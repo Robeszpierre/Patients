@@ -16,6 +16,7 @@ import java.awt.dnd.DropTargetEvent;
 import java.awt.dnd.DropTargetListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -78,9 +79,10 @@ public class DragListener implements  DropTargetListener{
             }
         }
     }
+    
+    BufferedImage img=null;
 
     private void displayImage(String path) {
-        BufferedImage img=null;
         Image dimg=null;
         try{
             img=ImageIO.read(new File(path));
@@ -93,5 +95,10 @@ public class DragListener implements  DropTargetListener{
         ImageIcon icon=new ImageIcon(dimg);
         imageLabel.setIcon(icon);
         pathlabel.setText(path);
-    } 
+    }
+    
+    public void save() throws IOException{
+        File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ "tongue.png");
+        ImageIO.write(img, "png", outputfile);
+    }
 }

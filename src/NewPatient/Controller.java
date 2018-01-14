@@ -3,6 +3,7 @@ package NewPatient;
 import Main.MainFrame;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
@@ -25,6 +26,7 @@ public class Controller {
     static public Controller controller=new Controller();
     
     public int idNumber;
+    public  String path="/home/robeszpierre/NetBeansProjects/Patients/src/Patients/";
     
     private MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;
@@ -33,7 +35,7 @@ public class Controller {
     private Complaints newPatientPresentComplaints;
     private PsychologicalAnamnesis newPatientPsychologicalAnamnesis;
     private Tongue newPatientTongue;
-    private NewPatientPulse newPatientPulse;
+    private Pulse newPatientPulse;
     private Diagnose newPatientDiagnose;
     
     public void start(){
@@ -115,7 +117,7 @@ public class Controller {
     }
     
     public void newPulse(){
-        newPatientPulse=new NewPatientPulse();
+        newPatientPulse=new Pulse();
         newPatientPulse.setVisible(true);
     }
     
@@ -124,12 +126,14 @@ public class Controller {
         newPatientDiagnose.setVisible(true);
     }
     
-    public void save(){
-        String path="/home/robeszpierre/NetBeansProjects/Patients/src/Patients/";
+    public void save() throws IOException{
         newPatientPersonalDatas.save(path);
         newPatientMedicalHistory.save(path);
         newPatientPresentComplaints.save(path);
         newPatientPsychologicalAnamnesis.save(path);
+        newPatientDiagnose.save(path);
+        newPatientPulse.save(path);
+        newPatientTongue.save(path); 
         
         PrintWriter writer;
         try {

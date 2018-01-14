@@ -1,9 +1,19 @@
 package NewPatient;
 
 
+import com.sun.org.apache.bcel.internal.generic.DDIV;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.dnd.DropTarget;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -25,15 +35,10 @@ public class Tongue extends javax.swing.JFrame {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2); 
         
-        connectToDragDrop();
+        drag=new DragListener(imageLabel, pathLabel);
+        new DropTarget(this, drag);
     }
-    
-    private void connectToDragDrop(){
-        DragListener d=new DragListener(imageLabel, pathLabel);
-        
-        new DropTarget(this, d);
-    }
-    
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -151,7 +156,7 @@ public class Tongue extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
-
+    private DragListener drag;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imageLabel;
     private javax.swing.JButton jButton1;
@@ -163,4 +168,24 @@ public class Tongue extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel pathLabel;
     // End of variables declaration//GEN-END:variables
+    
+    public void save(String path) throws IOException {
+        PrintWriter writer;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+            
+            String tongue=jTextPane1.getText();
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"tongue.txt");
+            writer = new PrintWriter(file, "UTF-8");
+            
+            writer.println(tongue);
+            writer.close();
+            drag.save();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
