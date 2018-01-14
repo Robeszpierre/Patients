@@ -1,3 +1,5 @@
+package NewPatient;
+
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -12,12 +14,12 @@ import java.awt.Toolkit;
  *
  * @author robeszpierre
  */
-public class NewPatientDiagnose extends javax.swing.JFrame {
+public class Diagnose extends javax.swing.JFrame {
 
     /**
      * Creates new form NewPatientDiagnose
      */
-    public NewPatientDiagnose() {
+    public Diagnose() {
         initComponents();      
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);  
@@ -218,6 +220,7 @@ public class NewPatientDiagnose extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         this.setVisible(false);
+        Controller.controller.save();
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
@@ -237,20 +240,21 @@ public class NewPatientDiagnose extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewPatientDiagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Diagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewPatientDiagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Diagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewPatientDiagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Diagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewPatientDiagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Diagnose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewPatientDiagnose().setVisible(true);
+                new Diagnose().setVisible(true);
             }
         });
     }

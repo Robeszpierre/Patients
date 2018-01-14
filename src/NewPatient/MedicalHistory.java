@@ -1,6 +1,14 @@
+package NewPatient;
+
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,16 +20,58 @@ import java.awt.Toolkit;
  *
  * @author robeszpierre
  */
-public class NewPatientMedicalHistory extends javax.swing.JFrame {
+public class MedicalHistory extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJPatientMedicalHistory
      */
-    public NewPatientMedicalHistory() {
+    public MedicalHistory() {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         jScrollPane9.getVerticalScrollBar().setUnitIncrement(30);
+    }
+    
+    public void save(String path){
+        PrintWriter writer;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+            
+            String childHood=jTextPane9.getText();
+            String previousIllnesses=jTextPane10.getText();
+            String actualIllnesses=jTextPane11.getText();
+            String surgeries=jTextPane12.getText();
+            String dentistry=jTextPane13.getText();
+            String medicines=jTextPane14.getText();
+            String pregnencies=jTextPane15.getText();
+            String pregnant=jComboBox2.getSelectedItem().toString();
+
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"medicalhistory.txt");
+            writer = new PrintWriter(file, "UTF-8");
+            
+            writer.println(childHood);
+            writer.println("***");
+            writer.println(previousIllnesses);
+            writer.println("***");
+            writer.println(actualIllnesses);
+            writer.println("***");
+            writer.println(surgeries);
+            writer.println("***");
+            writer.println(dentistry);
+            writer.println("***");
+            writer.println(medicines);
+            writer.println("***");
+            writer.println(pregnencies);
+            writer.println("***");
+            writer.println(pregnant);
+            writer.println("*****");
+            writer.close();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -66,7 +116,6 @@ public class NewPatientMedicalHistory extends javax.swing.JFrame {
         jScrollPane9.setHorizontalScrollBar(null);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(947, 1000));
 
         jLabel10.setText("Gyermekkori nagyobb betegség(ek)");
 

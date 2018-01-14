@@ -1,6 +1,13 @@
+package NewPatient;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,12 +19,12 @@ import java.awt.Toolkit;
  *
  * @author robeszpierre
  */
-public class NewPatientPersonalDatas extends javax.swing.JFrame {
+public class PersonalDatas extends javax.swing.JFrame {
 
     /**
      * Creates new form NewPatientPersonalDatas
      */
-    public NewPatientPersonalDatas() {
+    public PersonalDatas() {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);      
@@ -192,6 +199,39 @@ public class NewPatientPersonalDatas extends javax.swing.JFrame {
         Controller.controller.newMedicalHistory();
     }//GEN-LAST:event_jButton1MouseClicked
 
+    public void save(String path){
+        PrintWriter writer;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+            
+            String name=jTextField1.getText();
+            String mothername=jTextField9.getText();
+            String birthPlace=jTextField10.getText();
+            String birthDate=jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText();
+            String familyStatus=jTextField5.getText();
+            String emailAddress=jTextField7.getText();
+            String phoneNumber=jTextField8.getText();
+            String sex=jComboBox1.getSelectedItem().toString();
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"personaldata.txt");
+            writer = new PrintWriter(file, "UTF-8");
+            
+            writer.println(name);
+            writer.println(mothername);
+            writer.println(birthPlace);
+            writer.println(birthDate);
+            writer.println(familyStatus);
+            writer.println(emailAddress);
+            writer.println(phoneNumber);
+            writer.println(sex);
+            writer.close();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */

@@ -1,3 +1,5 @@
+package NewPatient;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,12 +10,12 @@
  *
  * @author robeszpierre
  */
-public class NewPatientQuestions extends javax.swing.JFrame {
+public class Questions extends javax.swing.JFrame {
 
     /**
      * Creates new form NewPatient
      */
-    public NewPatientQuestions() {
+    public Questions() {
         initComponents();
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(30); //sets the scrollbar faster
     }

@@ -1,6 +1,14 @@
+package NewPatient;
+
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,12 +20,12 @@ import java.awt.Toolkit;
  *
  * @author robeszpierre
  */
-public class NewPatientPresentComplaints extends javax.swing.JFrame {
+public class Complaints extends javax.swing.JFrame {
 
     /**
      * Creates new form NewPatientPresentComplaints
      */
-    public NewPatientPresentComplaints() {
+    public Complaints() {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);    
@@ -111,4 +119,24 @@ public class NewPatientPresentComplaints extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
+
+    void save(String path) {
+        PrintWriter writer;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+            
+            String complaints=jTextPane1.getText();
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"complaints.txt");
+            writer = new PrintWriter(file, "UTF-8");
+            
+            writer.println(complaints);
+
+            writer.close();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

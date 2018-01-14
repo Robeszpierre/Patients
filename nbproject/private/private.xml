@@ -3,16 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientPresentComplaints.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientPersonalDatas.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientDiagnose.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientMedicalHistory.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/Controller.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientPulse.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientPsychologicalAnamnesis.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/MainFrame.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientQuestions.java</file>
-            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatientTongue.java</file>
+            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatient/Controller.java</file>
+            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/Main/MainFrame.java</file>
+            <file>file:/home/robeszpierre/NetBeansProjects/Patients/src/NewPatient/NewPatientPersonalDatas.java</file>
         </group>
     </open-files>
 </project-private>
