@@ -3,6 +3,13 @@ package NewPatient;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -219,8 +226,12 @@ public class Diagnose extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        this.setVisible(false);
-        Controller.controller.save();
+        try {
+            this.setVisible(false);
+            Controller.controller.save();
+        } catch (IOException ex) {
+            Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
@@ -286,4 +297,43 @@ public class Diagnose extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane6;
     private javax.swing.JTextPane jTextPane7;
     // End of variables declaration//GEN-END:variables
+
+    void save(String path) {
+         PrintWriter writer;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+            
+            String diagnose=jTextPane1.getText();
+            String therapy=jTextPane2.getText();
+            String diet=jTextPane3.getText();
+            String herbs=jTextPane4.getText();
+            String chiniseMedicine=jTextPane5.getText();
+            String physiotherapy=jTextPane6.getText();
+            String other=jTextPane7.getText();
+
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"diagnose.txt");
+            writer = new PrintWriter(file, "UTF-8");
+            
+            writer.println(diagnose);
+            writer.println("***");
+            writer.println(therapy);
+            writer.println("***");
+            writer.println(diet);
+            writer.println("***");
+            writer.println(herbs);
+            writer.println("***");
+            writer.println(chiniseMedicine);
+            writer.println("***");
+            writer.println(physiotherapy);
+            writer.println("***");
+            writer.println(other);
+            writer.println("*****");
+            writer.close();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
