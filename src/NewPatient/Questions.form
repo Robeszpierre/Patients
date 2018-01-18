@@ -2470,7 +2470,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton2">
@@ -2479,6 +2481,7 @@
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton3">
@@ -2487,6 +2490,7 @@
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
@@ -2499,7 +2503,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup2"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton5">
@@ -2508,6 +2514,7 @@
                   <ComponentRef name="buttonGroup2"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton6">
@@ -2516,6 +2523,7 @@
                   <ComponentRef name="buttonGroup2"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
@@ -2528,7 +2536,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup3"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton8">
@@ -2537,6 +2547,7 @@
                   <ComponentRef name="buttonGroup3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton9">
@@ -2545,6 +2556,7 @@
                   <ComponentRef name="buttonGroup3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
@@ -2557,7 +2569,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup4"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton11">
@@ -2566,6 +2580,7 @@
                   <ComponentRef name="buttonGroup4"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton12">
@@ -2574,6 +2589,7 @@
                   <ComponentRef name="buttonGroup4"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
@@ -2598,7 +2614,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup5"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton14">
@@ -2607,6 +2625,7 @@
                   <ComponentRef name="buttonGroup5"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton15">
@@ -2615,6 +2634,7 @@
                   <ComponentRef name="buttonGroup5"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
@@ -2627,7 +2647,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup6"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton17">
@@ -2636,6 +2658,7 @@
                   <ComponentRef name="buttonGroup6"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton18">
@@ -2644,6 +2667,7 @@
                   <ComponentRef name="buttonGroup6"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
@@ -2656,7 +2680,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup7"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton20">
@@ -2665,6 +2691,7 @@
                   <ComponentRef name="buttonGroup7"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton21">
@@ -2673,6 +2700,7 @@
                   <ComponentRef name="buttonGroup7"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel16">
@@ -2685,7 +2713,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup8"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton23">
@@ -2694,6 +2724,7 @@
                   <ComponentRef name="buttonGroup8"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton24">
@@ -2702,6 +2733,7 @@
                   <ComponentRef name="buttonGroup8"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel17">
@@ -2714,7 +2746,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup9"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton26">
@@ -2723,6 +2757,7 @@
                   <ComponentRef name="buttonGroup9"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton27">
@@ -2731,6 +2766,7 @@
                   <ComponentRef name="buttonGroup9"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
@@ -2743,7 +2779,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup10"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton29">
@@ -2752,6 +2790,7 @@
                   <ComponentRef name="buttonGroup10"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton30">
@@ -2760,6 +2799,7 @@
                   <ComponentRef name="buttonGroup10"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel19">
@@ -2772,7 +2812,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup11"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton32">
@@ -2781,6 +2823,7 @@
                   <ComponentRef name="buttonGroup11"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton33">
@@ -2789,6 +2832,7 @@
                   <ComponentRef name="buttonGroup11"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
@@ -2801,7 +2845,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup12"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton35">
@@ -2810,6 +2856,7 @@
                   <ComponentRef name="buttonGroup12"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton36">
@@ -2818,6 +2865,7 @@
                   <ComponentRef name="buttonGroup12"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel21">
@@ -2830,7 +2878,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup13"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton38">
@@ -2839,6 +2889,7 @@
                   <ComponentRef name="buttonGroup13"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton39">
@@ -2847,6 +2898,7 @@
                   <ComponentRef name="buttonGroup13"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel22">
@@ -2859,7 +2911,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup14"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton41">
@@ -2868,6 +2922,7 @@
                   <ComponentRef name="buttonGroup14"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton42">
@@ -2876,6 +2931,7 @@
                   <ComponentRef name="buttonGroup14"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel23">
@@ -2888,7 +2944,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup15"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton44">
@@ -2897,6 +2955,7 @@
                   <ComponentRef name="buttonGroup15"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton45">
@@ -2905,6 +2964,7 @@
                   <ComponentRef name="buttonGroup15"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel24">
@@ -2917,7 +2977,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup16"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton47">
@@ -2926,6 +2988,7 @@
                   <ComponentRef name="buttonGroup16"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton48">
@@ -2934,6 +2997,7 @@
                   <ComponentRef name="buttonGroup16"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
@@ -2946,7 +3010,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup17"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton50">
@@ -2955,6 +3021,7 @@
                   <ComponentRef name="buttonGroup17"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton51">
@@ -2963,6 +3030,7 @@
                   <ComponentRef name="buttonGroup17"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
@@ -2975,7 +3043,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup18"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton53">
@@ -2984,6 +3054,7 @@
                   <ComponentRef name="buttonGroup18"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton54">
@@ -2992,6 +3063,7 @@
                   <ComponentRef name="buttonGroup18"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel27">
@@ -3004,7 +3076,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup19"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton56">
@@ -3013,6 +3087,7 @@
                   <ComponentRef name="buttonGroup19"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton57">
@@ -3021,6 +3096,7 @@
                   <ComponentRef name="buttonGroup19"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel28">
@@ -3033,7 +3109,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup20"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton59">
@@ -3042,6 +3120,7 @@
                   <ComponentRef name="buttonGroup20"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton60">
@@ -3050,6 +3129,7 @@
                   <ComponentRef name="buttonGroup20"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel29">
@@ -3062,7 +3142,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup21"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton62">
@@ -3071,6 +3153,7 @@
                   <ComponentRef name="buttonGroup21"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton63">
@@ -3079,6 +3162,7 @@
                   <ComponentRef name="buttonGroup21"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel30">
@@ -3091,7 +3175,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup22"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton65">
@@ -3100,6 +3186,7 @@
                   <ComponentRef name="buttonGroup22"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton66">
@@ -3108,6 +3195,7 @@
                   <ComponentRef name="buttonGroup22"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel31">
@@ -3128,7 +3216,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup23"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton68">
@@ -3137,6 +3227,7 @@
                   <ComponentRef name="buttonGroup23"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton69">
@@ -3145,6 +3236,7 @@
                   <ComponentRef name="buttonGroup23"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel33">
@@ -3157,7 +3249,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup24"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton71">
@@ -3166,6 +3260,7 @@
                   <ComponentRef name="buttonGroup24"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton72">
@@ -3174,6 +3269,7 @@
                   <ComponentRef name="buttonGroup24"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel34">
@@ -3186,7 +3282,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup25"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton74">
@@ -3195,6 +3293,7 @@
                   <ComponentRef name="buttonGroup25"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton75">
@@ -3203,6 +3302,7 @@
                   <ComponentRef name="buttonGroup25"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel35">
@@ -3215,7 +3315,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup26"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton77">
@@ -3224,6 +3326,7 @@
                   <ComponentRef name="buttonGroup26"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton78">
@@ -3232,6 +3335,7 @@
                   <ComponentRef name="buttonGroup26"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel36">
@@ -3244,7 +3348,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup27"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton80">
@@ -3253,6 +3359,7 @@
                   <ComponentRef name="buttonGroup27"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton81">
@@ -3261,6 +3368,7 @@
                   <ComponentRef name="buttonGroup27"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel37">
@@ -3273,7 +3381,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup28"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton83">
@@ -3282,6 +3392,7 @@
                   <ComponentRef name="buttonGroup28"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton84">
@@ -3290,6 +3401,7 @@
                   <ComponentRef name="buttonGroup28"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel38">
@@ -3302,7 +3414,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup29"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton86">
@@ -3311,6 +3425,7 @@
                   <ComponentRef name="buttonGroup29"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton87">
@@ -3319,6 +3434,7 @@
                   <ComponentRef name="buttonGroup29"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel39">
@@ -3331,7 +3447,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup30"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton89">
@@ -3340,6 +3458,7 @@
                   <ComponentRef name="buttonGroup30"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton90">
@@ -3348,6 +3467,7 @@
                   <ComponentRef name="buttonGroup30"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel40">
@@ -3360,7 +3480,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup31"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton92">
@@ -3369,6 +3491,7 @@
                   <ComponentRef name="buttonGroup31"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton93">
@@ -3377,6 +3500,7 @@
                   <ComponentRef name="buttonGroup31"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel41">
@@ -3389,7 +3513,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup32"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton95">
@@ -3398,6 +3524,7 @@
                   <ComponentRef name="buttonGroup32"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton96">
@@ -3406,6 +3533,7 @@
                   <ComponentRef name="buttonGroup32"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel42">
@@ -3418,7 +3546,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup33"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton98">
@@ -3427,6 +3557,7 @@
                   <ComponentRef name="buttonGroup33"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton99">
@@ -3435,6 +3566,7 @@
                   <ComponentRef name="buttonGroup33"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel43">
@@ -3447,7 +3579,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup34"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton101">
@@ -3456,6 +3590,7 @@
                   <ComponentRef name="buttonGroup34"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton102">
@@ -3464,6 +3599,7 @@
                   <ComponentRef name="buttonGroup34"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel44">
@@ -3476,7 +3612,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup35"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton104">
@@ -3485,6 +3623,7 @@
                   <ComponentRef name="buttonGroup35"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton105">
@@ -3493,6 +3632,7 @@
                   <ComponentRef name="buttonGroup35"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel45">
@@ -3505,7 +3645,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup36"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton107">
@@ -3514,6 +3656,7 @@
                   <ComponentRef name="buttonGroup36"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton108">
@@ -3522,6 +3665,7 @@
                   <ComponentRef name="buttonGroup36"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField6">
@@ -3549,7 +3693,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup37"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton110">
@@ -3558,6 +3704,7 @@
                   <ComponentRef name="buttonGroup37"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton111">
@@ -3566,6 +3713,7 @@
                   <ComponentRef name="buttonGroup37"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel48">
@@ -3578,7 +3726,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup38"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton113">
@@ -3587,6 +3737,7 @@
                   <ComponentRef name="buttonGroup38"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton114">
@@ -3595,6 +3746,7 @@
                   <ComponentRef name="buttonGroup38"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel49">
@@ -3607,7 +3759,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup39"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton116">
@@ -3616,6 +3770,7 @@
                   <ComponentRef name="buttonGroup39"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton117">
@@ -3624,6 +3779,7 @@
                   <ComponentRef name="buttonGroup39"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel50">
@@ -3636,7 +3792,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup40"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton119">
@@ -3645,6 +3803,7 @@
                   <ComponentRef name="buttonGroup40"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton120">
@@ -3653,6 +3812,7 @@
                   <ComponentRef name="buttonGroup40"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel51">
@@ -3665,7 +3825,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup41"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton122">
@@ -3674,6 +3836,7 @@
                   <ComponentRef name="buttonGroup41"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton123">
@@ -3682,6 +3845,7 @@
                   <ComponentRef name="buttonGroup41"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel52">
@@ -3694,7 +3858,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup42"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton125">
@@ -3703,6 +3869,7 @@
                   <ComponentRef name="buttonGroup42"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton126">
@@ -3711,6 +3878,7 @@
                   <ComponentRef name="buttonGroup42"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel53">
@@ -3723,7 +3891,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup43"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton128">
@@ -3732,6 +3902,7 @@
                   <ComponentRef name="buttonGroup43"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton129">
@@ -3740,6 +3911,7 @@
                   <ComponentRef name="buttonGroup43"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel54">
@@ -3752,7 +3924,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup44"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton131">
@@ -3761,6 +3935,7 @@
                   <ComponentRef name="buttonGroup44"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton132">
@@ -3769,6 +3944,7 @@
                   <ComponentRef name="buttonGroup44"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel55">
@@ -3781,7 +3957,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup45"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton134">
@@ -3790,6 +3968,7 @@
                   <ComponentRef name="buttonGroup45"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton135">
@@ -3798,6 +3977,7 @@
                   <ComponentRef name="buttonGroup45"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel56">
@@ -3810,7 +3990,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup46"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton137">
@@ -3819,6 +4001,7 @@
                   <ComponentRef name="buttonGroup46"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton138">
@@ -3827,6 +4010,7 @@
                   <ComponentRef name="buttonGroup46"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel57">
@@ -3839,7 +4023,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup47"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton140">
@@ -3848,6 +4034,7 @@
                   <ComponentRef name="buttonGroup47"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton141">
@@ -3856,6 +4043,7 @@
                   <ComponentRef name="buttonGroup47"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel58">
@@ -3868,7 +4056,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup48"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton143">
@@ -3877,6 +4067,7 @@
                   <ComponentRef name="buttonGroup48"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton144">
@@ -3885,6 +4076,7 @@
                   <ComponentRef name="buttonGroup48"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel59">
@@ -3897,7 +4089,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup49"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton146">
@@ -3906,6 +4100,7 @@
                   <ComponentRef name="buttonGroup49"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton147">
@@ -3914,6 +4109,7 @@
                   <ComponentRef name="buttonGroup49"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel60">
@@ -3931,7 +4127,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup50"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton152">
@@ -3940,6 +4138,7 @@
                   <ComponentRef name="buttonGroup50"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton153">
@@ -3948,6 +4147,7 @@
                   <ComponentRef name="buttonGroup50"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel62">
@@ -3960,7 +4160,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup51"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton155">
@@ -3969,6 +4171,7 @@
                   <ComponentRef name="buttonGroup51"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton156">
@@ -3977,6 +4180,7 @@
                   <ComponentRef name="buttonGroup51"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel63">
@@ -3989,6 +4193,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup52"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
               </Properties>
             </Component>
@@ -3998,6 +4203,7 @@
                   <ComponentRef name="buttonGroup52"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton159">
@@ -4006,6 +4212,7 @@
                   <ComponentRef name="buttonGroup52"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel64">
@@ -4018,7 +4225,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup53"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton161">
@@ -4027,6 +4236,7 @@
                   <ComponentRef name="buttonGroup53"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton162">
@@ -4035,6 +4245,7 @@
                   <ComponentRef name="buttonGroup53"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel65">
@@ -4047,7 +4258,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup54"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton164">
@@ -4056,6 +4269,7 @@
                   <ComponentRef name="buttonGroup54"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton165">
@@ -4064,6 +4278,7 @@
                   <ComponentRef name="buttonGroup54"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel66">
@@ -4076,7 +4291,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup55"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton167">
@@ -4085,6 +4302,7 @@
                   <ComponentRef name="buttonGroup55"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton168">
@@ -4093,6 +4311,7 @@
                   <ComponentRef name="buttonGroup55"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel67">
@@ -4105,7 +4324,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup56"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton170">
@@ -4114,6 +4335,7 @@
                   <ComponentRef name="buttonGroup56"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton171">
@@ -4122,6 +4344,7 @@
                   <ComponentRef name="buttonGroup56"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel70">
@@ -4163,7 +4386,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup57"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton173">
@@ -4172,6 +4397,7 @@
                   <ComponentRef name="buttonGroup57"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton174">
@@ -4180,6 +4406,7 @@
                   <ComponentRef name="buttonGroup57"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel79">
@@ -4192,7 +4419,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup58"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton194">
@@ -4201,6 +4430,7 @@
                   <ComponentRef name="buttonGroup58"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton195">
@@ -4209,6 +4439,7 @@
                   <ComponentRef name="buttonGroup58"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel80">
@@ -4221,7 +4452,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup59"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton197">
@@ -4230,6 +4463,7 @@
                   <ComponentRef name="buttonGroup59"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton198">
@@ -4238,6 +4472,7 @@
                   <ComponentRef name="buttonGroup59"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel81">
@@ -4250,7 +4485,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup60"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton200">
@@ -4259,6 +4496,7 @@
                   <ComponentRef name="buttonGroup60"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton201">
@@ -4267,6 +4505,7 @@
                   <ComponentRef name="buttonGroup60"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel82">
@@ -4279,7 +4518,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup61"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton203">
@@ -4288,6 +4529,7 @@
                   <ComponentRef name="buttonGroup61"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton204">
@@ -4296,6 +4538,7 @@
                   <ComponentRef name="buttonGroup61"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel83">
@@ -4308,7 +4551,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup62"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton206">
@@ -4317,6 +4562,7 @@
                   <ComponentRef name="buttonGroup62"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton207">
@@ -4325,6 +4571,7 @@
                   <ComponentRef name="buttonGroup62"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel84">
@@ -4337,7 +4584,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup63"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton209">
@@ -4346,6 +4595,7 @@
                   <ComponentRef name="buttonGroup63"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton210">
@@ -4354,6 +4604,7 @@
                   <ComponentRef name="buttonGroup63"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel85">
@@ -4366,7 +4617,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup64"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton212">
@@ -4375,6 +4628,7 @@
                   <ComponentRef name="buttonGroup64"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton213">
@@ -4383,6 +4637,7 @@
                   <ComponentRef name="buttonGroup64"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel86">
@@ -4396,6 +4651,7 @@
                   <ComponentRef name="buttonGroup66"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton215">
@@ -4403,7 +4659,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup66"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel87">
@@ -4417,6 +4675,7 @@
                   <ComponentRef name="buttonGroup65"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton217">
@@ -4425,6 +4684,7 @@
                   <ComponentRef name="buttonGroup65"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton218">
@@ -4432,7 +4692,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup65"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton219">
@@ -4441,6 +4703,7 @@
                   <ComponentRef name="buttonGroup67"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton220">
@@ -4449,6 +4712,7 @@
                   <ComponentRef name="buttonGroup67"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton221">
@@ -4456,7 +4720,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup67"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel88">
@@ -4470,6 +4736,7 @@
                   <ComponentRef name="buttonGroup66"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel89">
@@ -4483,6 +4750,7 @@
                   <ComponentRef name="buttonGroup68"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton224">
@@ -4491,6 +4759,7 @@
                   <ComponentRef name="buttonGroup68"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton225">
@@ -4498,7 +4767,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup68"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel90">
@@ -4512,6 +4783,7 @@
                   <ComponentRef name="buttonGroup69"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton227">
@@ -4520,6 +4792,7 @@
                   <ComponentRef name="buttonGroup69"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton228">
@@ -4527,7 +4800,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup69"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton229">
@@ -4535,7 +4810,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup71"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel91">
@@ -4549,6 +4826,7 @@
                   <ComponentRef name="buttonGroup70"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton231">
@@ -4557,6 +4835,7 @@
                   <ComponentRef name="buttonGroup70"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton232">
@@ -4564,7 +4843,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup70"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel92">
@@ -4578,6 +4859,7 @@
                   <ComponentRef name="buttonGroup71"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton234">
@@ -4586,6 +4868,7 @@
                   <ComponentRef name="buttonGroup71"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel73">
@@ -4606,7 +4889,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup72"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton236">
@@ -4615,6 +4900,7 @@
                   <ComponentRef name="buttonGroup72"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton237">
@@ -4623,6 +4909,7 @@
                   <ComponentRef name="buttonGroup72"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel94">
@@ -4635,7 +4922,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup73"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton239">
@@ -4644,6 +4933,7 @@
                   <ComponentRef name="buttonGroup73"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton240">
@@ -4652,6 +4942,7 @@
                   <ComponentRef name="buttonGroup73"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel95">
@@ -4675,9 +4966,9 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
-                    <StringItem index="0" value="Hideg"/>
-                    <StringItem index="1" value="Langyos"/>
-                    <StringItem index="2" value="Meleg"/>
+                    <StringItem index="0" value="hideg"/>
+                    <StringItem index="1" value="langyos"/>
+                    <StringItem index="2" value="meleg"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -4702,7 +4993,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup74"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton242">
@@ -4711,6 +5004,7 @@
                   <ComponentRef name="buttonGroup74"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton243">
@@ -4719,6 +5013,7 @@
                   <ComponentRef name="buttonGroup74"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel76">
@@ -4733,7 +5028,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup75"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton245">
@@ -4742,6 +5039,7 @@
                   <ComponentRef name="buttonGroup75"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton246">
@@ -4750,6 +5048,7 @@
                   <ComponentRef name="buttonGroup75"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel98">
@@ -4762,7 +5061,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup76"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton248">
@@ -4771,6 +5072,7 @@
                   <ComponentRef name="buttonGroup76"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton249">
@@ -4779,6 +5081,7 @@
                   <ComponentRef name="buttonGroup76"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel99">
@@ -4791,7 +5094,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup77"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton251">
@@ -4800,6 +5105,7 @@
                   <ComponentRef name="buttonGroup77"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton252">
@@ -4808,6 +5114,7 @@
                   <ComponentRef name="buttonGroup77"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel100">
@@ -4825,7 +5132,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup78"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton254">
@@ -4834,6 +5143,7 @@
                   <ComponentRef name="buttonGroup78"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton255">
@@ -4842,6 +5152,7 @@
                   <ComponentRef name="buttonGroup78"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel102">
@@ -4854,7 +5165,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup79"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton257">
@@ -4863,6 +5176,7 @@
                   <ComponentRef name="buttonGroup79"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton258">
@@ -4871,6 +5185,7 @@
                   <ComponentRef name="buttonGroup79"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel103">
@@ -4883,7 +5198,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup80"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton260">
@@ -4892,6 +5209,7 @@
                   <ComponentRef name="buttonGroup80"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton261">
@@ -4900,6 +5218,7 @@
                   <ComponentRef name="buttonGroup80"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel104">
@@ -4912,7 +5231,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup81"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton263">
@@ -4921,6 +5242,7 @@
                   <ComponentRef name="buttonGroup81"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton264">
@@ -4929,6 +5251,7 @@
                   <ComponentRef name="buttonGroup81"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel105">
@@ -4941,7 +5264,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup82"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton266">
@@ -4950,6 +5275,7 @@
                   <ComponentRef name="buttonGroup82"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton267">
@@ -4958,6 +5284,7 @@
                   <ComponentRef name="buttonGroup82"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel106">
@@ -4970,7 +5297,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup83"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton269">
@@ -4979,6 +5308,7 @@
                   <ComponentRef name="buttonGroup83"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton270">
@@ -4987,6 +5317,7 @@
                   <ComponentRef name="buttonGroup83"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel107">
@@ -4999,7 +5330,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup84"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton272">
@@ -5008,6 +5341,7 @@
                   <ComponentRef name="buttonGroup84"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton273">
@@ -5016,6 +5350,7 @@
                   <ComponentRef name="buttonGroup84"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel108">
@@ -5028,7 +5363,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup85"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton275">
@@ -5037,6 +5374,7 @@
                   <ComponentRef name="buttonGroup85"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton276">
@@ -5045,6 +5383,7 @@
                   <ComponentRef name="buttonGroup85"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel109">
@@ -5057,7 +5396,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup86"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton278">
@@ -5066,6 +5407,7 @@
                   <ComponentRef name="buttonGroup86"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton279">
@@ -5074,6 +5416,7 @@
                   <ComponentRef name="buttonGroup86"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel110">
@@ -5086,7 +5429,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup87"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton281">
@@ -5095,6 +5440,7 @@
                   <ComponentRef name="buttonGroup87"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton282">
@@ -5103,6 +5449,7 @@
                   <ComponentRef name="buttonGroup87"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel111">
@@ -5115,7 +5462,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup88"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton284">
@@ -5124,6 +5473,7 @@
                   <ComponentRef name="buttonGroup88"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton285">
@@ -5132,6 +5482,7 @@
                   <ComponentRef name="buttonGroup88"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel112">
@@ -5144,7 +5495,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup89"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton287">
@@ -5153,6 +5506,7 @@
                   <ComponentRef name="buttonGroup89"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton288">
@@ -5161,6 +5515,7 @@
                   <ComponentRef name="buttonGroup89"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel113">
@@ -5173,7 +5528,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup90"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton290">
@@ -5182,6 +5539,7 @@
                   <ComponentRef name="buttonGroup90"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton291">
@@ -5190,6 +5548,7 @@
                   <ComponentRef name="buttonGroup90"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel114">
@@ -5202,7 +5561,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup91"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton293">
@@ -5211,6 +5572,7 @@
                   <ComponentRef name="buttonGroup91"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton294">
@@ -5219,6 +5581,7 @@
                   <ComponentRef name="buttonGroup91"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel115">
@@ -5231,7 +5594,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup92"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton296">
@@ -5240,6 +5605,7 @@
                   <ComponentRef name="buttonGroup92"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton297">
@@ -5248,6 +5614,7 @@
                   <ComponentRef name="buttonGroup92"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel116">
@@ -5260,7 +5627,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup93"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton299">
@@ -5269,6 +5638,7 @@
                   <ComponentRef name="buttonGroup93"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton300">
@@ -5277,6 +5647,7 @@
                   <ComponentRef name="buttonGroup93"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel117">
@@ -5289,7 +5660,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup94"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton302">
@@ -5298,6 +5671,7 @@
                   <ComponentRef name="buttonGroup94"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton303">
@@ -5306,6 +5680,7 @@
                   <ComponentRef name="buttonGroup94"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel118">
@@ -5318,7 +5693,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup95"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton305">
@@ -5327,6 +5704,7 @@
                   <ComponentRef name="buttonGroup95"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton306">
@@ -5335,6 +5713,7 @@
                   <ComponentRef name="buttonGroup95"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel119">
@@ -5347,7 +5726,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup96"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton308">
@@ -5356,6 +5737,7 @@
                   <ComponentRef name="buttonGroup96"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton309">
@@ -5364,6 +5746,7 @@
                   <ComponentRef name="buttonGroup96"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton310">
@@ -5372,6 +5755,7 @@
                   <ComponentRef name="buttonGroup97"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton311">
@@ -5380,6 +5764,7 @@
                   <ComponentRef name="buttonGroup97"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton312">
@@ -5387,7 +5772,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup97"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel120">
@@ -5437,7 +5824,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup98"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton314">
@@ -5446,6 +5835,7 @@
                   <ComponentRef name="buttonGroup98"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton315">
@@ -5454,6 +5844,7 @@
                   <ComponentRef name="buttonGroup98"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton316">
@@ -5461,7 +5852,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup99"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton317">
@@ -5470,6 +5863,7 @@
                   <ComponentRef name="buttonGroup99"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton318">
@@ -5478,6 +5872,7 @@
                   <ComponentRef name="buttonGroup99"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel125">
@@ -5495,7 +5890,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup100"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton320">
@@ -5504,6 +5901,7 @@
                   <ComponentRef name="buttonGroup100"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton321">
@@ -5512,6 +5910,7 @@
                   <ComponentRef name="buttonGroup100"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel127">
@@ -5580,7 +5979,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup101"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton323">
@@ -5589,6 +5990,7 @@
                   <ComponentRef name="buttonGroup101"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton324">
@@ -5597,6 +5999,7 @@
                   <ComponentRef name="buttonGroup101"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel131">
@@ -5813,7 +6216,9 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="buttonGroup102"/>
                 </Property>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nem jellemz&#x151;"/>
+                <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton326">
@@ -5822,6 +6227,7 @@
                   <ComponentRef name="buttonGroup102"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ritka"/>
+                <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton327">
@@ -5830,6 +6236,7 @@
                   <ComponentRef name="buttonGroup102"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel153">

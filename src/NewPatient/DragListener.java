@@ -31,10 +31,12 @@ public class DragListener implements  DropTargetListener{
     
     JLabel imageLabel=new JLabel();
     JLabel pathlabel=new JLabel();
+    String imgName;
     
-    public DragListener(JLabel image, JLabel path){
+    public DragListener(JLabel image, JLabel path, String name){
         imageLabel=image;
         pathlabel=path;
+        imgName=name;
     }
     
     @Override
@@ -98,7 +100,7 @@ public class DragListener implements  DropTargetListener{
     }
     
     public void save() throws IOException{
-        File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ "tongue.png");
+        File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ imgName +".png");
         ImageIO.write(img, "png", outputfile);
     }
 }

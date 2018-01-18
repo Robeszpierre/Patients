@@ -37,6 +37,7 @@ public class Controller {
     private Tongue newPatientTongue;
     private Pulse newPatientPulse;
     private Diagnose newPatientDiagnose;
+    private Ear newPatientEar;
     
     public void start(){
         mainFrame=new MainFrame();
@@ -116,6 +117,11 @@ public class Controller {
         newPatientTongue.setVisible(true);
     }
     
+    public void newEar(){
+        newPatientEar=new Ear();
+        newPatientEar.setVisible(true);
+    }
+    
     public void newPulse(){
         newPatientPulse=new Pulse();
         newPatientPulse.setVisible(true);
@@ -130,10 +136,12 @@ public class Controller {
         newPatientPersonalDatas.save(path);
         newPatientMedicalHistory.save(path);
         newPatientPresentComplaints.save(path);
+        newPatientQuestions.save(path);
         newPatientPsychologicalAnamnesis.save(path);
         newPatientDiagnose.save(path);
         newPatientPulse.save(path);
         newPatientTongue.save(path); 
+        newPatientEar.save(path); 
         
         PrintWriter writer;
         try {

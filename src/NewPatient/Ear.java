@@ -25,17 +25,17 @@ import javax.imageio.ImageIO;
  *
  * @author robeszpierre
  */
-public class Tongue extends javax.swing.JFrame {
+public class Ear extends javax.swing.JFrame {
 
     /**
      * Creates new form Dragger
      */
-    public Tongue() {
+    public Ear() {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2); 
         
-        drag=new DragListener(imageLabel, pathLabel, "tongue");
+        drag=new DragListener(imageLabel, pathLabel, "ear");
         new DropTarget(this, drag);
     }
    
@@ -152,7 +152,7 @@ public class Tongue extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        Controller.controller.newEar();
+        Controller.controller.newPulse();
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -178,7 +178,7 @@ public class Tongue extends javax.swing.JFrame {
             
             String tongue=jTextPane1.getText();
          
-            File file = new File(path+File.separatorChar+dir+File.separatorChar+"tongue.txt");
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"ear.txt");
             writer = new PrintWriter(file, "UTF-8");
             
             writer.println(tongue);

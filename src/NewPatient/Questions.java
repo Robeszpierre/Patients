@@ -1,5 +1,12 @@
 package NewPatient;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -675,46 +682,62 @@ public class Questions extends javax.swing.JFrame {
         jLabel8.setText("Fej fázékonysága");
 
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
         jRadioButton1.setText("Nem jellemző");
+        jRadioButton1.setActionCommand("3");
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Ritka");
+        jRadioButton2.setActionCommand("2");
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Gyakori");
+        jRadioButton3.setActionCommand("1");
 
         jLabel9.setText("Szédülés:");
 
         buttonGroup2.add(jRadioButton4);
+        jRadioButton4.setSelected(true);
         jRadioButton4.setText("Nem jellemző");
+        jRadioButton4.setActionCommand("3");
 
         buttonGroup2.add(jRadioButton5);
         jRadioButton5.setText("Ritka");
+        jRadioButton5.setActionCommand("2");
 
         buttonGroup2.add(jRadioButton6);
         jRadioButton6.setText("Gyakori");
+        jRadioButton6.setActionCommand("1");
 
         jLabel10.setText("Elalvás zavara");
 
         buttonGroup3.add(jRadioButton7);
+        jRadioButton7.setSelected(true);
         jRadioButton7.setText("Nem jellemző");
+        jRadioButton7.setActionCommand("3");
 
         buttonGroup3.add(jRadioButton8);
         jRadioButton8.setText("Ritka");
+        jRadioButton8.setActionCommand("2");
 
         buttonGroup3.add(jRadioButton9);
         jRadioButton9.setText("Gyakori");
+        jRadioButton9.setActionCommand("1");
 
         jLabel11.setText("Átalvás zavara");
 
         buttonGroup4.add(jRadioButton10);
+        jRadioButton10.setSelected(true);
         jRadioButton10.setText("Nem jellemző");
+        jRadioButton10.setActionCommand("3");
 
         buttonGroup4.add(jRadioButton11);
         jRadioButton11.setText("Ritka");
+        jRadioButton11.setActionCommand("2");
 
         buttonGroup4.add(jRadioButton12);
         jRadioButton12.setText("Gyakori");
+        jRadioButton12.setActionCommand("1");
 
         jLabel12.setText("Ideje:");
 
@@ -723,200 +746,272 @@ public class Questions extends javax.swing.JFrame {
         jLabel13.setText("Memória romlása");
 
         buttonGroup5.add(jRadioButton13);
+        jRadioButton13.setSelected(true);
         jRadioButton13.setText("Nem jellemző");
+        jRadioButton13.setActionCommand("3");
 
         buttonGroup5.add(jRadioButton14);
         jRadioButton14.setText("Ritka");
+        jRadioButton14.setActionCommand("2");
 
         buttonGroup5.add(jRadioButton15);
         jRadioButton15.setText("Gyakori");
+        jRadioButton15.setActionCommand("1");
 
         jLabel14.setText("Hajhullás");
 
         buttonGroup6.add(jRadioButton16);
+        jRadioButton16.setSelected(true);
         jRadioButton16.setText("Nem jellemző");
+        jRadioButton16.setActionCommand("3");
 
         buttonGroup6.add(jRadioButton17);
         jRadioButton17.setText("Ritka");
+        jRadioButton17.setActionCommand("2");
 
         buttonGroup6.add(jRadioButton18);
         jRadioButton18.setText("Gyakori");
+        jRadioButton18.setActionCommand("1");
 
         jLabel15.setText("Korai őszülés");
 
         buttonGroup7.add(jRadioButton19);
+        jRadioButton19.setSelected(true);
         jRadioButton19.setText("Nem jellemző");
+        jRadioButton19.setActionCommand("3");
 
         buttonGroup7.add(jRadioButton20);
         jRadioButton20.setText("Ritka");
+        jRadioButton20.setActionCommand("2");
 
         buttonGroup7.add(jRadioButton21);
         jRadioButton21.setText("Gyakori");
+        jRadioButton21.setActionCommand("1");
 
         jLabel16.setText("Száraz haj");
 
         buttonGroup8.add(jRadioButton22);
+        jRadioButton22.setSelected(true);
         jRadioButton22.setText("Nem jellemző");
+        jRadioButton22.setActionCommand("3");
 
         buttonGroup8.add(jRadioButton23);
         jRadioButton23.setText("Ritka");
+        jRadioButton23.setActionCommand("2");
 
         buttonGroup8.add(jRadioButton24);
         jRadioButton24.setText("Gyakori");
+        jRadioButton24.setActionCommand("1");
 
         jLabel17.setText("Homályos látás");
 
         buttonGroup9.add(jRadioButton25);
+        jRadioButton25.setSelected(true);
         jRadioButton25.setText("Nem jellemző");
+        jRadioButton25.setActionCommand("3");
 
         buttonGroup9.add(jRadioButton26);
         jRadioButton26.setText("Ritka");
+        jRadioButton26.setActionCommand("2");
 
         buttonGroup9.add(jRadioButton27);
         jRadioButton27.setText("Gyakori");
+        jRadioButton27.setActionCommand("1");
 
         jLabel18.setText("Száraz szem");
 
         buttonGroup10.add(jRadioButton28);
+        jRadioButton28.setSelected(true);
         jRadioButton28.setText("Nem jellemző");
+        jRadioButton28.setActionCommand("3");
 
         buttonGroup10.add(jRadioButton29);
         jRadioButton29.setText("Ritka");
+        jRadioButton29.setActionCommand("2");
 
         buttonGroup10.add(jRadioButton30);
         jRadioButton30.setText("Gyakori");
+        jRadioButton30.setActionCommand("1");
 
         jLabel19.setText("Vörös szem");
 
         buttonGroup11.add(jRadioButton31);
+        jRadioButton31.setSelected(true);
         jRadioButton31.setText("Nem jellemző");
+        jRadioButton31.setActionCommand("3");
 
         buttonGroup11.add(jRadioButton32);
         jRadioButton32.setText("Ritka");
+        jRadioButton32.setActionCommand("2");
 
         buttonGroup11.add(jRadioButton33);
         jRadioButton33.setText("Gyakori");
+        jRadioButton33.setActionCommand("1");
 
         jLabel20.setText("Karikás, mélyen ülő szem");
 
         buttonGroup12.add(jRadioButton34);
+        jRadioButton34.setSelected(true);
         jRadioButton34.setText("Nem jellemző");
+        jRadioButton34.setActionCommand("3");
 
         buttonGroup12.add(jRadioButton35);
         jRadioButton35.setText("Ritka");
+        jRadioButton35.setActionCommand("2");
 
         buttonGroup12.add(jRadioButton36);
         jRadioButton36.setText("Gyakori");
+        jRadioButton36.setActionCommand("1");
 
         jLabel21.setText("Sötétben rosszabbul látás");
 
         buttonGroup13.add(jRadioButton37);
+        jRadioButton37.setSelected(true);
         jRadioButton37.setText("Nem jellemző");
+        jRadioButton37.setActionCommand("3");
 
         buttonGroup13.add(jRadioButton38);
         jRadioButton38.setText("Ritka");
+        jRadioButton38.setActionCommand("2");
 
         buttonGroup13.add(jRadioButton39);
         jRadioButton39.setText("Gyakori");
+        jRadioButton39.setActionCommand("1");
 
         jLabel22.setText("Fülzúgás");
 
         buttonGroup14.add(jRadioButton40);
+        jRadioButton40.setSelected(true);
         jRadioButton40.setText("Nem jellemző");
+        jRadioButton40.setActionCommand("3");
 
         buttonGroup14.add(jRadioButton41);
         jRadioButton41.setText("Ritka");
+        jRadioButton41.setActionCommand("2");
 
         buttonGroup14.add(jRadioButton42);
         jRadioButton42.setText("Gyakori");
+        jRadioButton42.setActionCommand("1");
 
         jLabel23.setText("Nagyothallás");
 
         buttonGroup15.add(jRadioButton43);
+        jRadioButton43.setSelected(true);
         jRadioButton43.setText("Nem jellemző");
+        jRadioButton43.setActionCommand("3");
 
         buttonGroup15.add(jRadioButton44);
         jRadioButton44.setText("Ritka");
+        jRadioButton44.setActionCommand("2");
 
         buttonGroup15.add(jRadioButton45);
         jRadioButton45.setText("Gyakori");
+        jRadioButton45.setActionCommand("1");
 
         jLabel24.setText("Laza fogak");
 
         buttonGroup16.add(jRadioButton46);
+        jRadioButton46.setSelected(true);
         jRadioButton46.setText("Nem jellemző");
+        jRadioButton46.setActionCommand("3");
 
         buttonGroup16.add(jRadioButton47);
         jRadioButton47.setText("Ritka");
+        jRadioButton47.setActionCommand("2");
 
         buttonGroup16.add(jRadioButton48);
         jRadioButton48.setText("Gyakori");
+        jRadioButton48.setActionCommand("1");
 
         jLabel25.setText("Ígygyulladás, afta, herpesz");
 
         buttonGroup17.add(jRadioButton49);
+        jRadioButton49.setSelected(true);
         jRadioButton49.setText("Nem jellemző");
+        jRadioButton49.setActionCommand("3");
 
         buttonGroup17.add(jRadioButton50);
         jRadioButton50.setText("Ritka");
+        jRadioButton50.setActionCommand("2");
 
         buttonGroup17.add(jRadioButton51);
         jRadioButton51.setText("Gyakori");
+        jRadioButton51.setActionCommand("1");
 
         jLabel26.setText("Kellemetlen szájszag");
 
         buttonGroup18.add(jRadioButton52);
+        jRadioButton52.setSelected(true);
         jRadioButton52.setText("Nem jellemző");
+        jRadioButton52.setActionCommand("3");
 
         buttonGroup18.add(jRadioButton53);
         jRadioButton53.setText("Ritka");
+        jRadioButton53.setActionCommand("2");
 
         buttonGroup18.add(jRadioButton54);
         jRadioButton54.setText("Gyakori");
+        jRadioButton54.setActionCommand("1");
 
         jLabel27.setText("Savas böfögés");
 
         buttonGroup19.add(jRadioButton55);
+        jRadioButton55.setSelected(true);
         jRadioButton55.setText("Nem jellemző");
+        jRadioButton55.setActionCommand("3");
 
         buttonGroup19.add(jRadioButton56);
         jRadioButton56.setText("Ritka");
+        jRadioButton56.setActionCommand("2");
 
         buttonGroup19.add(jRadioButton57);
         jRadioButton57.setText("Gyakori");
+        jRadioButton57.setActionCommand("1");
 
         jLabel28.setText("Orcapír");
 
         buttonGroup20.add(jRadioButton58);
+        jRadioButton58.setSelected(true);
         jRadioButton58.setText("Nem jellemző");
+        jRadioButton58.setActionCommand("3");
 
         buttonGroup20.add(jRadioButton59);
         jRadioButton59.setText("Ritka");
+        jRadioButton59.setActionCommand("2");
 
         buttonGroup20.add(jRadioButton60);
         jRadioButton60.setText("Gyakori");
+        jRadioButton60.setActionCommand("1");
 
         jLabel29.setText("Vörös arc");
 
         buttonGroup21.add(jRadioButton61);
+        jRadioButton61.setSelected(true);
         jRadioButton61.setText("Nem jellemző");
+        jRadioButton61.setActionCommand("3");
 
         buttonGroup21.add(jRadioButton62);
         jRadioButton62.setText("Ritka");
+        jRadioButton62.setActionCommand("2");
 
         buttonGroup21.add(jRadioButton63);
         jRadioButton63.setText("Gyakori");
+        jRadioButton63.setActionCommand("1");
 
         jLabel30.setText("Száraz száj-torok");
 
         buttonGroup22.add(jRadioButton64);
+        jRadioButton64.setSelected(true);
         jRadioButton64.setText("Nem jellemző");
+        jRadioButton64.setActionCommand("3");
 
         buttonGroup22.add(jRadioButton65);
         jRadioButton65.setText("Ritka");
+        jRadioButton65.setActionCommand("2");
 
         buttonGroup22.add(jRadioButton66);
         jRadioButton66.setText("Gyakori");
+        jRadioButton66.setActionCommand("1");
 
         jLabel31.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel31.setText("Mellkas");
@@ -924,156 +1019,212 @@ public class Questions extends javax.swing.JFrame {
         jLabel32.setText("Szívdobogás nyugalomban");
 
         buttonGroup23.add(jRadioButton67);
+        jRadioButton67.setSelected(true);
         jRadioButton67.setText("Nem jellemző");
+        jRadioButton67.setActionCommand("3");
 
         buttonGroup23.add(jRadioButton68);
         jRadioButton68.setText("Ritka");
+        jRadioButton68.setActionCommand("2");
 
         buttonGroup23.add(jRadioButton69);
         jRadioButton69.setText("Gyakori");
+        jRadioButton69.setActionCommand("1");
 
         jLabel33.setText("Terhelésre romló légszomj");
 
         buttonGroup24.add(jRadioButton70);
+        jRadioButton70.setSelected(true);
         jRadioButton70.setText("Nem jellemző");
+        jRadioButton70.setActionCommand("3");
 
         buttonGroup24.add(jRadioButton71);
         jRadioButton71.setText("Ritka");
+        jRadioButton71.setActionCommand("2");
 
         buttonGroup24.add(jRadioButton72);
         jRadioButton72.setText("Gyakori");
+        jRadioButton72.setActionCommand("1");
 
         jLabel34.setText("Erőtlen hang");
 
         buttonGroup25.add(jRadioButton73);
+        jRadioButton73.setSelected(true);
         jRadioButton73.setText("Nem jellemző");
+        jRadioButton73.setActionCommand("3");
 
         buttonGroup25.add(jRadioButton74);
         jRadioButton74.setText("Ritka");
+        jRadioButton74.setActionCommand("2");
 
         buttonGroup25.add(jRadioButton75);
         jRadioButton75.setText("Gyakori");
+        jRadioButton75.setActionCommand("1");
 
         jLabel35.setText("Rekedt hang");
 
         buttonGroup26.add(jRadioButton76);
+        jRadioButton76.setSelected(true);
         jRadioButton76.setText("Nem jellemző");
+        jRadioButton76.setActionCommand("3");
 
         buttonGroup26.add(jRadioButton77);
         jRadioButton77.setText("Ritka");
+        jRadioButton77.setActionCommand("2");
 
         buttonGroup26.add(jRadioButton78);
         jRadioButton78.setText("Gyakori");
+        jRadioButton78.setActionCommand("1");
 
         jLabel36.setText("Beszéd kerülése");
 
         buttonGroup27.add(jRadioButton79);
+        jRadioButton79.setSelected(true);
         jRadioButton79.setText("Nem jellemző");
+        jRadioButton79.setActionCommand("3");
 
         buttonGroup27.add(jRadioButton80);
         jRadioButton80.setText("Ritka");
+        jRadioButton80.setActionCommand("2");
 
         buttonGroup27.add(jRadioButton81);
         jRadioButton81.setText("Gyakori");
+        jRadioButton81.setActionCommand("1");
 
         jLabel37.setText("Hajlam megfázásra");
 
         buttonGroup28.add(jRadioButton82);
+        jRadioButton82.setSelected(true);
         jRadioButton82.setText("Nem jellemző");
+        jRadioButton82.setActionCommand("3");
 
         buttonGroup28.add(jRadioButton83);
         jRadioButton83.setText("Ritka");
+        jRadioButton83.setActionCommand("2");
 
         buttonGroup28.add(jRadioButton84);
         jRadioButton84.setText("Gyakori");
+        jRadioButton84.setActionCommand("1");
 
         jLabel38.setText("Szél-kerülés");
 
         buttonGroup29.add(jRadioButton85);
+        jRadioButton85.setSelected(true);
         jRadioButton85.setText("Nem jellemző");
+        jRadioButton85.setActionCommand("3");
 
         buttonGroup29.add(jRadioButton86);
         jRadioButton86.setText("Ritka");
+        jRadioButton86.setActionCommand("2");
 
         buttonGroup29.add(jRadioButton87);
         jRadioButton87.setText("Gyakori");
+        jRadioButton87.setActionCommand("1");
 
         jLabel39.setText("Száraz köhögés");
 
         buttonGroup30.add(jRadioButton88);
+        jRadioButton88.setSelected(true);
         jRadioButton88.setText("Nem jellemző");
+        jRadioButton88.setActionCommand("3");
 
         buttonGroup30.add(jRadioButton89);
         jRadioButton89.setText("Ritka");
+        jRadioButton89.setActionCommand("2");
 
         buttonGroup30.add(jRadioButton90);
         jRadioButton90.setText("Gyakori");
+        jRadioButton90.setActionCommand("1");
 
         jLabel40.setText("Asztmás köhögés");
 
         buttonGroup31.add(jRadioButton91);
+        jRadioButton91.setSelected(true);
         jRadioButton91.setText("Nem jellemző");
+        jRadioButton91.setActionCommand("3");
 
         buttonGroup31.add(jRadioButton92);
         jRadioButton92.setText("Ritka");
+        jRadioButton92.setActionCommand("2");
 
         buttonGroup31.add(jRadioButton93);
         jRadioButton93.setText("Gyakori");
+        jRadioButton93.setActionCommand("1");
 
         jLabel41.setText("Köpet");
 
         buttonGroup32.add(jRadioButton94);
+        jRadioButton94.setSelected(true);
         jRadioButton94.setText("Nem jellemző");
+        jRadioButton94.setActionCommand("3");
 
         buttonGroup32.add(jRadioButton95);
         jRadioButton95.setText("Ritka");
+        jRadioButton95.setActionCommand("2");
 
         buttonGroup32.add(jRadioButton96);
         jRadioButton96.setText("Gyakori");
+        jRadioButton96.setActionCommand("1");
 
         jLabel42.setText("Mellkasi teltségérzet");
 
         buttonGroup33.add(jRadioButton97);
+        jRadioButton97.setSelected(true);
         jRadioButton97.setText("Nem jellemző");
+        jRadioButton97.setActionCommand("3");
 
         buttonGroup33.add(jRadioButton98);
         jRadioButton98.setText("Ritka");
+        jRadioButton98.setActionCommand("2");
 
         buttonGroup33.add(jRadioButton99);
         jRadioButton99.setText("Gyakori");
+        jRadioButton99.setActionCommand("1");
 
         jLabel43.setText("Mellkasi fájdalom");
 
         buttonGroup34.add(jRadioButton100);
+        jRadioButton100.setSelected(true);
         jRadioButton100.setText("Nem jellemző");
+        jRadioButton100.setActionCommand("3");
 
         buttonGroup34.add(jRadioButton101);
         jRadioButton101.setText("Ritka");
+        jRadioButton101.setActionCommand("2");
 
         buttonGroup34.add(jRadioButton102);
         jRadioButton102.setText("Gyakori");
+        jRadioButton102.setActionCommand("1");
 
         jLabel44.setText("Mellfeszülés");
 
         buttonGroup35.add(jRadioButton103);
+        jRadioButton103.setSelected(true);
         jRadioButton103.setText("Nem jellemző");
+        jRadioButton103.setActionCommand("3");
 
         buttonGroup35.add(jRadioButton104);
         jRadioButton104.setText("Ritka");
+        jRadioButton104.setActionCommand("2");
 
         buttonGroup35.add(jRadioButton105);
         jRadioButton105.setText("Gyakori");
+        jRadioButton105.setActionCommand("1");
 
         jLabel45.setText("Hideg kezek");
 
         buttonGroup36.add(jRadioButton106);
+        jRadioButton106.setSelected(true);
         jRadioButton106.setText("Nem jellemző");
+        jRadioButton106.setActionCommand("3");
 
         buttonGroup36.add(jRadioButton107);
         jRadioButton107.setText("Ritka");
+        jRadioButton107.setActionCommand("2");
 
         buttonGroup36.add(jRadioButton108);
         jRadioButton108.setText("Gyakori");
+        jRadioButton108.setActionCommand("1");
 
         jLabel1.setText("Színe");
 
@@ -1083,224 +1234,303 @@ public class Questions extends javax.swing.JFrame {
         jLabel47.setText("Rossz étvágy");
 
         buttonGroup37.add(jRadioButton109);
+        jRadioButton109.setSelected(true);
         jRadioButton109.setText("Nem jellemző");
+        jRadioButton109.setActionCommand("3");
 
         buttonGroup37.add(jRadioButton110);
         jRadioButton110.setText("Ritka");
+        jRadioButton110.setActionCommand("2");
 
         buttonGroup37.add(jRadioButton111);
         jRadioButton111.setText("Gyakori");
+        jRadioButton111.setActionCommand("1");
 
         jLabel48.setText("Ízérzés zavara");
 
         buttonGroup38.add(jRadioButton112);
+        jRadioButton112.setSelected(true);
         jRadioButton112.setText("Nem jellemző");
+        jRadioButton112.setActionCommand("3");
 
         buttonGroup38.add(jRadioButton113);
         jRadioButton113.setText("Ritka");
+        jRadioButton113.setActionCommand("2");
 
         buttonGroup38.add(jRadioButton114);
         jRadioButton114.setText("Gyakori");
+        jRadioButton114.setActionCommand("1");
 
         jLabel49.setText("Hasi feszülés étkezés után");
 
         buttonGroup39.add(jRadioButton115);
+        jRadioButton115.setSelected(true);
         jRadioButton115.setText("Nem jellemző");
+        jRadioButton115.setActionCommand("3");
 
         buttonGroup39.add(jRadioButton116);
         jRadioButton116.setText("Ritka");
+        jRadioButton116.setActionCommand("2");
 
         buttonGroup39.add(jRadioButton117);
         jRadioButton117.setText("Gyakori");
+        jRadioButton117.setActionCommand("1");
 
         jLabel50.setText("Puffadás");
 
         buttonGroup40.add(jRadioButton118);
+        jRadioButton118.setSelected(true);
         jRadioButton118.setText("Nem jellemző");
+        jRadioButton118.setActionCommand("3");
 
         buttonGroup40.add(jRadioButton119);
         jRadioButton119.setText("Ritka");
+        jRadioButton119.setActionCommand("2");
 
         buttonGroup40.add(jRadioButton120);
         jRadioButton120.setText("Gyakori");
+        jRadioButton120.setActionCommand("1");
 
         jLabel51.setText("Fáradékonyság");
 
         buttonGroup41.add(jRadioButton121);
+        jRadioButton121.setSelected(true);
         jRadioButton121.setText("Nem jellemző");
+        jRadioButton121.setActionCommand("3");
 
         buttonGroup41.add(jRadioButton122);
         jRadioButton122.setText("Ritka");
+        jRadioButton122.setActionCommand("2");
 
         buttonGroup41.add(jRadioButton123);
         jRadioButton123.setText("Gyakori");
+        jRadioButton123.setActionCommand("1");
 
         jLabel52.setText("Hajlam fogyásra/hízásra");
 
         buttonGroup42.add(jRadioButton124);
+        jRadioButton124.setSelected(true);
         jRadioButton124.setText("Nem jellemző");
+        jRadioButton124.setActionCommand("3");
 
         buttonGroup42.add(jRadioButton125);
         jRadioButton125.setText("Ritka");
+        jRadioButton125.setActionCommand("2");
 
         buttonGroup42.add(jRadioButton126);
         jRadioButton126.setText("Gyakori");
+        jRadioButton126.setActionCommand("1");
 
         jLabel53.setText("Gyomortáji égő érzés + nem kíván enni");
 
         buttonGroup43.add(jRadioButton127);
+        jRadioButton127.setSelected(true);
         jRadioButton127.setText("Nem jellemző");
+        jRadioButton127.setActionCommand("3");
 
         buttonGroup43.add(jRadioButton128);
         jRadioButton128.setText("Ritka");
+        jRadioButton128.setActionCommand("2");
 
         buttonGroup43.add(jRadioButton129);
         jRadioButton129.setText("Gyakori");
+        jRadioButton129.setActionCommand("1");
 
         jLabel54.setText("Gyomortáji égő érzés + szomjúság hideg italra");
 
         buttonGroup44.add(jRadioButton130);
+        jRadioButton130.setSelected(true);
         jRadioButton130.setText("Nem jellemző");
+        jRadioButton130.setActionCommand("3");
 
         buttonGroup44.add(jRadioButton131);
         jRadioButton131.setText("Ritka");
+        jRadioButton131.setActionCommand("2");
 
         buttonGroup44.add(jRadioButton132);
         jRadioButton132.setText("Gyakori");
+        jRadioButton132.setActionCommand("1");
 
         jLabel55.setText("Állandó éhség");
 
         buttonGroup45.add(jRadioButton133);
+        jRadioButton133.setSelected(true);
         jRadioButton133.setText("Nem jellemző");
+        jRadioButton133.setActionCommand("3");
 
         buttonGroup45.add(jRadioButton134);
         jRadioButton134.setText("Ritka");
+        jRadioButton134.setActionCommand("2");
 
         buttonGroup45.add(jRadioButton135);
         jRadioButton135.setText("Gyakori");
+        jRadioButton135.setActionCommand("1");
 
         jLabel56.setText("Hányinger, hányás");
 
         buttonGroup46.add(jRadioButton136);
+        jRadioButton136.setSelected(true);
         jRadioButton136.setText("Nem jellemző");
+        jRadioButton136.setActionCommand("3");
 
         buttonGroup46.add(jRadioButton137);
         jRadioButton137.setText("Ritka");
+        jRadioButton137.setActionCommand("2");
 
         buttonGroup46.add(jRadioButton138);
         jRadioButton138.setText("Gyakori");
+        jRadioButton138.setActionCommand("1");
 
         jLabel57.setText("Böfögés, csukás");
 
         buttonGroup47.add(jRadioButton139);
+        jRadioButton139.setSelected(true);
         jRadioButton139.setText("Nem jellemző");
+        jRadioButton139.setActionCommand("3");
 
         buttonGroup47.add(jRadioButton140);
         jRadioButton140.setText("Ritka");
+        jRadioButton140.setActionCommand("2");
 
         buttonGroup47.add(jRadioButton141);
         jRadioButton141.setText("Gyakori");
+        jRadioButton141.setActionCommand("1");
 
         jLabel58.setText("Székrekedés");
 
         buttonGroup48.add(jRadioButton142);
+        jRadioButton142.setSelected(true);
         jRadioButton142.setText("Nem jellemző");
+        jRadioButton142.setActionCommand("3");
 
         buttonGroup48.add(jRadioButton143);
         jRadioButton143.setText("Ritka");
+        jRadioButton143.setActionCommand("2");
 
         buttonGroup48.add(jRadioButton144);
         jRadioButton144.setText("Gyakori");
+        jRadioButton144.setActionCommand("1");
 
         jLabel59.setText("Hasmenés");
 
         buttonGroup49.add(jRadioButton145);
+        jRadioButton145.setSelected(true);
         jRadioButton145.setText("Nem jellemző");
+        jRadioButton145.setActionCommand("3");
 
         buttonGroup49.add(jRadioButton146);
         jRadioButton146.setText("Ritka");
+        jRadioButton146.setActionCommand("2");
 
         buttonGroup49.add(jRadioButton147);
         jRadioButton147.setText("Gyakori");
+        jRadioButton147.setActionCommand("1");
 
         jLabel60.setText("Széklet");
 
         jLabel61.setText("Égő végbélnyílás");
 
         buttonGroup50.add(jRadioButton151);
+        jRadioButton151.setSelected(true);
         jRadioButton151.setText("Nem jellemző");
+        jRadioButton151.setActionCommand("3");
 
         buttonGroup50.add(jRadioButton152);
         jRadioButton152.setText("Ritka");
+        jRadioButton152.setActionCommand("2");
 
         buttonGroup50.add(jRadioButton153);
         jRadioButton153.setText("Gyakori");
+        jRadioButton153.setActionCommand("1");
 
         jLabel62.setText("Görcsög hasi fájdalom");
 
         buttonGroup51.add(jRadioButton154);
+        jRadioButton154.setSelected(true);
         jRadioButton154.setText("Nem jellemző");
+        jRadioButton154.setActionCommand("3");
 
         buttonGroup51.add(jRadioButton155);
         jRadioButton155.setText("Ritka");
+        jRadioButton155.setActionCommand("2");
 
         buttonGroup51.add(jRadioButton156);
         jRadioButton156.setText("Gyakori");
+        jRadioButton156.setActionCommand("1");
 
         jLabel63.setText("Hidegre romló gyomortáji teltség/fájdalom");
 
         buttonGroup52.add(jRadioButton157);
+        jRadioButton157.setSelected(true);
         jRadioButton157.setText("Nem jellemző");
 
         buttonGroup52.add(jRadioButton158);
         jRadioButton158.setText("Ritka");
+        jRadioButton158.setActionCommand("2");
 
         buttonGroup52.add(jRadioButton159);
         jRadioButton159.setText("Gyakori");
+        jRadioButton159.setActionCommand("1");
 
         jLabel64.setText("Aranyeresség");
 
         buttonGroup53.add(jRadioButton160);
+        jRadioButton160.setSelected(true);
         jRadioButton160.setText("Nem jellemző");
+        jRadioButton160.setActionCommand("3");
 
         buttonGroup53.add(jRadioButton161);
         jRadioButton161.setText("Ritka");
+        jRadioButton161.setActionCommand("2");
 
         buttonGroup53.add(jRadioButton162);
         jRadioButton162.setText("Gyakori");
+        jRadioButton162.setActionCommand("1");
 
         jLabel65.setText("Hideg hasalj");
 
         buttonGroup54.add(jRadioButton163);
+        jRadioButton163.setSelected(true);
         jRadioButton163.setText("Nem jellemző");
+        jRadioButton163.setActionCommand("3");
 
         buttonGroup54.add(jRadioButton164);
         jRadioButton164.setText("Ritka");
+        jRadioButton164.setActionCommand("2");
 
         buttonGroup54.add(jRadioButton165);
         jRadioButton165.setText("Gyakori");
+        jRadioButton165.setActionCommand("1");
 
         jLabel66.setText("Hideg orrcsúcs");
 
         buttonGroup55.add(jRadioButton166);
+        jRadioButton166.setSelected(true);
         jRadioButton166.setText("Nem jellemző");
+        jRadioButton166.setActionCommand("3");
 
         buttonGroup55.add(jRadioButton167);
         jRadioButton167.setText("Ritka");
+        jRadioButton167.setActionCommand("2");
 
         buttonGroup55.add(jRadioButton168);
         jRadioButton168.setText("Gyakori");
+        jRadioButton168.setActionCommand("1");
 
         jLabel67.setText("Aggodalmaskodás");
 
         buttonGroup56.add(jRadioButton169);
+        jRadioButton169.setSelected(true);
         jRadioButton169.setText("Nem jellemző");
+        jRadioButton169.setActionCommand("3");
 
         buttonGroup56.add(jRadioButton170);
         jRadioButton170.setText("Ritka");
+        jRadioButton170.setActionCommand("2");
 
         buttonGroup56.add(jRadioButton171);
         jRadioButton171.setText("Gyakori");
+        jRadioButton171.setActionCommand("1");
 
         jLabel70.setText("Gyakoriság");
 
@@ -1314,167 +1544,227 @@ public class Questions extends javax.swing.JFrame {
         jLabel69.setText("Izomgörcsök");
 
         buttonGroup57.add(jRadioButton172);
+        jRadioButton172.setSelected(true);
         jRadioButton172.setText("Nem jellemző");
+        jRadioButton172.setActionCommand("3");
 
         buttonGroup57.add(jRadioButton173);
         jRadioButton173.setText("Ritka");
+        jRadioButton173.setActionCommand("2");
 
         buttonGroup57.add(jRadioButton174);
         jRadioButton174.setText("Gyakori");
+        jRadioButton174.setActionCommand("1");
 
         jLabel79.setText("Izomrángás");
 
         buttonGroup58.add(jRadioButton193);
+        jRadioButton193.setSelected(true);
         jRadioButton193.setText("Nem jellemző");
+        jRadioButton193.setActionCommand("3");
 
         buttonGroup58.add(jRadioButton194);
         jRadioButton194.setText("Ritka");
+        jRadioButton194.setActionCommand("2");
 
         buttonGroup58.add(jRadioButton195);
         jRadioButton195.setText("Gyakori");
+        jRadioButton195.setActionCommand("1");
 
         jLabel80.setText("Ingerlékenység");
 
         buttonGroup59.add(jRadioButton196);
+        jRadioButton196.setSelected(true);
         jRadioButton196.setText("Nem jellemző");
+        jRadioButton196.setActionCommand("3");
 
         buttonGroup59.add(jRadioButton197);
         jRadioButton197.setText("Ritka");
+        jRadioButton197.setActionCommand("2");
 
         buttonGroup59.add(jRadioButton198);
         jRadioButton198.setText("Gyakori");
+        jRadioButton198.setActionCommand("1");
 
         jLabel81.setText("Lehangoltág");
 
         buttonGroup60.add(jRadioButton199);
+        jRadioButton199.setSelected(true);
         jRadioButton199.setText("Nem jellemző");
+        jRadioButton199.setActionCommand("3");
 
         buttonGroup60.add(jRadioButton200);
         jRadioButton200.setText("Ritka");
+        jRadioButton200.setActionCommand("2");
 
         buttonGroup60.add(jRadioButton201);
         jRadioButton201.setText("Gyakori");
+        jRadioButton201.setActionCommand("1");
 
         jLabel82.setText("Hullámzó hangulat");
 
         buttonGroup61.add(jRadioButton202);
+        jRadioButton202.setSelected(true);
         jRadioButton202.setText("Nem jellemző");
+        jRadioButton202.setActionCommand("3");
 
         buttonGroup61.add(jRadioButton203);
         jRadioButton203.setText("Ritka");
+        jRadioButton203.setActionCommand("2");
 
         buttonGroup61.add(jRadioButton204);
         jRadioButton204.setText("Gyakori");
+        jRadioButton204.setActionCommand("1");
 
         jLabel83.setText("Céltalanság érzete");
 
         buttonGroup62.add(jRadioButton205);
+        jRadioButton205.setSelected(true);
         jRadioButton205.setText("Nem jellemző");
+        jRadioButton205.setActionCommand("3");
 
         buttonGroup62.add(jRadioButton206);
         jRadioButton206.setText("Ritka");
+        jRadioButton206.setActionCommand("2");
 
         buttonGroup62.add(jRadioButton207);
         jRadioButton207.setText("Gyakori");
+        jRadioButton207.setActionCommand("1");
 
         jLabel84.setText("Dühkitörések");
 
         buttonGroup63.add(jRadioButton208);
+        jRadioButton208.setSelected(true);
         jRadioButton208.setText("Nem jellemző");
+        jRadioButton208.setActionCommand("3");
 
         buttonGroup63.add(jRadioButton209);
         jRadioButton209.setText("Ritka");
+        jRadioButton209.setActionCommand("2");
 
         buttonGroup63.add(jRadioButton210);
         jRadioButton210.setText("Gyakori");
+        jRadioButton210.setActionCommand("1");
 
         jLabel85.setText("Fogcsikorgatás");
 
         buttonGroup64.add(jRadioButton211);
+        jRadioButton211.setSelected(true);
         jRadioButton211.setText("Nem jellemző");
+        jRadioButton211.setActionCommand("3");
 
         buttonGroup64.add(jRadioButton212);
         jRadioButton212.setText("Ritka");
+        jRadioButton212.setActionCommand("2");
 
         buttonGroup64.add(jRadioButton213);
         jRadioButton213.setText("Gyakori");
+        jRadioButton213.setActionCommand("1");
 
         jLabel86.setText("Sírva ébredés");
 
         buttonGroup66.add(jRadioButton214);
         jRadioButton214.setText("Ritka");
+        jRadioButton214.setActionCommand("2");
 
         buttonGroup66.add(jRadioButton215);
+        jRadioButton215.setSelected(true);
         jRadioButton215.setText("Nem jellemző");
+        jRadioButton215.setActionCommand("3");
 
         jLabel87.setText("Bordaív alatt/mellkasi feszülés");
 
         buttonGroup65.add(jRadioButton216);
         jRadioButton216.setText("Gyakori");
+        jRadioButton216.setActionCommand("1");
 
         buttonGroup65.add(jRadioButton217);
         jRadioButton217.setText("Ritka");
+        jRadioButton217.setActionCommand("2");
 
         buttonGroup65.add(jRadioButton218);
+        jRadioButton218.setSelected(true);
         jRadioButton218.setText("Nem jellemző");
+        jRadioButton218.setActionCommand("3");
 
         buttonGroup67.add(jRadioButton219);
         jRadioButton219.setText("Gyakori");
+        jRadioButton219.setActionCommand("1");
 
         buttonGroup67.add(jRadioButton220);
         jRadioButton220.setText("Ritka");
+        jRadioButton220.setActionCommand("2");
 
         buttonGroup67.add(jRadioButton221);
+        jRadioButton221.setSelected(true);
         jRadioButton221.setText("Nem jellemző");
+        jRadioButton221.setActionCommand("3");
 
         jLabel88.setText("Bordatáji égő érzés");
 
         buttonGroup66.add(jRadioButton222);
         jRadioButton222.setText("Gyakori");
+        jRadioButton222.setActionCommand("1");
 
         jLabel89.setText("Keserű szájíz");
 
         buttonGroup68.add(jRadioButton223);
         jRadioButton223.setText("Gyakori");
+        jRadioButton223.setActionCommand("1");
 
         buttonGroup68.add(jRadioButton224);
         jRadioButton224.setText("Ritka");
+        jRadioButton224.setActionCommand("2");
 
         buttonGroup68.add(jRadioButton225);
+        jRadioButton225.setSelected(true);
         jRadioButton225.setText("Nem jellemző");
+        jRadioButton225.setActionCommand("3");
 
         jLabel90.setText("Sóhajtozás");
 
         buttonGroup69.add(jRadioButton226);
         jRadioButton226.setText("Gyakori");
+        jRadioButton226.setActionCommand("1");
 
         buttonGroup69.add(jRadioButton227);
         jRadioButton227.setText("Ritka");
+        jRadioButton227.setActionCommand("2");
 
         buttonGroup69.add(jRadioButton228);
+        jRadioButton228.setSelected(true);
         jRadioButton228.setText("Nem jellemző");
+        jRadioButton228.setActionCommand("3");
 
         buttonGroup71.add(jRadioButton229);
+        jRadioButton229.setSelected(true);
         jRadioButton229.setText("Nem jellemző");
+        jRadioButton229.setActionCommand("3");
 
         jLabel91.setText("Duzzadt, égő, viszkető herék/nagyajkak");
 
         buttonGroup70.add(jRadioButton230);
         jRadioButton230.setText("Gyakori");
+        jRadioButton230.setActionCommand("1");
 
         buttonGroup70.add(jRadioButton231);
         jRadioButton231.setText("Ritka");
+        jRadioButton231.setActionCommand("2");
 
         buttonGroup70.add(jRadioButton232);
+        jRadioButton232.setSelected(true);
         jRadioButton232.setText("Nem jellemző");
+        jRadioButton232.setActionCommand("3");
 
         jLabel92.setText("Gombócérzés a torokban");
 
         buttonGroup71.add(jRadioButton233);
         jRadioButton233.setText("Gyakori");
+        jRadioButton233.setActionCommand("1");
 
         buttonGroup71.add(jRadioButton234);
         jRadioButton234.setText("Ritka");
+        jRadioButton234.setActionCommand("2");
 
         jLabel73.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel73.setText("Alhas");
@@ -1482,24 +1772,32 @@ public class Questions extends javax.swing.JFrame {
         jLabel93.setText("Gyenge-érzékeny derék");
 
         buttonGroup72.add(jRadioButton235);
+        jRadioButton235.setSelected(true);
         jRadioButton235.setText("Nem jellemző");
+        jRadioButton235.setActionCommand("3");
 
         buttonGroup72.add(jRadioButton236);
         jRadioButton236.setText("Ritka");
+        jRadioButton236.setActionCommand("2");
 
         buttonGroup72.add(jRadioButton237);
         jRadioButton237.setText("Gyakori");
+        jRadioButton237.setActionCommand("1");
 
         jLabel94.setText("Gyenge-érzékeny térd");
 
         buttonGroup73.add(jRadioButton238);
+        jRadioButton238.setSelected(true);
         jRadioButton238.setText("Nem jellemző");
+        jRadioButton238.setActionCommand("3");
 
         buttonGroup73.add(jRadioButton239);
         jRadioButton239.setText("Ritka");
+        jRadioButton239.setActionCommand("2");
 
         buttonGroup73.add(jRadioButton240);
         jRadioButton240.setText("Gyakori");
+        jRadioButton240.setActionCommand("1");
 
         jLabel95.setText("Napi folyadékbevitel");
 
@@ -1507,273 +1805,369 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel74.setText("Mennyiség:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hideg", "Langyos", "Meleg" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "hideg", "langyos", "meleg" }));
 
         jLabel75.setText("liter");
 
         jLabel97.setText("Éjszakai vizelés");
 
         buttonGroup74.add(jRadioButton241);
+        jRadioButton241.setSelected(true);
         jRadioButton241.setText("Nem jellemző");
+        jRadioButton241.setActionCommand("3");
 
         buttonGroup74.add(jRadioButton242);
         jRadioButton242.setText("Ritka");
+        jRadioButton242.setActionCommand("2");
 
         buttonGroup74.add(jRadioButton243);
         jRadioButton243.setText("Gyakori");
+        jRadioButton243.setActionCommand("1");
 
         jLabel76.setText("Hányszor");
 
         buttonGroup75.add(jRadioButton244);
+        jRadioButton244.setSelected(true);
         jRadioButton244.setText("Nem jellemző");
+        jRadioButton244.setActionCommand("3");
 
         buttonGroup75.add(jRadioButton245);
         jRadioButton245.setText("Ritka");
+        jRadioButton245.setActionCommand("2");
 
         buttonGroup75.add(jRadioButton246);
         jRadioButton246.setText("Gyakori");
+        jRadioButton246.setActionCommand("1");
 
         jLabel98.setText("Gyenge vizeletsugár");
 
         buttonGroup76.add(jRadioButton247);
+        jRadioButton247.setSelected(true);
         jRadioButton247.setText("Nem jellemző");
+        jRadioButton247.setActionCommand("3");
 
         buttonGroup76.add(jRadioButton248);
         jRadioButton248.setText("Ritka");
+        jRadioButton248.setActionCommand("2");
 
         buttonGroup76.add(jRadioButton249);
         jRadioButton249.setText("Gyakori");
+        jRadioButton249.setActionCommand("1");
 
         jLabel99.setText("Vizeletcsepegés");
 
         buttonGroup77.add(jRadioButton250);
+        jRadioButton250.setSelected(true);
         jRadioButton250.setText("Nem jellemző");
+        jRadioButton250.setActionCommand("3");
 
         buttonGroup77.add(jRadioButton251);
         jRadioButton251.setText("Ritka");
+        jRadioButton251.setActionCommand("2");
 
         buttonGroup77.add(jRadioButton252);
         jRadioButton252.setText("Gyakori");
+        jRadioButton252.setActionCommand("1");
 
         jLabel100.setText("Éjszakai ágybavizelés");
 
         jLabel101.setText("Megtorpanó vizelés");
 
         buttonGroup78.add(jRadioButton253);
+        jRadioButton253.setSelected(true);
         jRadioButton253.setText("Nem jellemző");
+        jRadioButton253.setActionCommand("3");
 
         buttonGroup78.add(jRadioButton254);
         jRadioButton254.setText("Ritka");
+        jRadioButton254.setActionCommand("2");
 
         buttonGroup78.add(jRadioButton255);
         jRadioButton255.setText("Gyakori");
+        jRadioButton255.setActionCommand("1");
 
         jLabel102.setText("Vizelés után nincs teljes kiürültség-érzet");
 
         buttonGroup79.add(jRadioButton256);
+        jRadioButton256.setSelected(true);
         jRadioButton256.setText("Nem jellemző");
+        jRadioButton256.setActionCommand("3");
 
         buttonGroup79.add(jRadioButton257);
         jRadioButton257.setText("Ritka");
+        jRadioButton257.setActionCommand("2");
 
         buttonGroup79.add(jRadioButton258);
         jRadioButton258.setText("Gyakori");
+        jRadioButton258.setActionCommand("1");
 
         jLabel103.setText("Gyakori, sürgető vizelés");
 
         buttonGroup80.add(jRadioButton259);
+        jRadioButton259.setSelected(true);
         jRadioButton259.setText("Nem jellemző");
+        jRadioButton259.setActionCommand("3");
 
         buttonGroup80.add(jRadioButton260);
         jRadioButton260.setText("Ritka");
+        jRadioButton260.setActionCommand("2");
 
         buttonGroup80.add(jRadioButton261);
         jRadioButton261.setText("Gyakori");
+        jRadioButton261.setActionCommand("1");
 
         jLabel104.setText("Fájdalmas vizelés");
 
         buttonGroup81.add(jRadioButton262);
+        jRadioButton262.setSelected(true);
         jRadioButton262.setText("Nem jellemző");
+        jRadioButton262.setActionCommand("3");
 
         buttonGroup81.add(jRadioButton263);
         jRadioButton263.setText("Ritka");
+        jRadioButton263.setActionCommand("2");
 
         buttonGroup81.add(jRadioButton264);
         jRadioButton264.setText("Gyakori");
+        jRadioButton264.setActionCommand("1");
 
         jLabel105.setText("Zavaros vizelet");
 
         buttonGroup82.add(jRadioButton265);
+        jRadioButton265.setSelected(true);
         jRadioButton265.setText("Nem jellemző");
+        jRadioButton265.setActionCommand("3");
 
         buttonGroup82.add(jRadioButton266);
         jRadioButton266.setText("Ritka");
+        jRadioButton266.setActionCommand("2");
 
         buttonGroup82.add(jRadioButton267);
         jRadioButton267.setText("Gyakori");
+        jRadioButton267.setActionCommand("1");
 
         jLabel106.setText("Véres vizelet");
 
         buttonGroup83.add(jRadioButton268);
+        jRadioButton268.setSelected(true);
         jRadioButton268.setText("Nem jellemző");
+        jRadioButton268.setActionCommand("3");
 
         buttonGroup83.add(jRadioButton269);
         jRadioButton269.setText("Ritka");
+        jRadioButton269.setActionCommand("2");
 
         buttonGroup83.add(jRadioButton270);
         jRadioButton270.setText("Gyakori");
+        jRadioButton270.setActionCommand("1");
 
         jLabel107.setText("Alhasi teltség, fájdalom");
 
         buttonGroup84.add(jRadioButton271);
+        jRadioButton271.setSelected(true);
         jRadioButton271.setText("Nem jellemző");
+        jRadioButton271.setActionCommand("3");
 
         buttonGroup84.add(jRadioButton272);
         jRadioButton272.setText("Ritka");
+        jRadioButton272.setActionCommand("2");
 
         buttonGroup84.add(jRadioButton273);
         jRadioButton273.setText("Gyakori");
+        jRadioButton273.setActionCommand("1");
 
         jLabel108.setText("Prosztata-gondok");
 
         buttonGroup85.add(jRadioButton274);
+        jRadioButton274.setSelected(true);
         jRadioButton274.setText("Nem jellemző");
+        jRadioButton274.setActionCommand("3");
 
         buttonGroup85.add(jRadioButton275);
         jRadioButton275.setText("Ritka");
+        jRadioButton275.setActionCommand("2");
 
         buttonGroup85.add(jRadioButton276);
         jRadioButton276.setText("Gyakori");
+        jRadioButton276.setActionCommand("1");
 
         jLabel109.setText("Éjszakai magömlés");
 
         buttonGroup86.add(jRadioButton277);
+        jRadioButton277.setSelected(true);
         jRadioButton277.setText("Nem jellemző");
+        jRadioButton277.setActionCommand("3");
 
         buttonGroup86.add(jRadioButton278);
         jRadioButton278.setText("Ritka");
+        jRadioButton278.setActionCommand("2");
 
         buttonGroup86.add(jRadioButton279);
         jRadioButton279.setText("Gyakori");
+        jRadioButton279.setActionCommand("1");
 
         jLabel110.setText("Korai magömlés");
 
         buttonGroup87.add(jRadioButton280);
+        jRadioButton280.setSelected(true);
         jRadioButton280.setText("Nem jellemző");
+        jRadioButton280.setActionCommand("3");
 
         buttonGroup87.add(jRadioButton281);
         jRadioButton281.setText("Ritka");
+        jRadioButton281.setActionCommand("2");
 
         buttonGroup87.add(jRadioButton282);
         jRadioButton282.setText("Gyakori");
+        jRadioButton282.setActionCommand("1");
 
         jLabel111.setText("Bokatáji vizenyő");
 
         buttonGroup88.add(jRadioButton283);
+        jRadioButton283.setSelected(true);
         jRadioButton283.setText("Nem jellemző");
+        jRadioButton283.setActionCommand("3");
 
         buttonGroup88.add(jRadioButton284);
         jRadioButton284.setText("Ritka");
+        jRadioButton284.setActionCommand("2");
 
         buttonGroup88.add(jRadioButton285);
         jRadioButton285.setText("Gyakori");
+        jRadioButton285.setActionCommand("1");
 
         jLabel112.setText("Impotencia");
 
         buttonGroup89.add(jRadioButton286);
+        jRadioButton286.setSelected(true);
         jRadioButton286.setText("Nem jellemző");
+        jRadioButton286.setActionCommand("3");
 
         buttonGroup89.add(jRadioButton287);
         jRadioButton287.setText("Ritka");
+        jRadioButton287.setActionCommand("2");
 
         buttonGroup89.add(jRadioButton288);
         jRadioButton288.setText("Gyakori");
+        jRadioButton288.setActionCommand("1");
 
         jLabel113.setText("Frigiditás");
 
         buttonGroup90.add(jRadioButton289);
+        jRadioButton289.setSelected(true);
         jRadioButton289.setText("Nem jellemző");
+        jRadioButton289.setActionCommand("3");
 
         buttonGroup90.add(jRadioButton290);
         jRadioButton290.setText("Ritka");
+        jRadioButton290.setActionCommand("2");
 
         buttonGroup90.add(jRadioButton291);
         jRadioButton291.setText("Gyakori");
+        jRadioButton291.setActionCommand("1");
 
         jLabel114.setText("Meddőség");
 
         buttonGroup91.add(jRadioButton292);
+        jRadioButton292.setSelected(true);
         jRadioButton292.setText("Nem jellemző");
+        jRadioButton292.setActionCommand("3");
 
         buttonGroup91.add(jRadioButton293);
         jRadioButton293.setText("Ritka");
+        jRadioButton293.setActionCommand("2");
 
         buttonGroup91.add(jRadioButton294);
         jRadioButton294.setText("Gyakori");
+        jRadioButton294.setActionCommand("1");
 
         jLabel115.setText("Csontritkulás");
 
         buttonGroup92.add(jRadioButton295);
+        jRadioButton295.setSelected(true);
         jRadioButton295.setText("Nem jellemző");
+        jRadioButton295.setActionCommand("3");
 
         buttonGroup92.add(jRadioButton296);
         jRadioButton296.setText("Ritka");
+        jRadioButton296.setActionCommand("2");
 
         buttonGroup92.add(jRadioButton297);
         jRadioButton297.setText("Gyakori");
+        jRadioButton297.setActionCommand("1");
 
         jLabel116.setText("Hideg-fázós derék");
 
         buttonGroup93.add(jRadioButton298);
+        jRadioButton298.setSelected(true);
         jRadioButton298.setText("Nem jellemző");
+        jRadioButton298.setActionCommand("3");
 
         buttonGroup93.add(jRadioButton299);
         jRadioButton299.setText("Ritka");
+        jRadioButton299.setActionCommand("2");
 
         buttonGroup93.add(jRadioButton300);
         jRadioButton300.setText("Gyakori");
+        jRadioButton300.setActionCommand("1");
 
         jLabel117.setText("Hideg-fázós térdek");
 
         buttonGroup94.add(jRadioButton301);
+        jRadioButton301.setSelected(true);
         jRadioButton301.setText("Nem jellemző");
+        jRadioButton301.setActionCommand("3");
 
         buttonGroup94.add(jRadioButton302);
         jRadioButton302.setText("Ritka");
+        jRadioButton302.setActionCommand("2");
 
         buttonGroup94.add(jRadioButton303);
         jRadioButton303.setText("Gyakori");
+        jRadioButton303.setActionCommand("1");
 
         jLabel118.setText("Hideg-fázós lábak");
 
         buttonGroup95.add(jRadioButton304);
+        jRadioButton304.setSelected(true);
         jRadioButton304.setText("Nem jellemző");
+        jRadioButton304.setActionCommand("3");
 
         buttonGroup95.add(jRadioButton305);
         jRadioButton305.setText("Ritka");
+        jRadioButton305.setActionCommand("2");
 
         buttonGroup95.add(jRadioButton306);
         jRadioButton306.setText("Gyakori");
+        jRadioButton306.setActionCommand("1");
 
         jLabel119.setText("Éjszakai izzadás");
 
         buttonGroup96.add(jRadioButton307);
+        jRadioButton307.setSelected(true);
         jRadioButton307.setText("Nem jellemző");
+        jRadioButton307.setActionCommand("3");
 
         buttonGroup96.add(jRadioButton308);
         jRadioButton308.setText("Ritka");
+        jRadioButton308.setActionCommand("2");
 
         buttonGroup96.add(jRadioButton309);
         jRadioButton309.setText("Gyakori");
+        jRadioButton309.setActionCommand("1");
 
         buttonGroup97.add(jRadioButton310);
         jRadioButton310.setText("Gyakori");
+        jRadioButton310.setActionCommand("1");
 
         buttonGroup97.add(jRadioButton311);
         jRadioButton311.setText("Ritka");
+        jRadioButton311.setActionCommand("2");
 
         buttonGroup97.add(jRadioButton312);
+        jRadioButton312.setSelected(true);
         jRadioButton312.setText("Nem jellemző");
+        jRadioButton312.setActionCommand("3");
 
         jLabel120.setText("Nappali hőhullámok");
 
@@ -1791,35 +2185,47 @@ public class Questions extends javax.swing.JFrame {
         jLabel124.setText("Szabálytalan menstruáció");
 
         buttonGroup98.add(jRadioButton313);
+        jRadioButton313.setSelected(true);
         jRadioButton313.setText("Nem jellemző");
+        jRadioButton313.setActionCommand("3");
 
         buttonGroup98.add(jRadioButton314);
         jRadioButton314.setText("Ritka");
+        jRadioButton314.setActionCommand("2");
 
         buttonGroup98.add(jRadioButton315);
         jRadioButton315.setText("Gyakori");
+        jRadioButton315.setActionCommand("1");
 
         buttonGroup99.add(jRadioButton316);
+        jRadioButton316.setSelected(true);
         jRadioButton316.setText("Nem jellemző");
+        jRadioButton316.setActionCommand("3");
 
         buttonGroup99.add(jRadioButton317);
         jRadioButton317.setText("Ritka");
+        jRadioButton317.setActionCommand("2");
 
         buttonGroup99.add(jRadioButton318);
         jRadioButton318.setText("Gyakori");
+        jRadioButton318.setActionCommand("1");
 
         jLabel125.setText("Fájdalmas menstruáció");
 
         jLabel126.setText("Csomós menstruációs vér");
 
         buttonGroup100.add(jRadioButton319);
+        jRadioButton319.setSelected(true);
         jRadioButton319.setText("Nem jellemző");
+        jRadioButton319.setActionCommand("3");
 
         buttonGroup100.add(jRadioButton320);
         jRadioButton320.setText("Ritka");
+        jRadioButton320.setActionCommand("2");
 
         buttonGroup100.add(jRadioButton321);
         jRadioButton321.setText("Gyakori");
+        jRadioButton321.setActionCommand("1");
 
         jLabel127.setText("Vérzés színe");
 
@@ -1836,13 +2242,17 @@ public class Questions extends javax.swing.JFrame {
         jLabel130.setText("Premenstruációs tünetek");
 
         buttonGroup101.add(jRadioButton322);
+        jRadioButton322.setSelected(true);
         jRadioButton322.setText("Nem jellemző");
+        jRadioButton322.setActionCommand("3");
 
         buttonGroup101.add(jRadioButton323);
         jRadioButton323.setText("Ritka");
+        jRadioButton323.setActionCommand("2");
 
         buttonGroup101.add(jRadioButton324);
         jRadioButton324.setText("Gyakori");
+        jRadioButton324.setActionCommand("1");
 
         jLabel131.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel131.setText("Gerinc");
@@ -1907,13 +2317,17 @@ public class Questions extends javax.swing.JFrame {
         jLabel152.setText("Törékeny, puha körmök");
 
         buttonGroup102.add(jRadioButton325);
+        jRadioButton325.setSelected(true);
         jRadioButton325.setText("Nem jellemző");
+        jRadioButton325.setActionCommand("3");
 
         buttonGroup102.add(jRadioButton326);
         jRadioButton326.setText("Ritka");
+        jRadioButton326.setActionCommand("2");
 
         buttonGroup102.add(jRadioButton327);
         jRadioButton327.setText("Gyakori");
+        jRadioButton327.setActionCommand("1");
 
         jLabel153.setText("Napok száma");
 
@@ -4374,4 +4788,960 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    void save(String path) {
+        PrintWriter frequentWriter;
+        PrintWriter rareWriter;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"frequent.txt");
+            frequentWriter = new PrintWriter(file, "UTF-8");
+            File file2 = new File(path+File.separatorChar+dir+File.separatorChar+"rare.txt");
+            rareWriter = new PrintWriter(file2, "UTF-8");
+            
+            String action=buttonGroup1.getSelection().getActionCommand();
+            String content="fej fázékony";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup2.getSelection().getActionCommand();
+            content="szédülés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup3.getSelection().getActionCommand();
+            content="elalvás zavara";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup4.getSelection().getActionCommand();
+            content="átalvás zavara" + " ideje: " + jTextField5.getText();
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup5.getSelection().getActionCommand();
+            content="memória romlása";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup6.getSelection().getActionCommand();
+            content="hajhullás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup7.getSelection().getActionCommand();
+            content="korai őszülés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup8.getSelection().getActionCommand();
+            content="száraz haj";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup9.getSelection().getActionCommand();
+            content="homályos látás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup10.getSelection().getActionCommand();
+            content="száraz szem";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup11.getSelection().getActionCommand();
+            content="vörös szem";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup12.getSelection().getActionCommand();
+            content="karikás, mélyen ülő szem";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup13.getSelection().getActionCommand();
+            content="sötétben rosszabbul látás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup14.getSelection().getActionCommand();
+            content="fülzúgás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup15.getSelection().getActionCommand();
+            content="nagyothallás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup16.getSelection().getActionCommand();
+            content="laza fogak";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup17.getSelection().getActionCommand();
+            content="ínygyulladás, afta, herpesz";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup18.getSelection().getActionCommand();
+            content="kellemetlen szájszag";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup19.getSelection().getActionCommand();
+            content="savas böfögés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup20.getSelection().getActionCommand();
+            content="orcapír";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup21.getSelection().getActionCommand();
+            content="vörös arc";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup22.getSelection().getActionCommand();
+            content="száraz száj-torok";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            //Chest
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            action=buttonGroup23.getSelection().getActionCommand();
+            content="szívdobogás nyugalomban";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup24.getSelection().getActionCommand();
+            content="terhelésre romló légszomj";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup25.getSelection().getActionCommand();
+            content="erőtlen hang";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup26.getSelection().getActionCommand();
+            content="rekedt hang";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup27.getSelection().getActionCommand();
+            content="beszéd kerülése";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup28.getSelection().getActionCommand();
+            content="hajlam megázásra";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup29.getSelection().getActionCommand();
+            content="szél-kerülés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup30.getSelection().getActionCommand();
+            content="száraz köhögés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup31.getSelection().getActionCommand();
+            content="asztmás köhögés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup32.getSelection().getActionCommand();
+            content="köpet" + " " + jTextField6.getText();
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup33.getSelection().getActionCommand();
+            content="mellkasi teltségérzet";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup34.getSelection().getActionCommand();
+            content="mellkasi fájdalom";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup35.getSelection().getActionCommand();
+            content="mellfeszülés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup36.getSelection().getActionCommand();
+            content="hideg kezek";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            //Belly
+            
+            action=buttonGroup37.getSelection().getActionCommand();
+            content="rossz étvágy";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup38.getSelection().getActionCommand();
+            content="ízérzés zavara";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup39.getSelection().getActionCommand();
+            content="hasi feszülés étkezés után";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup40.getSelection().getActionCommand();
+            content="puffadás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup41.getSelection().getActionCommand();
+            content="fáradékonyság";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup42.getSelection().getActionCommand();
+            content="hajlam fogyásra/hízásra";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup43.getSelection().getActionCommand();
+            content="gyomortáji égő érzés + nem kíván enni";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup44.getSelection().getActionCommand();
+            content="gyomortáji égő érzés + szomjúság hideg italra";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup45.getSelection().getActionCommand();
+            content="állandó éhség";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup46.getSelection().getActionCommand();
+            content="hányinger, hányás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup47.getSelection().getActionCommand();
+            content="böfögés, csuklás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup48.getSelection().getActionCommand();
+            content="székrekedés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup49.getSelection().getActionCommand();
+            content="hasmenés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            frequentWriter.println("széklet gyakoriság: " + jTextField8.getText()+ " állag: "  + jTextField9.getText() + " szín: " + jTextField10.getText());
+            
+            action=buttonGroup50.getSelection().getActionCommand();
+            content="égő végbélnyílás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup51.getSelection().getActionCommand();
+            content="görcsös hasi fájdalom";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup52.getSelection().getActionCommand();
+            content="hidegre romló gyomortáji teltség/fájdalom";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup53.getSelection().getActionCommand();
+            content="aranyeresség";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup54.getSelection().getActionCommand();
+            content="hideg hasalj";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup55.getSelection().getActionCommand();
+            content="hideg orrcsúcs";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup56.getSelection().getActionCommand();
+            content="aggodalmaskodás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            //Liver
+            
+            action=buttonGroup57.getSelection().getActionCommand();
+            content="izomgörcsök";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup58.getSelection().getActionCommand();
+            content="izomrángás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup102.getSelection().getActionCommand();
+            content="törékeny, puha körmök";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup59.getSelection().getActionCommand();
+            content="ingerlékenyésg";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup60.getSelection().getActionCommand();
+            content="legangoltság";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup61.getSelection().getActionCommand();
+            content="hullámzó hangulat";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup62.getSelection().getActionCommand();
+            content="céltalanság érzete";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup63.getSelection().getActionCommand();
+            content="dühkitörések";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup64.getSelection().getActionCommand();
+            content="fogcsikorgatás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup65.getSelection().getActionCommand();
+            content="sírva ébredés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup66.getSelection().getActionCommand();
+            content="boraív alatt/mellkasi feszülés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup67.getSelection().getActionCommand();
+            content="bordatáji égő érzés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup68.getSelection().getActionCommand();
+            content="sóhajtozás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup69.getSelection().getActionCommand();
+            content="keserű szájíz";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup70.getSelection().getActionCommand();
+            content="gombócérzés torokban";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup71.getSelection().getActionCommand();
+            content="duzzadt, égő, viszkető herék/nagyajkak";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            
+            //Lower abdomen
+             
+            action=buttonGroup72.getSelection().getActionCommand();
+            content="gyenge-érzékeny derék";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup73.getSelection().getActionCommand();
+            content="gyenge-érzékeny térd";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            frequentWriter.println("napi folyadékbevitel " + jTextField7.getText() + " l " + jComboBox1.getSelectedItem().toString());
+            
+            frequentWriter.println("napközbeni vizeletürítések száma: " + jSpinner1.getValue().toString());
+             
+            action=buttonGroup74.getSelection().getActionCommand();
+            content="éjszakai vizelés száma: " + jSpinner2.getValue().toString();
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup75.getSelection().getActionCommand();
+            content="gyenge vizeletsugár";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup76.getSelection().getActionCommand();
+            content="vizeletcsepegés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup77.getSelection().getActionCommand();
+            content="éjszakai ágybavizelés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup78.getSelection().getActionCommand();
+            content="megtorpanó vizelés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup79.getSelection().getActionCommand();
+            content="vizelés után nincs teljes kiürültség-érzet";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup80.getSelection().getActionCommand();
+            content="gyakori, sürgető vizelés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup81.getSelection().getActionCommand();
+            content="fájdalmas vizelés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup82.getSelection().getActionCommand();
+            content="zavaros vizelet";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup83.getSelection().getActionCommand();
+            content="véres vizelet";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup84.getSelection().getActionCommand();
+            content="alhasi teltség, fájdalom";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup85.getSelection().getActionCommand();
+            content="prosztata gondok";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup86.getSelection().getActionCommand();
+            content="éjszakai magömlés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup87.getSelection().getActionCommand();
+            content="korai magömlés";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup88.getSelection().getActionCommand();
+            content="bokatáji vizenyő";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup89.getSelection().getActionCommand();
+            content="impotencia";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup90.getSelection().getActionCommand();
+            content="frigiditás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup91.getSelection().getActionCommand();
+            content="meddőség";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup92.getSelection().getActionCommand();
+            content="csontritkulás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup93.getSelection().getActionCommand();
+            content="hideg-fázós derék";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup94.getSelection().getActionCommand();
+            content="hideg-fázós térdek";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup95.getSelection().getActionCommand();
+            content="hideg-fázós lábak";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup96.getSelection().getActionCommand();
+            content="éjszakai izzadás";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+             
+            action=buttonGroup97.getSelection().getActionCommand();
+            content="nappali hőhullámok";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            //Menses
+            
+            frequentWriter.println(jSpinner3.getValue().toString());
+            
+            frequentWriter.println(jSpinner4.getValue().toString());
+            
+            frequentWriter.println(jComboBox2.getSelectedItem().toString());
+            
+            frequentWriter.println(jComboBox3.getSelectedItem().toString());
+            
+            frequentWriter.println(jComboBox4.getSelectedItem().toString());
+            
+            frequentWriter.println(jSpinner5.getValue().toString());
+            
+            frequentWriter.println(jSpinner6.getValue().toString());
+            
+            action=buttonGroup98.getSelection().getActionCommand();
+            content="szabálytalan menstruáció";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup99.getSelection().getActionCommand();
+            content="fájdalmas menstruáció";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup100.getSelection().getActionCommand();
+            content="csomós menstruációs vér";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            action=buttonGroup101.getSelection().getActionCommand();
+            content="premenstruációs tünetek";
+            if(action=="1"){
+                frequentWriter.println(content);
+            }else if(action=="2"){
+                rareWriter.println(content);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            //Spine
+            
+            frequentWriter.println(jTextField21.getText());
+            
+            frequentWriter.println(jTextField11.getText());
+            
+            frequentWriter.println(jTextField12.getText());
+            
+            frequentWriter.println(jTextField13.getText());
+            
+            frequentWriter.println(jTextField14.getText());
+            
+            frequentWriter.println(jTextField16.getText());
+            
+            frequentWriter.println(jTextField15.getText());
+            
+            frequentWriter.println(jTextField17.getText());
+            
+            action=jComboBox5.getSelectedItem().toString();
+            content="mozgáskorlátozott";
+            if(action=="igen"){
+                frequentWriter.println(content);
+            }
+            
+            action=jComboBox6.getSelectedItem().toString();
+            content="derék fázékony";
+            if(action=="igen"){
+                frequentWriter.println(content);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+            
+            
+             //Extremities
+             
+            frequentWriter.println(jTextField27.getText());
+            
+            frequentWriter.println(jTextField18.getText());
+            
+            frequentWriter.println(jTextField19.getText());
+            
+            frequentWriter.println(jTextField20.getText());
+            
+            frequentWriter.println(jTextField22.getText());
+            
+            frequentWriter.println(jTextField24.getText());
+            
+            frequentWriter.println(jTextField25.getText());
+            
+            frequentWriter.println(jTextField23.getText());
+            
+            frequentWriter.println(jTextField26.getText());
+            
+            action=jComboBox7.getSelectedItem().toString();
+            content="mozgáskorlátozottság";
+            if(action=="igen"){
+                frequentWriter.println(content);
+            }
+            
+            action=jComboBox8.getSelectedItem().toString();
+            content="éjszaka fennáll a fájdalom";
+            if(action=="igen"){
+                frequentWriter.println(content);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****");
+                        
+            frequentWriter.close();
+            rareWriter.close();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

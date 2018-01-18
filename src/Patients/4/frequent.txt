@@ -1,0 +1,20 @@
+*****
+*****
+széklet gyakoriság:  állag:  szín: 
+*****
+*****
+napi folyadékbevitel  l hideg
+napközbeni vizeletürítések száma: 0
+*****
+3
+3
+Sötét
+Bőséges
+Rövidebb
+3
+3
+szabálytalan menstruáció
+fájdalmas menstruáció
+csomós menstruációs vér
+premenstruációs tünetek
+*****
