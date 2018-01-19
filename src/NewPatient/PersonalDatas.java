@@ -206,26 +206,19 @@ public class PersonalDatas extends javax.swing.JFrame {
             File directory = new File(path+dir);
             directory.mkdir();
             
-            String name=jTextField1.getText();
-            String mothername=jTextField9.getText();
-            String birthPlace=jTextField10.getText();
-            String birthDate=jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText();
-            String familyStatus=jTextField5.getText();
-            String emailAddress=jTextField7.getText();
-            String phoneNumber=jTextField8.getText();
-            String sex=jComboBox1.getSelectedItem().toString();
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"personaldata.txt");
             writer = new PrintWriter(file, "UTF-8");
             
-            writer.println(name);
-            writer.println(mothername);
-            writer.println(birthPlace);
-            writer.println(birthDate);
-            writer.println(familyStatus);
-            writer.println(emailAddress);
-            writer.println(phoneNumber);
-            writer.println(sex);
+            writer.println(Controller.controller.idNumber);
+            writer.println(jTextField1.getText());
+            writer.println(jTextField9.getText());
+            writer.println(jTextField10.getText());
+            writer.println(jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText());
+            writer.println(jTextField5.getText());
+            writer.println(jTextField7.getText());
+            writer.println(jTextField8.getText());
+            writer.println(jComboBox1.getSelectedItem().toString());
             writer.close();
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);

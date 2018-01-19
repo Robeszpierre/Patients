@@ -59,7 +59,7 @@ public class Ear extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
 
-        setTitle("Nyelv");
+        setTitle("Fül");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

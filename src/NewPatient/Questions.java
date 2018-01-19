@@ -4803,6 +4803,12 @@ public class Questions extends javax.swing.JFrame {
             File file2 = new File(path+File.separatorChar+dir+File.separatorChar+"rare.txt");
             rareWriter = new PrintWriter(file2, "UTF-8");
             
+            //Head
+            
+            frequentWriter.println(jTextField1.getText());
+            
+            frequentWriter.println(jTextField2.getText() + " " + jTextField3.getText() + " " + jTextField4.getText());
+            
             String action=buttonGroup1.getSelection().getActionCommand();
             String content="fej fázékony";
             if(action=="1"){

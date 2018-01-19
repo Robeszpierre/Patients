@@ -18,6 +18,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -99,8 +101,12 @@ public class DragListener implements  DropTargetListener{
         pathlabel.setText(path);
     }
     
-    public void save() throws IOException{
-        File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ imgName +".png");
-        ImageIO.write(img, "png", outputfile);
+    public void save(){
+        try {
+            File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ imgName +".png");
+            ImageIO.write(img, "png", outputfile);
+        } catch (IOException ex) {
+            Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
