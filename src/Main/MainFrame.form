@@ -101,6 +101,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Betegek kezel&#xe9;se"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="existingPatientButtonMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

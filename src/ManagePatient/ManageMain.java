@@ -1,0 +1,377 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ManagePatient;
+
+import NewPatient.Controller;
+import java.awt.ComponentOrientation;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+/**
+ *
+ * @author robeszpierre
+ */
+public class ManageMain extends javax.swing.JFrame {
+
+    
+    Scanner frequentInput=null;
+    Scanner rareInput=null;
+    /**
+     * Creates new form ManageMain
+     */
+    public ManageMain() {
+        initComponents();
+        jScrollPane1.setBorder(null);
+        jScrollPane2.setBorder(null);
+        jScrollPane3.setBorder(null);
+        jScrollPane4.setBorder(null);
+        jScrollPane5.setBorder(null);
+        jScrollPane6.setBorder(null);
+        jTextArea2.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        jTextArea3.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        jTextArea4.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        
+        String path=Controller.controller.path+"1/"+"frequent.txt";
+        String path2=Controller.controller.path+"1/"+"rare.txt";
+        try {
+            frequentInput = new Scanner(new File(path));
+            rareInput = new Scanner(new File(path2));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //HEAD
+        
+        String line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea1.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea1.append("------------------\n");
+        String line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea1.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        //CHEST
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea2.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea2.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea2.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        
+        //BELLY
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea6.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea6.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea6.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        jTextArea6.append("\n");
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea6.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea6.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea6.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        
+        //LOWER ABDOMEN
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea3.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea3.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea3.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        jTextArea3.append("\n");
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea3.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea3.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea3.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        //SPINE
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea4.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        
+        //EXTREMITIES
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea5.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        
+        frequentInput.close();
+        rareInput.close();
+        
+        
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea6 = new javax.swing.JTextArea();
+        jPanel3 = new javax.swing.JPanel();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1300, 700));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1300, 700));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ManagePatient/body2.jpg"))); // NOI18N
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel1.setPreferredSize(new java.awt.Dimension(200, 650));
+        jLabel1.setRequestFocusEnabled(false);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setToolTipText("FEJ");
+        jTextArea1.setBorder(null);
+        jTextArea1.setOpaque(false);
+        jTextArea1.setRequestFocusEnabled(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jTextArea3.setRows(5);
+        jTextArea3.setToolTipText("FEJ");
+        jTextArea3.setBorder(null);
+        jTextArea3.setOpaque(false);
+        jTextArea3.setRequestFocusEnabled(false);
+        jScrollPane3.setViewportView(jTextArea3);
+        jTextArea3.getAccessibleContext().setAccessibleDescription("MELLKAS");
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jTextArea2.setRows(5);
+        jTextArea2.setToolTipText("FEJ");
+        jTextArea2.setBorder(null);
+        jTextArea2.setOpaque(false);
+        jTextArea2.setRequestFocusEnabled(false);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jTextArea4.setRows(5);
+        jTextArea4.setToolTipText("FEJ");
+        jTextArea4.setBorder(null);
+        jTextArea4.setOpaque(false);
+        jTextArea4.setRequestFocusEnabled(false);
+        jScrollPane4.setViewportView(jTextArea4);
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jTextArea5.setRows(5);
+        jTextArea5.setToolTipText("FEJ");
+        jTextArea5.setBorder(null);
+        jTextArea5.setOpaque(false);
+        jTextArea5.setRequestFocusEnabled(false);
+        jScrollPane5.setViewportView(jTextArea5);
+
+        jTextArea6.setColumns(20);
+        jTextArea6.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        jTextArea6.setRows(5);
+        jTextArea6.setToolTipText("FEJ");
+        jTextArea6.setBorder(null);
+        jTextArea6.setOpaque(false);
+        jTextArea6.setRequestFocusEnabled(false);
+        jScrollPane6.setViewportView(jTextArea6);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38))))
+        );
+
+        jTabbedPane1.addTab("Tünetek", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 648, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 675, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab2", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 642, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 675, Short.MAX_VALUE)
+        );
+
+        jTabbedPane3.addTab("tab1", jPanel4);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane3))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane3)
+        );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleDescription("tab1");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    
+    
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
+    private javax.swing.JTextArea jTextArea6;
+    // End of variables declaration//GEN-END:variables
+}

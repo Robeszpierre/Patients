@@ -1,5 +1,6 @@
 package Main;
 
+import ManagePatient.ManageMain;
 import NewPatient.Controller;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -60,6 +61,11 @@ public class MainFrame extends javax.swing.JFrame {
         existingPatientButton.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         existingPatientButton.setForeground(new java.awt.Color(255, 255, 255));
         existingPatientButton.setText("Betegek kezelése");
+        existingPatientButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                existingPatientButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -99,6 +105,11 @@ public class MainFrame extends javax.swing.JFrame {
     private void newPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newPatientButtonMouseClicked
          Controller.controller.newPatient();
     }//GEN-LAST:event_newPatientButtonMouseClicked
+
+    private void existingPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_existingPatientButtonMouseClicked
+        ManageMain manageMain = new ManageMain();
+        manageMain.setVisible(true);
+    }//GEN-LAST:event_existingPatientButtonMouseClicked
 
     /**
      * @param args the command line arguments
