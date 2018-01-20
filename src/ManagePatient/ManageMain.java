@@ -21,9 +21,10 @@ import javax.swing.JLabel;
  */
 public class ManageMain extends javax.swing.JFrame {
 
+    int idNumber=1;
     
-    Scanner frequentInput=null;
-    Scanner rareInput=null;
+    String path=Controller.controller.path + "/" + idNumber + "/";
+    
     /**
      * Creates new form ManageMain
      */
@@ -35,119 +36,31 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane4.setBorder(null);
         jScrollPane5.setBorder(null);
         jScrollPane6.setBorder(null);
+        jScrollPane7.setBorder(null);
         jTextArea2.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         jTextArea3.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         jTextArea4.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         
-        String path=Controller.controller.path+"1/"+"frequent.txt";
-        String path2=Controller.controller.path+"1/"+"rare.txt";
+        loadSymptoms();
+        
+
         try {
-            frequentInput = new Scanner(new File(path));
-            rareInput = new Scanner(new File(path2));
+            Scanner personalDataInput=new Scanner(new File(path+"personaldata.txt"));
+            personalDataInput.nextLine();
+            jTextArea7.append("Név: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Anyja neve: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Születési hely: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Születési időpont: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Családi állapot: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Foglalkozás: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("E-mail cím: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Telefonszám: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Neme: " + personalDataInput.nextLine() + "\n\n");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        //HEAD
         
-        String line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea1.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        jTextArea1.append("------------------\n");
-        String line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea1.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        
-        //CHEST
-        
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea2.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        jTextArea2.append("------------------\n");
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea2.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        
-        
-        //BELLY
-        
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea6.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        jTextArea6.append("------------------\n");
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea6.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        jTextArea6.append("\n");
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea6.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        jTextArea6.append("------------------\n");
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea6.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        
-        
-        //LOWER ABDOMEN
-        
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea3.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        jTextArea3.append("------------------\n");
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea3.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        jTextArea3.append("\n");
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea3.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        jTextArea3.append("------------------\n");
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea3.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        
-        //SPINE
-        
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea4.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        
-        //EXTREMITIES
-        
-        line = frequentInput.nextLine();
-        while(!line.equals("*****")){
-            jTextArea5.append(line+"\n");
-            line = frequentInput.nextLine();
-        }
-        
-        frequentInput.close();
-        rareInput.close();
         
         
     }
@@ -178,10 +91,13 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea6 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1300, 700));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -293,18 +209,45 @@ public class ManageMain extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Tünetek", jPanel2);
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTextArea7.setColumns(20);
+        jTextArea7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jTextArea7.setRows(5);
+        jScrollPane7.setViewportView(jTextArea7);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(202, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 675, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab2", jPanel3);
+        jTabbedPane1.addTab("Személyes adatok", jPanel3);
+
+        jButton1.setText("jButton1");
+        jTabbedPane1.addTab("tab3", jButton1);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -354,17 +297,20 @@ public class ManageMain extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTextArea jTextArea1;
@@ -373,5 +319,120 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextArea jTextArea6;
+    private javax.swing.JTextArea jTextArea7;
     // End of variables declaration//GEN-END:variables
+
+    private void loadSymptoms() {
+        Scanner frequentInput=null;
+        Scanner rareInput=null;
+        String path1=path+"frequent.txt";
+        String path2=path+"rare.txt";
+        try {
+            frequentInput = new Scanner(new File(path1));
+            rareInput = new Scanner(new File(path2));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //HEAD
+        
+        String line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea1.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea1.append("------------------\n");
+        String line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea1.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        //CHEST
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea2.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea2.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea2.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        
+        //BELLY
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea6.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea6.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea6.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        jTextArea6.append("\n");
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea6.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea6.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea6.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        
+        //LOWER ABDOMEN
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea3.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea3.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea3.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        jTextArea3.append("\n");
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea3.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        jTextArea3.append("------------------\n");
+        line2 = rareInput.nextLine();
+        while(!line2.equals("*****")){
+            jTextArea3.append(line2+"\n");
+            line2 = rareInput.nextLine();
+        }
+        
+        //SPINE
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea4.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        
+        //EXTREMITIES
+        
+        line = frequentInput.nextLine();
+        while(!line.equals("*****")){
+            jTextArea5.append(line+"\n");
+            line = frequentInput.nextLine();
+        }
+        
+        frequentInput.close();
+        rareInput.close();
+    }
 }
