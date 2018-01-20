@@ -80,7 +80,7 @@ public class Controller {
     public void newPatient(){
         newPatientPersonalDatas = new PersonalDatas();
         newPatientPersonalDatas.setVisible(true);
-        File file = new File("/home/robeszpierre/NetBeansProjects/Patients/src/Patients/idNumber.txt");
+        File file = new File(path + "idNumber.txt");
         Scanner sc;
         try {
             sc = new Scanner(file);
