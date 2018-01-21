@@ -1,6 +1,7 @@
 package Main;
 
 import ManagePatient.ManageMain;
+import ManagePatient.SelectPatient;
 import NewPatient.Controller;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -107,8 +108,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_newPatientButtonMouseClicked
 
     private void existingPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_existingPatientButtonMouseClicked
-        ManageMain manageMain = new ManageMain();
-        manageMain.setVisible(true);
+        SelectPatient selectPatient = new SelectPatient();
+        selectPatient.setVisible(true);
     }//GEN-LAST:event_existingPatientButtonMouseClicked
 
     /**

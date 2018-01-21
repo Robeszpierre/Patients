@@ -6,6 +6,7 @@
 package ManagePatient;
 
 import NewPatient.Controller;
+import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,15 +21,17 @@ import javax.swing.JLabel;
  * @author robeszpierre
  */
 public class ManageMain extends javax.swing.JFrame {
-
-    int idNumber=1;
     
-    String path=Controller.controller.path + "/" + idNumber + "/";
+
+    int idNumber;
     
     /**
      * Creates new form ManageMain
      */
-    public ManageMain() {
+    public ManageMain(int id) {
+        this.setVisible(true);
+        this.idNumber = id;
+        String path=Controller.controller.path + "/" + idNumber + "/";
         initComponents();
         jScrollPane1.setBorder(null);
         jScrollPane2.setBorder(null);
@@ -37,9 +40,48 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane5.setBorder(null);
         jScrollPane6.setBorder(null);
         jScrollPane7.setBorder(null);
-        jTextArea2.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-        jTextArea3.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-        jTextArea4.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        
+        jScrollPane1.getViewport().setOpaque(false);
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setViewportBorder(null);
+        jTextArea1.setBorder(null);
+        jTextArea1.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane2.getViewport().setOpaque(false);
+        jScrollPane2.setOpaque(false);
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setViewportBorder(null);
+        jTextArea2.setBorder(null);
+        jTextArea2.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane3.getViewport().setOpaque(false);
+        jScrollPane3.setOpaque(false);
+        jScrollPane3.setBorder(null);
+        jScrollPane3.setViewportBorder(null);
+        jTextArea3.setBorder(null);
+        jTextArea3.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane4.getViewport().setOpaque(false);
+        jScrollPane4.setOpaque(false);
+        jScrollPane4.setBorder(null);
+        jScrollPane4.setViewportBorder(null);
+        jTextArea4.setBorder(null);
+        jTextArea4.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane5.getViewport().setOpaque(false);
+        jScrollPane5.setOpaque(false);
+        jScrollPane5.setBorder(null);
+        jScrollPane5.setViewportBorder(null);
+        jTextArea5.setBorder(null);
+        jTextArea5.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane6.getViewport().setOpaque(false);
+        jScrollPane6.setOpaque(false);
+        jScrollPane6.setBorder(null);
+        jScrollPane6.setViewportBorder(null);
+        jTextArea6.setBorder(null);
+        jTextArea6.setBackground(new Color(0,0,0,0));
         
         loadSymptoms();
         
@@ -77,7 +119,6 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -90,26 +131,21 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea5 = new javax.swing.JTextArea();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea6 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
 
-        setPreferredSize(new java.awt.Dimension(1300, 700));
+        setTitle("Betegek kezelése");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1300, 700));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ManagePatient/body2.jpg"))); // NOI18N
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jLabel1.setPreferredSize(new java.awt.Dimension(200, 650));
-        jLabel1.setRequestFocusEnabled(false);
+        jPanel2.setLayout(null);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
@@ -119,6 +155,9 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea1.setOpaque(false);
         jTextArea1.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(50, 120, 280, 100);
 
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
@@ -130,6 +169,9 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea3);
         jTextArea3.getAccessibleContext().setAccessibleDescription("MELLKAS");
 
+        jPanel2.add(jScrollPane3);
+        jScrollPane3.setBounds(50, 230, 280, 110);
+
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jTextArea2.setRows(5);
@@ -138,6 +180,9 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea2.setOpaque(false);
         jTextArea2.setRequestFocusEnabled(false);
         jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel2.add(jScrollPane2);
+        jScrollPane2.setBounds(50, 0, 220, 110);
 
         jTextArea4.setColumns(20);
         jTextArea4.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
@@ -148,6 +193,9 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea4.setRequestFocusEnabled(false);
         jScrollPane4.setViewportView(jTextArea4);
 
+        jPanel2.add(jScrollPane4);
+        jScrollPane4.setBounds(50, 480, 203, 160);
+
         jTextArea5.setColumns(20);
         jTextArea5.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jTextArea5.setRows(5);
@@ -157,55 +205,24 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea5.setRequestFocusEnabled(false);
         jScrollPane5.setViewportView(jTextArea5);
 
+        jPanel2.add(jScrollPane5);
+        jScrollPane5.setBounds(350, 480, 203, 160);
+
         jTextArea6.setColumns(20);
         jTextArea6.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
         jTextArea6.setRows(5);
         jTextArea6.setToolTipText("FEJ");
-        jTextArea6.setBorder(null);
         jTextArea6.setOpaque(false);
         jTextArea6.setRequestFocusEnabled(false);
         jScrollPane6.setViewportView(jTextArea6);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38))))
-        );
+        jPanel2.add(jScrollPane6);
+        jScrollPane6.setBounds(50, 350, 320, 100);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ManagePatient/body3.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(0, 0, 650, 680);
 
         jTabbedPane1.addTab("Tünetek", jPanel2);
 
@@ -245,9 +262,6 @@ public class ManageMain extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Személyes adatok", jPanel3);
-
-        jButton1.setText("jButton1");
-        jTabbedPane1.addTab("tab3", jButton1);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -297,7 +311,6 @@ public class ManageMain extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -323,6 +336,7 @@ public class ManageMain extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void loadSymptoms() {
+        String path=Controller.controller.path + "/" + idNumber + "/";
         Scanner frequentInput=null;
         Scanner rareInput=null;
         String path1=path+"frequent.txt";
@@ -341,7 +355,6 @@ public class ManageMain extends javax.swing.JFrame {
             jTextArea1.append(line+"\n");
             line = frequentInput.nextLine();
         }
-        jTextArea1.append("------------------\n");
         String line2 = rareInput.nextLine();
         while(!line2.equals("*****")){
             jTextArea1.append(line2+"\n");
@@ -355,7 +368,6 @@ public class ManageMain extends javax.swing.JFrame {
             jTextArea2.append(line+"\n");
             line = frequentInput.nextLine();
         }
-        jTextArea2.append("------------------\n");
         line2 = rareInput.nextLine();
         while(!line2.equals("*****")){
             jTextArea2.append(line2+"\n");
@@ -370,7 +382,6 @@ public class ManageMain extends javax.swing.JFrame {
             jTextArea6.append(line+"\n");
             line = frequentInput.nextLine();
         }
-        jTextArea6.append("------------------\n");
         line2 = rareInput.nextLine();
         while(!line2.equals("*****")){
             jTextArea6.append(line2+"\n");
@@ -382,7 +393,6 @@ public class ManageMain extends javax.swing.JFrame {
             jTextArea6.append(line+"\n");
             line = frequentInput.nextLine();
         }
-        jTextArea6.append("------------------\n");
         line2 = rareInput.nextLine();
         while(!line2.equals("*****")){
             jTextArea6.append(line2+"\n");
@@ -397,7 +407,6 @@ public class ManageMain extends javax.swing.JFrame {
             jTextArea3.append(line+"\n");
             line = frequentInput.nextLine();
         }
-        jTextArea3.append("------------------\n");
         line2 = rareInput.nextLine();
         while(!line2.equals("*****")){
             jTextArea3.append(line2+"\n");
@@ -409,7 +418,6 @@ public class ManageMain extends javax.swing.JFrame {
             jTextArea3.append(line+"\n");
             line = frequentInput.nextLine();
         }
-        jTextArea3.append("------------------\n");
         line2 = rareInput.nextLine();
         while(!line2.equals("*****")){
             jTextArea3.append(line2+"\n");
