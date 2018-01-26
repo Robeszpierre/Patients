@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,6 +28,11 @@ public class Treatment extends javax.swing.JPanel {
     public Treatment() {
         initComponents();
         jScrollPane2.getVerticalScrollBar().setUnitIncrement(15);
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime dateTime = LocalDateTime.now();
+        String time = dateTime.format(formatter); 
+        jLabel1.setText(time);
     }
 
     /**
@@ -58,30 +66,38 @@ public class Treatment extends javax.swing.JPanel {
 
         jScrollPane2.setHorizontalScrollBar(null);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(627, 1240));
 
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setText("jLabel1");
 
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel2.setText("Változások");
 
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel3.setText("Romlás");
 
         jScrollPane1.setViewportView(jTextPane1);
 
+        jLabel4.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel4.setText("Javulás");
 
         jScrollPane3.setViewportView(jTextPane2);
 
+        jLabel5.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel5.setText("Egyéb");
 
         jScrollPane4.setViewportView(jTextPane3);
 
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel6.setText("Újabb javaslatok");
 
         jScrollPane5.setViewportView(jTextPane4);
 
         jScrollPane6.setViewportView(jTextPane5);
 
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel7.setText("Terápia (pontok, masszázs, moxa, köpöly stb.)");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -155,7 +171,7 @@ public class Treatment extends javax.swing.JPanel {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel1);
@@ -198,18 +214,16 @@ public class Treatment extends javax.swing.JPanel {
     void save(int treatmentNumber, int idNumber) {
           PrintWriter writer = null;
         
-            String path=Controller.controller.path;
-            String dir="Treatments";
-            File directory = new File(path+idNumber+File.separatorChar+dir);
-            directory.mkdir();
-        
-            File file = new File(path+idNumber+File.separatorChar+"Treatments"+File.separatorChar+Integer.toString(treatmentNumber+1)+".txt");
+            File file = new File(Controller.controller.path+idNumber+File.separatorChar+"Treatments"+File.separatorChar+Integer.toString(treatmentNumber+1)+".txt");
         try {
             writer = new PrintWriter(file, "UTF-8");
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
             
+            writer.println(jLabel1.getText());
+            writer.println("***");
+        
             writer.println(jTextPane1.getText());
             writer.println("***");
             
@@ -229,8 +243,65 @@ public class Treatment extends javax.swing.JPanel {
             writer.println(jTextPane5.getText());
             writer.println("***");
             
-            
-            
             writer.close();
+    }
+
+    void load(int i, String path) {
+        Scanner input;
+        String line, text = "";
+        try{
+            input=new Scanner(new File(path+"Treatments"+File.separatorChar+i+".txt"));
+            
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jLabel1.setText(text);
+            
+            text = "";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line;
+                line=input.nextLine();
+            }
+            jTextPane1.setText(text);
+            
+            text = "";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line;
+                line=input.nextLine();
+            }
+            jTextPane2.setText(text);
+            
+            text = "";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line;
+                line=input.nextLine();
+            }
+            jTextPane3.setText(text);
+            
+            text = "";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line;
+                line=input.nextLine();
+            }
+            jTextPane4.setText(text);
+            
+            text = "";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line;
+                line=input.nextLine();
+            }
+            jTextPane5.setText(text);
+            
+            input.close();
+        }catch(Exception e){
+            System.out.println("FILE NOT FOUND");
+    }
     }
 }

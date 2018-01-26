@@ -9,10 +9,15 @@ import NewPatient.Controller;
 import NewPatient.Tongue;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
+import java.awt.Dimension;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -34,6 +39,7 @@ public class ManageMain extends javax.swing.JFrame {
     
     int idNumber;
     
+    
     /**
      * Creates new form ManageMain
      */
@@ -42,8 +48,9 @@ public class ManageMain extends javax.swing.JFrame {
         this.idNumber = id;
         String path=Controller.controller.path + idNumber + File.separatorChar;
         initComponents(); 
-        myInitComponents();
-        
+        myInitComponents(path);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         loadPersonalData(path);
         loadSymptoms(path);
         loadMedicalHistory(path);
@@ -53,7 +60,8 @@ public class ManageMain extends javax.swing.JFrame {
         loadDiagnose(path);
         loadTongue(path);
         loadEar(path);
-        
+        loadTreatments(path);
+        loadFinalReport(path);
         
     }
 
@@ -207,6 +215,11 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextPane6 = new javax.swing.JTextPane();
         jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -1030,9 +1043,8 @@ public class ManageMain extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE))
+            .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1064,6 +1076,47 @@ public class ManageMain extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Fül", jPanel11);
+
+        jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel57.setText("Értékelés");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane8.setViewportView(jTextArea1);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyógyult", "részben gyógyult", "nem gyógyult", "egyéb" }));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel57)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+        );
+
+        jTabbedPane3.addTab("Záróvélemény", jPanel4);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -1097,7 +1150,7 @@ public class ManageMain extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
@@ -1130,16 +1183,14 @@ public class ManageMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-
-        treatments.add(new Treatment());
-        Treatment currentTreatment=treatments.get(idx);
-        
-        jTabbedPane3.addTab(Integer.toString(idx+1), currentTreatment);
-        idx++;
+        addTreatment();
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+         saveFinalReport();
+        
         for(int i=0; i<treatments.size(); i++){
             treatments.get(i).save(i, idNumber);
         }
@@ -1151,6 +1202,7 @@ public class ManageMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1203,6 +1255,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1231,6 +1284,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
@@ -1268,9 +1322,11 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane62;
     private javax.swing.JScrollPane jScrollPane63;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea7;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane10;
@@ -1451,7 +1507,7 @@ public class ManageMain extends javax.swing.JFrame {
         rareInput.close();
     }
 
-    private void myInitComponents() {
+    private void myInitComponents(String path) {
         jScrollPane7.setBorder(null);
         
         jScrollPane9.setBorder(null);
@@ -1834,5 +1890,64 @@ public class ManageMain extends javax.swing.JFrame {
         
         ImageIcon icon=new ImageIcon(dimg);
         jLabel56.setIcon(icon);
+    }
+
+    private void loadTreatments(String path) {
+        File folder = new File(path+File.separatorChar+"Treatments");
+		File[] listOfFiles = folder.listFiles();
+                    if(listOfFiles.length>0){
+                    for(int i = 1; i < listOfFiles.length+1; i++){
+                        treatments.add(new Treatment());
+                        Treatment currentTreatment=treatments.get(idx);
+                        jTabbedPane3.addTab(Integer.toString(idx+1), currentTreatment);
+                        currentTreatment.load(i, path);
+                        idx++;
+                    }
+                }
+    }
+
+    private void loadFinalReport(String path) {
+        Scanner input=null;
+        String text="";
+        try {
+            input=new Scanner(new File(path+"finalreport.txt"));
+        } catch (FileNotFoundException ex) {
+            System.out.println("There is no final report.");
+        }
+        String line=input.nextLine();
+        while(!line.equals("***")){
+            text+=line;
+            line=input.nextLine();
+        }
+        jTextArea1.setText(text);
+        
+        line=input.nextLine();
+        jComboBox1.setSelectedItem(line);
+    }
+    
+    private void addTreatment(){
+        treatments.add(new Treatment());
+        Treatment currentTreatment=treatments.get(idx);
+        
+        jTabbedPane3.addTab(Integer.toString(idx+1), currentTreatment);
+        idx++;
+    }
+
+    private void saveFinalReport() {
+        PrintWriter writer = null;
+        
+            File file = new File(Controller.controller.path+idNumber+File.separatorChar+"finalreport.txt");
+        try {
+            writer = new PrintWriter(file, "UTF-8");
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        writer.println(jTextArea1.getText());
+        writer.println("***");
+        writer.println(jComboBox1.getSelectedItem().toString());
+        writer.println("***");
+        
+        writer.close();
     }
 }

@@ -1,5 +1,7 @@
 package NewPatient;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -24,6 +26,8 @@ public class Questions extends javax.swing.JFrame {
      */
     public Questions() {
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(30); //sets the scrollbar faster
         if(Controller.controller.sex.equals("férfi")){
                 jSpinner3.setVisible(false);
@@ -683,14 +687,16 @@ public class Questions extends javax.swing.JFrame {
         jLabel157 = new javax.swing.JLabel();
 
         setTitle("Kikérdező lap");
+        setPreferredSize(new java.awt.Dimension(1300, 700));
 
         jScrollPane1.setHorizontalScrollBar(null);
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1203, 5553));
         jScrollPane1.setVerifyInputWhenFocusTarget(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(20, 20, 20));
         jPanel2.setMinimumSize(new java.awt.Dimension(500, 1500));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1200, 5850));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1200, 5550));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Fej");
@@ -2342,7 +2348,9 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel151.setText("Korábbi műtét");
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Következő");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -4196,11 +4204,11 @@ public class Questions extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1366, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1123, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

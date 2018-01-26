@@ -69,6 +69,9 @@ public class SelectPatient extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jList1);
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Kiválaszt");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

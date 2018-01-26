@@ -17,3 +17,5 @@
 
 # Gradle
 .nb-gradle/
+/src/Patients/build/
+/src/Patients/nbproject/private/

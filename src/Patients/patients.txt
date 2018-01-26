@@ -1,19 +1,2 @@
-3 ASD ASD
-4 qwe qwe
-5 kis jános
-6 
-6 asd
-6 qwe
-6 
-6 kovács
-7 nagy
-8 
-9 lakatos
-10 
-11 
-12 
-13 Anikó
-14 
-15 Attila
-16 
-17 Géza
+1 
+2 Pityu

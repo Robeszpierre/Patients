@@ -24,9 +24,8 @@ import javax.swing.JFrame;
 public class Controller {    
     
     static public Controller controller=new Controller();
-    
     public int idNumber;
-    public String path=File.separatorChar+"home"+File.separatorChar+"robeszpierre"+File.separatorChar+"NetBeansProjects"+File.separatorChar+"Patients"+File.separatorChar+"src"+File.separatorChar+"Patients"+File.separatorChar;
+    public String path=File.separatorChar+"home"+File.separatorChar+"robeszpierre"+File.separatorChar+"Desktop"+File.separatorChar+"Patients"+File.separatorChar;
     public String sex;
     
     private MainFrame mainFrame;
@@ -144,7 +143,7 @@ public class Controller {
               
         PrintWriter writer;
         try {
-            String path2=path+"/idNumber.txt";
+            String path2=path+File.separatorChar+"idNumber.txt";
             File file = new File(path2);
             writer = new PrintWriter(file, "UTF-8");
             writer.println(idNumber);
@@ -152,6 +151,21 @@ public class Controller {
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        PrintWriter writer2 = null;
+        try {
+            writer2 = new PrintWriter(path+idNumber+File.separatorChar+"finalreport.txt", "UTF-8");
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            System.out.println("Can't make final report txt");
+        }
+        writer2.println("***");
+        writer2.println("gyógyult");
+        writer2.println("***");
+        
+        writer2.close();
+        
+        File directory = new File(path+idNumber+File.separatorChar+"Treatments");
+        directory.mkdir();
         
         newPatientTongue.save(path); 
         newPatientEar.save(path); 
