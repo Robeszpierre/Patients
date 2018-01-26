@@ -25,6 +25,42 @@ public class Questions extends javax.swing.JFrame {
     public Questions() {
         initComponents();
         jScrollPane1.getVerticalScrollBar().setUnitIncrement(30); //sets the scrollbar faster
+        if(Controller.controller.sex.equals("férfi")){
+                jSpinner3.setVisible(false);
+                jSpinner4.setVisible(false);
+                jComboBox2.setVisible(false);
+                jComboBox3.setVisible(false);
+                jComboBox4.setVisible(false);
+                jSpinner5.setVisible(false);
+                jSpinner6.setVisible(false);
+                jRadioButton313.setVisible(false);
+                jRadioButton314.setVisible(false);
+                jRadioButton315.setVisible(false);
+                jRadioButton316.setVisible(false);
+                jRadioButton317.setVisible(false);
+                jRadioButton318.setVisible(false);
+                jRadioButton319.setVisible(false);
+                jRadioButton320.setVisible(false);
+                jRadioButton321.setVisible(false);
+                jRadioButton322.setVisible(false);
+                jRadioButton323.setVisible(false);
+                jRadioButton324.setVisible(false);
+                jLabel77.setVisible(false);
+                jLabel78.setVisible(false);
+                jLabel121.setVisible(false);
+                jLabel122.setVisible(false);
+                jLabel123.setVisible(false);
+                jLabel129.setVisible(false);
+                jLabel124.setVisible(false);
+                jLabel125.setVisible(false);
+                jLabel126.setVisible(false);
+                jLabel127.setVisible(false);
+                jLabel128.setVisible(false);
+                jLabel129.setVisible(false);
+                jLabel130.setVisible(false);
+                jLabel153.setVisible(false);
+                jLabel154.setVisible(false);
+            }
     }
 
     /**
@@ -2229,15 +2265,15 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel127.setText("Vérzés színe");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sötét", "Halvány" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sötét", "halvány" }));
 
         jLabel128.setText("Mennyisége");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bőséges", "Kevés", "Normális" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "bőséges", "kevés", "normális" }));
 
         jLabel129.setText("Ciklus hossza");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rövidebb", "Hosszabb", "Rendszertelen" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rövidebb", "hosszabb", "rendszertelen" }));
 
         jLabel130.setText("Premenstruációs tünetek");
 
@@ -2269,11 +2305,11 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel137.setText("Mozgáskorlátozottság");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Igen", "Nem" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
         jLabel138.setText("Derék fázékony-e");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Igen", "Nem" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
         jLabel139.setText("Korábbi sérülés");
 
@@ -2290,7 +2326,7 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel145.setText("Éjszaka fennáll-e a fájdalom");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Igen", "Nem" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
         jLabel147.setText("Mi rontja?");
 
@@ -2298,7 +2334,7 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel146.setText("Mozgáskorlátozottság");
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Igen", "Nem" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
         jLabel149.setText("Egyéb kísérő tünetek (pl. bőrpír)");
 
@@ -5211,7 +5247,7 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
-            frequentWriter.println("széklet gyakoriság: " + jTextField8.getText()+ " állag: "  + jTextField9.getText() + " szín: " + jTextField10.getText());
+            rareWriter.println("széklet gyakoriság: " + jTextField8.getText()+ " állag: "  + jTextField9.getText() + " szín: " + jTextField10.getText());
             
             action=buttonGroup50.getSelection().getActionCommand();
             content="égő végbélnyílás";
@@ -5424,9 +5460,9 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
-            frequentWriter.println("napi folyadékbevitel " + jTextField7.getText() + " l " + jComboBox1.getSelectedItem().toString());
+            rareWriter.println("napi folyadékbevitel " + jTextField7.getText() + " l " + jComboBox1.getSelectedItem().toString());
             
-            frequentWriter.println("napközbeni vizeletürítések száma: " + jSpinner1.getValue().toString());
+            rareWriter.println("napközbeni vizeletürítések száma: " + jSpinner1.getValue().toString());
              
             action=buttonGroup74.getSelection().getActionCommand();
             content="éjszakai vizelés száma: " + jSpinner2.getValue().toString();
@@ -5626,72 +5662,89 @@ public class Questions extends javax.swing.JFrame {
             
             //Menses
             
-            frequentWriter.println(jSpinner3.getValue().toString());
-            
-            frequentWriter.println(jSpinner4.getValue().toString());
-            
-            frequentWriter.println(jComboBox2.getSelectedItem().toString());
-            
-            frequentWriter.println(jComboBox3.getSelectedItem().toString());
-            
-            frequentWriter.println(jComboBox4.getSelectedItem().toString());
-            
-            frequentWriter.println(jSpinner5.getValue().toString());
-            
-            frequentWriter.println(jSpinner6.getValue().toString());
-            
-            action=buttonGroup98.getSelection().getActionCommand();
-            content="szabálytalan menstruáció";
-            if(action=="1"){
-                frequentWriter.println(content);
-            }else if(action=="2"){
-                rareWriter.println(content);
+            if(Controller.controller.sex.equals("nő")){
+                rareWriter.println(jSpinner3.getValue().toString()+".-"+jSpinner4.getValue().toString()+". életévig");
+
+                rareWriter.println("szín: " + jComboBox2.getSelectedItem().toString() + " mennyiség: "+jComboBox3.getSelectedItem().toString());
+
+                rareWriter.println("hossz: "+ jComboBox4.getSelectedItem().toString()+" nap: "+jSpinner5.getValue().toString()+" ciklus nap: "+jSpinner6.getValue().toString());
+
+                action=buttonGroup98.getSelection().getActionCommand();
+                content="szabálytalan menstruáció";
+                if(action=="1"){
+                    frequentWriter.println(content);
+                }else if(action=="2"){
+                    rareWriter.println(content);
+                }
+
+                action=buttonGroup99.getSelection().getActionCommand();
+                content="fájdalmas menstruáció";
+                if(action=="1"){
+                    frequentWriter.println(content);
+                }else if(action=="2"){
+                    rareWriter.println(content);
+                }
+
+                action=buttonGroup100.getSelection().getActionCommand();
+                content="csomós menstruációs vér";
+                if(action=="1"){
+                    frequentWriter.println(content);
+                }else if(action=="2"){
+                    rareWriter.println(content);
+                }
+
+                action=buttonGroup101.getSelection().getActionCommand();
+                content="premenstruációs tünetek";
+                if(action=="1"){
+                    frequentWriter.println(content);
+                }else if(action=="2"){
+                    rareWriter.println(content);
+                }
             }
-            
-            action=buttonGroup99.getSelection().getActionCommand();
-            content="fájdalmas menstruáció";
-            if(action=="1"){
-                frequentWriter.println(content);
-            }else if(action=="2"){
-                rareWriter.println(content);
-            }
-            
-            action=buttonGroup100.getSelection().getActionCommand();
-            content="csomós menstruációs vér";
-            if(action=="1"){
-                frequentWriter.println(content);
-            }else if(action=="2"){
-                rareWriter.println(content);
-            }
-            
-            action=buttonGroup101.getSelection().getActionCommand();
-            content="premenstruációs tünetek";
-            if(action=="1"){
-                frequentWriter.println(content);
-            }else if(action=="2"){
-                rareWriter.println(content);
-            }
-            
             frequentWriter.println("*****");
             rareWriter.println("*****");
             
             //Spine
             
-            frequentWriter.println(jTextField21.getText());
+            String text=jTextField21.getText();
+            if(!text.equals("")){
+                frequentWriter.println("ideje: "+ text);
+            }
             
-            frequentWriter.println(jTextField11.getText());
+            text=jTextField11.getText();
+            if(!text.equals("")){
+                frequentWriter.println("érintett: "+text);
+            }
             
-            frequentWriter.println(jTextField12.getText());
+            text=jTextField12.getText();
+            if(!text.equals("")){
+              frequentWriter.println("kisugrzás: " + text);
+            }
             
-            frequentWriter.println(jTextField13.getText());
+            text=jTextField13.getText();
+            if(!text.equals("")){
+              frequentWriter.println("jelleg: "+text);
+            }
             
-            frequentWriter.println(jTextField14.getText());
+            text=jTextField14.getText();
+            if(!text.equals("")){
+               frequentWriter.println("rontja: "+text);
+            }
             
-            frequentWriter.println(jTextField16.getText());
+            text=jTextField16.getText();
+            if(!text.equals("")){
+             frequentWriter.println("javítja: "+text);
+            }
             
-            frequentWriter.println(jTextField15.getText());
+            text=jTextField15.getText();
+            if(!text.equals("")){
+                frequentWriter.println("korábbi sérülés: "+text);
+            }
             
-            frequentWriter.println(jTextField17.getText());
+            text=jTextField17.getText();
+            if(!text.equals("")){
+              frequentWriter.println("korábbi műtét: "+text);
+            }
             
             action=jComboBox5.getSelectedItem().toString();
             content="mozgáskorlátozott";
@@ -5710,24 +5763,51 @@ public class Questions extends javax.swing.JFrame {
             
             
              //Extremities
-             
-            frequentWriter.println(jTextField27.getText());
             
-            frequentWriter.println(jTextField18.getText());
+            text=jTextField27.getText();
+            if(!text.equals("")){
+                frequentWriter.println("ideje: "+ text);
+            }
             
-            frequentWriter.println(jTextField19.getText());
+            text=jTextField18.getText();
+            if(!text.equals("")){
+                frequentWriter.println("helye: "+ text);
+            }
             
-            frequentWriter.println(jTextField20.getText());
+            text=jTextField19.getText();
+            if(!text.equals("")){
+                frequentWriter.println("kisugárzás: "+ text);
+            }
             
-            frequentWriter.println(jTextField22.getText());
+            text=jTextField20.getText();
+            if(!text.equals("")){
+                frequentWriter.println("jelleg: "+ text);
+            }
             
-            frequentWriter.println(jTextField24.getText());
+            text=jTextField22.getText();
+            if(!text.equals("")){
+                frequentWriter.println("rontja: "+ text);
+            }
             
-            frequentWriter.println(jTextField25.getText());
+            text=jTextField24.getText();
+            if(!text.equals("")){
+                frequentWriter.println("javítja: "+ text);
+            }
             
-            frequentWriter.println(jTextField23.getText());
+            text=jTextField25.getText();
+            if(!text.equals("")){
+                frequentWriter.println("kisérő tünet: "+ text);
+            }
             
-            frequentWriter.println(jTextField26.getText());
+            text=jTextField23.getText();
+            if(!text.equals("")){
+                frequentWriter.println("korábbi sérülés: "+ text);
+            }
+            
+            text=jTextField26.getText();
+            if(!text.equals("")){
+                frequentWriter.println("korábbi műtét: "+ text);
+            }
             
             action=jComboBox7.getSelectedItem().toString();
             content="mozgáskorlátozottság";

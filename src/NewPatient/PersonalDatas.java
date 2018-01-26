@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
@@ -85,7 +86,7 @@ public class PersonalDatas extends javax.swing.JFrame {
 
         jLabel7.setText("Nem");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Férfi", "Nő" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "férfi", "nő" }));
 
         jLabel8.setText("Anyja neve");
 
@@ -209,6 +210,7 @@ public class PersonalDatas extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         this.setVisible(false);
+        Controller.controller.setSex(jComboBox1.getSelectedItem().toString());
         Controller.controller.newMedicalHistory();
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -224,7 +226,7 @@ public class PersonalDatas extends javax.swing.JFrame {
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"personaldata.txt");
             File file2 = new File(path+File.separatorChar+"patients.txt");
             writer = new PrintWriter(file, "UTF-8");
-            writer2 = new PrintWriter(file2, "UTF-8");
+            writer2 = new PrintWriter(new FileOutputStream(file2, true)); 
             
             
             writer.println(Controller.controller.idNumber);
@@ -241,6 +243,7 @@ public class PersonalDatas extends javax.swing.JFrame {
             writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
             writer2.append(" ");
             writer2.append(jTextField1.getText());
+            writer2.append("\n");
             
             writer.close();
             writer2.close();

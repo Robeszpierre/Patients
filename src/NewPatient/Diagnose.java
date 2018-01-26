@@ -330,7 +330,7 @@ public class Diagnose extends javax.swing.JFrame {
             writer.println(physiotherapy);
             writer.println("***");
             writer.println(other);
-            writer.println("*****");
+            writer.println("***");
             writer.close();
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);

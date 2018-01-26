@@ -6,15 +6,22 @@
 package ManagePatient;
 
 import NewPatient.Controller;
+import NewPatient.Tongue;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /**
  *
@@ -22,7 +29,9 @@ import javax.swing.JLabel;
  */
 public class ManageMain extends javax.swing.JFrame {
     
-
+    ArrayList<Treatment> treatments=new ArrayList<Treatment>();
+    int idx=0;
+    
     int idNumber;
     
     /**
@@ -31,78 +40,19 @@ public class ManageMain extends javax.swing.JFrame {
     public ManageMain(int id) {
         this.setVisible(true);
         this.idNumber = id;
-        String path=Controller.controller.path + "/" + idNumber + "/";
-        initComponents();
-        jScrollPane1.setBorder(null);
-        jScrollPane2.setBorder(null);
-        jScrollPane3.setBorder(null);
-        jScrollPane4.setBorder(null);
-        jScrollPane5.setBorder(null);
-        jScrollPane6.setBorder(null);
-        jScrollPane7.setBorder(null);
+        String path=Controller.controller.path + idNumber + File.separatorChar;
+        initComponents(); 
+        myInitComponents();
         
-        jScrollPane1.getViewport().setOpaque(false);
-        jScrollPane1.setOpaque(false);
-        jScrollPane1.setBorder(null);
-        jScrollPane1.setViewportBorder(null);
-        jTextArea1.setBorder(null);
-        jTextArea1.setBackground(new Color(0,0,0,0));
-        
-        jScrollPane2.getViewport().setOpaque(false);
-        jScrollPane2.setOpaque(false);
-        jScrollPane2.setBorder(null);
-        jScrollPane2.setViewportBorder(null);
-        jTextArea2.setBorder(null);
-        jTextArea2.setBackground(new Color(0,0,0,0));
-        
-        jScrollPane3.getViewport().setOpaque(false);
-        jScrollPane3.setOpaque(false);
-        jScrollPane3.setBorder(null);
-        jScrollPane3.setViewportBorder(null);
-        jTextArea3.setBorder(null);
-        jTextArea3.setBackground(new Color(0,0,0,0));
-        
-        jScrollPane4.getViewport().setOpaque(false);
-        jScrollPane4.setOpaque(false);
-        jScrollPane4.setBorder(null);
-        jScrollPane4.setViewportBorder(null);
-        jTextArea4.setBorder(null);
-        jTextArea4.setBackground(new Color(0,0,0,0));
-        
-        jScrollPane5.getViewport().setOpaque(false);
-        jScrollPane5.setOpaque(false);
-        jScrollPane5.setBorder(null);
-        jScrollPane5.setViewportBorder(null);
-        jTextArea5.setBorder(null);
-        jTextArea5.setBackground(new Color(0,0,0,0));
-        
-        jScrollPane6.getViewport().setOpaque(false);
-        jScrollPane6.setOpaque(false);
-        jScrollPane6.setBorder(null);
-        jScrollPane6.setViewportBorder(null);
-        jTextArea6.setBorder(null);
-        jTextArea6.setBackground(new Color(0,0,0,0));
-        
-        loadSymptoms();
-        
-
-        try {
-            Scanner personalDataInput=new Scanner(new File(path+"personaldata.txt"));
-            personalDataInput.nextLine();
-            jTextArea7.append("Név: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Anyja neve: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Születési hely: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Születési időpont: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Családi állapot: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Foglalkozás: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("E-mail cím: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Telefonszám: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Neme: " + personalDataInput.nextLine() + "\n\n");
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
+        loadPersonalData(path);
+        loadSymptoms(path);
+        loadMedicalHistory(path);
+        loadComplaints(path);  
+        loadAnamnezis(path);
+        loadPulse(path);
+        loadDiagnose(path);
+        loadTongue(path);
+        loadEar(path);
         
         
     }
@@ -119,26 +69,148 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jList9 = new javax.swing.JList<>();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jList10 = new javax.swing.JList<>();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jList11 = new javax.swing.JList<>();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jList12 = new javax.swing.JList<>();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jList13 = new javax.swing.JList<>();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jList14 = new javax.swing.JList<>();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jList15 = new javax.swing.JList<>();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        jList16 = new javax.swing.JList<>();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        jList17 = new javax.swing.JList<>();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        jList18 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
+        jScrollPane19 = new javax.swing.JScrollPane();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        jTextPane9 = new javax.swing.JTextPane();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        jTextPane10 = new javax.swing.JTextPane();
+        jLabel11 = new javax.swing.JLabel();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        jTextPane11 = new javax.swing.JTextPane();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jScrollPane23 = new javax.swing.JScrollPane();
+        jTextPane12 = new javax.swing.JTextPane();
+        jScrollPane24 = new javax.swing.JScrollPane();
+        jTextPane13 = new javax.swing.JTextPane();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane25 = new javax.swing.JScrollPane();
+        jTextPane14 = new javax.swing.JTextPane();
+        jLabel15 = new javax.swing.JLabel();
+        jScrollPane26 = new javax.swing.JScrollPane();
+        jTextPane15 = new javax.swing.JTextPane();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane3 = new javax.swing.JTextPane();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextPane4 = new javax.swing.JTextPane();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jScrollPane56 = new javax.swing.JScrollPane();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel87 = new javax.swing.JLabel();
+        jScrollPane57 = new javax.swing.JScrollPane();
+        jTextPane40 = new javax.swing.JTextPane();
+        jScrollPane58 = new javax.swing.JScrollPane();
+        jTextPane41 = new javax.swing.JTextPane();
+        jLabel88 = new javax.swing.JLabel();
+        jScrollPane59 = new javax.swing.JScrollPane();
+        jTextPane42 = new javax.swing.JTextPane();
+        jLabel89 = new javax.swing.JLabel();
+        jLabel90 = new javax.swing.JLabel();
+        jScrollPane60 = new javax.swing.JScrollPane();
+        jTextPane43 = new javax.swing.JTextPane();
+        jLabel91 = new javax.swing.JLabel();
+        jScrollPane61 = new javax.swing.JScrollPane();
+        jTextPane44 = new javax.swing.JTextPane();
+        jLabel92 = new javax.swing.JLabel();
+        jScrollPane62 = new javax.swing.JScrollPane();
+        jTextPane45 = new javax.swing.JTextPane();
+        jLabel93 = new javax.swing.JLabel();
+        jLabel94 = new javax.swing.JLabel();
+        jScrollPane63 = new javax.swing.JScrollPane();
+        jTextPane46 = new javax.swing.JTextPane();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextPane5 = new javax.swing.JTextPane();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextPane6 = new javax.swing.JTextPane();
         jTabbedPane3 = new javax.swing.JTabbedPane();
-        jPanel4 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Betegek kezelése");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -147,77 +219,91 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setToolTipText("FEJ");
-        jTextArea1.setBorder(null);
-        jTextArea1.setOpaque(false);
-        jTextArea1.setRequestFocusEnabled(false);
-        jScrollPane1.setViewportView(jTextArea1);
+        jList9.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList9.setOpaque(false);
+        jList9.setVisibleRowCount(5);
+        jScrollPane9.setViewportView(jList9);
 
-        jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(50, 120, 280, 100);
+        jPanel2.add(jScrollPane9);
+        jScrollPane9.setBounds(310, 350, 340, 110);
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        jTextArea3.setRows(5);
-        jTextArea3.setToolTipText("FEJ");
-        jTextArea3.setBorder(null);
-        jTextArea3.setOpaque(false);
-        jTextArea3.setRequestFocusEnabled(false);
-        jScrollPane3.setViewportView(jTextArea3);
-        jTextArea3.getAccessibleContext().setAccessibleDescription("MELLKAS");
+        jList10.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList10.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList10.setOpaque(false);
+        jList10.setVisibleRowCount(6);
+        jScrollPane10.setViewportView(jList10);
 
-        jPanel2.add(jScrollPane3);
-        jScrollPane3.setBounds(50, 230, 280, 110);
+        jPanel2.add(jScrollPane10);
+        jScrollPane10.setBounds(310, 0, 340, 120);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        jTextArea2.setRows(5);
-        jTextArea2.setToolTipText("FEJ");
-        jTextArea2.setBorder(null);
-        jTextArea2.setOpaque(false);
-        jTextArea2.setRequestFocusEnabled(false);
-        jScrollPane2.setViewportView(jTextArea2);
+        jList11.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList11.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList11.setOpaque(false);
+        jList11.setVisibleRowCount(6);
+        jScrollPane11.setViewportView(jList11);
 
-        jPanel2.add(jScrollPane2);
-        jScrollPane2.setBounds(50, 0, 220, 110);
+        jPanel2.add(jScrollPane11);
+        jScrollPane11.setBounds(0, 0, 310, 120);
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        jTextArea4.setRows(5);
-        jTextArea4.setToolTipText("FEJ");
-        jTextArea4.setBorder(null);
-        jTextArea4.setOpaque(false);
-        jTextArea4.setRequestFocusEnabled(false);
-        jScrollPane4.setViewportView(jTextArea4);
+        jList12.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList12.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList12.setOpaque(false);
+        jList12.setVisibleRowCount(5);
+        jScrollPane12.setViewportView(jList12);
 
-        jPanel2.add(jScrollPane4);
-        jScrollPane4.setBounds(50, 480, 203, 160);
+        jPanel2.add(jScrollPane12);
+        jScrollPane12.setBounds(0, 120, 310, 100);
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        jTextArea5.setRows(5);
-        jTextArea5.setToolTipText("FEJ");
-        jTextArea5.setBorder(null);
-        jTextArea5.setOpaque(false);
-        jTextArea5.setRequestFocusEnabled(false);
-        jScrollPane5.setViewportView(jTextArea5);
+        jList13.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList13.setOpaque(false);
+        jList13.setVisibleRowCount(5);
+        jScrollPane13.setViewportView(jList13);
 
-        jPanel2.add(jScrollPane5);
-        jScrollPane5.setBounds(350, 480, 203, 160);
+        jPanel2.add(jScrollPane13);
+        jScrollPane13.setBounds(0, 230, 310, 120);
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
-        jTextArea6.setRows(5);
-        jTextArea6.setToolTipText("FEJ");
-        jTextArea6.setOpaque(false);
-        jTextArea6.setRequestFocusEnabled(false);
-        jScrollPane6.setViewportView(jTextArea6);
+        jList14.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList14.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
+        jList14.setOpaque(false);
+        jList14.setVisibleRowCount(5);
+        jScrollPane14.setViewportView(jList14);
 
-        jPanel2.add(jScrollPane6);
-        jScrollPane6.setBounds(50, 350, 320, 100);
+        jPanel2.add(jScrollPane14);
+        jScrollPane14.setBounds(310, 120, 340, 100);
+
+        jList15.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList15.setOpaque(false);
+        jList15.setVisibleRowCount(5);
+        jScrollPane15.setViewportView(jList15);
+
+        jPanel2.add(jScrollPane15);
+        jScrollPane15.setBounds(310, 230, 340, 120);
+
+        jList16.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList16.setOpaque(false);
+        jList16.setVisibleRowCount(5);
+        jScrollPane16.setViewportView(jList16);
+
+        jPanel2.add(jScrollPane16);
+        jScrollPane16.setBounds(0, 350, 310, 110);
+
+        jScrollPane17.setBackground(new java.awt.Color(111, 111, 111));
+
+        jList17.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList17.setOpaque(false);
+        jList17.setVisibleRowCount(10);
+        jScrollPane17.setViewportView(jList17);
+
+        jPanel2.add(jScrollPane17);
+        jScrollPane17.setBounds(0, 460, 310, 220);
+
+        jList18.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
+        jList18.setOpaque(false);
+        jList18.setVisibleRowCount(10);
+        jScrollPane18.setViewportView(jList18);
+
+        jPanel2.add(jScrollPane18);
+        jScrollPane18.setBounds(310, 460, 340, 220);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ManagePatient/body3.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -228,8 +314,9 @@ public class ManageMain extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTextArea7.setEditable(false);
         jTextArea7.setColumns(20);
-        jTextArea7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jTextArea7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jTextArea7.setRows(5);
         jScrollPane7.setViewportView(jTextArea7);
 
@@ -261,20 +348,742 @@ public class ManageMain extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Személyes adatok", jPanel3);
+        jTabbedPane1.addTab("Adatok", jPanel3);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 642, Short.MAX_VALUE)
+        jScrollPane19.setHorizontalScrollBar(null);
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel10.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel10.setText("Gyermekkori nagyobb betegség(ek)");
+
+        jScrollPane20.setBorder(null);
+
+        jTextPane9.setEditable(false);
+        jTextPane9.setBorder(null);
+        jScrollPane20.setViewportView(jTextPane9);
+
+        jScrollPane21.setBorder(null);
+
+        jTextPane10.setEditable(false);
+        jScrollPane21.setViewportView(jTextPane10);
+
+        jLabel11.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel11.setText("Előző betegség(ek)");
+
+        jScrollPane22.setBorder(null);
+
+        jTextPane11.setEditable(false);
+        jTextPane11.setBorder(null);
+        jScrollPane22.setViewportView(jTextPane11);
+
+        jLabel12.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel12.setText("Ismert, jelenleg is fennálló betegség(ek)");
+
+        jLabel13.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel13.setText("Műtét(ek)");
+
+        jScrollPane23.setBorder(null);
+
+        jTextPane12.setEditable(false);
+        jTextPane12.setBorder(null);
+        jScrollPane23.setViewportView(jTextPane12);
+
+        jScrollPane24.setBorder(null);
+
+        jTextPane13.setEditable(false);
+        jTextPane13.setBorder(null);
+        jScrollPane24.setViewportView(jTextPane13);
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel14.setText("Nagyobb fogászati beavatkozás(ok)");
+
+        jScrollPane25.setBorder(null);
+
+        jTextPane14.setEditable(false);
+        jTextPane14.setBorder(null);
+        jScrollPane25.setViewportView(jTextPane14);
+
+        jLabel15.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel15.setText("Jelenleg szedett gyógyszer(ek), gyógynövény(ek)");
+
+        jScrollPane26.setBorder(null);
+
+        jTextPane15.setEditable(false);
+        jTextPane15.setBorder(null);
+        jScrollPane26.setViewportView(jTextPane15);
+
+        jLabel16.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel16.setText("Korábbi terhesség(ek)");
+
+        jLabel17.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel17.setText("Jelenleg állapotos-e");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel10))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel17)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(401, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 675, Short.MAX_VALUE)
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane26, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel2))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("tab1", jPanel4);
+        jScrollPane19.setViewportView(jPanel7);
+
+        jTabbedPane1.addTab("Kórtörténet", jScrollPane19);
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel3.setText("Jelen panaszok");
+
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setViewportView(jTextPane1);
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jScrollPane1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 538, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Panaszok", jPanel6);
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel4.setText("Magzati kor, születés körüli időszak");
+
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setViewportView(jTextPane2);
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel5.setText("Gyermekkor");
+
+        jScrollPane3.setBorder(null);
+        jScrollPane3.setViewportView(jTextPane3);
+
+        jLabel6.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel6.setText("Felnőtt kor ill. a jelenleg fennálló helyzet");
+
+        jScrollPane4.setBorder(null);
+        jScrollPane4.setViewportView(jTextPane4);
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4)
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                            .addGap(23, 23, 23)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel5))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Anamnézis", jPanel8);
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel7.setText("Mélység");
+
+        jLabel8.setText("Sebesség");
+
+        jLabel9.setText("Erő");
+
+        jLabel18.setText("Ritmus");
+
+        jLabel19.setText("BAL");
+
+        jLabel20.setText("JOBB");
+
+        jLabel21.setText("Mélység");
+
+        jLabel22.setText("Sebesség");
+
+        jLabel23.setText("Erő");
+
+        jLabel24.setText("Ritmus");
+
+        jLabel25.setText("1 (T):");
+
+        jLabel26.setText("2 (L):");
+
+        jLabel27.setText("3 (V):");
+
+        jLabel28.setText("1 (Sz):");
+
+        jLabel29.setText("2 (M):");
+
+        jLabel30.setText("3 (V):");
+
+        jLabel31.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel31.setText("jLabel31");
+
+        jLabel32.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel32.setText("jLabel32");
+
+        jLabel33.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel33.setText("jLabel33");
+
+        jLabel34.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel34.setText("jLabel34");
+
+        jLabel35.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel35.setText("jLabel31");
+
+        jLabel36.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel36.setText("jLabel32");
+
+        jLabel37.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel37.setText("jLabel33");
+
+        jLabel38.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel38.setText("jLabel34");
+
+        jLabel39.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel39.setText("jLabel31");
+
+        jLabel40.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel40.setText("jLabel32");
+
+        jLabel41.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel41.setText("jLabel33");
+
+        jLabel42.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel42.setText("jLabel34");
+
+        jLabel43.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel43.setText("jLabel31");
+
+        jLabel44.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel44.setText("jLabel32");
+
+        jLabel45.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel45.setText("jLabel33");
+
+        jLabel46.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel46.setText("jLabel34");
+
+        jLabel47.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel47.setText("jLabel31");
+
+        jLabel48.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel48.setText("jLabel32");
+
+        jLabel49.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel49.setText("jLabel33");
+
+        jLabel50.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel50.setText("jLabel34");
+
+        jLabel51.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel51.setText("jLabel31");
+
+        jLabel52.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel52.setText("jLabel32");
+
+        jLabel53.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel53.setText("jLabel33");
+
+        jLabel54.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel54.setText("jLabel34");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel26)
+                                    .addComponent(jLabel27)
+                                    .addComponent(jLabel28)
+                                    .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel7)
+                                            .addComponent(jLabel31))
+                                        .addGap(54, 54, 54)
+                                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel32)))
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(jLabel35)
+                                        .addGap(54, 54, 54)
+                                        .addComponent(jLabel36))
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(jLabel39)
+                                        .addGap(54, 54, 54)
+                                        .addComponent(jLabel40)))
+                                .addGap(73, 73, 73)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel33)
+                                    .addComponent(jLabel37)
+                                    .addComponent(jLabel41))
+                                .addGap(51, 51, 51)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel42)
+                                    .addComponent(jLabel38)
+                                    .addComponent(jLabel34)
+                                    .addComponent(jLabel18)))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel43)
+                                    .addComponent(jLabel47)
+                                    .addComponent(jLabel51))
+                                .addGap(56, 56, 56)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel21)
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel22)
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel45)
+                                    .addComponent(jLabel49)
+                                    .addComponent(jLabel53))
+                                .addGap(51, 51, 51)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel54)
+                                    .addComponent(jLabel50)
+                                    .addComponent(jLabel46)))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addGap(87, 87, 87)
+                                .addComponent(jLabel24)))))
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel18))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel34))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel35)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel38))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel39)
+                    .addComponent(jLabel40)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel42))
+                .addGap(68, 68, 68)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel29)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel30))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel44)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel48)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel52))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel45)
+                            .addComponent(jLabel46))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel49)
+                            .addComponent(jLabel50))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel53)
+                            .addComponent(jLabel54)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel43)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel47)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel51)))
+                .addContainerGap(373, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Pulzus", jPanel9);
+
+        jScrollPane56.setHorizontalScrollBar(null);
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel87.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel87.setText("Diagnózis(ok)");
+
+        jScrollPane57.setBorder(null);
+        jScrollPane57.setViewportView(jTextPane40);
+
+        jScrollPane58.setBorder(null);
+        jScrollPane58.setViewportView(jTextPane41);
+
+        jLabel88.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel88.setText("Terápiás koncepció");
+
+        jScrollPane59.setBorder(null);
+        jScrollPane59.setViewportView(jTextPane42);
+
+        jLabel89.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel89.setText("JAVASLAT(OK)");
+
+        jLabel90.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel90.setText("1. Étrend");
+
+        jScrollPane60.setBorder(null);
+        jScrollPane60.setViewportView(jTextPane43);
+
+        jLabel91.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel91.setText("2. Gyógynövény");
+
+        jScrollPane61.setBorder(null);
+        jScrollPane61.setViewportView(jTextPane44);
+
+        jLabel92.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel92.setText("3. Kínai orvosság");
+
+        jScrollPane62.setBorder(null);
+        jScrollPane62.setViewportView(jTextPane45);
+
+        jLabel93.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel93.setText("4. Mozgás/gyógytorna");
+
+        jLabel94.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel94.setText("5. Életmód, egyéb javaslat");
+
+        jScrollPane63.setBorder(null);
+        jScrollPane63.setViewportView(jTextPane46);
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jScrollPane58))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap(27, Short.MAX_VALUE)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane59)
+                            .addComponent(jScrollPane60, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane61)
+                            .addComponent(jScrollPane62)
+                            .addComponent(jScrollPane63))))
+                .addGap(399, 399, 399))
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel88))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel94))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel87))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel90))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel92))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel91))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel93))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jScrollPane57, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(257, 257, 257)
+                        .addComponent(jLabel89)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel87)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane57, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel88)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane58, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel89)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel90)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane59, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel91)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane60, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel92)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane61, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel93)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane62, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel94)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane63, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        jScrollPane56.setViewportView(jPanel14);
+
+        jTabbedPane1.addTab("Diagnózis", jScrollPane56);
+
+        jScrollPane5.setBorder(null);
+
+        jTextPane5.setEditable(false);
+        jScrollPane5.setViewportView(jTextPane5);
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Nyelv", jPanel10);
+
+        jScrollPane6.setBorder(null);
+        jScrollPane6.setViewportView(jTextPane6);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Fül", jPanel11);
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Új kezelés");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Mentés");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -283,12 +1092,26 @@ public class ManageMain extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane3))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTabbedPane3)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-            .addComponent(jTabbedPane3)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleDescription("tab1");
@@ -307,36 +1130,171 @@ public class ManageMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+
+        treatments.add(new Treatment());
+        Treatment currentTreatment=treatments.get(idx);
+        
+        jTabbedPane3.addTab(Integer.toString(idx+1), currentTreatment);
+        idx++;
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        for(int i=0; i<treatments.size(); i++){
+            treatments.get(i).save(i, idNumber);
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
+
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
+    private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JList<String> jList10;
+    private javax.swing.JList<String> jList11;
+    private javax.swing.JList<String> jList12;
+    private javax.swing.JList<String> jList13;
+    private javax.swing.JList<String> jList14;
+    private javax.swing.JList<String> jList15;
+    private javax.swing.JList<String> jList16;
+    private javax.swing.JList<String> jList17;
+    private javax.swing.JList<String> jList18;
+    private javax.swing.JList<String> jList9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane17;
+    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
+    private javax.swing.JScrollPane jScrollPane23;
+    private javax.swing.JScrollPane jScrollPane24;
+    private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane56;
+    private javax.swing.JScrollPane jScrollPane57;
+    private javax.swing.JScrollPane jScrollPane58;
+    private javax.swing.JScrollPane jScrollPane59;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane60;
+    private javax.swing.JScrollPane jScrollPane61;
+    private javax.swing.JScrollPane jScrollPane62;
+    private javax.swing.JScrollPane jScrollPane63;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane10;
+    private javax.swing.JTextPane jTextPane11;
+    private javax.swing.JTextPane jTextPane12;
+    private javax.swing.JTextPane jTextPane13;
+    private javax.swing.JTextPane jTextPane14;
+    private javax.swing.JTextPane jTextPane15;
+    private javax.swing.JTextPane jTextPane2;
+    private javax.swing.JTextPane jTextPane3;
+    private javax.swing.JTextPane jTextPane4;
+    private javax.swing.JTextPane jTextPane40;
+    private javax.swing.JTextPane jTextPane41;
+    private javax.swing.JTextPane jTextPane42;
+    private javax.swing.JTextPane jTextPane43;
+    private javax.swing.JTextPane jTextPane44;
+    private javax.swing.JTextPane jTextPane45;
+    private javax.swing.JTextPane jTextPane46;
+    private javax.swing.JTextPane jTextPane5;
+    private javax.swing.JTextPane jTextPane6;
+    private javax.swing.JTextPane jTextPane9;
     // End of variables declaration//GEN-END:variables
 
-    private void loadSymptoms() {
-        String path=Controller.controller.path + "/" + idNumber + "/";
+    private void loadSymptoms(String path) {
         Scanner frequentInput=null;
         Scanner rareInput=null;
         String path1=path+"frequent.txt";
@@ -348,99 +1306,533 @@ public class ManageMain extends javax.swing.JFrame {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        //HEAD
         
         String line = frequentInput.nextLine();
+        String line2 = rareInput.nextLine();
+        
+        //HEAD
+       
+        
+        DefaultListModel listModel1 = new DefaultListModel();
+        
         while(!line.equals("*****")){
-            jTextArea1.append(line+"\n");
+            listModel1.addElement(line);
             line = frequentInput.nextLine();
         }
-        String line2 = rareInput.nextLine();
+        jList11.setModel(listModel1);
+        
+        
+        DefaultListModel listModel2 = new DefaultListModel();
+        
         while(!line2.equals("*****")){
-            jTextArea1.append(line2+"\n");
+            listModel2.addElement(line2);
             line2 = rareInput.nextLine();
         }
+        jList10.setModel(listModel2);
+        
+        line = frequentInput.nextLine();
+        line2 = rareInput.nextLine();
         
         //CHEST
         
-        line = frequentInput.nextLine();
+        DefaultListModel listModel3 = new DefaultListModel();
         while(!line.equals("*****")){
-            jTextArea2.append(line+"\n");
+            listModel3.addElement(line);
             line = frequentInput.nextLine();
         }
-        line2 = rareInput.nextLine();
+        jList12.setModel(listModel3);
+        
+        DefaultListModel listModel4 = new DefaultListModel();
         while(!line2.equals("*****")){
-            jTextArea2.append(line2+"\n");
+            listModel4.addElement(line2);
             line2 = rareInput.nextLine();
         }
+        jList14.setModel(listModel4);
         
+        line = frequentInput.nextLine();
+        line2 = rareInput.nextLine();
         
         //BELLY
         
-        line = frequentInput.nextLine();
+        DefaultListModel listModel5 = new DefaultListModel();
         while(!line.equals("*****")){
-            jTextArea6.append(line+"\n");
+            listModel5.addElement(line);
             line = frequentInput.nextLine();
         }
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea6.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        jTextArea6.append("\n");
+        
         line = frequentInput.nextLine();
+        
         while(!line.equals("*****")){
-            jTextArea6.append(line+"\n");
+            listModel5.addElement(line);
             line = frequentInput.nextLine();
         }
-        line2 = rareInput.nextLine();
+        
+        jList13.setModel(listModel5);
+        
+        DefaultListModel listModel6 = new DefaultListModel();
         while(!line2.equals("*****")){
-            jTextArea6.append(line2+"\n");
+            listModel6.addElement(line2);
             line2 = rareInput.nextLine();
         }
+        
+        line2 = rareInput.nextLine();
+        
+        while(!line2.equals("*****")){
+            listModel6.addElement(line2);
+            line2 = rareInput.nextLine();
+        }
+        
+        
+        jList15.setModel(listModel6);
+        
+        line = frequentInput.nextLine();
+        line2 = rareInput.nextLine();
+        
+
         
         
         //LOWER ABDOMEN
         
-        line = frequentInput.nextLine();
+        DefaultListModel listModel7 = new DefaultListModel();
         while(!line.equals("*****")){
-            jTextArea3.append(line+"\n");
+            listModel7.addElement(line);
             line = frequentInput.nextLine();
         }
-        line2 = rareInput.nextLine();
-        while(!line2.equals("*****")){
-            jTextArea3.append(line2+"\n");
-            line2 = rareInput.nextLine();
-        }
-        jTextArea3.append("\n");
+        
         line = frequentInput.nextLine();
+        
         while(!line.equals("*****")){
-            jTextArea3.append(line+"\n");
+            listModel7.addElement(line);
             line = frequentInput.nextLine();
         }
-        line2 = rareInput.nextLine();
+        
+        jList16.setModel(listModel7);
+        
+        DefaultListModel listModel8 = new DefaultListModel();
         while(!line2.equals("*****")){
-            jTextArea3.append(line2+"\n");
+            listModel8.addElement(line2);
             line2 = rareInput.nextLine();
         }
+        
+        line2 = rareInput.nextLine();
+        
+        while(!line2.equals("*****")){
+            listModel8.addElement(line2);
+            line2 = rareInput.nextLine();
+        }
+        
+        
+        jList9.setModel(listModel8);
+        
+        line = frequentInput.nextLine();
+        line2 = rareInput.nextLine();
         
         //SPINE
         
-        line = frequentInput.nextLine();
+        DefaultListModel listModel9 = new DefaultListModel();
         while(!line.equals("*****")){
-            jTextArea4.append(line+"\n");
+            listModel9.addElement(line);
             line = frequentInput.nextLine();
         }
+        jList17.setModel(listModel9);
+        
+        line = frequentInput.nextLine();
         
         //EXTREMITIES
         
-        line = frequentInput.nextLine();
+        DefaultListModel listModel10 = new DefaultListModel();
         while(!line.equals("*****")){
-            jTextArea5.append(line+"\n");
+            listModel10.addElement(line);
             line = frequentInput.nextLine();
         }
+        jList18.setModel(listModel10);
         
         frequentInput.close();
         rareInput.close();
+    }
+
+    private void myInitComponents() {
+        jScrollPane7.setBorder(null);
+        
+        jScrollPane9.setBorder(null);
+        jScrollPane10.setBorder(null);
+        jScrollPane11.setBorder(null);
+        jScrollPane12.setBorder(null);
+        jScrollPane13.setBorder(null);
+        jScrollPane14.setBorder(null);
+        jScrollPane15.setBorder(null);
+        jScrollPane16.setBorder(null);
+        jScrollPane17.setBorder(null);
+        jScrollPane18.setBorder(null);
+        
+        jScrollPane19.getVerticalScrollBar().setUnitIncrement(30);
+        jScrollPane56.getVerticalScrollBar().setUnitIncrement(30);
+        
+        jScrollPane9.getViewport().setOpaque(false);
+        jScrollPane9.setOpaque(false);
+        jScrollPane9.setBorder(null);
+        jScrollPane9.setViewportBorder(null);
+        jList9.setBorder(null);
+        jList9.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane10.getViewport().setOpaque(false);
+        jScrollPane10.setOpaque(false);
+        jScrollPane10.setBorder(null);
+        jScrollPane10.setViewportBorder(null);
+        jList10.setBorder(null);
+        jList10.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane11.getViewport().setOpaque(false);
+        jScrollPane11.setOpaque(false);
+        jScrollPane11.setBorder(null);
+        jScrollPane11.setViewportBorder(null);
+        jList11.setBorder(null);
+        jList11.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane12.getViewport().setOpaque(false);
+        jScrollPane12.setOpaque(false);
+        jScrollPane12.setBorder(null);
+        jScrollPane12.setViewportBorder(null);
+        jList12.setBorder(null);
+        jList12.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane13.getViewport().setOpaque(false);
+        jScrollPane13.setOpaque(false);
+        jScrollPane13.setBorder(null);
+        jScrollPane13.setViewportBorder(null);
+        jList13.setBorder(null);
+        jList13.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane14.getViewport().setOpaque(false);
+        jScrollPane14.setOpaque(false);
+        jScrollPane14.setBorder(null);
+        jScrollPane14.setViewportBorder(null);
+        jList14.setBorder(null);
+        jList14.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane15.getViewport().setOpaque(false);
+        jScrollPane15.setOpaque(false);
+        jScrollPane15.setBorder(null);
+        jScrollPane15.setViewportBorder(null);
+        jList15.setBorder(null);
+        jList15.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane16.getViewport().setOpaque(false);
+        jScrollPane16.setOpaque(false);
+        jScrollPane16.setBorder(null);
+        jScrollPane16.setViewportBorder(null);
+        jList16.setBorder(null);
+        jList16.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane17.getViewport().setOpaque(false);
+        jScrollPane17.setOpaque(false);
+        jScrollPane17.setBorder(null);
+        jScrollPane17.setViewportBorder(null);
+        jList17.setBorder(null);
+        jList17.setBackground(new Color(0,0,0,0));
+        
+        jScrollPane18.getViewport().setOpaque(false);
+        jScrollPane18.setOpaque(false);
+        jScrollPane18.setBorder(null);
+        jScrollPane18.setViewportBorder(null);
+        jList18.setBorder(null);
+        jList18.setBackground(new Color(0,0,0,0));
+    }
+
+    private void loadMedicalHistory(String path) {
+        try {
+            Scanner medicalHistory=new Scanner(new File(path+"medicalhistory.txt"));
+            String line=medicalHistory.nextLine();
+            String text="";
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane9.setText(text);
+            }
+            
+            text="";
+            line=medicalHistory.nextLine();
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane10.setText(text);
+            }
+            
+            text="";
+            line=medicalHistory.nextLine();
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane11.setText(text);
+            }
+            
+            text="";
+            line=medicalHistory.nextLine();
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane12.setText(text);
+            }
+            
+            text="";
+            line=medicalHistory.nextLine();
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane13.setText(text);
+            }
+            
+            text="";
+            line=medicalHistory.nextLine();
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane14.setText(text);
+            }
+            
+            text="";
+            line=medicalHistory.nextLine();
+            while(!line.equals("***")){
+                    text+=line+"\n";
+                    line=medicalHistory.nextLine();
+                jTextPane15.setText(text);
+            }
+            
+            line=medicalHistory.nextLine();
+            jLabel2.setText(line);
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void loadPersonalData(String path) {
+        try {
+            Scanner personalDataInput=new Scanner(new File(path+"personaldata.txt"));
+            personalDataInput.nextLine();
+            jTextArea7.append("Név: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Anyja neve: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Születési hely: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Születési időpont: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Családi állapot: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Foglalkozás: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("E-mail cím: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Telefonszám: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Neme: " + personalDataInput.nextLine() + "\n\n");
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void loadComplaints(String path) {
+         try {
+            Scanner input=new Scanner(new File(path+"complaints.txt"));
+            String text="";
+            while(input.hasNextLine()){
+                text+=input.nextLine()+"\n";
+            }
+            jTextPane1.setText(text);
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+
+    private void loadAnamnezis(String path) {
+        try {
+            Scanner input=new Scanner(new File(path+"anamnesis.txt"));
+            
+            String text="";
+            String line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            input.nextLine();
+            jTextPane2.setText(text);
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            input.nextLine();
+            jTextPane3.setText(text);
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane4.setText(text);
+            
+            
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void loadPulse(String path) {
+        try {
+            Scanner input=new Scanner(new File(path+"pulse.txt"));
+            
+            jLabel31.setText(input.next());
+            jLabel32.setText(input.next());
+            jLabel33.setText(input.next());
+            jLabel34.setText(input.next());
+            jLabel35.setText(input.next());
+            jLabel36.setText(input.next());
+            jLabel37.setText(input.next());
+            jLabel38.setText(input.next());
+            jLabel39.setText(input.next());
+            jLabel40.setText(input.next());
+            jLabel41.setText(input.next());
+            jLabel42.setText(input.next());
+            jLabel43.setText(input.next());
+            jLabel44.setText(input.next());
+            jLabel45.setText(input.next());
+            jLabel46.setText(input.next());
+            jLabel47.setText(input.next());
+            jLabel48.setText(input.next());
+            jLabel49.setText(input.next());
+            jLabel50.setText(input.next());
+            jLabel51.setText(input.next());
+            jLabel52.setText(input.next());
+            jLabel53.setText(input.next());
+            jLabel54.setText(input.next());
+
+            
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void loadDiagnose(String path) {
+        try {
+            Scanner input=new Scanner(new File(path+"diagnose.txt"));
+            String text="";
+            String line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane40.setText(text);
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane41.setText(text);
+            line=input.nextLine();
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane42.setText(text);
+            line=input.nextLine();
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane43.setText(text);
+            line=input.nextLine();
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane44.setText(text);
+            line=input.nextLine();
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane45.setText(text);
+            line=input.nextLine();
+            
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            jTextPane46.setText(text);
+            
+            
+            
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void loadTongue(String path) {
+        try {
+            Scanner input=new Scanner(new File(path+"tongue.txt"));
+            String text="";
+            while(input.hasNext()){
+                text+=input.nextLine()+"\n";
+            }
+            jTextPane5.setText(text);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        BufferedImage img=null;   
+        Image dimg=null;
+        try{
+            img=ImageIO.read(new File(path+"tongue.png"));
+            dimg = img.getScaledInstance(jLabel55.getWidth(), jLabel55.getHeight(),
+            Image.SCALE_SMOOTH);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        ImageIcon icon=new ImageIcon(dimg);
+        jLabel55.setIcon(icon);
+    }
+
+    private void loadEar(String path) {
+        try {
+            Scanner input=new Scanner(new File(path+"ear.txt"));
+            String text="";
+            while(input.hasNext()){
+                text+=input.nextLine()+"\n";
+            }
+            jTextPane6.setText(text);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        BufferedImage img=null;   
+        Image dimg=null;
+        try{
+            img=ImageIO.read(new File(path+"ear.png"));
+            dimg = img.getScaledInstance(jLabel56.getWidth(), jLabel56.getHeight(),
+            Image.SCALE_SMOOTH);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        ImageIcon icon=new ImageIcon(dimg);
+        jLabel56.setIcon(icon);
     }
 }

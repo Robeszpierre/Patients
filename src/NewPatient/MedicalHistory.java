@@ -67,7 +67,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             writer.println(pregnencies);
             writer.println("***");
             writer.println(pregnant);
-            writer.println("*****");
+            writer.println("***");
             writer.close();
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);

@@ -5922,8 +5922,8 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
-                    <StringItem index="0" value="S&#xf6;t&#xe9;t"/>
-                    <StringItem index="1" value="Halv&#xe1;ny"/>
+                    <StringItem index="0" value="s&#xf6;t&#xe9;t"/>
+                    <StringItem index="1" value="halv&#xe1;ny"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -5940,9 +5940,9 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
-                    <StringItem index="0" value="B&#x151;s&#xe9;ges"/>
-                    <StringItem index="1" value="Kev&#xe9;s"/>
-                    <StringItem index="2" value="Norm&#xe1;lis"/>
+                    <StringItem index="0" value="b&#x151;s&#xe9;ges"/>
+                    <StringItem index="1" value="kev&#xe9;s"/>
+                    <StringItem index="2" value="norm&#xe1;lis"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -5959,9 +5959,9 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
-                    <StringItem index="0" value="R&#xf6;videbb"/>
-                    <StringItem index="1" value="Hosszabb"/>
-                    <StringItem index="2" value="Rendszertelen"/>
+                    <StringItem index="0" value="r&#xf6;videbb"/>
+                    <StringItem index="1" value="hosszabb"/>
+                    <StringItem index="2" value="rendszertelen"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -6054,8 +6054,8 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
-                    <StringItem index="0" value="Igen"/>
-                    <StringItem index="1" value="Nem"/>
+                    <StringItem index="0" value="nem"/>
+                    <StringItem index="1" value="igen"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -6072,8 +6072,8 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
-                    <StringItem index="0" value="Igen"/>
-                    <StringItem index="1" value="Nem"/>
+                    <StringItem index="0" value="nem"/>
+                    <StringItem index="1" value="igen"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -6133,8 +6133,8 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
-                    <StringItem index="0" value="Igen"/>
-                    <StringItem index="1" value="Nem"/>
+                    <StringItem index="0" value="nem"/>
+                    <StringItem index="1" value="igen"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -6165,8 +6165,8 @@
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
-                    <StringItem index="0" value="Igen"/>
-                    <StringItem index="1" value="Nem"/>
+                    <StringItem index="0" value="nem"/>
+                    <StringItem index="1" value="igen"/>
                   </StringArray>
                 </Property>
               </Properties>

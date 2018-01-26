@@ -26,7 +26,8 @@ public class Controller {
     static public Controller controller=new Controller();
     
     public int idNumber;
-    public  String path="/home/robeszpierre/NetBeansProjects/Patients/src/Patients/";
+    public String path=File.separatorChar+"home"+File.separatorChar+"robeszpierre"+File.separatorChar+"NetBeansProjects"+File.separatorChar+"Patients"+File.separatorChar+"src"+File.separatorChar+"Patients"+File.separatorChar;
+    public String sex;
     
     private MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;
@@ -140,9 +141,7 @@ public class Controller {
         newPatientPsychologicalAnamnesis.save(path);
         newPatientDiagnose.save(path);
         newPatientPulse.save(path);
-        newPatientTongue.save(path); 
-        newPatientEar.save(path); 
-        
+              
         PrintWriter writer;
         try {
             String path2=path+"/idNumber.txt";
@@ -153,5 +152,12 @@ public class Controller {
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        newPatientTongue.save(path); 
+        newPatientEar.save(path); 
+    }
+    
+    public void setSex(String s){
+        sex=s;
     }
 }

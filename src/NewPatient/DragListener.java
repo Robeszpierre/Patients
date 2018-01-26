@@ -84,7 +84,7 @@ public class DragListener implements  DropTargetListener{
         }
     }
     
-    BufferedImage img=null;
+    BufferedImage img=null;   
 
     private void displayImage(String path) {
         Image dimg=null;
