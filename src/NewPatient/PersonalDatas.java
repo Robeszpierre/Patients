@@ -242,10 +242,10 @@ public class PersonalDatas extends javax.swing.JFrame {
             writer.println(jTextField8.getText());
             writer.println(jComboBox1.getSelectedItem().toString());
             
-            writer2.append("\n");
             writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
             writer2.append(" ");
             writer2.append(jTextField1.getText());
+            writer2.append(System.getProperty("line.separator"));
             
             
             writer.close();
