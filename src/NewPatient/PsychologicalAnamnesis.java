@@ -175,7 +175,7 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
             String adultHood=jTextPane3.getText();
         
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"anamnesis.txt");
-            writer = new PrintWriter(file, "UTF-8");
+            writer = new PrintWriter(file);
             
             writer.println(fetalAge);
             writer.println("***");
@@ -184,7 +184,7 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
             writer.println(adultHood);
             writer.println("***");
             writer.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

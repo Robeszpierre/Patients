@@ -34,7 +34,7 @@ public class SelectPatient extends javax.swing.JFrame {
         Scanner inputPatients=null;
         
         try {
-            inputPatients=new Scanner(new File(Controller.controller.path+"patients.txt"));
+            inputPatients=new Scanner(new File(Controller.controller.path+"patients.txt"), "UTF-8");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(SelectPatient.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -50,7 +50,7 @@ public class MedicalHistory extends javax.swing.JFrame {
 
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"medicalhistory.txt");
-            writer = new PrintWriter(file, "UTF-8");
+            writer = new PrintWriter(file);
             
             writer.println(childHood);
             writer.println("***");
@@ -69,7 +69,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             writer.println(pregnant);
             writer.println("***");
             writer.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

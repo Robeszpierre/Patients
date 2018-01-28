@@ -4843,9 +4843,9 @@ public class Questions extends javax.swing.JFrame {
 
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"frequent.txt");
-            frequentWriter = new PrintWriter(file, "UTF-8");
+            frequentWriter = new PrintWriter(file);
             File file2 = new File(path+File.separatorChar+dir+File.separatorChar+"rare.txt");
-            rareWriter = new PrintWriter(file2, "UTF-8");
+            rareWriter = new PrintWriter(file2);
             
             //Head
             
@@ -5834,7 +5834,7 @@ public class Questions extends javax.swing.JFrame {
                         
             frequentWriter.close();
             rareWriter.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

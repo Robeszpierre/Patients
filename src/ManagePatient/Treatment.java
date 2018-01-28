@@ -216,8 +216,8 @@ public class Treatment extends javax.swing.JPanel {
         
             File file = new File(Controller.controller.path+idNumber+File.separatorChar+"Treatments"+File.separatorChar+Integer.toString(treatmentNumber+1)+".txt");
         try {
-            writer = new PrintWriter(file, "UTF-8");
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            writer = new PrintWriter(file);
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
             

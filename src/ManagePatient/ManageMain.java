@@ -1855,7 +1855,7 @@ public class ManageMain extends javax.swing.JFrame {
         BufferedImage img=null;   
         Image dimg=null;
         try{
-            img=ImageIO.read(new File(path+"tongue.png"));
+            img=ImageIO.read(new File(path+"tongue.jpg"));
             dimg = img.getScaledInstance(jLabel55.getWidth(), jLabel55.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
@@ -1881,7 +1881,7 @@ public class ManageMain extends javax.swing.JFrame {
         BufferedImage img=null;   
         Image dimg=null;
         try{
-            img=ImageIO.read(new File(path+"ear.png"));
+            img=ImageIO.read(new File(path+"ear.jpg"));
             dimg = img.getScaledInstance(jLabel56.getWidth(), jLabel56.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
@@ -1938,8 +1938,8 @@ public class ManageMain extends javax.swing.JFrame {
         
             File file = new File(Controller.controller.path+idNumber+File.separatorChar+"finalreport.txt");
         try {
-            writer = new PrintWriter(file, "UTF-8");
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            writer = new PrintWriter(file);
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
         

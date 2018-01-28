@@ -5,6 +5,10 @@ import ManagePatient.SelectPatient;
 import NewPatient.Controller;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.lang.reflect.Field;
+import java.nio.charset.Charset;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /*
@@ -26,6 +30,23 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        System.setProperty("file.encoding","UTF-8");
+            Field charset = null;
+        try {
+            charset = Charset.class.getDeclaredField("defaultCharset");
+        } catch (NoSuchFieldException | SecurityException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            charset.setAccessible(true);
+        try {
+            charset.set(null,null);
+        } catch (IllegalArgumentException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+          
     }
 
     /**

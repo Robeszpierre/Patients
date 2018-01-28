@@ -25,7 +25,7 @@ public class Controller {
     
     static public Controller controller=new Controller();
     public int idNumber;
-    public String path=File.separatorChar+"home"+File.separatorChar+"robeszpierre"+File.separatorChar+"Desktop"+File.separatorChar+"Patients"+File.separatorChar;
+    public String path="C:\\Users\\Robeszpierre\\Desktop\\Patients\\";
     public String sex;
     
     private MainFrame mainFrame;
@@ -145,17 +145,17 @@ public class Controller {
         try {
             String path2=path+File.separatorChar+"idNumber.txt";
             File file = new File(path2);
-            writer = new PrintWriter(file, "UTF-8");
+            writer = new PrintWriter(file);
             writer.println(idNumber);
             writer.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         PrintWriter writer2 = null;
         try {
-            writer2 = new PrintWriter(path+idNumber+File.separatorChar+"finalreport.txt", "UTF-8");
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            writer2 = new PrintWriter(path+idNumber+File.separatorChar+"finalreport.txt");
+        } catch (FileNotFoundException ex) {
             System.out.println("Can't make final report txt");
         }
         writer2.println("***");

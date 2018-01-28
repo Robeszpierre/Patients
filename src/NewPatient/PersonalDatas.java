@@ -227,7 +227,7 @@ public class PersonalDatas extends javax.swing.JFrame {
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"personaldata.txt");
             File file2 = new File(path+File.separatorChar+"patients.txt");
-            writer = new PrintWriter(file, "UTF-8");
+            writer = new PrintWriter(file);
             writer2 = new PrintWriter(new FileOutputStream(file2, true)); 
             
             
@@ -241,15 +241,16 @@ public class PersonalDatas extends javax.swing.JFrame {
             writer.println(jTextField7.getText());
             writer.println(jTextField8.getText());
             writer.println(jComboBox1.getSelectedItem().toString());
-
+            
+            writer2.append("\n");
             writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
             writer2.append(" ");
             writer2.append(jTextField1.getText());
-            writer2.append("\n");
+            
             
             writer.close();
             writer2.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

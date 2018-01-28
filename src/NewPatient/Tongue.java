@@ -182,12 +182,12 @@ public class Tongue extends javax.swing.JFrame {
             String tongue=jTextPane1.getText();
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"tongue.txt");
-            writer = new PrintWriter(file, "UTF-8");
+            writer = new PrintWriter(file);
             
             writer.println(tongue);
             writer.close();
             drag.save();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

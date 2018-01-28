@@ -441,7 +441,7 @@ public class Pulse extends javax.swing.JFrame {
 
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"pulse.txt");
-            writer = new PrintWriter(file, "UTF-8");
+            writer = new PrintWriter(file);
             
             writer.print(t1 + " " + t2 + " " + t3 + " " + t4 + "\n");
             writer.print(l1 + " " + l2 + " " + l3 + " " + l4 + "\n");
@@ -450,7 +450,7 @@ public class Pulse extends javax.swing.JFrame {
             writer.print(m1 + " " + m2 + " " + m3 + " " + m4 + "\n");
             writer.print(k1 + " " + k2 + " " + k3 + " " + k4 + "\n");
             writer.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+        } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
