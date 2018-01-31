@@ -67,6 +67,7 @@ public class Diagnose extends javax.swing.JFrame {
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextPane7 = new javax.swing.JTextPane();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setTitle("Diagnózis/Javaslatok");
         setResizable(false);
@@ -123,6 +124,16 @@ public class Diagnose extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Előző");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -153,7 +164,9 @@ public class Diagnose extends javax.swing.JFrame {
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel7))
@@ -206,7 +219,9 @@ public class Diagnose extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
@@ -229,13 +244,28 @@ public class Diagnose extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        Controller.controller.numOfPatients++;
+        
+        if(Controller.controller.sex.equals("férfi")){
+            Controller.controller.numOfMan++;
+        }else{
+            Controller.controller.numOfWoman++;
+        }
+        
+        Controller.controller.countAvg();
+        
         try {
             this.setVisible(false);
             Controller.controller.save();
         } catch (IOException ex) {
             Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }   
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        this.setVisible(false);
+        Controller.controller.previous7();
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -275,6 +305,7 @@ public class Diagnose extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

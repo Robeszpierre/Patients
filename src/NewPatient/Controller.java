@@ -10,6 +10,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import sun.security.krb5.Checksum;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -38,9 +39,21 @@ public class Controller {
     private Diagnose newPatientDiagnose;
     private Ear newPatientEar;
     
+    //statistic
+    public int numOfPatients;
+    public int numOfMan;
+    public int numOfWoman;
+    public int sumOfAge;
+    public int avgAge;
+    public int sumOfManAge;
+    public int avgManAge;
+    public int sumOfWomanAge;
+    public int avgWomanAge;
+    
     public void start(){
         mainFrame=new MainFrame();
         mainFrame.setVisible(true);
+        initStat();
     }
     
     
@@ -92,43 +105,74 @@ public class Controller {
     }
      
     public void newQuestions() {
-        newPatientQuestions = new Questions();
+        
         newPatientQuestions.setVisible(true);
     }
     
     public void newMedicalHistory(){
+        
+        newPatientQuestions = new Questions();
         newPatientMedicalHistory=new MedicalHistory();
+        newPatientPresentComplaints=new Complaints();
+        newPatientPsychologicalAnamnesis=new PsychologicalAnamnesis();
+        newPatientTongue=new Tongue();
+        newPatientEar=new Ear();
+        newPatientPulse=new Pulse();
+        newPatientDiagnose=new Diagnose();
+        
         newPatientMedicalHistory.setVisible(true);
     }
     
     public void newCompleints(){
-        newPatientPresentComplaints=new Complaints();
         newPatientPresentComplaints.setVisible(true);
     }
     
     public void newAnamnesis(){
-        newPatientPsychologicalAnamnesis=new PsychologicalAnamnesis();
         newPatientPsychologicalAnamnesis.setVisible(true);
     }
     
     public void newTongue(){
-        newPatientTongue=new Tongue();
         newPatientTongue.setVisible(true);
     }
     
     public void newEar(){
-        newPatientEar=new Ear();
         newPatientEar.setVisible(true);
     }
     
-    public void newPulse(){
-        newPatientPulse=new Pulse();
+    public void newPulse(){  
         newPatientPulse.setVisible(true);
     }
     
     public void newDiagnose(){
-        newPatientDiagnose=new Diagnose();
         newPatientDiagnose.setVisible(true);
+    }
+    
+    public void previous1(){
+        newPatientMedicalHistory.setVisible(true);
+    }
+    
+    public void previous2(){
+        newPatientPresentComplaints.setVisible(true);
+    }
+    
+    public void previous3(){
+        newPatientPsychologicalAnamnesis.setVisible(true);
+    }
+    
+    public void previous4(){
+        newPatientQuestions.setVisible(true);
+    }
+    
+    public void previous5(){
+        newPatientTongue.setVisible(true);
+    }
+    
+    public void previous6(){
+        newPatientEar.setVisible(true);
+    }
+    
+    public void previous7(){
+        newPatientPulse.setVisible(true);
     }
     
     public void save() throws IOException{
@@ -163,6 +207,24 @@ public class Controller {
         
         writer2.close();
         
+        PrintWriter writer3=null;
+        try {
+            writer3 = new PrintWriter(path+"statistic.txt");
+            writer3.println(numOfPatients);
+            writer3.println(numOfMan);
+            writer3.println(numOfWoman);
+            writer3.println(sumOfAge);
+            writer3.println(avgAge);
+            writer3.println(sumOfManAge);
+            writer3.println(avgManAge);
+            writer3.println(sumOfWomanAge);
+            writer3.println(avgWomanAge);
+        } catch (FileNotFoundException ex) {
+            System.out.println("Can't make final report txt");
+        }
+
+        writer3.close();
+        
         File directory = new File(path+idNumber+File.separatorChar+"Treatments");
         directory.mkdir();
         
@@ -172,5 +234,36 @@ public class Controller {
     
     public void setSex(String s){
         sex=s;
+    }
+
+    private void initStat() {
+        try {
+            Scanner input=new Scanner(new File(path+"statistic.txt"));
+            numOfPatients=Integer.parseInt(input.nextLine());
+            numOfMan=Integer.parseInt(input.nextLine());
+            numOfWoman=Integer.parseInt(input.nextLine());
+            sumOfAge=Integer.parseInt(input.nextLine());
+            avgAge=Integer.parseInt(input.nextLine());
+            sumOfManAge=Integer.parseInt(input.nextLine());
+            avgManAge=Integer.parseInt(input.nextLine());
+            sumOfWomanAge=Integer.parseInt(input.nextLine());
+            avgWomanAge=Integer.parseInt(input.nextLine());
+            
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    void countAvg() {
+        avgAge=sumOfAge/numOfPatients;
+        try{
+            avgManAge=sumOfManAge/numOfMan;
+        }catch(Exception e){
+        }
+        try{
+            avgWomanAge=numOfWoman;
+        }catch(Exception e){
+        }
     }
 }

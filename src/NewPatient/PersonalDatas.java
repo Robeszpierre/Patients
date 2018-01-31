@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -212,6 +214,31 @@ public class PersonalDatas extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         this.setVisible(false);
+        
+        int patientBirthAge;
+        try{
+            patientBirthAge=Integer.parseInt(jTextField2.getText());
+        }catch(Exception e){
+            patientBirthAge=0;
+        }
+        
+        System.out.println(patientBirthAge);
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy");
+        LocalDateTime dateTime = LocalDateTime.now();
+        String time = dateTime.format(formatter); 
+        
+        int currentAge=Integer.parseInt(time);
+        
+        int patientAge=currentAge-patientBirthAge;
+        Controller.controller.sumOfAge+=patientAge;
+        
+        if(jComboBox1.getSelectedItem().toString().equals("férfi")){
+            Controller.controller.sumOfManAge+=patientAge;
+        }else{
+            Controller.controller.sumOfWomanAge+=patientAge;
+        } 
+        
         Controller.controller.setSex(jComboBox1.getSelectedItem().toString());
         Controller.controller.newMedicalHistory();
     }//GEN-LAST:event_jButton1MouseClicked

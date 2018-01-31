@@ -101,6 +101,7 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane18 = new javax.swing.JScrollPane();
         jList18 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -225,13 +226,13 @@ public class ManageMain extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Betegek kezelése");
+        setPreferredSize(new java.awt.Dimension(1366, 768));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1300, 700));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1366, 740));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
@@ -327,6 +328,18 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel2.add(jLabel1);
         jLabel1.setBounds(0, 0, 650, 680);
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Tünetmódosítás");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jButton3);
+        jButton3.setBounds(210, 680, 200, 30);
+
         jTabbedPane1.addTab("Tünetek", jPanel2);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -351,7 +364,7 @@ public class ManageMain extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(242, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -570,7 +583,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -635,7 +648,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Anamnézis", jPanel8);
@@ -804,9 +817,8 @@ public class ManageMain extends javax.swing.JFrame {
                                     .addComponent(jLabel51))
                                 .addGap(56, 56, 56)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel48)
-                                        .addComponent(jLabel52))
+                                    .addComponent(jLabel48)
+                                    .addComponent(jLabel52)
                                     .addComponent(jLabel44)))))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel19)
@@ -902,7 +914,7 @@ public class ManageMain extends javax.swing.JFrame {
                         .addComponent(jLabel47)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel51)))
-                .addContainerGap(373, Short.MAX_VALUE))
+                .addContainerGap(413, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Pulzus", jPanel9);
@@ -1078,7 +1090,7 @@ public class ManageMain extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1101,7 +1113,7 @@ public class ManageMain extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Fül", jPanel11);
@@ -1123,14 +1135,15 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel57)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel57))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 641, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18))
         );
         jPanel4Layout.setVerticalGroup(
@@ -1161,19 +1174,10 @@ public class ManageMain extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Mentés");
+        jButton2.setPreferredSize(new java.awt.Dimension(111, 33));
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
-            }
-        });
-
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Tünetmódosítás");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
             }
         });
 
@@ -1185,14 +1189,11 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPane3)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 632, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -1200,11 +1201,10 @@ public class ManageMain extends javax.swing.JFrame {
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                    .addComponent(jButton1)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -1218,7 +1218,7 @@ public class ManageMain extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1248,10 +1248,12 @@ public class ManageMain extends javax.swing.JFrame {
                 line=input.nextLine();
             }
             Controller.controller.setSex(line);
+            Controller.controller.idNumber=idNumber;
             Questions q=new Questions();
             q.load(idNumber);
             q.setVisible(true);
             q.hideComponents();
+            this.dispose();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }
