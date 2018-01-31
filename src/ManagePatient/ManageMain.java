@@ -6,6 +6,7 @@
 package ManagePatient;
 
 import NewPatient.Controller;
+import NewPatient.Questions;
 import NewPatient.Tongue;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
@@ -26,6 +27,7 @@ import javax.imageio.ImageIO;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -58,10 +60,11 @@ public class ManageMain extends javax.swing.JFrame {
         loadAnamnezis(path);
         loadPulse(path);
         loadDiagnose(path);
-        loadTongue(path);
-        loadEar(path);
         loadTreatments(path);
         loadFinalReport(path);
+        loadTongue(path);
+        loadEar(path);
+
         
     }
 
@@ -222,6 +225,7 @@ public class ManageMain extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Betegek kezelése");
@@ -541,6 +545,8 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel3.setText("Jelen panaszok");
 
         jScrollPane1.setBorder(null);
+
+        jTextPane1.setEditable(false);
         jScrollPane1.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -576,18 +582,24 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel4.setText("Magzati kor, születés körüli időszak");
 
         jScrollPane2.setBorder(null);
+
+        jTextPane2.setEditable(false);
         jScrollPane2.setViewportView(jTextPane2);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel5.setText("Gyermekkor");
 
         jScrollPane3.setBorder(null);
+
+        jTextPane3.setEditable(false);
         jScrollPane3.setViewportView(jTextPane3);
 
         jLabel6.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel6.setText("Felnőtt kor ill. a jelenleg fennálló helyzet");
 
         jScrollPane4.setBorder(null);
+
+        jTextPane4.setEditable(false);
         jScrollPane4.setViewportView(jTextPane4);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -792,9 +804,10 @@ public class ManageMain extends javax.swing.JFrame {
                                     .addComponent(jLabel51))
                                 .addGap(56, 56, 56)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel48)
+                                        .addComponent(jLabel52))
+                                    .addComponent(jLabel44)))))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel19)
                         .addGap(69, 69, 69)
@@ -902,15 +915,21 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel87.setText("Diagnózis(ok)");
 
         jScrollPane57.setBorder(null);
+
+        jTextPane40.setEditable(false);
         jScrollPane57.setViewportView(jTextPane40);
 
         jScrollPane58.setBorder(null);
+
+        jTextPane41.setEditable(false);
         jScrollPane58.setViewportView(jTextPane41);
 
         jLabel88.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel88.setText("Terápiás koncepció");
 
         jScrollPane59.setBorder(null);
+
+        jTextPane42.setEditable(false);
         jScrollPane59.setViewportView(jTextPane42);
 
         jLabel89.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -920,18 +939,24 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel90.setText("1. Étrend");
 
         jScrollPane60.setBorder(null);
+
+        jTextPane43.setEditable(false);
         jScrollPane60.setViewportView(jTextPane43);
 
         jLabel91.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel91.setText("2. Gyógynövény");
 
         jScrollPane61.setBorder(null);
+
+        jTextPane44.setEditable(false);
         jScrollPane61.setViewportView(jTextPane44);
 
         jLabel92.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel92.setText("3. Kínai orvosság");
 
         jScrollPane62.setBorder(null);
+
+        jTextPane45.setEditable(false);
         jScrollPane62.setViewportView(jTextPane45);
 
         jLabel93.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -941,6 +966,8 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel94.setText("5. Életmód, egyéb javaslat");
 
         jScrollPane63.setBorder(null);
+
+        jTextPane46.setEditable(false);
         jScrollPane63.setViewportView(jTextPane46);
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -1058,6 +1085,8 @@ public class ManageMain extends javax.swing.JFrame {
         jTabbedPane1.addTab("Nyelv", jPanel10);
 
         jScrollPane6.setBorder(null);
+
+        jTextPane6.setEditable(false);
         jScrollPane6.setViewportView(jTextPane6);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -1098,7 +1127,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel57)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1138,32 +1167,44 @@ public class ManageMain extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Tünetmódosítás");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedPane3)
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 632, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1194,7 +1235,27 @@ public class ManageMain extends javax.swing.JFrame {
         for(int i=0; i<treatments.size(); i++){
             treatments.get(i).save(i, idNumber);
         }
+        
+        JOptionPane.showMessageDialog(null, "Adatok elmentve!");
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        Scanner input=null;
+        String line="";
+        try {
+            input=new Scanner(new File(Controller.controller.path+File.separatorChar+idNumber+File.separatorChar+"personaldata.txt"));
+            for(int i=0; i<10; i++){
+                line=input.nextLine();
+            }
+            Controller.controller.setSex(line);
+            Questions q=new Questions();
+            q.load(idNumber);
+            q.setVisible(true);
+            q.hideComponents();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3MouseClicked
 
     
     
@@ -1202,6 +1263,7 @@ public class ManageMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1736,30 +1798,30 @@ public class ManageMain extends javax.swing.JFrame {
         try {
             Scanner input=new Scanner(new File(path+"pulse.txt"));
             
-            jLabel31.setText(input.next());
-            jLabel32.setText(input.next());
-            jLabel33.setText(input.next());
-            jLabel34.setText(input.next());
-            jLabel35.setText(input.next());
-            jLabel36.setText(input.next());
-            jLabel37.setText(input.next());
-            jLabel38.setText(input.next());
-            jLabel39.setText(input.next());
-            jLabel40.setText(input.next());
-            jLabel41.setText(input.next());
-            jLabel42.setText(input.next());
-            jLabel43.setText(input.next());
-            jLabel44.setText(input.next());
-            jLabel45.setText(input.next());
-            jLabel46.setText(input.next());
-            jLabel47.setText(input.next());
-            jLabel48.setText(input.next());
-            jLabel49.setText(input.next());
-            jLabel50.setText(input.next());
-            jLabel51.setText(input.next());
-            jLabel52.setText(input.next());
-            jLabel53.setText(input.next());
-            jLabel54.setText(input.next());
+            jLabel31.setText(input.nextLine());
+            jLabel32.setText(input.nextLine());
+            jLabel33.setText(input.nextLine());
+            jLabel34.setText(input.nextLine());
+            jLabel35.setText(input.nextLine());
+            jLabel36.setText(input.nextLine());
+            jLabel37.setText(input.nextLine());
+            jLabel38.setText(input.nextLine());
+            jLabel39.setText(input.nextLine());
+            jLabel40.setText(input.nextLine());
+            jLabel41.setText(input.nextLine());
+            jLabel42.setText(input.nextLine());
+            jLabel43.setText(input.nextLine());
+            jLabel44.setText(input.nextLine());
+            jLabel45.setText(input.nextLine());
+            jLabel46.setText(input.nextLine());
+            jLabel47.setText(input.nextLine());
+            jLabel48.setText(input.nextLine());
+            jLabel49.setText(input.nextLine());
+            jLabel50.setText(input.nextLine());
+            jLabel51.setText(input.nextLine());
+            jLabel52.setText(input.nextLine());
+            jLabel53.setText(input.nextLine());
+            jLabel54.setText(input.nextLine());
 
             
             input.close();
@@ -1859,7 +1921,7 @@ public class ManageMain extends javax.swing.JFrame {
             dimg = img.getScaledInstance(jLabel55.getWidth(), jLabel55.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
-            e.printStackTrace();
+                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
         }
         
         ImageIcon icon=new ImageIcon(dimg);
@@ -1885,7 +1947,7 @@ public class ManageMain extends javax.swing.JFrame {
             dimg = img.getScaledInstance(jLabel56.getWidth(), jLabel56.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
-            e.printStackTrace();
+                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
         }
         
         ImageIcon icon=new ImageIcon(dimg);
@@ -1893,7 +1955,7 @@ public class ManageMain extends javax.swing.JFrame {
     }
 
     private void loadTreatments(String path) {
-        File folder = new File(path+File.separatorChar+"Treatments");
+        File folder = new File(path+"Treatments");
 		File[] listOfFiles = folder.listFiles();
                     if(listOfFiles.length>0){
                     for(int i = 1; i < listOfFiles.length+1; i++){
@@ -1916,7 +1978,7 @@ public class ManageMain extends javax.swing.JFrame {
         }
         String line=input.nextLine();
         while(!line.equals("***")){
-            text+=line;
+            text+=line+"\n";
             line=input.nextLine();
         }
         jTextArea1.setText(text);

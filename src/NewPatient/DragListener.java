@@ -34,11 +34,17 @@ public class DragListener implements  DropTargetListener{
     JLabel imageLabel=new JLabel();
     JLabel pathlabel=new JLabel();
     String imgName;
+    BufferedImage img=null; 
     
     public DragListener(JLabel image, JLabel path, String name){
-        imageLabel=image;
-        pathlabel=path;
-        imgName=name;
+        try {
+            imageLabel=image;
+            pathlabel=path;
+            imgName=name;
+            img=ImageIO.read(new File(Controller.controller.path+"noimage.jpg"));
+        } catch (IOException ex) {
+            Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @Override
@@ -84,7 +90,7 @@ public class DragListener implements  DropTargetListener{
         }
     }
     
-    BufferedImage img=null;   
+      
 
     private void displayImage(String path) {
         Image dimg=null;

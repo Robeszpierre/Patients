@@ -99,13 +99,13 @@ public class Pulse extends javax.swing.JFrame {
 
         jLabel6.setText("JOBB");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "felületes", "közép", "mély" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyors", "normális", "lassú" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erőteljes", "normális", "gyenge" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "szabályos", "kihagyó" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -117,29 +117,29 @@ public class Pulse extends javax.swing.JFrame {
             }
         });
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "felületes", "közép", "mély" }));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyors", "normális", "lassú" }));
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erőteljes", "normális", "gyenge" }));
+        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "szabályos", "kihagyó" }));
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "felületes", "közép", "mély" }));
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
 
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyors", "normális", "lassú" }));
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erőteljes", "normális", "gyenge" }));
+        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "szabályos", "kihagyó" }));
+        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
 
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "felületes", "közép", "mély" }));
+        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
 
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyors", "normális", "lassú" }));
+        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
 
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erőteljes", "normális", "gyenge" }));
+        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "szabályos", "kihagyó" }));
+        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
 
         jLabel7.setText("Mélység");
 
@@ -149,21 +149,21 @@ public class Pulse extends javax.swing.JFrame {
 
         jLabel10.setText("Ritmus");
 
-        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "felületes", "közép", "mély" }));
+        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
 
-        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyors", "normális", "lassú" }));
+        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
 
-        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erőteljes", "normális", "gyenge" }));
+        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "szabályos", "kihagyó" }));
+        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
 
-        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "felületes", "közép", "mély" }));
+        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
 
-        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "gyors", "normális", "lassú" }));
+        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
 
-        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "erőteljes", "normális", "gyenge" }));
+        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "szabályos", "kihagyó" }));
+        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
 
         jLabel11.setText("1 (T):");
 
@@ -408,47 +408,39 @@ public class Pulse extends javax.swing.JFrame {
             File directory = new File(path+dir);
             directory.mkdir();
             
-            String t1=jComboBox5.getSelectedItem().toString();
-            String t2=jComboBox6.getSelectedItem().toString();
-            String t3=jComboBox7.getSelectedItem().toString();
-            String t4=jComboBox8.getSelectedItem().toString();
-            
-            String l1=jComboBox5.getSelectedItem().toString();
-            String l2=jComboBox6.getSelectedItem().toString();
-            String l3=jComboBox7.getSelectedItem().toString();
-            String l4=jComboBox8.getSelectedItem().toString();
-            
-            String v1=jComboBox5.getSelectedItem().toString();
-            String v2=jComboBox6.getSelectedItem().toString();
-            String v3=jComboBox7.getSelectedItem().toString();
-            String v4=jComboBox8.getSelectedItem().toString();
-            
-            String s1=jComboBox5.getSelectedItem().toString();
-            String s2=jComboBox6.getSelectedItem().toString();
-            String s3=jComboBox7.getSelectedItem().toString();
-            String s4=jComboBox8.getSelectedItem().toString();
-            
-            String m1=jComboBox5.getSelectedItem().toString();
-            String m2=jComboBox6.getSelectedItem().toString();
-            String m3=jComboBox7.getSelectedItem().toString();
-            String m4=jComboBox8.getSelectedItem().toString();
-            
-            String k1=jComboBox5.getSelectedItem().toString();
-            String k2=jComboBox6.getSelectedItem().toString();
-            String k3=jComboBox7.getSelectedItem().toString();
-            String k4=jComboBox8.getSelectedItem().toString();
-           
-
-         
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"pulse.txt");
             writer = new PrintWriter(file);
             
-            writer.print(t1 + " " + t2 + " " + t3 + " " + t4 + "\n");
-            writer.print(l1 + " " + l2 + " " + l3 + " " + l4 + "\n");
-            writer.print(v1 + " " + v2 + " " + v3 + " " + v4 + "\n");
-            writer.print(s1 + " " + s2 + " " + s3 + " " + s4 + "\n");
-            writer.print(m1 + " " + m2 + " " + m3 + " " + m4 + "\n");
-            writer.print(k1 + " " + k2 + " " + k3 + " " + k4 + "\n");
+            writer.println(jComboBox5.getSelectedItem().toString());
+            writer.println(jComboBox6.getSelectedItem().toString());
+            writer.println(jComboBox7.getSelectedItem().toString());
+            writer.println(jComboBox8.getSelectedItem().toString());
+            
+            writer.println(jComboBox9.getSelectedItem().toString());
+            writer.println(jComboBox10.getSelectedItem().toString());
+            writer.println(jComboBox11.getSelectedItem().toString());
+            writer.println(jComboBox12.getSelectedItem().toString());
+            
+            writer.println(jComboBox13.getSelectedItem().toString());
+            writer.println(jComboBox14.getSelectedItem().toString());
+            writer.println(jComboBox15.getSelectedItem().toString());
+            writer.println(jComboBox16.getSelectedItem().toString());
+            
+            writer.println(jComboBox17.getSelectedItem().toString());
+            writer.println(jComboBox18.getSelectedItem().toString());
+            writer.println(jComboBox19.getSelectedItem().toString());
+            writer.println(jComboBox20.getSelectedItem().toString());
+            
+            writer.println(jComboBox21.getSelectedItem().toString());
+            writer.println(jComboBox22.getSelectedItem().toString());
+            writer.println(jComboBox23.getSelectedItem().toString());
+            writer.println(jComboBox24.getSelectedItem().toString());
+            
+            writer.println(jComboBox25.getSelectedItem().toString());
+            writer.println(jComboBox26.getSelectedItem().toString());
+            writer.println(jComboBox27.getSelectedItem().toString());
+            writer.println(jComboBox28.getSelectedItem().toString());
+    
             writer.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);

@@ -261,10 +261,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox5">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="fel&#xfc;letes"/>
-                <StringItem index="1" value="k&#xf6;z&#xe9;p"/>
-                <StringItem index="2" value="m&#xe9;ly"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="fel&#xfc;letes"/>
+                <StringItem index="2" value="k&#xf6;z&#xe9;p"/>
+                <StringItem index="3" value="m&#xe9;ly"/>
               </StringArray>
             </Property>
           </Properties>
@@ -275,10 +276,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox6">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="gyors"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="lass&#xfa;"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="gyors"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="lass&#xfa;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -289,10 +291,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox7">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="er&#x151;teljes"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="gyenge"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="er&#x151;teljes"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="gyenge"/>
               </StringArray>
             </Property>
           </Properties>
@@ -303,9 +306,10 @@
         <Component class="javax.swing.JComboBox" name="jComboBox8">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="szab&#xe1;lyos"/>
-                <StringItem index="1" value="kihagy&#xf3;"/>
+              <StringArray count="3">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="szab&#xe1;lyos"/>
+                <StringItem index="2" value="kihagy&#xf3;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -333,10 +337,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox9">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="fel&#xfc;letes"/>
-                <StringItem index="1" value="k&#xf6;z&#xe9;p"/>
-                <StringItem index="2" value="m&#xe9;ly"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="fel&#xfc;letes"/>
+                <StringItem index="2" value="k&#xf6;z&#xe9;p"/>
+                <StringItem index="3" value="m&#xe9;ly"/>
               </StringArray>
             </Property>
           </Properties>
@@ -347,10 +352,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox10">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="gyors"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="lass&#xfa;"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="gyors"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="lass&#xfa;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -361,10 +367,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox11">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="er&#x151;teljes"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="gyenge"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="er&#x151;teljes"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="gyenge"/>
               </StringArray>
             </Property>
           </Properties>
@@ -375,9 +382,10 @@
         <Component class="javax.swing.JComboBox" name="jComboBox12">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="szab&#xe1;lyos"/>
-                <StringItem index="1" value="kihagy&#xf3;"/>
+              <StringArray count="3">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="szab&#xe1;lyos"/>
+                <StringItem index="2" value="kihagy&#xf3;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -388,10 +396,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox13">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="fel&#xfc;letes"/>
-                <StringItem index="1" value="k&#xf6;z&#xe9;p"/>
-                <StringItem index="2" value="m&#xe9;ly"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="fel&#xfc;letes"/>
+                <StringItem index="2" value="k&#xf6;z&#xe9;p"/>
+                <StringItem index="3" value="m&#xe9;ly"/>
               </StringArray>
             </Property>
           </Properties>
@@ -402,10 +411,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox14">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="gyors"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="lass&#xfa;"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="gyors"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="lass&#xfa;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -416,10 +426,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox15">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="er&#x151;teljes"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="gyenge"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="er&#x151;teljes"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="gyenge"/>
               </StringArray>
             </Property>
           </Properties>
@@ -430,9 +441,10 @@
         <Component class="javax.swing.JComboBox" name="jComboBox16">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="szab&#xe1;lyos"/>
-                <StringItem index="1" value="kihagy&#xf3;"/>
+              <StringArray count="3">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="szab&#xe1;lyos"/>
+                <StringItem index="2" value="kihagy&#xf3;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -443,10 +455,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox17">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="fel&#xfc;letes"/>
-                <StringItem index="1" value="k&#xf6;z&#xe9;p"/>
-                <StringItem index="2" value="m&#xe9;ly"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="fel&#xfc;letes"/>
+                <StringItem index="2" value="k&#xf6;z&#xe9;p"/>
+                <StringItem index="3" value="m&#xe9;ly"/>
               </StringArray>
             </Property>
           </Properties>
@@ -457,10 +470,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox18">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="gyors"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="lass&#xfa;"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="gyors"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="lass&#xfa;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -471,10 +485,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox19">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="er&#x151;teljes"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="gyenge"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="er&#x151;teljes"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="gyenge"/>
               </StringArray>
             </Property>
           </Properties>
@@ -485,9 +500,10 @@
         <Component class="javax.swing.JComboBox" name="jComboBox20">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="szab&#xe1;lyos"/>
-                <StringItem index="1" value="kihagy&#xf3;"/>
+              <StringArray count="3">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="szab&#xe1;lyos"/>
+                <StringItem index="2" value="kihagy&#xf3;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -518,10 +534,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox21">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="fel&#xfc;letes"/>
-                <StringItem index="1" value="k&#xf6;z&#xe9;p"/>
-                <StringItem index="2" value="m&#xe9;ly"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="fel&#xfc;letes"/>
+                <StringItem index="2" value="k&#xf6;z&#xe9;p"/>
+                <StringItem index="3" value="m&#xe9;ly"/>
               </StringArray>
             </Property>
           </Properties>
@@ -532,10 +549,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox22">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="gyors"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="lass&#xfa;"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="gyors"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="lass&#xfa;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -546,10 +564,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox23">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="er&#x151;teljes"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="gyenge"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="er&#x151;teljes"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="gyenge"/>
               </StringArray>
             </Property>
           </Properties>
@@ -560,9 +579,10 @@
         <Component class="javax.swing.JComboBox" name="jComboBox24">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="szab&#xe1;lyos"/>
-                <StringItem index="1" value="kihagy&#xf3;"/>
+              <StringArray count="3">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="szab&#xe1;lyos"/>
+                <StringItem index="2" value="kihagy&#xf3;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -573,10 +593,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox25">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="fel&#xfc;letes"/>
-                <StringItem index="1" value="k&#xf6;z&#xe9;p"/>
-                <StringItem index="2" value="m&#xe9;ly"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="fel&#xfc;letes"/>
+                <StringItem index="2" value="k&#xf6;z&#xe9;p"/>
+                <StringItem index="3" value="m&#xe9;ly"/>
               </StringArray>
             </Property>
           </Properties>
@@ -587,10 +608,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox26">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="gyors"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="lass&#xfa;"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="gyors"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="lass&#xfa;"/>
               </StringArray>
             </Property>
           </Properties>
@@ -601,10 +623,11 @@
         <Component class="javax.swing.JComboBox" name="jComboBox27">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="er&#x151;teljes"/>
-                <StringItem index="1" value="norm&#xe1;lis"/>
-                <StringItem index="2" value="gyenge"/>
+              <StringArray count="4">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="er&#x151;teljes"/>
+                <StringItem index="2" value="norm&#xe1;lis"/>
+                <StringItem index="3" value="gyenge"/>
               </StringArray>
             </Property>
           </Properties>
@@ -615,9 +638,10 @@
         <Component class="javax.swing.JComboBox" name="jComboBox28">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="szab&#xe1;lyos"/>
-                <StringItem index="1" value="kihagy&#xf3;"/>
+              <StringArray count="3">
+                <StringItem index="0" value="&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;"/>
+                <StringItem index="1" value="szab&#xe1;lyos"/>
+                <StringItem index="2" value="kihagy&#xf3;"/>
               </StringArray>
             </Property>
           </Properties>

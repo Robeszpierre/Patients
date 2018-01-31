@@ -262,7 +262,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line;
+                text+=line+"\n";
                 line=input.nextLine();
             }
             jTextPane1.setText(text);
@@ -270,7 +270,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line;
+                text+=line+"\n";
                 line=input.nextLine();
             }
             jTextPane2.setText(text);
@@ -278,7 +278,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line;
+                text+=line+"\n";
                 line=input.nextLine();
             }
             jTextPane3.setText(text);
@@ -286,7 +286,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line;
+                text+=line+"\n";
                 line=input.nextLine();
             }
             jTextPane4.setText(text);
@@ -294,7 +294,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line;
+                text+=line+"\n";
                 line=input.nextLine();
             }
             jTextPane5.setText(text);

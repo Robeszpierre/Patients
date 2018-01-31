@@ -24,10 +24,9 @@ import javax.swing.JFrame;
 public class Controller {    
     
     static public Controller controller=new Controller();
-    public int idNumber;
-    public String path="C:\\Users\\Robeszpierre\\Desktop\\Patients\\";
+    public int idNumber; 
+    public String path="/home/robeszpierre/Desktop/Patients/";
     public String sex;
-    
     private MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;
     private Questions newPatientQuestions;

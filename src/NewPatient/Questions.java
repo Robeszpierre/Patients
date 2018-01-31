@@ -6,8 +6,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.AbstractButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JRadioButton;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -49,6 +56,10 @@ public class Questions extends javax.swing.JFrame {
                 jRadioButton322.setVisible(false);
                 jRadioButton323.setVisible(false);
                 jRadioButton324.setVisible(false);
+                jRadioButton405.setVisible(false);
+                jRadioButton406.setVisible(false);
+                jRadioButton407.setVisible(false);
+                jRadioButton408.setVisible(false);
                 jLabel77.setVisible(false);
                 jLabel78.setVisible(false);
                 jLabel121.setVisible(false);
@@ -685,18 +696,159 @@ public class Questions extends javax.swing.JFrame {
         jLabel156 = new javax.swing.JLabel();
         jTextField27 = new javax.swing.JTextField();
         jLabel157 = new javax.swing.JLabel();
+        jRadioButton148 = new javax.swing.JRadioButton();
+        jRadioButton149 = new javax.swing.JRadioButton();
+        jRadioButton150 = new javax.swing.JRadioButton();
+        jRadioButton175 = new javax.swing.JRadioButton();
+        jRadioButton176 = new javax.swing.JRadioButton();
+        jRadioButton177 = new javax.swing.JRadioButton();
+        jRadioButton178 = new javax.swing.JRadioButton();
+        jRadioButton179 = new javax.swing.JRadioButton();
+        jRadioButton180 = new javax.swing.JRadioButton();
+        jRadioButton181 = new javax.swing.JRadioButton();
+        jRadioButton182 = new javax.swing.JRadioButton();
+        jRadioButton183 = new javax.swing.JRadioButton();
+        jRadioButton184 = new javax.swing.JRadioButton();
+        jRadioButton185 = new javax.swing.JRadioButton();
+        jRadioButton186 = new javax.swing.JRadioButton();
+        jRadioButton187 = new javax.swing.JRadioButton();
+        jRadioButton188 = new javax.swing.JRadioButton();
+        jRadioButton189 = new javax.swing.JRadioButton();
+        jRadioButton190 = new javax.swing.JRadioButton();
+        jRadioButton191 = new javax.swing.JRadioButton();
+        jRadioButton192 = new javax.swing.JRadioButton();
+        jRadioButton328 = new javax.swing.JRadioButton();
+        jRadioButton329 = new javax.swing.JRadioButton();
+        jRadioButton330 = new javax.swing.JRadioButton();
+        jRadioButton331 = new javax.swing.JRadioButton();
+        jRadioButton332 = new javax.swing.JRadioButton();
+        jRadioButton333 = new javax.swing.JRadioButton();
+        jRadioButton334 = new javax.swing.JRadioButton();
+        jRadioButton335 = new javax.swing.JRadioButton();
+        jRadioButton336 = new javax.swing.JRadioButton();
+        jRadioButton337 = new javax.swing.JRadioButton();
+        jRadioButton338 = new javax.swing.JRadioButton();
+        jRadioButton339 = new javax.swing.JRadioButton();
+        jRadioButton340 = new javax.swing.JRadioButton();
+        jRadioButton341 = new javax.swing.JRadioButton();
+        jRadioButton342 = new javax.swing.JRadioButton();
+        jRadioButton379 = new javax.swing.JRadioButton();
+        jRadioButton380 = new javax.swing.JRadioButton();
+        jRadioButton381 = new javax.swing.JRadioButton();
+        jRadioButton382 = new javax.swing.JRadioButton();
+        jRadioButton383 = new javax.swing.JRadioButton();
+        jRadioButton384 = new javax.swing.JRadioButton();
+        jRadioButton385 = new javax.swing.JRadioButton();
+        jRadioButton386 = new javax.swing.JRadioButton();
+        jRadioButton387 = new javax.swing.JRadioButton();
+        jRadioButton388 = new javax.swing.JRadioButton();
+        jRadioButton389 = new javax.swing.JRadioButton();
+        jRadioButton390 = new javax.swing.JRadioButton();
+        jRadioButton391 = new javax.swing.JRadioButton();
+        jRadioButton392 = new javax.swing.JRadioButton();
+        jRadioButton393 = new javax.swing.JRadioButton();
+        jRadioButton394 = new javax.swing.JRadioButton();
+        jRadioButton395 = new javax.swing.JRadioButton();
+        jRadioButton396 = new javax.swing.JRadioButton();
+        jRadioButton397 = new javax.swing.JRadioButton();
+        jRadioButton398 = new javax.swing.JRadioButton();
+        jRadioButton399 = new javax.swing.JRadioButton();
+        jRadioButton400 = new javax.swing.JRadioButton();
+        jRadioButton401 = new javax.swing.JRadioButton();
+        jRadioButton402 = new javax.swing.JRadioButton();
+        jRadioButton403 = new javax.swing.JRadioButton();
+        jRadioButton404 = new javax.swing.JRadioButton();
+        jRadioButton405 = new javax.swing.JRadioButton();
+        jRadioButton406 = new javax.swing.JRadioButton();
+        jRadioButton407 = new javax.swing.JRadioButton();
+        jRadioButton408 = new javax.swing.JRadioButton();
+        jRadioButton343 = new javax.swing.JRadioButton();
+        jRadioButton344 = new javax.swing.JRadioButton();
+        jRadioButton345 = new javax.swing.JRadioButton();
+        jRadioButton346 = new javax.swing.JRadioButton();
+        jRadioButton347 = new javax.swing.JRadioButton();
+        jRadioButton348 = new javax.swing.JRadioButton();
+        jRadioButton349 = new javax.swing.JRadioButton();
+        jRadioButton350 = new javax.swing.JRadioButton();
+        jRadioButton351 = new javax.swing.JRadioButton();
+        jRadioButton352 = new javax.swing.JRadioButton();
+        jRadioButton353 = new javax.swing.JRadioButton();
+        jRadioButton354 = new javax.swing.JRadioButton();
+        jRadioButton355 = new javax.swing.JRadioButton();
+        jRadioButton356 = new javax.swing.JRadioButton();
+        jRadioButton357 = new javax.swing.JRadioButton();
+        jRadioButton358 = new javax.swing.JRadioButton();
+        jRadioButton359 = new javax.swing.JRadioButton();
+        jRadioButton360 = new javax.swing.JRadioButton();
+        jRadioButton361 = new javax.swing.JRadioButton();
+        jRadioButton362 = new javax.swing.JRadioButton();
+        jRadioButton363 = new javax.swing.JRadioButton();
+        jRadioButton364 = new javax.swing.JRadioButton();
+        jRadioButton365 = new javax.swing.JRadioButton();
+        jRadioButton366 = new javax.swing.JRadioButton();
+        jRadioButton367 = new javax.swing.JRadioButton();
+        jRadioButton368 = new javax.swing.JRadioButton();
+        jRadioButton369 = new javax.swing.JRadioButton();
+        jRadioButton370 = new javax.swing.JRadioButton();
+        jRadioButton371 = new javax.swing.JRadioButton();
+        jRadioButton372 = new javax.swing.JRadioButton();
+        jRadioButton373 = new javax.swing.JRadioButton();
+        jRadioButton374 = new javax.swing.JRadioButton();
+        jRadioButton375 = new javax.swing.JRadioButton();
+        jRadioButton376 = new javax.swing.JRadioButton();
+        jRadioButton377 = new javax.swing.JRadioButton();
+        jRadioButton378 = new javax.swing.JRadioButton();
+        jTextField28 = new javax.swing.JTextField();
+        jTextField29 = new javax.swing.JTextField();
+        jLabel158 = new javax.swing.JLabel();
+        jTextField30 = new javax.swing.JTextField();
+        jTextField31 = new javax.swing.JTextField();
+        jLabel160 = new javax.swing.JLabel();
+        jLabel161 = new javax.swing.JLabel();
+        jTextField32 = new javax.swing.JTextField();
+        jTextField33 = new javax.swing.JTextField();
+        jLabel159 = new javax.swing.JLabel();
+        jTextField34 = new javax.swing.JTextField();
+        jTextField35 = new javax.swing.JTextField();
+        jLabel162 = new javax.swing.JLabel();
+        jTextField36 = new javax.swing.JTextField();
+        jTextField37 = new javax.swing.JTextField();
+        jLabel163 = new javax.swing.JLabel();
+        jTextField38 = new javax.swing.JTextField();
+        jLabel164 = new javax.swing.JLabel();
+        jComboBox9 = new javax.swing.JComboBox<>();
+        jLabel165 = new javax.swing.JLabel();
+        jTextField39 = new javax.swing.JTextField();
+        jLabel166 = new javax.swing.JLabel();
+        jTextField40 = new javax.swing.JTextField();
+        jTextField41 = new javax.swing.JTextField();
+        jLabel167 = new javax.swing.JLabel();
+        jLabel168 = new javax.swing.JLabel();
+        jTextField42 = new javax.swing.JTextField();
+        jLabel169 = new javax.swing.JLabel();
+        jTextField43 = new javax.swing.JTextField();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
 
         setTitle("Kikérdező lap");
-        setPreferredSize(new java.awt.Dimension(1300, 700));
+        setPreferredSize(new java.awt.Dimension(1366, 768));
 
         jScrollPane1.setHorizontalScrollBar(null);
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(1203, 5553));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1366, 6500));
         jScrollPane1.setVerifyInputWhenFocusTarget(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(20, 20, 20));
         jPanel2.setMinimumSize(new java.awt.Dimension(500, 1500));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1200, 5550));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 6500));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Fej");
@@ -704,13 +856,13 @@ public class Questions extends javax.swing.JFrame {
         jLabel3.setText("Arc színe:");
 
         jTextField1.setMinimumSize(new java.awt.Dimension(100, 23));
-        jTextField1.setPreferredSize(new java.awt.Dimension(50, 23));
+        jTextField1.setPreferredSize(new java.awt.Dimension(50, 28));
 
         jLabel4.setText("Fejfájás:");
 
-        jTextField2.setPreferredSize(new java.awt.Dimension(100, 23));
+        jTextField2.setPreferredSize(new java.awt.Dimension(100, 26));
 
-        jTextField3.setPreferredSize(new java.awt.Dimension(100, 23));
+        jTextField3.setPreferredSize(new java.awt.Dimension(100, 26));
 
         jTextField4.setPreferredSize(new java.awt.Dimension(100, 23));
 
@@ -724,62 +876,58 @@ public class Questions extends javax.swing.JFrame {
         jLabel8.setText("Fej fázékonysága");
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setSelected(true);
         jRadioButton1.setText("Nem jellemző");
-        jRadioButton1.setActionCommand("3");
+        jRadioButton1.setActionCommand("0");
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Ritka");
-        jRadioButton2.setActionCommand("2");
+        jRadioButton2.setActionCommand("1");
 
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("Gyakori");
-        jRadioButton3.setActionCommand("1");
+        jRadioButton3.setActionCommand("2");
 
         jLabel9.setText("Szédülés:");
 
         buttonGroup2.add(jRadioButton4);
-        jRadioButton4.setSelected(true);
         jRadioButton4.setText("Nem jellemző");
-        jRadioButton4.setActionCommand("3");
+        jRadioButton4.setActionCommand("0");
 
         buttonGroup2.add(jRadioButton5);
         jRadioButton5.setText("Ritka");
-        jRadioButton5.setActionCommand("2");
+        jRadioButton5.setActionCommand("1");
 
         buttonGroup2.add(jRadioButton6);
         jRadioButton6.setText("Gyakori");
-        jRadioButton6.setActionCommand("1");
+        jRadioButton6.setActionCommand("2");
 
         jLabel10.setText("Elalvás zavara");
 
         buttonGroup3.add(jRadioButton7);
-        jRadioButton7.setSelected(true);
         jRadioButton7.setText("Nem jellemző");
-        jRadioButton7.setActionCommand("3");
+        jRadioButton7.setActionCommand("0");
 
         buttonGroup3.add(jRadioButton8);
         jRadioButton8.setText("Ritka");
-        jRadioButton8.setActionCommand("2");
+        jRadioButton8.setActionCommand("1");
 
         buttonGroup3.add(jRadioButton9);
         jRadioButton9.setText("Gyakori");
-        jRadioButton9.setActionCommand("1");
+        jRadioButton9.setActionCommand("2");
 
         jLabel11.setText("Átalvás zavara");
 
         buttonGroup4.add(jRadioButton10);
-        jRadioButton10.setSelected(true);
         jRadioButton10.setText("Nem jellemző");
-        jRadioButton10.setActionCommand("3");
+        jRadioButton10.setActionCommand("0");
 
         buttonGroup4.add(jRadioButton11);
         jRadioButton11.setText("Ritka");
-        jRadioButton11.setActionCommand("2");
+        jRadioButton11.setActionCommand("1");
 
         buttonGroup4.add(jRadioButton12);
         jRadioButton12.setText("Gyakori");
-        jRadioButton12.setActionCommand("1");
+        jRadioButton12.setActionCommand("2");
 
         jLabel12.setText("Ideje:");
 
@@ -788,272 +936,254 @@ public class Questions extends javax.swing.JFrame {
         jLabel13.setText("Memória romlása");
 
         buttonGroup5.add(jRadioButton13);
-        jRadioButton13.setSelected(true);
         jRadioButton13.setText("Nem jellemző");
-        jRadioButton13.setActionCommand("3");
+        jRadioButton13.setActionCommand("0");
 
         buttonGroup5.add(jRadioButton14);
         jRadioButton14.setText("Ritka");
-        jRadioButton14.setActionCommand("2");
+        jRadioButton14.setActionCommand("1");
 
         buttonGroup5.add(jRadioButton15);
         jRadioButton15.setText("Gyakori");
-        jRadioButton15.setActionCommand("1");
+        jRadioButton15.setActionCommand("2");
 
         jLabel14.setText("Hajhullás");
 
         buttonGroup6.add(jRadioButton16);
-        jRadioButton16.setSelected(true);
         jRadioButton16.setText("Nem jellemző");
-        jRadioButton16.setActionCommand("3");
+        jRadioButton16.setActionCommand("0");
 
         buttonGroup6.add(jRadioButton17);
         jRadioButton17.setText("Ritka");
-        jRadioButton17.setActionCommand("2");
+        jRadioButton17.setActionCommand("1");
 
         buttonGroup6.add(jRadioButton18);
         jRadioButton18.setText("Gyakori");
-        jRadioButton18.setActionCommand("1");
+        jRadioButton18.setActionCommand("2");
 
         jLabel15.setText("Korai őszülés");
 
         buttonGroup7.add(jRadioButton19);
-        jRadioButton19.setSelected(true);
         jRadioButton19.setText("Nem jellemző");
-        jRadioButton19.setActionCommand("3");
+        jRadioButton19.setActionCommand("0");
 
         buttonGroup7.add(jRadioButton20);
         jRadioButton20.setText("Ritka");
-        jRadioButton20.setActionCommand("2");
+        jRadioButton20.setActionCommand("1");
 
         buttonGroup7.add(jRadioButton21);
         jRadioButton21.setText("Gyakori");
-        jRadioButton21.setActionCommand("1");
+        jRadioButton21.setActionCommand("2");
 
         jLabel16.setText("Száraz haj");
 
         buttonGroup8.add(jRadioButton22);
-        jRadioButton22.setSelected(true);
         jRadioButton22.setText("Nem jellemző");
-        jRadioButton22.setActionCommand("3");
+        jRadioButton22.setActionCommand("0");
 
         buttonGroup8.add(jRadioButton23);
         jRadioButton23.setText("Ritka");
-        jRadioButton23.setActionCommand("2");
+        jRadioButton23.setActionCommand("1");
 
         buttonGroup8.add(jRadioButton24);
         jRadioButton24.setText("Gyakori");
-        jRadioButton24.setActionCommand("1");
+        jRadioButton24.setActionCommand("2");
 
         jLabel17.setText("Homályos látás");
 
         buttonGroup9.add(jRadioButton25);
-        jRadioButton25.setSelected(true);
         jRadioButton25.setText("Nem jellemző");
-        jRadioButton25.setActionCommand("3");
+        jRadioButton25.setActionCommand("0");
 
         buttonGroup9.add(jRadioButton26);
         jRadioButton26.setText("Ritka");
-        jRadioButton26.setActionCommand("2");
+        jRadioButton26.setActionCommand("1");
 
         buttonGroup9.add(jRadioButton27);
         jRadioButton27.setText("Gyakori");
-        jRadioButton27.setActionCommand("1");
+        jRadioButton27.setActionCommand("2");
 
         jLabel18.setText("Száraz szem");
 
         buttonGroup10.add(jRadioButton28);
-        jRadioButton28.setSelected(true);
         jRadioButton28.setText("Nem jellemző");
-        jRadioButton28.setActionCommand("3");
+        jRadioButton28.setActionCommand("0");
 
         buttonGroup10.add(jRadioButton29);
         jRadioButton29.setText("Ritka");
-        jRadioButton29.setActionCommand("2");
+        jRadioButton29.setActionCommand("1");
 
         buttonGroup10.add(jRadioButton30);
         jRadioButton30.setText("Gyakori");
-        jRadioButton30.setActionCommand("1");
+        jRadioButton30.setActionCommand("2");
 
         jLabel19.setText("Vörös szem");
 
         buttonGroup11.add(jRadioButton31);
-        jRadioButton31.setSelected(true);
         jRadioButton31.setText("Nem jellemző");
-        jRadioButton31.setActionCommand("3");
+        jRadioButton31.setActionCommand("0");
 
         buttonGroup11.add(jRadioButton32);
         jRadioButton32.setText("Ritka");
-        jRadioButton32.setActionCommand("2");
+        jRadioButton32.setActionCommand("1");
 
         buttonGroup11.add(jRadioButton33);
         jRadioButton33.setText("Gyakori");
-        jRadioButton33.setActionCommand("1");
+        jRadioButton33.setActionCommand("2");
 
         jLabel20.setText("Karikás, mélyen ülő szem");
 
         buttonGroup12.add(jRadioButton34);
-        jRadioButton34.setSelected(true);
         jRadioButton34.setText("Nem jellemző");
-        jRadioButton34.setActionCommand("3");
+        jRadioButton34.setActionCommand("0");
 
         buttonGroup12.add(jRadioButton35);
         jRadioButton35.setText("Ritka");
-        jRadioButton35.setActionCommand("2");
+        jRadioButton35.setActionCommand("1");
 
         buttonGroup12.add(jRadioButton36);
         jRadioButton36.setText("Gyakori");
-        jRadioButton36.setActionCommand("1");
+        jRadioButton36.setActionCommand("2");
 
         jLabel21.setText("Sötétben rosszabbul látás");
 
         buttonGroup13.add(jRadioButton37);
-        jRadioButton37.setSelected(true);
         jRadioButton37.setText("Nem jellemző");
-        jRadioButton37.setActionCommand("3");
+        jRadioButton37.setActionCommand("0");
 
         buttonGroup13.add(jRadioButton38);
         jRadioButton38.setText("Ritka");
-        jRadioButton38.setActionCommand("2");
+        jRadioButton38.setActionCommand("1");
 
         buttonGroup13.add(jRadioButton39);
         jRadioButton39.setText("Gyakori");
-        jRadioButton39.setActionCommand("1");
+        jRadioButton39.setActionCommand("2");
 
         jLabel22.setText("Fülzúgás");
 
         buttonGroup14.add(jRadioButton40);
-        jRadioButton40.setSelected(true);
         jRadioButton40.setText("Nem jellemző");
-        jRadioButton40.setActionCommand("3");
+        jRadioButton40.setActionCommand("0");
 
         buttonGroup14.add(jRadioButton41);
         jRadioButton41.setText("Ritka");
-        jRadioButton41.setActionCommand("2");
+        jRadioButton41.setActionCommand("1");
 
         buttonGroup14.add(jRadioButton42);
         jRadioButton42.setText("Gyakori");
-        jRadioButton42.setActionCommand("1");
+        jRadioButton42.setActionCommand("2");
 
         jLabel23.setText("Nagyothallás");
 
         buttonGroup15.add(jRadioButton43);
-        jRadioButton43.setSelected(true);
         jRadioButton43.setText("Nem jellemző");
-        jRadioButton43.setActionCommand("3");
+        jRadioButton43.setActionCommand("0");
 
         buttonGroup15.add(jRadioButton44);
         jRadioButton44.setText("Ritka");
-        jRadioButton44.setActionCommand("2");
+        jRadioButton44.setActionCommand("1");
 
         buttonGroup15.add(jRadioButton45);
         jRadioButton45.setText("Gyakori");
-        jRadioButton45.setActionCommand("1");
+        jRadioButton45.setActionCommand("2");
 
         jLabel24.setText("Laza fogak");
 
         buttonGroup16.add(jRadioButton46);
-        jRadioButton46.setSelected(true);
         jRadioButton46.setText("Nem jellemző");
-        jRadioButton46.setActionCommand("3");
+        jRadioButton46.setActionCommand("0");
 
         buttonGroup16.add(jRadioButton47);
         jRadioButton47.setText("Ritka");
-        jRadioButton47.setActionCommand("2");
+        jRadioButton47.setActionCommand("1");
 
         buttonGroup16.add(jRadioButton48);
         jRadioButton48.setText("Gyakori");
-        jRadioButton48.setActionCommand("1");
+        jRadioButton48.setActionCommand("2");
 
         jLabel25.setText("Ígygyulladás, afta, herpesz");
 
         buttonGroup17.add(jRadioButton49);
-        jRadioButton49.setSelected(true);
         jRadioButton49.setText("Nem jellemző");
-        jRadioButton49.setActionCommand("3");
+        jRadioButton49.setActionCommand("0");
 
         buttonGroup17.add(jRadioButton50);
         jRadioButton50.setText("Ritka");
-        jRadioButton50.setActionCommand("2");
+        jRadioButton50.setActionCommand("1");
 
         buttonGroup17.add(jRadioButton51);
         jRadioButton51.setText("Gyakori");
-        jRadioButton51.setActionCommand("1");
+        jRadioButton51.setActionCommand("2");
 
         jLabel26.setText("Kellemetlen szájszag");
 
         buttonGroup18.add(jRadioButton52);
-        jRadioButton52.setSelected(true);
         jRadioButton52.setText("Nem jellemző");
-        jRadioButton52.setActionCommand("3");
+        jRadioButton52.setActionCommand("0");
 
         buttonGroup18.add(jRadioButton53);
         jRadioButton53.setText("Ritka");
-        jRadioButton53.setActionCommand("2");
+        jRadioButton53.setActionCommand("1");
 
         buttonGroup18.add(jRadioButton54);
         jRadioButton54.setText("Gyakori");
-        jRadioButton54.setActionCommand("1");
+        jRadioButton54.setActionCommand("2");
 
         jLabel27.setText("Savas böfögés");
 
         buttonGroup19.add(jRadioButton55);
-        jRadioButton55.setSelected(true);
         jRadioButton55.setText("Nem jellemző");
-        jRadioButton55.setActionCommand("3");
+        jRadioButton55.setActionCommand("0");
 
         buttonGroup19.add(jRadioButton56);
         jRadioButton56.setText("Ritka");
-        jRadioButton56.setActionCommand("2");
+        jRadioButton56.setActionCommand("1");
 
         buttonGroup19.add(jRadioButton57);
         jRadioButton57.setText("Gyakori");
-        jRadioButton57.setActionCommand("1");
+        jRadioButton57.setActionCommand("2");
 
         jLabel28.setText("Orcapír");
 
         buttonGroup20.add(jRadioButton58);
-        jRadioButton58.setSelected(true);
         jRadioButton58.setText("Nem jellemző");
-        jRadioButton58.setActionCommand("3");
+        jRadioButton58.setActionCommand("0");
 
         buttonGroup20.add(jRadioButton59);
         jRadioButton59.setText("Ritka");
-        jRadioButton59.setActionCommand("2");
+        jRadioButton59.setActionCommand("1");
 
         buttonGroup20.add(jRadioButton60);
         jRadioButton60.setText("Gyakori");
-        jRadioButton60.setActionCommand("1");
+        jRadioButton60.setActionCommand("2");
 
         jLabel29.setText("Vörös arc");
 
         buttonGroup21.add(jRadioButton61);
-        jRadioButton61.setSelected(true);
         jRadioButton61.setText("Nem jellemző");
-        jRadioButton61.setActionCommand("3");
+        jRadioButton61.setActionCommand("0");
 
         buttonGroup21.add(jRadioButton62);
         jRadioButton62.setText("Ritka");
-        jRadioButton62.setActionCommand("2");
+        jRadioButton62.setActionCommand("1");
 
         buttonGroup21.add(jRadioButton63);
         jRadioButton63.setText("Gyakori");
-        jRadioButton63.setActionCommand("1");
+        jRadioButton63.setActionCommand("2");
 
         jLabel30.setText("Száraz száj-torok");
 
         buttonGroup22.add(jRadioButton64);
-        jRadioButton64.setSelected(true);
         jRadioButton64.setText("Nem jellemző");
-        jRadioButton64.setActionCommand("3");
+        jRadioButton64.setActionCommand("0");
 
         buttonGroup22.add(jRadioButton65);
         jRadioButton65.setText("Ritka");
-        jRadioButton65.setActionCommand("2");
+        jRadioButton65.setActionCommand("1");
 
         buttonGroup22.add(jRadioButton66);
         jRadioButton66.setText("Gyakori");
-        jRadioButton66.setActionCommand("1");
+        jRadioButton66.setActionCommand("2");
 
         jLabel31.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel31.setText("Mellkas");
@@ -1061,212 +1191,198 @@ public class Questions extends javax.swing.JFrame {
         jLabel32.setText("Szívdobogás nyugalomban");
 
         buttonGroup23.add(jRadioButton67);
-        jRadioButton67.setSelected(true);
         jRadioButton67.setText("Nem jellemző");
-        jRadioButton67.setActionCommand("3");
+        jRadioButton67.setActionCommand("0");
 
         buttonGroup23.add(jRadioButton68);
         jRadioButton68.setText("Ritka");
-        jRadioButton68.setActionCommand("2");
+        jRadioButton68.setActionCommand("1");
 
         buttonGroup23.add(jRadioButton69);
         jRadioButton69.setText("Gyakori");
-        jRadioButton69.setActionCommand("1");
+        jRadioButton69.setActionCommand("2");
 
         jLabel33.setText("Terhelésre romló légszomj");
 
         buttonGroup24.add(jRadioButton70);
-        jRadioButton70.setSelected(true);
         jRadioButton70.setText("Nem jellemző");
-        jRadioButton70.setActionCommand("3");
+        jRadioButton70.setActionCommand("0");
 
         buttonGroup24.add(jRadioButton71);
         jRadioButton71.setText("Ritka");
-        jRadioButton71.setActionCommand("2");
+        jRadioButton71.setActionCommand("1");
 
         buttonGroup24.add(jRadioButton72);
         jRadioButton72.setText("Gyakori");
-        jRadioButton72.setActionCommand("1");
+        jRadioButton72.setActionCommand("2");
 
         jLabel34.setText("Erőtlen hang");
 
         buttonGroup25.add(jRadioButton73);
-        jRadioButton73.setSelected(true);
         jRadioButton73.setText("Nem jellemző");
-        jRadioButton73.setActionCommand("3");
+        jRadioButton73.setActionCommand("0");
 
         buttonGroup25.add(jRadioButton74);
         jRadioButton74.setText("Ritka");
-        jRadioButton74.setActionCommand("2");
+        jRadioButton74.setActionCommand("1");
 
         buttonGroup25.add(jRadioButton75);
         jRadioButton75.setText("Gyakori");
-        jRadioButton75.setActionCommand("1");
+        jRadioButton75.setActionCommand("2");
 
         jLabel35.setText("Rekedt hang");
 
         buttonGroup26.add(jRadioButton76);
-        jRadioButton76.setSelected(true);
         jRadioButton76.setText("Nem jellemző");
-        jRadioButton76.setActionCommand("3");
+        jRadioButton76.setActionCommand("0");
 
         buttonGroup26.add(jRadioButton77);
         jRadioButton77.setText("Ritka");
-        jRadioButton77.setActionCommand("2");
+        jRadioButton77.setActionCommand("1");
 
         buttonGroup26.add(jRadioButton78);
         jRadioButton78.setText("Gyakori");
-        jRadioButton78.setActionCommand("1");
+        jRadioButton78.setActionCommand("2");
 
         jLabel36.setText("Beszéd kerülése");
 
         buttonGroup27.add(jRadioButton79);
-        jRadioButton79.setSelected(true);
         jRadioButton79.setText("Nem jellemző");
-        jRadioButton79.setActionCommand("3");
+        jRadioButton79.setActionCommand("0");
 
         buttonGroup27.add(jRadioButton80);
         jRadioButton80.setText("Ritka");
-        jRadioButton80.setActionCommand("2");
+        jRadioButton80.setActionCommand("1");
 
         buttonGroup27.add(jRadioButton81);
         jRadioButton81.setText("Gyakori");
-        jRadioButton81.setActionCommand("1");
+        jRadioButton81.setActionCommand("2");
 
         jLabel37.setText("Hajlam megfázásra");
 
         buttonGroup28.add(jRadioButton82);
-        jRadioButton82.setSelected(true);
         jRadioButton82.setText("Nem jellemző");
-        jRadioButton82.setActionCommand("3");
+        jRadioButton82.setActionCommand("0");
 
         buttonGroup28.add(jRadioButton83);
         jRadioButton83.setText("Ritka");
-        jRadioButton83.setActionCommand("2");
+        jRadioButton83.setActionCommand("1");
 
         buttonGroup28.add(jRadioButton84);
         jRadioButton84.setText("Gyakori");
-        jRadioButton84.setActionCommand("1");
+        jRadioButton84.setActionCommand("2");
 
         jLabel38.setText("Szél-kerülés");
 
         buttonGroup29.add(jRadioButton85);
-        jRadioButton85.setSelected(true);
         jRadioButton85.setText("Nem jellemző");
-        jRadioButton85.setActionCommand("3");
+        jRadioButton85.setActionCommand("0");
 
         buttonGroup29.add(jRadioButton86);
         jRadioButton86.setText("Ritka");
-        jRadioButton86.setActionCommand("2");
+        jRadioButton86.setActionCommand("1");
 
         buttonGroup29.add(jRadioButton87);
         jRadioButton87.setText("Gyakori");
-        jRadioButton87.setActionCommand("1");
+        jRadioButton87.setActionCommand("2");
 
         jLabel39.setText("Száraz köhögés");
 
         buttonGroup30.add(jRadioButton88);
-        jRadioButton88.setSelected(true);
         jRadioButton88.setText("Nem jellemző");
-        jRadioButton88.setActionCommand("3");
+        jRadioButton88.setActionCommand("0");
 
         buttonGroup30.add(jRadioButton89);
         jRadioButton89.setText("Ritka");
-        jRadioButton89.setActionCommand("2");
+        jRadioButton89.setActionCommand("1");
 
         buttonGroup30.add(jRadioButton90);
         jRadioButton90.setText("Gyakori");
-        jRadioButton90.setActionCommand("1");
+        jRadioButton90.setActionCommand("2");
 
         jLabel40.setText("Asztmás köhögés");
 
         buttonGroup31.add(jRadioButton91);
-        jRadioButton91.setSelected(true);
         jRadioButton91.setText("Nem jellemző");
-        jRadioButton91.setActionCommand("3");
+        jRadioButton91.setActionCommand("0");
 
         buttonGroup31.add(jRadioButton92);
         jRadioButton92.setText("Ritka");
-        jRadioButton92.setActionCommand("2");
+        jRadioButton92.setActionCommand("1");
 
         buttonGroup31.add(jRadioButton93);
         jRadioButton93.setText("Gyakori");
-        jRadioButton93.setActionCommand("1");
+        jRadioButton93.setActionCommand("2");
 
         jLabel41.setText("Köpet");
 
         buttonGroup32.add(jRadioButton94);
-        jRadioButton94.setSelected(true);
         jRadioButton94.setText("Nem jellemző");
-        jRadioButton94.setActionCommand("3");
+        jRadioButton94.setActionCommand("0");
 
         buttonGroup32.add(jRadioButton95);
         jRadioButton95.setText("Ritka");
-        jRadioButton95.setActionCommand("2");
+        jRadioButton95.setActionCommand("1");
 
         buttonGroup32.add(jRadioButton96);
         jRadioButton96.setText("Gyakori");
-        jRadioButton96.setActionCommand("1");
+        jRadioButton96.setActionCommand("2");
 
         jLabel42.setText("Mellkasi teltségérzet");
 
         buttonGroup33.add(jRadioButton97);
-        jRadioButton97.setSelected(true);
         jRadioButton97.setText("Nem jellemző");
-        jRadioButton97.setActionCommand("3");
+        jRadioButton97.setActionCommand("0");
 
         buttonGroup33.add(jRadioButton98);
         jRadioButton98.setText("Ritka");
-        jRadioButton98.setActionCommand("2");
+        jRadioButton98.setActionCommand("1");
 
         buttonGroup33.add(jRadioButton99);
         jRadioButton99.setText("Gyakori");
-        jRadioButton99.setActionCommand("1");
+        jRadioButton99.setActionCommand("2");
 
         jLabel43.setText("Mellkasi fájdalom");
 
         buttonGroup34.add(jRadioButton100);
-        jRadioButton100.setSelected(true);
         jRadioButton100.setText("Nem jellemző");
-        jRadioButton100.setActionCommand("3");
+        jRadioButton100.setActionCommand("0");
 
         buttonGroup34.add(jRadioButton101);
         jRadioButton101.setText("Ritka");
-        jRadioButton101.setActionCommand("2");
+        jRadioButton101.setActionCommand("1");
 
         buttonGroup34.add(jRadioButton102);
         jRadioButton102.setText("Gyakori");
-        jRadioButton102.setActionCommand("1");
+        jRadioButton102.setActionCommand("2");
 
         jLabel44.setText("Mellfeszülés");
 
         buttonGroup35.add(jRadioButton103);
-        jRadioButton103.setSelected(true);
         jRadioButton103.setText("Nem jellemző");
-        jRadioButton103.setActionCommand("3");
+        jRadioButton103.setActionCommand("0");
 
         buttonGroup35.add(jRadioButton104);
         jRadioButton104.setText("Ritka");
-        jRadioButton104.setActionCommand("2");
+        jRadioButton104.setActionCommand("1");
 
         buttonGroup35.add(jRadioButton105);
         jRadioButton105.setText("Gyakori");
-        jRadioButton105.setActionCommand("1");
+        jRadioButton105.setActionCommand("2");
 
         jLabel45.setText("Hideg kezek");
 
         buttonGroup36.add(jRadioButton106);
-        jRadioButton106.setSelected(true);
         jRadioButton106.setText("Nem jellemző");
-        jRadioButton106.setActionCommand("3");
+        jRadioButton106.setActionCommand("0");
 
         buttonGroup36.add(jRadioButton107);
         jRadioButton107.setText("Ritka");
-        jRadioButton107.setActionCommand("2");
+        jRadioButton107.setActionCommand("1");
 
         buttonGroup36.add(jRadioButton108);
         jRadioButton108.setText("Gyakori");
-        jRadioButton108.setActionCommand("1");
+        jRadioButton108.setActionCommand("2");
 
         jLabel1.setText("Színe");
 
@@ -1276,303 +1392,283 @@ public class Questions extends javax.swing.JFrame {
         jLabel47.setText("Rossz étvágy");
 
         buttonGroup37.add(jRadioButton109);
-        jRadioButton109.setSelected(true);
         jRadioButton109.setText("Nem jellemző");
-        jRadioButton109.setActionCommand("3");
+        jRadioButton109.setActionCommand("0");
 
         buttonGroup37.add(jRadioButton110);
         jRadioButton110.setText("Ritka");
-        jRadioButton110.setActionCommand("2");
+        jRadioButton110.setActionCommand("1");
 
         buttonGroup37.add(jRadioButton111);
         jRadioButton111.setText("Gyakori");
-        jRadioButton111.setActionCommand("1");
+        jRadioButton111.setActionCommand("2");
 
         jLabel48.setText("Ízérzés zavara");
 
         buttonGroup38.add(jRadioButton112);
-        jRadioButton112.setSelected(true);
         jRadioButton112.setText("Nem jellemző");
-        jRadioButton112.setActionCommand("3");
+        jRadioButton112.setActionCommand("0");
 
         buttonGroup38.add(jRadioButton113);
         jRadioButton113.setText("Ritka");
-        jRadioButton113.setActionCommand("2");
+        jRadioButton113.setActionCommand("1");
 
         buttonGroup38.add(jRadioButton114);
         jRadioButton114.setText("Gyakori");
-        jRadioButton114.setActionCommand("1");
+        jRadioButton114.setActionCommand("2");
 
         jLabel49.setText("Hasi feszülés étkezés után");
 
         buttonGroup39.add(jRadioButton115);
-        jRadioButton115.setSelected(true);
         jRadioButton115.setText("Nem jellemző");
-        jRadioButton115.setActionCommand("3");
+        jRadioButton115.setActionCommand("0");
 
         buttonGroup39.add(jRadioButton116);
         jRadioButton116.setText("Ritka");
-        jRadioButton116.setActionCommand("2");
+        jRadioButton116.setActionCommand("1");
 
         buttonGroup39.add(jRadioButton117);
         jRadioButton117.setText("Gyakori");
-        jRadioButton117.setActionCommand("1");
+        jRadioButton117.setActionCommand("2");
 
         jLabel50.setText("Puffadás");
 
         buttonGroup40.add(jRadioButton118);
-        jRadioButton118.setSelected(true);
         jRadioButton118.setText("Nem jellemző");
-        jRadioButton118.setActionCommand("3");
+        jRadioButton118.setActionCommand("0");
 
         buttonGroup40.add(jRadioButton119);
         jRadioButton119.setText("Ritka");
-        jRadioButton119.setActionCommand("2");
+        jRadioButton119.setActionCommand("1");
 
         buttonGroup40.add(jRadioButton120);
         jRadioButton120.setText("Gyakori");
-        jRadioButton120.setActionCommand("1");
+        jRadioButton120.setActionCommand("2");
 
         jLabel51.setText("Fáradékonyság");
 
         buttonGroup41.add(jRadioButton121);
-        jRadioButton121.setSelected(true);
         jRadioButton121.setText("Nem jellemző");
-        jRadioButton121.setActionCommand("3");
+        jRadioButton121.setActionCommand("0");
 
         buttonGroup41.add(jRadioButton122);
         jRadioButton122.setText("Ritka");
-        jRadioButton122.setActionCommand("2");
+        jRadioButton122.setActionCommand("1");
 
         buttonGroup41.add(jRadioButton123);
         jRadioButton123.setText("Gyakori");
-        jRadioButton123.setActionCommand("1");
+        jRadioButton123.setActionCommand("2");
 
         jLabel52.setText("Hajlam fogyásra/hízásra");
 
         buttonGroup42.add(jRadioButton124);
-        jRadioButton124.setSelected(true);
         jRadioButton124.setText("Nem jellemző");
-        jRadioButton124.setActionCommand("3");
+        jRadioButton124.setActionCommand("0");
 
         buttonGroup42.add(jRadioButton125);
         jRadioButton125.setText("Ritka");
-        jRadioButton125.setActionCommand("2");
+        jRadioButton125.setActionCommand("1");
 
         buttonGroup42.add(jRadioButton126);
         jRadioButton126.setText("Gyakori");
-        jRadioButton126.setActionCommand("1");
+        jRadioButton126.setActionCommand("2");
 
         jLabel53.setText("Gyomortáji égő érzés + nem kíván enni");
 
         buttonGroup43.add(jRadioButton127);
-        jRadioButton127.setSelected(true);
         jRadioButton127.setText("Nem jellemző");
-        jRadioButton127.setActionCommand("3");
+        jRadioButton127.setActionCommand("0");
 
         buttonGroup43.add(jRadioButton128);
         jRadioButton128.setText("Ritka");
-        jRadioButton128.setActionCommand("2");
+        jRadioButton128.setActionCommand("1");
 
         buttonGroup43.add(jRadioButton129);
         jRadioButton129.setText("Gyakori");
-        jRadioButton129.setActionCommand("1");
+        jRadioButton129.setActionCommand("2");
 
         jLabel54.setText("Gyomortáji égő érzés + szomjúság hideg italra");
 
         buttonGroup44.add(jRadioButton130);
-        jRadioButton130.setSelected(true);
         jRadioButton130.setText("Nem jellemző");
-        jRadioButton130.setActionCommand("3");
+        jRadioButton130.setActionCommand("0");
 
         buttonGroup44.add(jRadioButton131);
         jRadioButton131.setText("Ritka");
-        jRadioButton131.setActionCommand("2");
+        jRadioButton131.setActionCommand("1");
 
         buttonGroup44.add(jRadioButton132);
         jRadioButton132.setText("Gyakori");
-        jRadioButton132.setActionCommand("1");
+        jRadioButton132.setActionCommand("2");
 
         jLabel55.setText("Állandó éhség");
 
         buttonGroup45.add(jRadioButton133);
-        jRadioButton133.setSelected(true);
         jRadioButton133.setText("Nem jellemző");
-        jRadioButton133.setActionCommand("3");
+        jRadioButton133.setActionCommand("0");
 
         buttonGroup45.add(jRadioButton134);
         jRadioButton134.setText("Ritka");
-        jRadioButton134.setActionCommand("2");
+        jRadioButton134.setActionCommand("1");
 
         buttonGroup45.add(jRadioButton135);
         jRadioButton135.setText("Gyakori");
-        jRadioButton135.setActionCommand("1");
+        jRadioButton135.setActionCommand("2");
 
         jLabel56.setText("Hányinger, hányás");
 
         buttonGroup46.add(jRadioButton136);
-        jRadioButton136.setSelected(true);
         jRadioButton136.setText("Nem jellemző");
-        jRadioButton136.setActionCommand("3");
+        jRadioButton136.setActionCommand("0");
 
         buttonGroup46.add(jRadioButton137);
         jRadioButton137.setText("Ritka");
-        jRadioButton137.setActionCommand("2");
+        jRadioButton137.setActionCommand("1");
 
         buttonGroup46.add(jRadioButton138);
         jRadioButton138.setText("Gyakori");
-        jRadioButton138.setActionCommand("1");
+        jRadioButton138.setActionCommand("2");
 
         jLabel57.setText("Böfögés, csukás");
 
         buttonGroup47.add(jRadioButton139);
-        jRadioButton139.setSelected(true);
         jRadioButton139.setText("Nem jellemző");
-        jRadioButton139.setActionCommand("3");
+        jRadioButton139.setActionCommand("0");
 
         buttonGroup47.add(jRadioButton140);
         jRadioButton140.setText("Ritka");
-        jRadioButton140.setActionCommand("2");
+        jRadioButton140.setActionCommand("1");
 
         buttonGroup47.add(jRadioButton141);
         jRadioButton141.setText("Gyakori");
-        jRadioButton141.setActionCommand("1");
+        jRadioButton141.setActionCommand("2");
 
         jLabel58.setText("Székrekedés");
 
         buttonGroup48.add(jRadioButton142);
-        jRadioButton142.setSelected(true);
         jRadioButton142.setText("Nem jellemző");
-        jRadioButton142.setActionCommand("3");
+        jRadioButton142.setActionCommand("0");
 
         buttonGroup48.add(jRadioButton143);
         jRadioButton143.setText("Ritka");
-        jRadioButton143.setActionCommand("2");
+        jRadioButton143.setActionCommand("1");
 
         buttonGroup48.add(jRadioButton144);
         jRadioButton144.setText("Gyakori");
-        jRadioButton144.setActionCommand("1");
+        jRadioButton144.setActionCommand("2");
 
         jLabel59.setText("Hasmenés");
 
         buttonGroup49.add(jRadioButton145);
-        jRadioButton145.setSelected(true);
         jRadioButton145.setText("Nem jellemző");
-        jRadioButton145.setActionCommand("3");
+        jRadioButton145.setActionCommand("0");
 
         buttonGroup49.add(jRadioButton146);
         jRadioButton146.setText("Ritka");
-        jRadioButton146.setActionCommand("2");
+        jRadioButton146.setActionCommand("1");
 
         buttonGroup49.add(jRadioButton147);
         jRadioButton147.setText("Gyakori");
-        jRadioButton147.setActionCommand("1");
+        jRadioButton147.setActionCommand("2");
 
         jLabel60.setText("Széklet");
 
         jLabel61.setText("Égő végbélnyílás");
 
         buttonGroup50.add(jRadioButton151);
-        jRadioButton151.setSelected(true);
         jRadioButton151.setText("Nem jellemző");
-        jRadioButton151.setActionCommand("3");
+        jRadioButton151.setActionCommand("0");
 
         buttonGroup50.add(jRadioButton152);
         jRadioButton152.setText("Ritka");
-        jRadioButton152.setActionCommand("2");
+        jRadioButton152.setActionCommand("1");
 
         buttonGroup50.add(jRadioButton153);
         jRadioButton153.setText("Gyakori");
-        jRadioButton153.setActionCommand("1");
+        jRadioButton153.setActionCommand("2");
 
         jLabel62.setText("Görcsög hasi fájdalom");
 
         buttonGroup51.add(jRadioButton154);
-        jRadioButton154.setSelected(true);
         jRadioButton154.setText("Nem jellemző");
-        jRadioButton154.setActionCommand("3");
+        jRadioButton154.setActionCommand("0");
 
         buttonGroup51.add(jRadioButton155);
         jRadioButton155.setText("Ritka");
-        jRadioButton155.setActionCommand("2");
+        jRadioButton155.setActionCommand("1");
 
         buttonGroup51.add(jRadioButton156);
         jRadioButton156.setText("Gyakori");
-        jRadioButton156.setActionCommand("1");
+        jRadioButton156.setActionCommand("2");
 
         jLabel63.setText("Hidegre romló gyomortáji teltség/fájdalom");
 
         buttonGroup52.add(jRadioButton157);
-        jRadioButton157.setSelected(true);
         jRadioButton157.setText("Nem jellemző");
 
         buttonGroup52.add(jRadioButton158);
         jRadioButton158.setText("Ritka");
-        jRadioButton158.setActionCommand("2");
+        jRadioButton158.setActionCommand("1");
 
         buttonGroup52.add(jRadioButton159);
         jRadioButton159.setText("Gyakori");
-        jRadioButton159.setActionCommand("1");
+        jRadioButton159.setActionCommand("2");
 
         jLabel64.setText("Aranyeresség");
 
         buttonGroup53.add(jRadioButton160);
-        jRadioButton160.setSelected(true);
         jRadioButton160.setText("Nem jellemző");
-        jRadioButton160.setActionCommand("3");
+        jRadioButton160.setActionCommand("0");
 
         buttonGroup53.add(jRadioButton161);
         jRadioButton161.setText("Ritka");
-        jRadioButton161.setActionCommand("2");
+        jRadioButton161.setActionCommand("1");
 
         buttonGroup53.add(jRadioButton162);
         jRadioButton162.setText("Gyakori");
-        jRadioButton162.setActionCommand("1");
+        jRadioButton162.setActionCommand("2");
 
         jLabel65.setText("Hideg hasalj");
 
         buttonGroup54.add(jRadioButton163);
-        jRadioButton163.setSelected(true);
         jRadioButton163.setText("Nem jellemző");
-        jRadioButton163.setActionCommand("3");
+        jRadioButton163.setActionCommand("0");
 
         buttonGroup54.add(jRadioButton164);
         jRadioButton164.setText("Ritka");
-        jRadioButton164.setActionCommand("2");
+        jRadioButton164.setActionCommand("1");
 
         buttonGroup54.add(jRadioButton165);
         jRadioButton165.setText("Gyakori");
-        jRadioButton165.setActionCommand("1");
+        jRadioButton165.setActionCommand("2");
 
         jLabel66.setText("Hideg orrcsúcs");
 
         buttonGroup55.add(jRadioButton166);
-        jRadioButton166.setSelected(true);
         jRadioButton166.setText("Nem jellemző");
-        jRadioButton166.setActionCommand("3");
+        jRadioButton166.setActionCommand("0");
 
         buttonGroup55.add(jRadioButton167);
         jRadioButton167.setText("Ritka");
-        jRadioButton167.setActionCommand("2");
+        jRadioButton167.setActionCommand("1");
 
         buttonGroup55.add(jRadioButton168);
         jRadioButton168.setText("Gyakori");
-        jRadioButton168.setActionCommand("1");
+        jRadioButton168.setActionCommand("2");
 
         jLabel67.setText("Aggodalmaskodás");
 
         buttonGroup56.add(jRadioButton169);
-        jRadioButton169.setSelected(true);
         jRadioButton169.setText("Nem jellemző");
-        jRadioButton169.setActionCommand("3");
+        jRadioButton169.setActionCommand("0");
 
         buttonGroup56.add(jRadioButton170);
         jRadioButton170.setText("Ritka");
-        jRadioButton170.setActionCommand("2");
+        jRadioButton170.setActionCommand("1");
 
         buttonGroup56.add(jRadioButton171);
         jRadioButton171.setText("Gyakori");
-        jRadioButton171.setActionCommand("1");
+        jRadioButton171.setActionCommand("2");
 
         jLabel70.setText("Gyakoriság");
 
@@ -1586,227 +1682,212 @@ public class Questions extends javax.swing.JFrame {
         jLabel69.setText("Izomgörcsök");
 
         buttonGroup57.add(jRadioButton172);
-        jRadioButton172.setSelected(true);
         jRadioButton172.setText("Nem jellemző");
-        jRadioButton172.setActionCommand("3");
+        jRadioButton172.setActionCommand("0");
 
         buttonGroup57.add(jRadioButton173);
         jRadioButton173.setText("Ritka");
-        jRadioButton173.setActionCommand("2");
+        jRadioButton173.setActionCommand("1");
 
         buttonGroup57.add(jRadioButton174);
         jRadioButton174.setText("Gyakori");
-        jRadioButton174.setActionCommand("1");
+        jRadioButton174.setActionCommand("2");
 
         jLabel79.setText("Izomrángás");
 
         buttonGroup58.add(jRadioButton193);
-        jRadioButton193.setSelected(true);
         jRadioButton193.setText("Nem jellemző");
-        jRadioButton193.setActionCommand("3");
+        jRadioButton193.setActionCommand("0");
 
         buttonGroup58.add(jRadioButton194);
         jRadioButton194.setText("Ritka");
-        jRadioButton194.setActionCommand("2");
+        jRadioButton194.setActionCommand("1");
 
         buttonGroup58.add(jRadioButton195);
         jRadioButton195.setText("Gyakori");
-        jRadioButton195.setActionCommand("1");
+        jRadioButton195.setActionCommand("2");
 
         jLabel80.setText("Ingerlékenység");
 
         buttonGroup59.add(jRadioButton196);
-        jRadioButton196.setSelected(true);
         jRadioButton196.setText("Nem jellemző");
-        jRadioButton196.setActionCommand("3");
+        jRadioButton196.setActionCommand("0");
 
         buttonGroup59.add(jRadioButton197);
         jRadioButton197.setText("Ritka");
-        jRadioButton197.setActionCommand("2");
+        jRadioButton197.setActionCommand("1");
 
         buttonGroup59.add(jRadioButton198);
         jRadioButton198.setText("Gyakori");
-        jRadioButton198.setActionCommand("1");
+        jRadioButton198.setActionCommand("2");
 
         jLabel81.setText("Lehangoltág");
 
         buttonGroup60.add(jRadioButton199);
-        jRadioButton199.setSelected(true);
         jRadioButton199.setText("Nem jellemző");
-        jRadioButton199.setActionCommand("3");
+        jRadioButton199.setActionCommand("0");
 
         buttonGroup60.add(jRadioButton200);
         jRadioButton200.setText("Ritka");
-        jRadioButton200.setActionCommand("2");
+        jRadioButton200.setActionCommand("1");
 
         buttonGroup60.add(jRadioButton201);
         jRadioButton201.setText("Gyakori");
-        jRadioButton201.setActionCommand("1");
+        jRadioButton201.setActionCommand("2");
 
         jLabel82.setText("Hullámzó hangulat");
 
         buttonGroup61.add(jRadioButton202);
-        jRadioButton202.setSelected(true);
         jRadioButton202.setText("Nem jellemző");
-        jRadioButton202.setActionCommand("3");
+        jRadioButton202.setActionCommand("0");
 
         buttonGroup61.add(jRadioButton203);
         jRadioButton203.setText("Ritka");
-        jRadioButton203.setActionCommand("2");
+        jRadioButton203.setActionCommand("1");
 
         buttonGroup61.add(jRadioButton204);
         jRadioButton204.setText("Gyakori");
-        jRadioButton204.setActionCommand("1");
+        jRadioButton204.setActionCommand("2");
 
         jLabel83.setText("Céltalanság érzete");
 
         buttonGroup62.add(jRadioButton205);
-        jRadioButton205.setSelected(true);
         jRadioButton205.setText("Nem jellemző");
-        jRadioButton205.setActionCommand("3");
+        jRadioButton205.setActionCommand("0");
 
         buttonGroup62.add(jRadioButton206);
         jRadioButton206.setText("Ritka");
-        jRadioButton206.setActionCommand("2");
+        jRadioButton206.setActionCommand("1");
 
         buttonGroup62.add(jRadioButton207);
         jRadioButton207.setText("Gyakori");
-        jRadioButton207.setActionCommand("1");
+        jRadioButton207.setActionCommand("2");
 
         jLabel84.setText("Dühkitörések");
 
         buttonGroup63.add(jRadioButton208);
-        jRadioButton208.setSelected(true);
         jRadioButton208.setText("Nem jellemző");
-        jRadioButton208.setActionCommand("3");
+        jRadioButton208.setActionCommand("0");
 
         buttonGroup63.add(jRadioButton209);
         jRadioButton209.setText("Ritka");
-        jRadioButton209.setActionCommand("2");
+        jRadioButton209.setActionCommand("1");
 
         buttonGroup63.add(jRadioButton210);
         jRadioButton210.setText("Gyakori");
-        jRadioButton210.setActionCommand("1");
+        jRadioButton210.setActionCommand("2");
 
         jLabel85.setText("Fogcsikorgatás");
 
         buttonGroup64.add(jRadioButton211);
-        jRadioButton211.setSelected(true);
         jRadioButton211.setText("Nem jellemző");
-        jRadioButton211.setActionCommand("3");
+        jRadioButton211.setActionCommand("0");
 
         buttonGroup64.add(jRadioButton212);
         jRadioButton212.setText("Ritka");
-        jRadioButton212.setActionCommand("2");
+        jRadioButton212.setActionCommand("1");
 
         buttonGroup64.add(jRadioButton213);
         jRadioButton213.setText("Gyakori");
-        jRadioButton213.setActionCommand("1");
+        jRadioButton213.setActionCommand("2");
 
         jLabel86.setText("Sírva ébredés");
 
         buttonGroup66.add(jRadioButton214);
         jRadioButton214.setText("Ritka");
-        jRadioButton214.setActionCommand("2");
+        jRadioButton214.setActionCommand("1");
 
         buttonGroup66.add(jRadioButton215);
-        jRadioButton215.setSelected(true);
         jRadioButton215.setText("Nem jellemző");
-        jRadioButton215.setActionCommand("3");
+        jRadioButton215.setActionCommand("0");
 
         jLabel87.setText("Bordaív alatt/mellkasi feszülés");
 
         buttonGroup65.add(jRadioButton216);
         jRadioButton216.setText("Gyakori");
-        jRadioButton216.setActionCommand("1");
+        jRadioButton216.setActionCommand("2");
 
         buttonGroup65.add(jRadioButton217);
         jRadioButton217.setText("Ritka");
-        jRadioButton217.setActionCommand("2");
+        jRadioButton217.setActionCommand("1");
 
         buttonGroup65.add(jRadioButton218);
-        jRadioButton218.setSelected(true);
         jRadioButton218.setText("Nem jellemző");
-        jRadioButton218.setActionCommand("3");
+        jRadioButton218.setActionCommand("0");
 
         buttonGroup67.add(jRadioButton219);
         jRadioButton219.setText("Gyakori");
-        jRadioButton219.setActionCommand("1");
+        jRadioButton219.setActionCommand("2");
 
         buttonGroup67.add(jRadioButton220);
         jRadioButton220.setText("Ritka");
-        jRadioButton220.setActionCommand("2");
+        jRadioButton220.setActionCommand("1");
 
         buttonGroup67.add(jRadioButton221);
-        jRadioButton221.setSelected(true);
         jRadioButton221.setText("Nem jellemző");
-        jRadioButton221.setActionCommand("3");
+        jRadioButton221.setActionCommand("0");
 
         jLabel88.setText("Bordatáji égő érzés");
 
         buttonGroup66.add(jRadioButton222);
         jRadioButton222.setText("Gyakori");
-        jRadioButton222.setActionCommand("1");
+        jRadioButton222.setActionCommand("2");
 
         jLabel89.setText("Keserű szájíz");
 
         buttonGroup68.add(jRadioButton223);
         jRadioButton223.setText("Gyakori");
-        jRadioButton223.setActionCommand("1");
+        jRadioButton223.setActionCommand("2");
 
         buttonGroup68.add(jRadioButton224);
         jRadioButton224.setText("Ritka");
-        jRadioButton224.setActionCommand("2");
+        jRadioButton224.setActionCommand("1");
 
         buttonGroup68.add(jRadioButton225);
-        jRadioButton225.setSelected(true);
         jRadioButton225.setText("Nem jellemző");
-        jRadioButton225.setActionCommand("3");
+        jRadioButton225.setActionCommand("0");
 
         jLabel90.setText("Sóhajtozás");
 
         buttonGroup69.add(jRadioButton226);
         jRadioButton226.setText("Gyakori");
-        jRadioButton226.setActionCommand("1");
+        jRadioButton226.setActionCommand("2");
 
         buttonGroup69.add(jRadioButton227);
         jRadioButton227.setText("Ritka");
-        jRadioButton227.setActionCommand("2");
+        jRadioButton227.setActionCommand("1");
 
         buttonGroup69.add(jRadioButton228);
-        jRadioButton228.setSelected(true);
         jRadioButton228.setText("Nem jellemző");
-        jRadioButton228.setActionCommand("3");
+        jRadioButton228.setActionCommand("0");
 
         buttonGroup71.add(jRadioButton229);
-        jRadioButton229.setSelected(true);
         jRadioButton229.setText("Nem jellemző");
-        jRadioButton229.setActionCommand("3");
+        jRadioButton229.setActionCommand("0");
 
         jLabel91.setText("Duzzadt, égő, viszkető herék/nagyajkak");
 
         buttonGroup70.add(jRadioButton230);
         jRadioButton230.setText("Gyakori");
-        jRadioButton230.setActionCommand("1");
+        jRadioButton230.setActionCommand("2");
 
         buttonGroup70.add(jRadioButton231);
         jRadioButton231.setText("Ritka");
-        jRadioButton231.setActionCommand("2");
+        jRadioButton231.setActionCommand("1");
 
         buttonGroup70.add(jRadioButton232);
-        jRadioButton232.setSelected(true);
         jRadioButton232.setText("Nem jellemző");
-        jRadioButton232.setActionCommand("3");
+        jRadioButton232.setActionCommand("0");
 
         jLabel92.setText("Gombócérzés a torokban");
 
         buttonGroup71.add(jRadioButton233);
         jRadioButton233.setText("Gyakori");
-        jRadioButton233.setActionCommand("1");
+        jRadioButton233.setActionCommand("2");
 
         buttonGroup71.add(jRadioButton234);
         jRadioButton234.setText("Ritka");
-        jRadioButton234.setActionCommand("2");
+        jRadioButton234.setActionCommand("1");
 
         jLabel73.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel73.setText("Alhas");
@@ -1814,32 +1895,30 @@ public class Questions extends javax.swing.JFrame {
         jLabel93.setText("Gyenge-érzékeny derék");
 
         buttonGroup72.add(jRadioButton235);
-        jRadioButton235.setSelected(true);
         jRadioButton235.setText("Nem jellemző");
-        jRadioButton235.setActionCommand("3");
+        jRadioButton235.setActionCommand("0");
 
         buttonGroup72.add(jRadioButton236);
         jRadioButton236.setText("Ritka");
-        jRadioButton236.setActionCommand("2");
+        jRadioButton236.setActionCommand("1");
 
         buttonGroup72.add(jRadioButton237);
         jRadioButton237.setText("Gyakori");
-        jRadioButton237.setActionCommand("1");
+        jRadioButton237.setActionCommand("2");
 
         jLabel94.setText("Gyenge-érzékeny térd");
 
         buttonGroup73.add(jRadioButton238);
-        jRadioButton238.setSelected(true);
         jRadioButton238.setText("Nem jellemző");
-        jRadioButton238.setActionCommand("3");
+        jRadioButton238.setActionCommand("0");
 
         buttonGroup73.add(jRadioButton239);
         jRadioButton239.setText("Ritka");
-        jRadioButton239.setActionCommand("2");
+        jRadioButton239.setActionCommand("1");
 
         buttonGroup73.add(jRadioButton240);
         jRadioButton240.setText("Gyakori");
-        jRadioButton240.setActionCommand("1");
+        jRadioButton240.setActionCommand("2");
 
         jLabel95.setText("Napi folyadékbevitel");
 
@@ -1847,369 +1926,345 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel74.setText("Mennyiség:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "hideg", "langyos", "meleg" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "mindegy", "hideg", "langyos", "meleg" }));
 
         jLabel75.setText("liter");
 
         jLabel97.setText("Éjszakai vizelés");
 
         buttonGroup74.add(jRadioButton241);
-        jRadioButton241.setSelected(true);
         jRadioButton241.setText("Nem jellemző");
-        jRadioButton241.setActionCommand("3");
+        jRadioButton241.setActionCommand("0");
 
         buttonGroup74.add(jRadioButton242);
         jRadioButton242.setText("Ritka");
-        jRadioButton242.setActionCommand("2");
+        jRadioButton242.setActionCommand("1");
 
         buttonGroup74.add(jRadioButton243);
         jRadioButton243.setText("Gyakori");
-        jRadioButton243.setActionCommand("1");
+        jRadioButton243.setActionCommand("2");
 
         jLabel76.setText("Hányszor");
 
         buttonGroup75.add(jRadioButton244);
-        jRadioButton244.setSelected(true);
         jRadioButton244.setText("Nem jellemző");
-        jRadioButton244.setActionCommand("3");
+        jRadioButton244.setActionCommand("0");
 
         buttonGroup75.add(jRadioButton245);
         jRadioButton245.setText("Ritka");
-        jRadioButton245.setActionCommand("2");
+        jRadioButton245.setActionCommand("1");
 
         buttonGroup75.add(jRadioButton246);
         jRadioButton246.setText("Gyakori");
-        jRadioButton246.setActionCommand("1");
+        jRadioButton246.setActionCommand("2");
 
         jLabel98.setText("Gyenge vizeletsugár");
 
         buttonGroup76.add(jRadioButton247);
-        jRadioButton247.setSelected(true);
         jRadioButton247.setText("Nem jellemző");
-        jRadioButton247.setActionCommand("3");
+        jRadioButton247.setActionCommand("0");
 
         buttonGroup76.add(jRadioButton248);
         jRadioButton248.setText("Ritka");
-        jRadioButton248.setActionCommand("2");
+        jRadioButton248.setActionCommand("1");
 
         buttonGroup76.add(jRadioButton249);
         jRadioButton249.setText("Gyakori");
-        jRadioButton249.setActionCommand("1");
+        jRadioButton249.setActionCommand("2");
 
         jLabel99.setText("Vizeletcsepegés");
 
         buttonGroup77.add(jRadioButton250);
-        jRadioButton250.setSelected(true);
         jRadioButton250.setText("Nem jellemző");
-        jRadioButton250.setActionCommand("3");
+        jRadioButton250.setActionCommand("0");
 
         buttonGroup77.add(jRadioButton251);
         jRadioButton251.setText("Ritka");
-        jRadioButton251.setActionCommand("2");
+        jRadioButton251.setActionCommand("1");
 
         buttonGroup77.add(jRadioButton252);
         jRadioButton252.setText("Gyakori");
-        jRadioButton252.setActionCommand("1");
+        jRadioButton252.setActionCommand("2");
 
         jLabel100.setText("Éjszakai ágybavizelés");
 
         jLabel101.setText("Megtorpanó vizelés");
 
         buttonGroup78.add(jRadioButton253);
-        jRadioButton253.setSelected(true);
         jRadioButton253.setText("Nem jellemző");
-        jRadioButton253.setActionCommand("3");
+        jRadioButton253.setActionCommand("0");
 
         buttonGroup78.add(jRadioButton254);
         jRadioButton254.setText("Ritka");
-        jRadioButton254.setActionCommand("2");
+        jRadioButton254.setActionCommand("1");
 
         buttonGroup78.add(jRadioButton255);
         jRadioButton255.setText("Gyakori");
-        jRadioButton255.setActionCommand("1");
+        jRadioButton255.setActionCommand("2");
 
         jLabel102.setText("Vizelés után nincs teljes kiürültség-érzet");
 
         buttonGroup79.add(jRadioButton256);
-        jRadioButton256.setSelected(true);
         jRadioButton256.setText("Nem jellemző");
-        jRadioButton256.setActionCommand("3");
+        jRadioButton256.setActionCommand("0");
 
         buttonGroup79.add(jRadioButton257);
         jRadioButton257.setText("Ritka");
-        jRadioButton257.setActionCommand("2");
+        jRadioButton257.setActionCommand("1");
 
         buttonGroup79.add(jRadioButton258);
         jRadioButton258.setText("Gyakori");
-        jRadioButton258.setActionCommand("1");
+        jRadioButton258.setActionCommand("2");
 
         jLabel103.setText("Gyakori, sürgető vizelés");
 
         buttonGroup80.add(jRadioButton259);
-        jRadioButton259.setSelected(true);
         jRadioButton259.setText("Nem jellemző");
-        jRadioButton259.setActionCommand("3");
+        jRadioButton259.setActionCommand("0");
 
         buttonGroup80.add(jRadioButton260);
         jRadioButton260.setText("Ritka");
-        jRadioButton260.setActionCommand("2");
+        jRadioButton260.setActionCommand("1");
 
         buttonGroup80.add(jRadioButton261);
         jRadioButton261.setText("Gyakori");
-        jRadioButton261.setActionCommand("1");
+        jRadioButton261.setActionCommand("2");
 
         jLabel104.setText("Fájdalmas vizelés");
 
         buttonGroup81.add(jRadioButton262);
-        jRadioButton262.setSelected(true);
         jRadioButton262.setText("Nem jellemző");
-        jRadioButton262.setActionCommand("3");
+        jRadioButton262.setActionCommand("0");
 
         buttonGroup81.add(jRadioButton263);
         jRadioButton263.setText("Ritka");
-        jRadioButton263.setActionCommand("2");
+        jRadioButton263.setActionCommand("1");
 
         buttonGroup81.add(jRadioButton264);
         jRadioButton264.setText("Gyakori");
-        jRadioButton264.setActionCommand("1");
+        jRadioButton264.setActionCommand("2");
 
         jLabel105.setText("Zavaros vizelet");
 
         buttonGroup82.add(jRadioButton265);
-        jRadioButton265.setSelected(true);
         jRadioButton265.setText("Nem jellemző");
-        jRadioButton265.setActionCommand("3");
+        jRadioButton265.setActionCommand("0");
 
         buttonGroup82.add(jRadioButton266);
         jRadioButton266.setText("Ritka");
-        jRadioButton266.setActionCommand("2");
+        jRadioButton266.setActionCommand("1");
 
         buttonGroup82.add(jRadioButton267);
         jRadioButton267.setText("Gyakori");
-        jRadioButton267.setActionCommand("1");
+        jRadioButton267.setActionCommand("2");
 
         jLabel106.setText("Véres vizelet");
 
         buttonGroup83.add(jRadioButton268);
-        jRadioButton268.setSelected(true);
         jRadioButton268.setText("Nem jellemző");
-        jRadioButton268.setActionCommand("3");
+        jRadioButton268.setActionCommand("0");
 
         buttonGroup83.add(jRadioButton269);
         jRadioButton269.setText("Ritka");
-        jRadioButton269.setActionCommand("2");
+        jRadioButton269.setActionCommand("1");
 
         buttonGroup83.add(jRadioButton270);
         jRadioButton270.setText("Gyakori");
-        jRadioButton270.setActionCommand("1");
+        jRadioButton270.setActionCommand("2");
 
         jLabel107.setText("Alhasi teltség, fájdalom");
 
         buttonGroup84.add(jRadioButton271);
-        jRadioButton271.setSelected(true);
         jRadioButton271.setText("Nem jellemző");
-        jRadioButton271.setActionCommand("3");
+        jRadioButton271.setActionCommand("0");
 
         buttonGroup84.add(jRadioButton272);
         jRadioButton272.setText("Ritka");
-        jRadioButton272.setActionCommand("2");
+        jRadioButton272.setActionCommand("1");
 
         buttonGroup84.add(jRadioButton273);
         jRadioButton273.setText("Gyakori");
-        jRadioButton273.setActionCommand("1");
+        jRadioButton273.setActionCommand("2");
 
         jLabel108.setText("Prosztata-gondok");
 
         buttonGroup85.add(jRadioButton274);
-        jRadioButton274.setSelected(true);
         jRadioButton274.setText("Nem jellemző");
-        jRadioButton274.setActionCommand("3");
+        jRadioButton274.setActionCommand("0");
 
         buttonGroup85.add(jRadioButton275);
         jRadioButton275.setText("Ritka");
-        jRadioButton275.setActionCommand("2");
+        jRadioButton275.setActionCommand("1");
 
         buttonGroup85.add(jRadioButton276);
         jRadioButton276.setText("Gyakori");
-        jRadioButton276.setActionCommand("1");
+        jRadioButton276.setActionCommand("2");
 
         jLabel109.setText("Éjszakai magömlés");
 
         buttonGroup86.add(jRadioButton277);
-        jRadioButton277.setSelected(true);
         jRadioButton277.setText("Nem jellemző");
-        jRadioButton277.setActionCommand("3");
+        jRadioButton277.setActionCommand("0");
 
         buttonGroup86.add(jRadioButton278);
         jRadioButton278.setText("Ritka");
-        jRadioButton278.setActionCommand("2");
+        jRadioButton278.setActionCommand("1");
 
         buttonGroup86.add(jRadioButton279);
         jRadioButton279.setText("Gyakori");
-        jRadioButton279.setActionCommand("1");
+        jRadioButton279.setActionCommand("2");
 
         jLabel110.setText("Korai magömlés");
 
         buttonGroup87.add(jRadioButton280);
-        jRadioButton280.setSelected(true);
         jRadioButton280.setText("Nem jellemző");
-        jRadioButton280.setActionCommand("3");
+        jRadioButton280.setActionCommand("0");
 
         buttonGroup87.add(jRadioButton281);
         jRadioButton281.setText("Ritka");
-        jRadioButton281.setActionCommand("2");
+        jRadioButton281.setActionCommand("1");
 
         buttonGroup87.add(jRadioButton282);
         jRadioButton282.setText("Gyakori");
-        jRadioButton282.setActionCommand("1");
+        jRadioButton282.setActionCommand("2");
 
         jLabel111.setText("Bokatáji vizenyő");
 
         buttonGroup88.add(jRadioButton283);
-        jRadioButton283.setSelected(true);
         jRadioButton283.setText("Nem jellemző");
-        jRadioButton283.setActionCommand("3");
+        jRadioButton283.setActionCommand("0");
 
         buttonGroup88.add(jRadioButton284);
         jRadioButton284.setText("Ritka");
-        jRadioButton284.setActionCommand("2");
+        jRadioButton284.setActionCommand("1");
 
         buttonGroup88.add(jRadioButton285);
         jRadioButton285.setText("Gyakori");
-        jRadioButton285.setActionCommand("1");
+        jRadioButton285.setActionCommand("2");
 
         jLabel112.setText("Impotencia");
 
         buttonGroup89.add(jRadioButton286);
-        jRadioButton286.setSelected(true);
         jRadioButton286.setText("Nem jellemző");
-        jRadioButton286.setActionCommand("3");
+        jRadioButton286.setActionCommand("0");
 
         buttonGroup89.add(jRadioButton287);
         jRadioButton287.setText("Ritka");
-        jRadioButton287.setActionCommand("2");
+        jRadioButton287.setActionCommand("1");
 
         buttonGroup89.add(jRadioButton288);
         jRadioButton288.setText("Gyakori");
-        jRadioButton288.setActionCommand("1");
+        jRadioButton288.setActionCommand("2");
 
         jLabel113.setText("Frigiditás");
 
         buttonGroup90.add(jRadioButton289);
-        jRadioButton289.setSelected(true);
         jRadioButton289.setText("Nem jellemző");
-        jRadioButton289.setActionCommand("3");
+        jRadioButton289.setActionCommand("0");
 
         buttonGroup90.add(jRadioButton290);
         jRadioButton290.setText("Ritka");
-        jRadioButton290.setActionCommand("2");
+        jRadioButton290.setActionCommand("1");
 
         buttonGroup90.add(jRadioButton291);
         jRadioButton291.setText("Gyakori");
-        jRadioButton291.setActionCommand("1");
+        jRadioButton291.setActionCommand("2");
 
         jLabel114.setText("Meddőség");
 
         buttonGroup91.add(jRadioButton292);
-        jRadioButton292.setSelected(true);
         jRadioButton292.setText("Nem jellemző");
-        jRadioButton292.setActionCommand("3");
+        jRadioButton292.setActionCommand("0");
 
         buttonGroup91.add(jRadioButton293);
         jRadioButton293.setText("Ritka");
-        jRadioButton293.setActionCommand("2");
+        jRadioButton293.setActionCommand("1");
 
         buttonGroup91.add(jRadioButton294);
         jRadioButton294.setText("Gyakori");
-        jRadioButton294.setActionCommand("1");
+        jRadioButton294.setActionCommand("2");
 
         jLabel115.setText("Csontritkulás");
 
         buttonGroup92.add(jRadioButton295);
-        jRadioButton295.setSelected(true);
         jRadioButton295.setText("Nem jellemző");
-        jRadioButton295.setActionCommand("3");
+        jRadioButton295.setActionCommand("0");
 
         buttonGroup92.add(jRadioButton296);
         jRadioButton296.setText("Ritka");
-        jRadioButton296.setActionCommand("2");
+        jRadioButton296.setActionCommand("1");
 
         buttonGroup92.add(jRadioButton297);
         jRadioButton297.setText("Gyakori");
-        jRadioButton297.setActionCommand("1");
+        jRadioButton297.setActionCommand("2");
 
         jLabel116.setText("Hideg-fázós derék");
 
         buttonGroup93.add(jRadioButton298);
-        jRadioButton298.setSelected(true);
         jRadioButton298.setText("Nem jellemző");
-        jRadioButton298.setActionCommand("3");
+        jRadioButton298.setActionCommand("0");
 
         buttonGroup93.add(jRadioButton299);
         jRadioButton299.setText("Ritka");
-        jRadioButton299.setActionCommand("2");
+        jRadioButton299.setActionCommand("1");
 
         buttonGroup93.add(jRadioButton300);
         jRadioButton300.setText("Gyakori");
-        jRadioButton300.setActionCommand("1");
+        jRadioButton300.setActionCommand("2");
 
         jLabel117.setText("Hideg-fázós térdek");
 
         buttonGroup94.add(jRadioButton301);
-        jRadioButton301.setSelected(true);
         jRadioButton301.setText("Nem jellemző");
-        jRadioButton301.setActionCommand("3");
+        jRadioButton301.setActionCommand("0");
 
         buttonGroup94.add(jRadioButton302);
         jRadioButton302.setText("Ritka");
-        jRadioButton302.setActionCommand("2");
+        jRadioButton302.setActionCommand("1");
 
         buttonGroup94.add(jRadioButton303);
         jRadioButton303.setText("Gyakori");
-        jRadioButton303.setActionCommand("1");
+        jRadioButton303.setActionCommand("2");
 
         jLabel118.setText("Hideg-fázós lábak");
 
         buttonGroup95.add(jRadioButton304);
-        jRadioButton304.setSelected(true);
         jRadioButton304.setText("Nem jellemző");
-        jRadioButton304.setActionCommand("3");
+        jRadioButton304.setActionCommand("0");
 
         buttonGroup95.add(jRadioButton305);
         jRadioButton305.setText("Ritka");
-        jRadioButton305.setActionCommand("2");
+        jRadioButton305.setActionCommand("1");
 
         buttonGroup95.add(jRadioButton306);
         jRadioButton306.setText("Gyakori");
-        jRadioButton306.setActionCommand("1");
+        jRadioButton306.setActionCommand("2");
 
         jLabel119.setText("Éjszakai izzadás");
 
         buttonGroup96.add(jRadioButton307);
-        jRadioButton307.setSelected(true);
         jRadioButton307.setText("Nem jellemző");
-        jRadioButton307.setActionCommand("3");
+        jRadioButton307.setActionCommand("0");
 
         buttonGroup96.add(jRadioButton308);
         jRadioButton308.setText("Ritka");
-        jRadioButton308.setActionCommand("2");
+        jRadioButton308.setActionCommand("1");
 
         buttonGroup96.add(jRadioButton309);
         jRadioButton309.setText("Gyakori");
-        jRadioButton309.setActionCommand("1");
+        jRadioButton309.setActionCommand("2");
 
         buttonGroup97.add(jRadioButton310);
         jRadioButton310.setText("Gyakori");
-        jRadioButton310.setActionCommand("1");
+        jRadioButton310.setActionCommand("2");
 
         buttonGroup97.add(jRadioButton311);
         jRadioButton311.setText("Ritka");
-        jRadioButton311.setActionCommand("2");
+        jRadioButton311.setActionCommand("1");
 
         buttonGroup97.add(jRadioButton312);
-        jRadioButton312.setSelected(true);
         jRadioButton312.setText("Nem jellemző");
-        jRadioButton312.setActionCommand("3");
+        jRadioButton312.setActionCommand("0");
 
         jLabel120.setText("Nappali hőhullámok");
 
@@ -2227,79 +2282,75 @@ public class Questions extends javax.swing.JFrame {
         jLabel124.setText("Szabálytalan menstruáció");
 
         buttonGroup98.add(jRadioButton313);
-        jRadioButton313.setSelected(true);
         jRadioButton313.setText("Nem jellemző");
-        jRadioButton313.setActionCommand("3");
+        jRadioButton313.setActionCommand("0");
 
         buttonGroup98.add(jRadioButton314);
         jRadioButton314.setText("Ritka");
-        jRadioButton314.setActionCommand("2");
+        jRadioButton314.setActionCommand("1");
 
         buttonGroup98.add(jRadioButton315);
         jRadioButton315.setText("Gyakori");
-        jRadioButton315.setActionCommand("1");
+        jRadioButton315.setActionCommand("2");
 
         buttonGroup99.add(jRadioButton316);
-        jRadioButton316.setSelected(true);
         jRadioButton316.setText("Nem jellemző");
-        jRadioButton316.setActionCommand("3");
+        jRadioButton316.setActionCommand("0");
 
         buttonGroup99.add(jRadioButton317);
         jRadioButton317.setText("Ritka");
-        jRadioButton317.setActionCommand("2");
+        jRadioButton317.setActionCommand("1");
 
         buttonGroup99.add(jRadioButton318);
         jRadioButton318.setText("Gyakori");
-        jRadioButton318.setActionCommand("1");
+        jRadioButton318.setActionCommand("2");
 
         jLabel125.setText("Fájdalmas menstruáció");
 
         jLabel126.setText("Csomós menstruációs vér");
 
         buttonGroup100.add(jRadioButton319);
-        jRadioButton319.setSelected(true);
         jRadioButton319.setText("Nem jellemző");
-        jRadioButton319.setActionCommand("3");
+        jRadioButton319.setActionCommand("0");
 
         buttonGroup100.add(jRadioButton320);
         jRadioButton320.setText("Ritka");
-        jRadioButton320.setActionCommand("2");
+        jRadioButton320.setActionCommand("1");
 
         buttonGroup100.add(jRadioButton321);
         jRadioButton321.setText("Gyakori");
-        jRadioButton321.setActionCommand("1");
+        jRadioButton321.setActionCommand("2");
 
         jLabel127.setText("Vérzés színe");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sötét", "halvány" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "sötét", "halvány" }));
 
         jLabel128.setText("Mennyisége");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "bőséges", "kevés", "normális" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "bőséges", "kevés", "normális" }));
 
         jLabel129.setText("Ciklus hossza");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "rövidebb", "hosszabb", "rendszertelen" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "rövidebb", "hosszabb", "rendszertelen" }));
 
         jLabel130.setText("Premenstruációs tünetek");
 
         buttonGroup101.add(jRadioButton322);
-        jRadioButton322.setSelected(true);
         jRadioButton322.setText("Nem jellemző");
-        jRadioButton322.setActionCommand("3");
+        jRadioButton322.setActionCommand("0");
 
         buttonGroup101.add(jRadioButton323);
         jRadioButton323.setText("Ritka");
-        jRadioButton323.setActionCommand("2");
+        jRadioButton323.setActionCommand("1");
 
         buttonGroup101.add(jRadioButton324);
         jRadioButton324.setText("Gyakori");
-        jRadioButton324.setActionCommand("1");
+        jRadioButton324.setActionCommand("2");
 
         jLabel131.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel131.setText("Gerinc");
 
-        jLabel132.setText("Melyik gerencszakaz/csigolya érintett");
+        jLabel132.setText("Melyik gerincszakaz/csigolya érintett");
 
         jLabel133.setText("Kisugárzás");
 
@@ -2361,17 +2412,16 @@ public class Questions extends javax.swing.JFrame {
         jLabel152.setText("Törékeny, puha körmök");
 
         buttonGroup102.add(jRadioButton325);
-        jRadioButton325.setSelected(true);
         jRadioButton325.setText("Nem jellemző");
-        jRadioButton325.setActionCommand("3");
+        jRadioButton325.setActionCommand("0");
 
         buttonGroup102.add(jRadioButton326);
         jRadioButton326.setText("Ritka");
-        jRadioButton326.setActionCommand("2");
+        jRadioButton326.setActionCommand("1");
 
         buttonGroup102.add(jRadioButton327);
         jRadioButton327.setText("Gyakori");
-        jRadioButton327.setActionCommand("1");
+        jRadioButton327.setActionCommand("2");
 
         jLabel153.setText("Napok száma");
 
@@ -2381,662 +2431,653 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel156.setText("Panasz fennállásának ideje");
 
+        buttonGroup1.add(jRadioButton148);
+        jRadioButton148.setSelected(true);
+        jRadioButton148.setText("Nem megkérdezett");
+        jRadioButton148.setActionCommand("3");
+
+        buttonGroup2.add(jRadioButton149);
+        jRadioButton149.setSelected(true);
+        jRadioButton149.setText("Nem megkérdezett");
+        jRadioButton149.setActionCommand("3");
+
+        buttonGroup3.add(jRadioButton150);
+        jRadioButton150.setSelected(true);
+        jRadioButton150.setText("Nem megkérdezett");
+        jRadioButton150.setActionCommand("3");
+
+        buttonGroup4.add(jRadioButton175);
+        jRadioButton175.setSelected(true);
+        jRadioButton175.setText("Nem megkérdezett");
+        jRadioButton175.setActionCommand("3");
+
+        buttonGroup8.add(jRadioButton176);
+        jRadioButton176.setSelected(true);
+        jRadioButton176.setText("Nem megkérdezett");
+        jRadioButton176.setActionCommand("3");
+
+        buttonGroup7.add(jRadioButton177);
+        jRadioButton177.setSelected(true);
+        jRadioButton177.setText("Nem megkérdezett");
+        jRadioButton177.setActionCommand("3");
+
+        buttonGroup6.add(jRadioButton178);
+        jRadioButton178.setSelected(true);
+        jRadioButton178.setText("Nem megkérdezett");
+        jRadioButton178.setActionCommand("3");
+
+        buttonGroup5.add(jRadioButton179);
+        jRadioButton179.setSelected(true);
+        jRadioButton179.setText("Nem megkérdezett");
+        jRadioButton179.setActionCommand("3");
+
+        buttonGroup14.add(jRadioButton180);
+        jRadioButton180.setSelected(true);
+        jRadioButton180.setText("Nem megkérdezett");
+        jRadioButton180.setActionCommand("3");
+
+        buttonGroup12.add(jRadioButton181);
+        jRadioButton181.setSelected(true);
+        jRadioButton181.setText("Nem megkérdezett");
+        jRadioButton181.setActionCommand("3");
+
+        buttonGroup11.add(jRadioButton182);
+        jRadioButton182.setSelected(true);
+        jRadioButton182.setText("Nem megkérdezett");
+        jRadioButton182.setActionCommand("3");
+
+        buttonGroup10.add(jRadioButton183);
+        jRadioButton183.setSelected(true);
+        jRadioButton183.setText("Nem megkérdezett");
+        jRadioButton183.setActionCommand("3");
+
+        buttonGroup9.add(jRadioButton184);
+        jRadioButton184.setSelected(true);
+        jRadioButton184.setText("Nem megkérdezett");
+        jRadioButton184.setActionCommand("3");
+
+        buttonGroup15.add(jRadioButton185);
+        jRadioButton185.setSelected(true);
+        jRadioButton185.setText("Nem megkérdezett");
+        jRadioButton185.setActionCommand("3");
+
+        buttonGroup16.add(jRadioButton186);
+        jRadioButton186.setSelected(true);
+        jRadioButton186.setText("Nem megkérdezett");
+        jRadioButton186.setActionCommand("3");
+
+        buttonGroup13.add(jRadioButton187);
+        jRadioButton187.setSelected(true);
+        jRadioButton187.setText("Nem megkérdezett");
+        jRadioButton187.setActionCommand("3");
+
+        buttonGroup22.add(jRadioButton188);
+        jRadioButton188.setSelected(true);
+        jRadioButton188.setText("Nem megkérdezett");
+        jRadioButton188.setActionCommand("3");
+
+        buttonGroup21.add(jRadioButton189);
+        jRadioButton189.setSelected(true);
+        jRadioButton189.setText("Nem megkérdezett");
+        jRadioButton189.setActionCommand("3");
+
+        buttonGroup17.add(jRadioButton190);
+        jRadioButton190.setSelected(true);
+        jRadioButton190.setText("Nem megkérdezett");
+        jRadioButton190.setActionCommand("3");
+
+        buttonGroup18.add(jRadioButton191);
+        jRadioButton191.setSelected(true);
+        jRadioButton191.setText("Nem megkérdezett");
+        jRadioButton191.setActionCommand("3");
+
+        buttonGroup20.add(jRadioButton192);
+        jRadioButton192.setSelected(true);
+        jRadioButton192.setText("Nem megkérdezett");
+        jRadioButton192.setActionCommand("3");
+
+        buttonGroup19.add(jRadioButton328);
+        jRadioButton328.setSelected(true);
+        jRadioButton328.setText("Nem megkérdezett");
+        jRadioButton328.setActionCommand("3");
+
+        buttonGroup28.add(jRadioButton329);
+        jRadioButton329.setSelected(true);
+        jRadioButton329.setText("Nem megkérdezett");
+        jRadioButton329.setActionCommand("3");
+
+        buttonGroup27.add(jRadioButton330);
+        jRadioButton330.setSelected(true);
+        jRadioButton330.setText("Nem megkérdezett");
+        jRadioButton330.setActionCommand("3");
+
+        buttonGroup23.add(jRadioButton331);
+        jRadioButton331.setSelected(true);
+        jRadioButton331.setText("Nem megkérdezett");
+        jRadioButton331.setActionCommand("3");
+
+        buttonGroup24.add(jRadioButton332);
+        jRadioButton332.setSelected(true);
+        jRadioButton332.setText("Nem megkérdezett");
+        jRadioButton332.setActionCommand("3");
+
+        buttonGroup26.add(jRadioButton333);
+        jRadioButton333.setSelected(true);
+        jRadioButton333.setText("Nem megkérdezett");
+        jRadioButton333.setActionCommand("3");
+
+        buttonGroup25.add(jRadioButton334);
+        jRadioButton334.setSelected(true);
+        jRadioButton334.setText("Nem megkérdezett");
+        jRadioButton334.setActionCommand("3");
+
+        buttonGroup29.add(jRadioButton335);
+        jRadioButton335.setSelected(true);
+        jRadioButton335.setText("Nem megkérdezett");
+        jRadioButton335.setActionCommand("3");
+
+        buttonGroup30.add(jRadioButton336);
+        jRadioButton336.setSelected(true);
+        jRadioButton336.setText("Nem megkérdezett");
+        jRadioButton336.setActionCommand("3");
+
+        buttonGroup31.add(jRadioButton337);
+        jRadioButton337.setSelected(true);
+        jRadioButton337.setText("Nem megkérdezett");
+        jRadioButton337.setActionCommand("3");
+
+        buttonGroup34.add(jRadioButton338);
+        jRadioButton338.setSelected(true);
+        jRadioButton338.setText("Nem megkérdezett");
+        jRadioButton338.setActionCommand("3");
+
+        buttonGroup32.add(jRadioButton339);
+        jRadioButton339.setSelected(true);
+        jRadioButton339.setText("Nem megkérdezett");
+        jRadioButton339.setActionCommand("3");
+
+        buttonGroup33.add(jRadioButton340);
+        jRadioButton340.setSelected(true);
+        jRadioButton340.setText("Nem megkérdezett");
+        jRadioButton340.setActionCommand("3");
+
+        buttonGroup36.add(jRadioButton341);
+        jRadioButton341.setSelected(true);
+        jRadioButton341.setText("Nem megkérdezett");
+        jRadioButton341.setActionCommand("3");
+
+        buttonGroup35.add(jRadioButton342);
+        jRadioButton342.setSelected(true);
+        jRadioButton342.setText("Nem megkérdezett");
+        jRadioButton342.setActionCommand("3");
+
+        buttonGroup73.add(jRadioButton379);
+        jRadioButton379.setSelected(true);
+        jRadioButton379.setText("Nem megkérdezett");
+        jRadioButton379.setActionCommand("3");
+
+        buttonGroup72.add(jRadioButton380);
+        jRadioButton380.setSelected(true);
+        jRadioButton380.setText("Nem megkérdezett");
+        jRadioButton380.setActionCommand("3");
+
+        buttonGroup75.add(jRadioButton381);
+        jRadioButton381.setSelected(true);
+        jRadioButton381.setText("Nem megkérdezett");
+        jRadioButton381.setActionCommand("3");
+
+        buttonGroup74.add(jRadioButton382);
+        jRadioButton382.setSelected(true);
+        jRadioButton382.setText("Nem megkérdezett");
+        jRadioButton382.setActionCommand("3");
+
+        buttonGroup76.add(jRadioButton383);
+        jRadioButton383.setSelected(true);
+        jRadioButton383.setText("Nem megkérdezett");
+        jRadioButton383.setActionCommand("3");
+
+        buttonGroup77.add(jRadioButton384);
+        jRadioButton384.setSelected(true);
+        jRadioButton384.setText("Nem megkérdezett");
+        jRadioButton384.setActionCommand("3");
+
+        buttonGroup78.add(jRadioButton385);
+        jRadioButton385.setSelected(true);
+        jRadioButton385.setText("Nem megkérdezett");
+        jRadioButton385.setActionCommand("3");
+
+        buttonGroup79.add(jRadioButton386);
+        jRadioButton386.setSelected(true);
+        jRadioButton386.setText("Nem megkérdezett");
+        jRadioButton386.setActionCommand("3");
+
+        buttonGroup83.add(jRadioButton387);
+        jRadioButton387.setSelected(true);
+        jRadioButton387.setText("Nem megkérdezett");
+        jRadioButton387.setActionCommand("3");
+
+        buttonGroup82.add(jRadioButton388);
+        jRadioButton388.setSelected(true);
+        jRadioButton388.setText("Nem megkérdezett");
+        jRadioButton388.setActionCommand("3");
+
+        buttonGroup80.add(jRadioButton389);
+        jRadioButton389.setSelected(true);
+        jRadioButton389.setText("Nem megkérdezett");
+        jRadioButton389.setActionCommand("3");
+
+        buttonGroup81.add(jRadioButton390);
+        jRadioButton390.setSelected(true);
+        jRadioButton390.setText("Nem megkérdezett");
+        jRadioButton390.setActionCommand("3");
+
+        buttonGroup85.add(jRadioButton391);
+        jRadioButton391.setSelected(true);
+        jRadioButton391.setText("Nem megkérdezett");
+        jRadioButton391.setActionCommand("3");
+
+        buttonGroup84.add(jRadioButton392);
+        jRadioButton392.setSelected(true);
+        jRadioButton392.setText("Nem megkérdezett");
+        jRadioButton392.setActionCommand("3");
+
+        buttonGroup89.add(jRadioButton393);
+        jRadioButton393.setSelected(true);
+        jRadioButton393.setText("Nem megkérdezett");
+        jRadioButton393.setActionCommand("3");
+
+        buttonGroup88.add(jRadioButton394);
+        jRadioButton394.setSelected(true);
+        jRadioButton394.setText("Nem megkérdezett");
+        jRadioButton394.setActionCommand("3");
+
+        buttonGroup86.add(jRadioButton395);
+        jRadioButton395.setSelected(true);
+        jRadioButton395.setText("Nem megkérdezett");
+        jRadioButton395.setActionCommand("3");
+
+        buttonGroup87.add(jRadioButton396);
+        jRadioButton396.setSelected(true);
+        jRadioButton396.setText("Nem megkérdezett");
+        jRadioButton396.setActionCommand("3");
+
+        buttonGroup91.add(jRadioButton397);
+        jRadioButton397.setSelected(true);
+        jRadioButton397.setText("Nem megkérdezett");
+        jRadioButton397.setActionCommand("3");
+
+        buttonGroup90.add(jRadioButton398);
+        jRadioButton398.setSelected(true);
+        jRadioButton398.setText("Nem megkérdezett");
+        jRadioButton398.setActionCommand("3");
+
+        buttonGroup95.add(jRadioButton399);
+        jRadioButton399.setSelected(true);
+        jRadioButton399.setText("Nem megkérdezett");
+        jRadioButton399.setActionCommand("3");
+
+        buttonGroup94.add(jRadioButton400);
+        jRadioButton400.setSelected(true);
+        jRadioButton400.setText("Nem megkérdezett");
+        jRadioButton400.setActionCommand("3");
+
+        buttonGroup92.add(jRadioButton401);
+        jRadioButton401.setSelected(true);
+        jRadioButton401.setText("Nem megkérdezett");
+        jRadioButton401.setActionCommand("3");
+
+        buttonGroup93.add(jRadioButton402);
+        jRadioButton402.setSelected(true);
+        jRadioButton402.setText("Nem megkérdezett");
+        jRadioButton402.setActionCommand("3");
+
+        buttonGroup97.add(jRadioButton403);
+        jRadioButton403.setSelected(true);
+        jRadioButton403.setText("Nem megkérdezett");
+        jRadioButton403.setActionCommand("3");
+
+        buttonGroup96.add(jRadioButton404);
+        jRadioButton404.setSelected(true);
+        jRadioButton404.setText("Nem megkérdezett");
+        jRadioButton404.setActionCommand("3");
+
+        buttonGroup98.add(jRadioButton405);
+        jRadioButton405.setSelected(true);
+        jRadioButton405.setText("Nem megkérdezett");
+        jRadioButton405.setActionCommand("3");
+
+        buttonGroup99.add(jRadioButton406);
+        jRadioButton406.setSelected(true);
+        jRadioButton406.setText("Nem megkérdezett");
+        jRadioButton406.setActionCommand("3");
+
+        buttonGroup100.add(jRadioButton407);
+        jRadioButton407.setSelected(true);
+        jRadioButton407.setText("Nem megkérdezett");
+        jRadioButton407.setActionCommand("3");
+
+        buttonGroup101.add(jRadioButton408);
+        jRadioButton408.setSelected(true);
+        jRadioButton408.setText("Nem megkérdezett");
+        jRadioButton408.setActionCommand("3");
+
+        buttonGroup41.add(jRadioButton343);
+        jRadioButton343.setSelected(true);
+        jRadioButton343.setText("Nem megkérdezett");
+        jRadioButton343.setActionCommand("3");
+
+        buttonGroup42.add(jRadioButton344);
+        jRadioButton344.setSelected(true);
+        jRadioButton344.setText("Nem megkérdezett");
+        jRadioButton344.setActionCommand("3");
+
+        buttonGroup39.add(jRadioButton345);
+        jRadioButton345.setSelected(true);
+        jRadioButton345.setText("Nem megkérdezett");
+        jRadioButton345.setActionCommand("3");
+
+        buttonGroup38.add(jRadioButton346);
+        jRadioButton346.setSelected(true);
+        jRadioButton346.setText("Nem megkérdezett");
+        jRadioButton346.setActionCommand("3");
+
+        buttonGroup40.add(jRadioButton347);
+        jRadioButton347.setSelected(true);
+        jRadioButton347.setText("Nem megkérdezett");
+        jRadioButton347.setActionCommand("3");
+
+        buttonGroup37.add(jRadioButton348);
+        jRadioButton348.setSelected(true);
+        jRadioButton348.setText("Nem megkérdezett");
+        jRadioButton348.setActionCommand("3");
+
+        buttonGroup43.add(jRadioButton349);
+        jRadioButton349.setSelected(true);
+        jRadioButton349.setText("Nem megkérdezett");
+        jRadioButton349.setActionCommand("3");
+
+        buttonGroup44.add(jRadioButton350);
+        jRadioButton350.setSelected(true);
+        jRadioButton350.setText("Nem megkérdezett");
+        jRadioButton350.setActionCommand("3");
+
+        buttonGroup45.add(jRadioButton351);
+        jRadioButton351.setSelected(true);
+        jRadioButton351.setText("Nem megkérdezett");
+        jRadioButton351.setActionCommand("3");
+
+        buttonGroup46.add(jRadioButton352);
+        jRadioButton352.setSelected(true);
+        jRadioButton352.setText("Nem megkérdezett");
+        jRadioButton352.setActionCommand("3");
+
+        buttonGroup47.add(jRadioButton353);
+        jRadioButton353.setSelected(true);
+        jRadioButton353.setText("Nem megkérdezett");
+        jRadioButton353.setActionCommand("3");
+
+        buttonGroup48.add(jRadioButton354);
+        jRadioButton354.setSelected(true);
+        jRadioButton354.setText("Nem megkérdezett");
+        jRadioButton354.setActionCommand("3");
+
+        buttonGroup49.add(jRadioButton355);
+        jRadioButton355.setSelected(true);
+        jRadioButton355.setText("Nem megkérdezett");
+        jRadioButton355.setActionCommand("3");
+
+        buttonGroup50.add(jRadioButton356);
+        jRadioButton356.setSelected(true);
+        jRadioButton356.setText("Nem megkérdezett");
+        jRadioButton356.setActionCommand("3");
+
+        buttonGroup51.add(jRadioButton357);
+        jRadioButton357.setSelected(true);
+        jRadioButton357.setText("Nem megkérdezett");
+        jRadioButton357.setActionCommand("3");
+
+        buttonGroup52.add(jRadioButton358);
+        jRadioButton358.setSelected(true);
+        jRadioButton358.setText("Nem megkérdezett");
+        jRadioButton358.setActionCommand("3");
+
+        buttonGroup57.add(jRadioButton359);
+        jRadioButton359.setSelected(true);
+        jRadioButton359.setText("Nem megkérdezett");
+        jRadioButton359.setActionCommand("3");
+
+        buttonGroup55.add(jRadioButton360);
+        jRadioButton360.setSelected(true);
+        jRadioButton360.setText("Nem megkérdezett");
+        jRadioButton360.setActionCommand("3");
+
+        buttonGroup54.add(jRadioButton361);
+        jRadioButton361.setSelected(true);
+        jRadioButton361.setText("Nem megkérdezett");
+        jRadioButton361.setActionCommand("3");
+
+        buttonGroup53.add(jRadioButton362);
+        jRadioButton362.setSelected(true);
+        jRadioButton362.setText("Nem megkérdezett");
+        jRadioButton362.setActionCommand("3");
+
+        buttonGroup56.add(jRadioButton363);
+        jRadioButton363.setSelected(true);
+        jRadioButton363.setText("Nem megkérdezett");
+        jRadioButton363.setActionCommand("3");
+
+        buttonGroup58.add(jRadioButton364);
+        jRadioButton364.setSelected(true);
+        jRadioButton364.setText("Nem megkérdezett");
+        jRadioButton364.setActionCommand("3");
+
+        buttonGroup102.add(jRadioButton365);
+        jRadioButton365.setSelected(true);
+        jRadioButton365.setText("Nem megkérdezett");
+        jRadioButton365.setActionCommand("3");
+
+        buttonGroup59.add(jRadioButton366);
+        jRadioButton366.setSelected(true);
+        jRadioButton366.setText("Nem megkérdezett");
+        jRadioButton366.setActionCommand("3");
+
+        buttonGroup60.add(jRadioButton367);
+        jRadioButton367.setSelected(true);
+        jRadioButton367.setText("Nem megkérdezett");
+        jRadioButton367.setActionCommand("3");
+
+        buttonGroup61.add(jRadioButton368);
+        jRadioButton368.setSelected(true);
+        jRadioButton368.setText("Nem megkérdezett");
+        jRadioButton368.setActionCommand("3");
+
+        buttonGroup62.add(jRadioButton369);
+        jRadioButton369.setSelected(true);
+        jRadioButton369.setText("Nem megkérdezett");
+        jRadioButton369.setActionCommand("3");
+
+        buttonGroup63.add(jRadioButton370);
+        jRadioButton370.setSelected(true);
+        jRadioButton370.setText("Nem megkérdezett");
+        jRadioButton370.setActionCommand("3");
+
+        buttonGroup64.add(jRadioButton371);
+        jRadioButton371.setSelected(true);
+        jRadioButton371.setText("Nem megkérdezett");
+        jRadioButton371.setActionCommand("3");
+
+        buttonGroup65.add(jRadioButton372);
+        jRadioButton372.setSelected(true);
+        jRadioButton372.setText("Nem megkérdezett");
+        jRadioButton372.setActionCommand("3");
+
+        buttonGroup66.add(jRadioButton373);
+        jRadioButton373.setSelected(true);
+        jRadioButton373.setText("Nem megkérdezett");
+        jRadioButton373.setActionCommand("3");
+
+        buttonGroup67.add(jRadioButton374);
+        jRadioButton374.setSelected(true);
+        jRadioButton374.setText("Nem megkérdezett");
+        jRadioButton374.setActionCommand("3");
+
+        buttonGroup68.add(jRadioButton375);
+        jRadioButton375.setSelected(true);
+        jRadioButton375.setText("Nem megkérdezett");
+        jRadioButton375.setActionCommand("3");
+
+        buttonGroup69.add(jRadioButton376);
+        jRadioButton376.setSelected(true);
+        jRadioButton376.setText("Nem megkérdezett");
+        jRadioButton376.setActionCommand("3");
+
+        buttonGroup70.add(jRadioButton377);
+        jRadioButton377.setSelected(true);
+        jRadioButton377.setText("Nem megkérdezett");
+        jRadioButton377.setActionCommand("3");
+
+        buttonGroup71.add(jRadioButton378);
+        jRadioButton378.setSelected(true);
+        jRadioButton378.setText("Nem megkérdezett");
+        jRadioButton378.setActionCommand("3");
+
+        jLabel158.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel158.setText("Egyéb");
+
+        jLabel160.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel160.setText("Egyéb");
+
+        jLabel161.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel161.setText("Egyéb");
+
+        jLabel159.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel159.setText("Egyéb");
+
+        jLabel162.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel162.setText("Egyéb");
+
+        jLabel163.setText("Érintett meridián(ok)");
+
+        jLabel164.setText("Éjszaka fennáll-e a fájdalom");
+
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
+
+        jLabel165.setText("Érzékeny (trigger, Ahshi) pontok");
+
+        jLabel166.setText("Érintett meridián(ok)");
+
+        jLabel167.setText("Érzékeny (trigger, Ahshi) pontok");
+
+        jLabel168.setText("Egyéb");
+
+        jLabel169.setText("Egyéb");
+
+        jLabel170.setText("gyakori");
+
+        jLabel171.setText("ritka");
+
+        jLabel172.setText("gyakori");
+
+        jLabel173.setText("ritka");
+
+        jLabel174.setText("gyakori");
+
+        jLabel175.setText("ritka");
+
+        jLabel176.setText("ritka");
+
+        jLabel177.setText("gyakori");
+
+        jLabel178.setText("gyakori");
+
+        jLabel179.setText("ritka");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel77))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                .addComponent(jLabel129)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel5)
+                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel153)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
+                                        .addComponent(jLabel130)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton4)
+                                        .addComponent(jRadioButton322)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton5)
+                                        .addComponent(jRadioButton323)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton6))
+                                        .addComponent(jRadioButton324))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
+                                        .addComponent(jLabel125)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton1)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton3))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton7)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton9))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel11)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton10)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton11)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton12))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton13)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton14)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton15))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel14)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton16)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton17)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton18))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel15)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton19)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton20)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton21))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel16)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton22)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton23)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton24))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel17)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton25)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton26)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton27))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel18)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton28)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton29)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton30))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel19)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton31)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton32)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton33))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel20)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton34)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton35)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton36))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel21)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton37)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton38)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton39))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel22)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton40)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton41)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton42))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel23)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton43)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton44)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton45))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel24)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton46)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton47)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton48))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel25)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton49)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton50)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton51))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel26)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton52)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton53)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton54))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel27)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton55)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton56)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton57))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel28)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton58)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton59)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton60))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel29)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton61)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton62)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton63))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel30)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton64)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton65)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton66))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel32)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton67)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton68)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton69))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel33)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton70)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton71)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton72))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel34)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton73)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton74)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton75))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel35)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton76)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton77)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton78))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel36)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton79)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton80)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton81))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel37)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton82)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton83)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton84))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel38)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton85)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton86)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton87))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel39)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton88)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton89)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton90))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel40)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton91)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton92)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton93))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel41)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton94)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton95)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton96))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel42)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton97)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton98)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton99))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel43)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton100)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton101)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton102))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel44)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton103)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton104)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton105))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel45)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton106)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton107)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton108))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel47)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton109)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton110)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton111))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel48)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton112)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton113)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton114))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel49)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton115)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton116)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton117))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel50)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton118)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton119)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton120))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel51)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton121)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton122)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton123))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel52)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton124)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton125)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton126))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel55)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton133)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton134)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton135))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel56)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton136)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton137)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton138))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel57)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton139)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton140)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton141))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel58)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton142)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton143)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton144))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel59)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton145)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton146)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton147))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel62)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton154)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton155)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton156))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel64)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton160)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton161)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton162))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel65)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton163)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton164)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton165))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel66)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton166)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton167)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton168))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel67)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton169)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton170)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton171))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel61)
-                                            .addComponent(jLabel60))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel70)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel71))
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton151)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton152)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton153)))))
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel12)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(38, 38, 38)
-                                        .addComponent(jLabel1)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel72)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel53)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton127)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton128)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton129))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel54)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton130)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton131)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton132))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel63)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton157)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton158)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton159)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(460, 460, 460))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel131, javax.swing.GroupLayout.Alignment.LEADING)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(jLabel68))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel87)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton215)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton214)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton222))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel92)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton232)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton231)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton230))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel81)
-                                                    .addComponent(jLabel82)
-                                                    .addComponent(jLabel83)
-                                                    .addComponent(jLabel84)
-                                                    .addComponent(jLabel80))
-                                                .addGap(30, 30, 30)
-                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jRadioButton208)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton209)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton210))
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jRadioButton205)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton206)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton207))
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jRadioButton202)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton203)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton204))
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jRadioButton199)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton200)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton201))
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jRadioButton196)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton197)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(jRadioButton198))))
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel85)
+                                        .addComponent(jRadioButton316)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton317)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton318))
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addComponent(jLabel124)
+                                            .addGap(64, 64, 64)
+                                            .addComponent(jRadioButton313)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jRadioButton314)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jRadioButton315))
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel121)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jRadioButton211)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton212)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton213)))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel86)
-                                                .addComponent(jLabel88)
-                                                .addComponent(jLabel90)
-                                                .addComponent(jLabel89))
-                                            .addGap(30, 30, 30)
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                                    .addComponent(jRadioButton228)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton227)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton226))
-                                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                                    .addComponent(jRadioButton225)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton224)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton223))
-                                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                                    .addComponent(jRadioButton221)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton220)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton219))
-                                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                                    .addComponent(jRadioButton218)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton217)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jRadioButton216)))))
+                                                .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel122)
+                                                .addGap(30, 30, 30)
+                                                .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel91)
+                                        .addComponent(jLabel126)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jRadioButton319)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton229)
+                                        .addComponent(jRadioButton320)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton234)))
+                                        .addComponent(jRadioButton321)))
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton233))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jRadioButton405)
+                                    .addComponent(jRadioButton407)
+                                    .addComponent(jRadioButton406)
+                                    .addComponent(jRadioButton408)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel69)
-                                    .addComponent(jLabel79)
-                                    .addComponent(jLabel152))
+                                .addComponent(jLabel154)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel127)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel123)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton325)
+                                        .addComponent(jLabel128)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton326)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton327))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton193)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton194)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton195))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton172)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton173)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton174))))))
+                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel78)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3072,7 +3113,7 @@ public class Questions extends javax.swing.JFrame {
                                             .addComponent(jLabel75)
                                             .addGap(18, 18, 18)
                                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(34, 34, 34))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                     .addComponent(jLabel100)
@@ -3267,464 +3308,1355 @@ public class Questions extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(jRadioButton310))))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel76)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(jLabel77))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton381)
+                            .addComponent(jRadioButton380)
+                            .addComponent(jRadioButton379)
+                            .addComponent(jRadioButton384)
+                            .addComponent(jRadioButton383)
+                            .addComponent(jRadioButton386)
+                            .addComponent(jRadioButton385)
+                            .addComponent(jRadioButton390)
+                            .addComponent(jRadioButton389)
+                            .addComponent(jRadioButton387)
+                            .addComponent(jRadioButton388)
+                            .addComponent(jRadioButton391)
+                            .addComponent(jRadioButton392)
+                            .addComponent(jRadioButton396)
+                            .addComponent(jRadioButton395)
+                            .addComponent(jRadioButton393)
+                            .addComponent(jRadioButton394)
+                            .addComponent(jRadioButton397)
+                            .addComponent(jRadioButton398)
+                            .addComponent(jRadioButton402)
+                            .addComponent(jRadioButton401)
+                            .addComponent(jRadioButton399)
+                            .addComponent(jRadioButton400)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel127)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel128)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel129)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel153)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel130)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jRadioButton322)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton323)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton324))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel125)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jRadioButton316)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton317)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton318))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel124)
-                                        .addGap(64, 64, 64)
-                                        .addComponent(jRadioButton313)
+                                        .addComponent(jRadioButton382)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton314)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton315))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel121)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel78))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel122)
-                                            .addGap(30, 30, 30)
-                                            .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel123))))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel126)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jRadioButton319)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton320)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton321)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel154)
+                                        .addComponent(jLabel76))
+                                    .addComponent(jRadioButton404)
+                                    .addComponent(jRadioButton403))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel162)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField37, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+                                            .addComponent(jTextField36))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel170)
+                                            .addComponent(jLabel171)))
+                                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addGap(186, 186, 186)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel87)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton215)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton214)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton222)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton373))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel81)
+                                                        .addComponent(jLabel82)
+                                                        .addComponent(jLabel83)
+                                                        .addComponent(jLabel84)
+                                                        .addComponent(jLabel80))
+                                                    .addGap(30, 30, 30)
+                                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                            .addComponent(jRadioButton208)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton209)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton210))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                            .addComponent(jRadioButton205)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton206)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton207))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                            .addComponent(jRadioButton202)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton203)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton204))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                            .addComponent(jRadioButton199)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton200)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton201))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                            .addComponent(jRadioButton196)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton197)
+                                                            .addGap(18, 18, 18)
+                                                            .addComponent(jRadioButton198))))
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                    .addComponent(jLabel85)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(jRadioButton211)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(jRadioButton212)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(jRadioButton213)))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel86)
+                                                    .addComponent(jLabel88)
+                                                    .addComponent(jLabel90)
+                                                    .addComponent(jLabel89))
+                                                .addGap(30, 30, 30)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton228)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton227)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton226))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton225)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton224)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton223))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton221)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton220)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton219))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton218)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton217)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton216)))))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButton368)
+                                            .addComponent(jRadioButton369)
+                                            .addComponent(jRadioButton370)
+                                            .addComponent(jRadioButton371)
+                                            .addComponent(jRadioButton372)
+                                            .addComponent(jRadioButton374)
+                                            .addComponent(jRadioButton375)
+                                            .addComponent(jRadioButton376)
+                                            .addComponent(jRadioButton367)
+                                            .addComponent(jRadioButton366)))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel69)
+                                            .addComponent(jLabel79)
+                                            .addComponent(jLabel152))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jRadioButton172)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton173)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton174)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton359))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton325)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton326)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton327))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton193)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton194)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton195)))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton365)
+                                                    .addComponent(jRadioButton364))))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel92)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton232)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton231)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton230)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton377))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel91)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton229)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton234)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton233)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton378)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel159)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField35)
+                                    .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel172)
+                                    .addComponent(jLabel173)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton6))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton3))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton8)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton9))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton10)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton11)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton12))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton14)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton15))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton16)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton17)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton18))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton19)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton20)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton21))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton22)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton23)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton24))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton25)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton26)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton27))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton28)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton29)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton30))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton31)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton32)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton33))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton34)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton35)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton36))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton37)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton38)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton39))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton40)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton41)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton42))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton43)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton44)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton45))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton46)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton47)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton48))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel25)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton49)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton50)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton51))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel26)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton52)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton53)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton54))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton55)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton56)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton57))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel28)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton58)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton59)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton60))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel29)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton61)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton62)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton63))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel30)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton64)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton65)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton66))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton67)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton68)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton69))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel33)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton70)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton71)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton72))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel34)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton73)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton74)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton75))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel35)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton76)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton77)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton78))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel36)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton79)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton80)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton81))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel37)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton82)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton83)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton84))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel38)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton85)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton86)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton87))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton88)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton89)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton90))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel40)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton91)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton92)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton93))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel41)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton94)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton95)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton96))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel42)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton97)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton98)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton99))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel43)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton100)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton101)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton102))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel44)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton103)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton104)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton105))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel45)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton106)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton107)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton108)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton192)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jRadioButton189)
+                                    .addComponent(jRadioButton188)
+                                    .addComponent(jRadioButton148)
+                                    .addComponent(jRadioButton149)
+                                    .addComponent(jRadioButton150)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton175)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel12)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jRadioButton179)
+                                    .addComponent(jRadioButton178)
+                                    .addComponent(jRadioButton177)
+                                    .addComponent(jRadioButton176)
+                                    .addComponent(jRadioButton184)
+                                    .addComponent(jRadioButton183)
+                                    .addComponent(jRadioButton182)
+                                    .addComponent(jRadioButton181)
+                                    .addComponent(jRadioButton187)
+                                    .addComponent(jRadioButton180)
+                                    .addComponent(jRadioButton185)
+                                    .addComponent(jRadioButton186)
+                                    .addComponent(jRadioButton190)
+                                    .addComponent(jRadioButton191)
+                                    .addComponent(jRadioButton328)
+                                    .addComponent(jRadioButton331)
+                                    .addComponent(jRadioButton332)
+                                    .addComponent(jRadioButton334)
+                                    .addComponent(jRadioButton333)
+                                    .addComponent(jRadioButton330)
+                                    .addComponent(jRadioButton329)
+                                    .addComponent(jRadioButton335)
+                                    .addComponent(jRadioButton336)
+                                    .addComponent(jRadioButton337)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButton339)
+                                            .addComponent(jRadioButton340)
+                                            .addComponent(jRadioButton341))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jRadioButton338)
+                                    .addComponent(jRadioButton342))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel160)
+                            .addComponent(jLabel158))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jTextField30)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jTextField29, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                                .addComponent(jTextField28, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel54)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton130)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton131)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton132)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton350))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel55)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton133)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton134)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton135))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel56)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton136)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton137)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton138))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel57)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton139)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton140)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton141))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel58)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton142)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton143)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton144))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel59)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton145)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton146)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton147))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel62)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton154)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton155)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton156))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel61)
+                                                    .addComponent(jLabel60))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel70)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jLabel71))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton151)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton152)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton153)))))
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(5, 5, 5)
+                                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel72)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton352)
+                                                    .addComponent(jRadioButton351)
+                                                    .addComponent(jRadioButton353)
+                                                    .addComponent(jRadioButton354)
+                                                    .addComponent(jRadioButton355)))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton357)
+                                                    .addComponent(jRadioButton356)))))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel53)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton127)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton128)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton129)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton349))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(95, 95, 95)
+                                        .addComponent(jLabel68))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel63)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton157)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton158)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton159)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton358))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel64)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton160)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton161)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton162))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel65)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton163)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton164)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton165))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel66)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton166)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton167)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton168))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel67)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jRadioButton169)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton170)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton171)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButton362)
+                                            .addComponent(jRadioButton361)
+                                            .addComponent(jRadioButton360)
+                                            .addComponent(jRadioButton363))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel161)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField33, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                            .addComponent(jTextField32)))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addComponent(jLabel141)
+                                            .addGap(814, 814, 814))
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel156)
+                                                .addGap(701, 701, 701))
+                                            .addComponent(jLabel142)
+                                            .addComponent(jLabel143)
+                                            .addComponent(jLabel166)
+                                            .addComponent(jLabel167)
+                                            .addComponent(jLabel144)
+                                            .addComponent(jLabel145)
+                                            .addComponent(jLabel147)
+                                            .addComponent(jLabel148)
+                                            .addComponent(jLabel146)
+                                            .addComponent(jLabel149)
+                                            .addComponent(jLabel150)
+                                            .addComponent(jLabel151)
+                                            .addComponent(jLabel169)))
+                                    .addComponent(jLabel31)
+                                    .addComponent(jLabel73)
+                                    .addComponent(jLabel131)
+                                    .addComponent(jLabel2)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel46)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(19, 19, 19)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel47)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jRadioButton109)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton110)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton111))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel48)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jRadioButton112)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton113)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton114))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel49)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jRadioButton115)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton116)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton117))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel50)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jRadioButton118)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton119)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton120))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel51)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jRadioButton121)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton122)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton123))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jLabel52)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jRadioButton124)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton125)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton126)))))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButton348)
+                                            .addComponent(jRadioButton346)
+                                            .addComponent(jRadioButton345)
+                                            .addComponent(jRadioButton347)
+                                            .addComponent(jRadioButton343)
+                                            .addComponent(jRadioButton344))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel175)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel174)
+                        .addComponent(jLabel177)
+                        .addComponent(jLabel176, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel179)
+                    .addComponent(jLabel178))
+                .addGap(97, 97, 97))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel132)
-                                    .addComponent(jLabel133)
-                                    .addComponent(jLabel134)
-                                    .addComponent(jLabel135)
-                                    .addComponent(jLabel136)
-                                    .addComponent(jLabel137)
-                                    .addComponent(jLabel138)
-                                    .addComponent(jLabel139)
-                                    .addComponent(jLabel140)
-                                    .addComponent(jLabel155))
-                                .addGap(59, 59, 59)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField17, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                                    .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                                    .addComponent(jTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                                    .addComponent(jTextField11)
-                                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
-                                    .addComponent(jTextField21)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel141)
-                                .addGap(814, 814, 814))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel156)
-                                .addGap(90, 90, 90)
-                                .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jTextField18)
+                                        .addComponent(jTextField27)
+                                        .addComponent(jTextField19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel142)
-                                    .addComponent(jLabel143)
-                                    .addComponent(jLabel145)
-                                    .addComponent(jLabel144)
-                                    .addComponent(jLabel147)
-                                    .addComponent(jLabel148)
-                                    .addComponent(jLabel146)
-                                    .addComponent(jLabel149)
-                                    .addComponent(jLabel150)
-                                    .addComponent(jLabel151))
-                                .addGap(56, 56, 56)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel132)
+                                            .addComponent(jLabel133)
+                                            .addComponent(jLabel134)
+                                            .addComponent(jLabel135)
+                                            .addComponent(jLabel136)
+                                            .addComponent(jLabel137)
+                                            .addComponent(jLabel138)
+                                            .addComponent(jLabel139)
+                                            .addComponent(jLabel140)
+                                            .addComponent(jLabel155)
+                                            .addComponent(jLabel163)
+                                            .addComponent(jLabel164)
+                                            .addComponent(jLabel165))
+                                        .addGap(59, 59, 59))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel168)
+                                        .addGap(285, 285, 285)))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField20)
-                                    .addComponent(jTextField19)
-                                    .addComponent(jTextField18)
-                                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField22)
-                                    .addComponent(jTextField23)
-                                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField24, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField25)
-                                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel157))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField17)
+                                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField14)
+                                    .addComponent(jTextField13)
+                                    .addComponent(jTextField12)
+                                    .addComponent(jTextField11)
+                                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField16)
+                                    .addComponent(jTextField21)
+                                    .addComponent(jTextField38)
+                                    .addComponent(jTextField39)
+                                    .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
+                                    .addComponent(jTextField42))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel157)
+                        .addGap(1299, 1299, 1299))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(308, 308, 308))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(7, 7, 7)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel6))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jRadioButton1)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton148))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(jRadioButton4)
+                            .addComponent(jRadioButton5)
+                            .addComponent(jRadioButton6)
+                            .addComponent(jRadioButton149))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jRadioButton7)
+                            .addComponent(jRadioButton8)
+                            .addComponent(jRadioButton9)
+                            .addComponent(jRadioButton150))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(jRadioButton10)
+                            .addComponent(jRadioButton11)
+                            .addComponent(jRadioButton12)
+                            .addComponent(jLabel12)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButton175))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jRadioButton13)
+                                    .addComponent(jRadioButton14)
+                                    .addComponent(jRadioButton15))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jRadioButton16)
+                                    .addComponent(jRadioButton17)
+                                    .addComponent(jRadioButton18))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jRadioButton19)
+                                    .addComponent(jRadioButton20)
+                                    .addComponent(jRadioButton21))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jRadioButton22)
+                                    .addComponent(jRadioButton23)
+                                    .addComponent(jRadioButton24)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton179)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton178)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton177)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton176)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(jRadioButton25)
+                            .addComponent(jRadioButton26)
+                            .addComponent(jRadioButton27))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(jRadioButton28)
+                            .addComponent(jRadioButton29)
+                            .addComponent(jRadioButton30))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jRadioButton31)
+                            .addComponent(jRadioButton32)
+                            .addComponent(jRadioButton33))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(jRadioButton34)
+                            .addComponent(jRadioButton35)
+                            .addComponent(jRadioButton36))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel21)
+                            .addComponent(jRadioButton37)
+                            .addComponent(jRadioButton38)
+                            .addComponent(jRadioButton39))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel22)
+                            .addComponent(jRadioButton40)
+                            .addComponent(jRadioButton41)
+                            .addComponent(jRadioButton42))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel23)
+                            .addComponent(jRadioButton43)
+                            .addComponent(jRadioButton44)
+                            .addComponent(jRadioButton45))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(jRadioButton46)
+                            .addComponent(jRadioButton47)
+                            .addComponent(jRadioButton48)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton184)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton183)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton182)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton181)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton187)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton180)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton185)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton186)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton9))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jRadioButton10)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton12)
-                    .addComponent(jLabel12)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jRadioButton13)
-                    .addComponent(jRadioButton14)
-                    .addComponent(jRadioButton15))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jRadioButton16)
-                    .addComponent(jRadioButton17)
-                    .addComponent(jRadioButton18))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jRadioButton19)
-                    .addComponent(jRadioButton20)
-                    .addComponent(jRadioButton21))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jRadioButton22)
-                    .addComponent(jRadioButton23)
-                    .addComponent(jRadioButton24))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jRadioButton25)
-                    .addComponent(jRadioButton26)
-                    .addComponent(jRadioButton27))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(jRadioButton28)
-                    .addComponent(jRadioButton29)
-                    .addComponent(jRadioButton30))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(jRadioButton31)
-                    .addComponent(jRadioButton32)
-                    .addComponent(jRadioButton33))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(jRadioButton34)
-                    .addComponent(jRadioButton35)
-                    .addComponent(jRadioButton36))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(jRadioButton37)
-                    .addComponent(jRadioButton38)
-                    .addComponent(jRadioButton39))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel22)
-                    .addComponent(jRadioButton40)
-                    .addComponent(jRadioButton41)
-                    .addComponent(jRadioButton42))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jRadioButton43)
-                    .addComponent(jRadioButton44)
-                    .addComponent(jRadioButton45))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(jRadioButton46)
-                    .addComponent(jRadioButton47)
-                    .addComponent(jRadioButton48))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(jRadioButton49)
-                    .addComponent(jRadioButton50)
-                    .addComponent(jRadioButton51))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(jRadioButton52)
-                    .addComponent(jRadioButton53)
-                    .addComponent(jRadioButton54))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27)
-                    .addComponent(jRadioButton55)
-                    .addComponent(jRadioButton56)
-                    .addComponent(jRadioButton57))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(jRadioButton58)
-                    .addComponent(jRadioButton59)
-                    .addComponent(jRadioButton60))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
-                    .addComponent(jRadioButton61)
-                    .addComponent(jRadioButton62)
-                    .addComponent(jRadioButton63))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(jRadioButton64)
-                    .addComponent(jRadioButton65)
-                    .addComponent(jRadioButton66))
-                .addGap(70, 70, 70)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel25)
+                            .addComponent(jRadioButton49)
+                            .addComponent(jRadioButton50)
+                            .addComponent(jRadioButton51))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel26)
+                            .addComponent(jRadioButton52)
+                            .addComponent(jRadioButton53)
+                            .addComponent(jRadioButton54))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel27)
+                            .addComponent(jRadioButton55)
+                            .addComponent(jRadioButton56)
+                            .addComponent(jRadioButton57)
+                            .addComponent(jRadioButton328))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel28)
+                            .addComponent(jRadioButton58)
+                            .addComponent(jRadioButton59)
+                            .addComponent(jRadioButton60)
+                            .addComponent(jRadioButton192))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel29)
+                            .addComponent(jRadioButton61)
+                            .addComponent(jRadioButton62)
+                            .addComponent(jRadioButton63)
+                            .addComponent(jRadioButton189)
+                            .addComponent(jLabel158)
+                            .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel178))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel30)
+                            .addComponent(jRadioButton64)
+                            .addComponent(jRadioButton65)
+                            .addComponent(jRadioButton66)
+                            .addComponent(jRadioButton188)
+                            .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel179)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton190)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton191)))
+                .addGap(64, 64, 64)
                 .addComponent(jLabel31)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
                     .addComponent(jRadioButton67)
                     .addComponent(jRadioButton68)
-                    .addComponent(jRadioButton69))
+                    .addComponent(jRadioButton69)
+                    .addComponent(jRadioButton331))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
                     .addComponent(jRadioButton70)
                     .addComponent(jRadioButton71)
-                    .addComponent(jRadioButton72))
+                    .addComponent(jRadioButton72)
+                    .addComponent(jRadioButton332))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
                     .addComponent(jRadioButton73)
                     .addComponent(jRadioButton74)
-                    .addComponent(jRadioButton75))
+                    .addComponent(jRadioButton75)
+                    .addComponent(jRadioButton334))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
                     .addComponent(jRadioButton76)
                     .addComponent(jRadioButton77)
-                    .addComponent(jRadioButton78))
+                    .addComponent(jRadioButton78)
+                    .addComponent(jRadioButton333))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
                     .addComponent(jRadioButton79)
                     .addComponent(jRadioButton80)
-                    .addComponent(jRadioButton81))
+                    .addComponent(jRadioButton81)
+                    .addComponent(jRadioButton330))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
                     .addComponent(jRadioButton82)
                     .addComponent(jRadioButton83)
-                    .addComponent(jRadioButton84))
+                    .addComponent(jRadioButton84)
+                    .addComponent(jRadioButton329))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
                     .addComponent(jRadioButton85)
                     .addComponent(jRadioButton86)
-                    .addComponent(jRadioButton87))
+                    .addComponent(jRadioButton87)
+                    .addComponent(jRadioButton335))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
                     .addComponent(jRadioButton88)
                     .addComponent(jRadioButton89)
-                    .addComponent(jRadioButton90))
+                    .addComponent(jRadioButton90)
+                    .addComponent(jRadioButton336))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
                     .addComponent(jRadioButton91)
                     .addComponent(jRadioButton92)
-                    .addComponent(jRadioButton93))
+                    .addComponent(jRadioButton93)
+                    .addComponent(jRadioButton337))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
-                    .addComponent(jRadioButton94)
-                    .addComponent(jRadioButton95)
-                    .addComponent(jRadioButton96)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel42)
-                    .addComponent(jRadioButton97)
-                    .addComponent(jRadioButton98)
-                    .addComponent(jRadioButton99))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel43)
-                    .addComponent(jRadioButton100)
-                    .addComponent(jRadioButton101)
-                    .addComponent(jRadioButton102))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel44)
-                    .addComponent(jRadioButton103)
-                    .addComponent(jRadioButton104)
-                    .addComponent(jRadioButton105))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel45)
-                    .addComponent(jRadioButton106)
-                    .addComponent(jRadioButton107)
-                    .addComponent(jRadioButton108))
-                .addGap(83, 83, 83)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel41)
+                            .addComponent(jRadioButton94)
+                            .addComponent(jRadioButton95)
+                            .addComponent(jRadioButton96))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel42)
+                            .addComponent(jRadioButton97)
+                            .addComponent(jRadioButton98)
+                            .addComponent(jRadioButton99)
+                            .addComponent(jRadioButton340))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel43)
+                            .addComponent(jRadioButton100)
+                            .addComponent(jRadioButton101)
+                            .addComponent(jRadioButton102)
+                            .addComponent(jRadioButton338))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(jRadioButton103)
+                            .addComponent(jRadioButton104)
+                            .addComponent(jRadioButton105)
+                            .addComponent(jRadioButton342)
+                            .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel160)
+                            .addComponent(jLabel177))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel45)
+                            .addComponent(jRadioButton106)
+                            .addComponent(jRadioButton107)
+                            .addComponent(jRadioButton108)
+                            .addComponent(jRadioButton341)
+                            .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel176)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jRadioButton339)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)))
+                .addGap(28, 28, 28)
                 .addComponent(jLabel46)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel47)
-                    .addComponent(jRadioButton109)
-                    .addComponent(jRadioButton110)
-                    .addComponent(jRadioButton111))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel48)
-                    .addComponent(jRadioButton112)
-                    .addComponent(jRadioButton113)
-                    .addComponent(jRadioButton114))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel49)
-                    .addComponent(jRadioButton115)
-                    .addComponent(jRadioButton116)
-                    .addComponent(jRadioButton117))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel50)
-                    .addComponent(jRadioButton118)
-                    .addComponent(jRadioButton119)
-                    .addComponent(jRadioButton120))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel51)
-                    .addComponent(jRadioButton121)
-                    .addComponent(jRadioButton122)
-                    .addComponent(jRadioButton123))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel52)
-                    .addComponent(jRadioButton124)
-                    .addComponent(jRadioButton125)
-                    .addComponent(jRadioButton126))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel47)
+                            .addComponent(jRadioButton109)
+                            .addComponent(jRadioButton110)
+                            .addComponent(jRadioButton111)
+                            .addComponent(jRadioButton348))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel48)
+                            .addComponent(jRadioButton112)
+                            .addComponent(jRadioButton113)
+                            .addComponent(jRadioButton114)
+                            .addComponent(jRadioButton346))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel49)
+                            .addComponent(jRadioButton115)
+                            .addComponent(jRadioButton116)
+                            .addComponent(jRadioButton117))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel50)
+                            .addComponent(jRadioButton118)
+                            .addComponent(jRadioButton119)
+                            .addComponent(jRadioButton120))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel51)
+                            .addComponent(jRadioButton121)
+                            .addComponent(jRadioButton122)
+                            .addComponent(jRadioButton123))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel52)
+                            .addComponent(jRadioButton124)
+                            .addComponent(jRadioButton125)
+                            .addComponent(jRadioButton126)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton345)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton347)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton343)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton344)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53)
                     .addComponent(jRadioButton127)
                     .addComponent(jRadioButton128)
-                    .addComponent(jRadioButton129))
-                .addGap(18, 18, 18)
+                    .addComponent(jRadioButton129)
+                    .addComponent(jRadioButton349))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54)
                     .addComponent(jRadioButton130)
                     .addComponent(jRadioButton131)
-                    .addComponent(jRadioButton132))
+                    .addComponent(jRadioButton132)
+                    .addComponent(jRadioButton350))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel55)
                     .addComponent(jRadioButton133)
                     .addComponent(jRadioButton134)
-                    .addComponent(jRadioButton135))
+                    .addComponent(jRadioButton135)
+                    .addComponent(jRadioButton351))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
                     .addComponent(jRadioButton136)
                     .addComponent(jRadioButton137)
-                    .addComponent(jRadioButton138))
+                    .addComponent(jRadioButton138)
+                    .addComponent(jRadioButton352))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel57)
                     .addComponent(jRadioButton139)
                     .addComponent(jRadioButton140)
-                    .addComponent(jRadioButton141))
+                    .addComponent(jRadioButton141)
+                    .addComponent(jRadioButton353))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel58)
                     .addComponent(jRadioButton142)
                     .addComponent(jRadioButton143)
-                    .addComponent(jRadioButton144))
+                    .addComponent(jRadioButton144)
+                    .addComponent(jRadioButton354))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
                     .addComponent(jRadioButton145)
                     .addComponent(jRadioButton146)
-                    .addComponent(jRadioButton147))
+                    .addComponent(jRadioButton147)
+                    .addComponent(jRadioButton355))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel60)
@@ -3739,158 +4671,215 @@ public class Questions extends javax.swing.JFrame {
                     .addComponent(jLabel61)
                     .addComponent(jRadioButton151)
                     .addComponent(jRadioButton152)
-                    .addComponent(jRadioButton153))
+                    .addComponent(jRadioButton153)
+                    .addComponent(jRadioButton356))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel62)
                     .addComponent(jRadioButton154)
                     .addComponent(jRadioButton155)
-                    .addComponent(jRadioButton156))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel63)
-                    .addComponent(jRadioButton157)
-                    .addComponent(jRadioButton158)
-                    .addComponent(jRadioButton159))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel64)
-                    .addComponent(jRadioButton160)
-                    .addComponent(jRadioButton161)
-                    .addComponent(jRadioButton162))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel65)
-                    .addComponent(jRadioButton163)
-                    .addComponent(jRadioButton164)
-                    .addComponent(jRadioButton165))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel66)
-                    .addComponent(jRadioButton166)
-                    .addComponent(jRadioButton167)
-                    .addComponent(jRadioButton168))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel67)
-                    .addComponent(jRadioButton169)
-                    .addComponent(jRadioButton170)
-                    .addComponent(jRadioButton171))
-                .addGap(34, 34, 34)
+                    .addComponent(jRadioButton156)
+                    .addComponent(jRadioButton357))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel161)
+                            .addComponent(jLabel174))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel175)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel63)
+                            .addComponent(jRadioButton157)
+                            .addComponent(jRadioButton158)
+                            .addComponent(jRadioButton159)
+                            .addComponent(jRadioButton358))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel64)
+                                    .addComponent(jRadioButton160)
+                                    .addComponent(jRadioButton161)
+                                    .addComponent(jRadioButton162))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel65)
+                                    .addComponent(jRadioButton163)
+                                    .addComponent(jRadioButton164)
+                                    .addComponent(jRadioButton165))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel66)
+                                    .addComponent(jRadioButton166)
+                                    .addComponent(jRadioButton167)
+                                    .addComponent(jRadioButton168))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel67)
+                                    .addComponent(jRadioButton169)
+                                    .addComponent(jRadioButton170)
+                                    .addComponent(jRadioButton171)
+                                    .addComponent(jRadioButton363)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jRadioButton362)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton361)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton360)))))
+                .addGap(42, 42, 42)
                 .addComponent(jLabel68)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel69)
                     .addComponent(jRadioButton172)
                     .addComponent(jRadioButton173)
-                    .addComponent(jRadioButton174))
+                    .addComponent(jRadioButton174)
+                    .addComponent(jRadioButton359))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel79)
                     .addComponent(jRadioButton193)
                     .addComponent(jRadioButton194)
-                    .addComponent(jRadioButton195))
+                    .addComponent(jRadioButton195)
+                    .addComponent(jRadioButton364))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel152)
                     .addComponent(jRadioButton325)
                     .addComponent(jRadioButton326)
-                    .addComponent(jRadioButton327))
+                    .addComponent(jRadioButton327)
+                    .addComponent(jRadioButton365))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel80)
                     .addComponent(jRadioButton196)
                     .addComponent(jRadioButton197)
-                    .addComponent(jRadioButton198))
+                    .addComponent(jRadioButton198)
+                    .addComponent(jRadioButton366))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel81)
                     .addComponent(jRadioButton199)
                     .addComponent(jRadioButton200)
-                    .addComponent(jRadioButton201))
+                    .addComponent(jRadioButton201)
+                    .addComponent(jRadioButton367))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel82)
                     .addComponent(jRadioButton202)
                     .addComponent(jRadioButton203)
-                    .addComponent(jRadioButton204))
+                    .addComponent(jRadioButton204)
+                    .addComponent(jRadioButton368))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel83)
                     .addComponent(jRadioButton205)
                     .addComponent(jRadioButton206)
-                    .addComponent(jRadioButton207))
+                    .addComponent(jRadioButton207)
+                    .addComponent(jRadioButton369))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel84)
                     .addComponent(jRadioButton208)
                     .addComponent(jRadioButton209)
-                    .addComponent(jRadioButton210))
+                    .addComponent(jRadioButton210)
+                    .addComponent(jRadioButton370))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel85)
                     .addComponent(jRadioButton211)
                     .addComponent(jRadioButton212)
-                    .addComponent(jRadioButton213))
+                    .addComponent(jRadioButton213)
+                    .addComponent(jRadioButton371))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel86)
                     .addComponent(jRadioButton218)
                     .addComponent(jRadioButton217)
-                    .addComponent(jRadioButton216))
+                    .addComponent(jRadioButton216)
+                    .addComponent(jRadioButton372))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel87)
                     .addComponent(jRadioButton215)
                     .addComponent(jRadioButton214)
-                    .addComponent(jRadioButton222))
+                    .addComponent(jRadioButton222)
+                    .addComponent(jRadioButton373))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel88)
                     .addComponent(jRadioButton221)
                     .addComponent(jRadioButton220)
-                    .addComponent(jRadioButton219))
+                    .addComponent(jRadioButton219)
+                    .addComponent(jRadioButton374))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel90)
                     .addComponent(jRadioButton225)
                     .addComponent(jRadioButton224)
-                    .addComponent(jRadioButton223))
+                    .addComponent(jRadioButton223)
+                    .addComponent(jRadioButton375))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel89)
                     .addComponent(jRadioButton228)
                     .addComponent(jRadioButton227)
-                    .addComponent(jRadioButton226))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel92)
-                    .addComponent(jRadioButton232)
-                    .addComponent(jRadioButton231)
-                    .addComponent(jRadioButton230))
+                    .addComponent(jRadioButton226)
+                    .addComponent(jRadioButton376))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton229)
-                        .addComponent(jRadioButton234)
-                        .addComponent(jRadioButton233))
-                    .addComponent(jLabel91))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel92)
+                            .addComponent(jRadioButton232)
+                            .addComponent(jRadioButton231)
+                            .addComponent(jRadioButton230)
+                            .addComponent(jRadioButton377))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jRadioButton229)
+                                .addComponent(jRadioButton234)
+                                .addComponent(jRadioButton233)
+                                .addComponent(jRadioButton378))
+                            .addComponent(jLabel91)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel159)
+                            .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel172))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel173))))
                 .addGap(68, 68, 68)
                 .addComponent(jLabel73)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton235)
-                        .addComponent(jRadioButton236)
-                        .addComponent(jRadioButton237))
-                    .addComponent(jLabel93, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton238)
-                        .addComponent(jRadioButton239)
-                        .addComponent(jRadioButton240))
-                    .addComponent(jLabel94))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jRadioButton235)
+                                .addComponent(jRadioButton236)
+                                .addComponent(jRadioButton237))
+                            .addComponent(jLabel93, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jRadioButton238)
+                                .addComponent(jRadioButton239)
+                                .addComponent(jRadioButton240))
+                            .addComponent(jLabel94)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton380)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton379)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3904,153 +4893,220 @@ public class Questions extends javax.swing.JFrame {
                     .addComponent(jLabel96)
                     .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel97)
-                    .addComponent(jRadioButton241)
-                    .addComponent(jRadioButton242)
-                    .addComponent(jRadioButton243)
-                    .addComponent(jLabel76)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel98)
-                    .addComponent(jRadioButton244)
-                    .addComponent(jRadioButton245)
-                    .addComponent(jRadioButton246))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel99)
-                    .addComponent(jRadioButton247)
-                    .addComponent(jRadioButton248)
-                    .addComponent(jRadioButton249))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel100)
-                    .addComponent(jRadioButton250)
-                    .addComponent(jRadioButton251)
-                    .addComponent(jRadioButton252))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel101)
-                    .addComponent(jRadioButton253)
-                    .addComponent(jRadioButton254)
-                    .addComponent(jRadioButton255))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel97)
+                            .addComponent(jRadioButton241)
+                            .addComponent(jRadioButton242)
+                            .addComponent(jRadioButton243))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel98)
+                            .addComponent(jRadioButton244)
+                            .addComponent(jRadioButton245)
+                            .addComponent(jRadioButton246)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton382)
+                            .addComponent(jLabel76)
+                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton381)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton257)
-                        .addComponent(jRadioButton258))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel102)
-                        .addComponent(jRadioButton256)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel99)
+                            .addComponent(jRadioButton247)
+                            .addComponent(jRadioButton248)
+                            .addComponent(jRadioButton249))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel100)
+                            .addComponent(jRadioButton250)
+                            .addComponent(jRadioButton251)
+                            .addComponent(jRadioButton252)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton383)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton384)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel103)
-                    .addComponent(jRadioButton259)
-                    .addComponent(jRadioButton260)
-                    .addComponent(jRadioButton261))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel101)
+                            .addComponent(jRadioButton253)
+                            .addComponent(jRadioButton254)
+                            .addComponent(jRadioButton255))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jRadioButton257)
+                                .addComponent(jRadioButton258))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel102)
+                                .addComponent(jRadioButton256))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton385)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton386)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel104)
-                    .addComponent(jRadioButton262)
-                    .addComponent(jRadioButton263)
-                    .addComponent(jRadioButton264))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel103)
+                            .addComponent(jRadioButton259)
+                            .addComponent(jRadioButton260)
+                            .addComponent(jRadioButton261))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel104)
+                            .addComponent(jRadioButton262)
+                            .addComponent(jRadioButton263)
+                            .addComponent(jRadioButton264))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel105)
+                            .addComponent(jRadioButton265)
+                            .addComponent(jRadioButton266)
+                            .addComponent(jRadioButton267))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel106)
+                            .addComponent(jRadioButton268)
+                            .addComponent(jRadioButton269)
+                            .addComponent(jRadioButton270))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel107)
+                            .addComponent(jRadioButton271)
+                            .addComponent(jRadioButton272)
+                            .addComponent(jRadioButton273))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel108)
+                            .addComponent(jRadioButton274)
+                            .addComponent(jRadioButton275)
+                            .addComponent(jRadioButton276)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton389)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton390)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton388)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton387)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton392)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton391)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel105)
-                    .addComponent(jRadioButton265)
-                    .addComponent(jRadioButton266)
-                    .addComponent(jRadioButton267))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel109)
+                            .addComponent(jRadioButton277)
+                            .addComponent(jRadioButton278)
+                            .addComponent(jRadioButton279))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel110)
+                            .addComponent(jRadioButton280)
+                            .addComponent(jRadioButton281)
+                            .addComponent(jRadioButton282))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel111)
+                            .addComponent(jRadioButton283)
+                            .addComponent(jRadioButton284)
+                            .addComponent(jRadioButton285))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel112)
+                            .addComponent(jRadioButton286)
+                            .addComponent(jRadioButton287)
+                            .addComponent(jRadioButton288))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel113)
+                            .addComponent(jRadioButton289)
+                            .addComponent(jRadioButton290)
+                            .addComponent(jRadioButton291))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel114)
+                            .addComponent(jRadioButton292)
+                            .addComponent(jRadioButton293)
+                            .addComponent(jRadioButton294)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton395)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton396)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton394)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton393)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton398)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton397)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel106)
-                    .addComponent(jRadioButton268)
-                    .addComponent(jRadioButton269)
-                    .addComponent(jRadioButton270))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel107)
-                    .addComponent(jRadioButton271)
-                    .addComponent(jRadioButton272)
-                    .addComponent(jRadioButton273))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel108)
-                    .addComponent(jRadioButton274)
-                    .addComponent(jRadioButton275)
-                    .addComponent(jRadioButton276))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel109)
-                    .addComponent(jRadioButton277)
-                    .addComponent(jRadioButton278)
-                    .addComponent(jRadioButton279))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel110)
-                    .addComponent(jRadioButton280)
-                    .addComponent(jRadioButton281)
-                    .addComponent(jRadioButton282))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel111)
-                    .addComponent(jRadioButton283)
-                    .addComponent(jRadioButton284)
-                    .addComponent(jRadioButton285))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel112)
-                    .addComponent(jRadioButton286)
-                    .addComponent(jRadioButton287)
-                    .addComponent(jRadioButton288))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel113)
-                    .addComponent(jRadioButton289)
-                    .addComponent(jRadioButton290)
-                    .addComponent(jRadioButton291))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel114)
-                    .addComponent(jRadioButton292)
-                    .addComponent(jRadioButton293)
-                    .addComponent(jRadioButton294))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel115)
-                    .addComponent(jRadioButton295)
-                    .addComponent(jRadioButton296)
-                    .addComponent(jRadioButton297))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel116)
-                    .addComponent(jRadioButton298)
-                    .addComponent(jRadioButton299)
-                    .addComponent(jRadioButton300))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel117)
-                    .addComponent(jRadioButton301)
-                    .addComponent(jRadioButton302)
-                    .addComponent(jRadioButton303))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel118)
-                    .addComponent(jRadioButton304)
-                    .addComponent(jRadioButton305)
-                    .addComponent(jRadioButton306))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel119)
-                    .addComponent(jRadioButton307)
-                    .addComponent(jRadioButton308)
-                    .addComponent(jRadioButton309))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel120)
-                    .addComponent(jRadioButton312)
-                    .addComponent(jRadioButton311)
-                    .addComponent(jRadioButton310))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel115)
+                            .addComponent(jRadioButton295)
+                            .addComponent(jRadioButton296)
+                            .addComponent(jRadioButton297))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel116)
+                            .addComponent(jRadioButton298)
+                            .addComponent(jRadioButton299)
+                            .addComponent(jRadioButton300))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel117)
+                            .addComponent(jRadioButton301)
+                            .addComponent(jRadioButton302)
+                            .addComponent(jRadioButton303))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel118)
+                            .addComponent(jRadioButton304)
+                            .addComponent(jRadioButton305)
+                            .addComponent(jRadioButton306)
+                            .addComponent(jRadioButton399))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel119)
+                            .addComponent(jRadioButton307)
+                            .addComponent(jRadioButton308)
+                            .addComponent(jRadioButton309)
+                            .addComponent(jRadioButton404))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel120)
+                            .addComponent(jRadioButton312)
+                            .addComponent(jRadioButton311)
+                            .addComponent(jRadioButton310)
+                            .addComponent(jRadioButton403)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton401)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton402)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton400)
+                        .addGap(67, 67, 67)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel162)
+                            .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel170))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel171))))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel77)
                 .addGap(18, 18, 18)
@@ -4064,23 +5120,31 @@ public class Questions extends javax.swing.JFrame {
                     .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel123))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel124)
-                    .addComponent(jRadioButton313)
-                    .addComponent(jRadioButton314)
-                    .addComponent(jRadioButton315))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel125)
-                    .addComponent(jRadioButton316)
-                    .addComponent(jRadioButton317)
-                    .addComponent(jRadioButton318))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel126)
-                    .addComponent(jRadioButton319)
-                    .addComponent(jRadioButton320)
-                    .addComponent(jRadioButton321))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel124)
+                            .addComponent(jRadioButton313)
+                            .addComponent(jRadioButton314)
+                            .addComponent(jRadioButton315))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel125)
+                            .addComponent(jRadioButton316)
+                            .addComponent(jRadioButton317)
+                            .addComponent(jRadioButton318))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel126)
+                            .addComponent(jRadioButton319)
+                            .addComponent(jRadioButton320)
+                            .addComponent(jRadioButton321)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton405)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton406)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton407)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel127)
@@ -4102,7 +5166,8 @@ public class Questions extends javax.swing.JFrame {
                     .addComponent(jLabel130)
                     .addComponent(jRadioButton322)
                     .addComponent(jRadioButton323)
-                    .addComponent(jRadioButton324))
+                    .addComponent(jRadioButton324)
+                    .addComponent(jRadioButton408))
                 .addGap(66, 66, 66)
                 .addComponent(jLabel131)
                 .addGap(18, 18, 18)
@@ -4117,6 +5182,18 @@ public class Questions extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel133)
                     .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel163)
+                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel165)
+                    .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel164)
+                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel134)
@@ -4145,7 +5222,11 @@ public class Questions extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel140)
                     .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(76, 76, 76)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel168)
+                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(73, 73, 73)
                 .addComponent(jLabel141)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4154,11 +5235,19 @@ public class Questions extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel142)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel143))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel143)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel166))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel167))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel144)
@@ -4191,11 +5280,15 @@ public class Questions extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel151)
                     .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel169)
+                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addComponent(jLabel157)
-                .addGap(26, 26, 26))
+                .addGap(13, 13, 13)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1615, 1615, 1615))
         );
 
         jScrollPane1.setViewportView(jPanel2);
@@ -4204,11 +5297,11 @@ public class Questions extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1123, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
         );
 
         pack();
@@ -4333,6 +5426,7 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
+    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -4398,8 +5492,30 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel155;
     private javax.swing.JLabel jLabel156;
     private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
+    private javax.swing.JLabel jLabel179;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -4545,7 +5661,10 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton145;
     private javax.swing.JRadioButton jRadioButton146;
     private javax.swing.JRadioButton jRadioButton147;
+    private javax.swing.JRadioButton jRadioButton148;
+    private javax.swing.JRadioButton jRadioButton149;
     private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton150;
     private javax.swing.JRadioButton jRadioButton151;
     private javax.swing.JRadioButton jRadioButton152;
     private javax.swing.JRadioButton jRadioButton153;
@@ -4572,8 +5691,26 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton172;
     private javax.swing.JRadioButton jRadioButton173;
     private javax.swing.JRadioButton jRadioButton174;
+    private javax.swing.JRadioButton jRadioButton175;
+    private javax.swing.JRadioButton jRadioButton176;
+    private javax.swing.JRadioButton jRadioButton177;
+    private javax.swing.JRadioButton jRadioButton178;
+    private javax.swing.JRadioButton jRadioButton179;
     private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton180;
+    private javax.swing.JRadioButton jRadioButton181;
+    private javax.swing.JRadioButton jRadioButton182;
+    private javax.swing.JRadioButton jRadioButton183;
+    private javax.swing.JRadioButton jRadioButton184;
+    private javax.swing.JRadioButton jRadioButton185;
+    private javax.swing.JRadioButton jRadioButton186;
+    private javax.swing.JRadioButton jRadioButton187;
+    private javax.swing.JRadioButton jRadioButton188;
+    private javax.swing.JRadioButton jRadioButton189;
     private javax.swing.JRadioButton jRadioButton19;
+    private javax.swing.JRadioButton jRadioButton190;
+    private javax.swing.JRadioButton jRadioButton191;
+    private javax.swing.JRadioButton jRadioButton192;
     private javax.swing.JRadioButton jRadioButton193;
     private javax.swing.JRadioButton jRadioButton194;
     private javax.swing.JRadioButton jRadioButton195;
@@ -4724,15 +5861,96 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton325;
     private javax.swing.JRadioButton jRadioButton326;
     private javax.swing.JRadioButton jRadioButton327;
+    private javax.swing.JRadioButton jRadioButton328;
+    private javax.swing.JRadioButton jRadioButton329;
     private javax.swing.JRadioButton jRadioButton33;
+    private javax.swing.JRadioButton jRadioButton330;
+    private javax.swing.JRadioButton jRadioButton331;
+    private javax.swing.JRadioButton jRadioButton332;
+    private javax.swing.JRadioButton jRadioButton333;
+    private javax.swing.JRadioButton jRadioButton334;
+    private javax.swing.JRadioButton jRadioButton335;
+    private javax.swing.JRadioButton jRadioButton336;
+    private javax.swing.JRadioButton jRadioButton337;
+    private javax.swing.JRadioButton jRadioButton338;
+    private javax.swing.JRadioButton jRadioButton339;
     private javax.swing.JRadioButton jRadioButton34;
+    private javax.swing.JRadioButton jRadioButton340;
+    private javax.swing.JRadioButton jRadioButton341;
+    private javax.swing.JRadioButton jRadioButton342;
+    private javax.swing.JRadioButton jRadioButton343;
+    private javax.swing.JRadioButton jRadioButton344;
+    private javax.swing.JRadioButton jRadioButton345;
+    private javax.swing.JRadioButton jRadioButton346;
+    private javax.swing.JRadioButton jRadioButton347;
+    private javax.swing.JRadioButton jRadioButton348;
+    private javax.swing.JRadioButton jRadioButton349;
     private javax.swing.JRadioButton jRadioButton35;
+    private javax.swing.JRadioButton jRadioButton350;
+    private javax.swing.JRadioButton jRadioButton351;
+    private javax.swing.JRadioButton jRadioButton352;
+    private javax.swing.JRadioButton jRadioButton353;
+    private javax.swing.JRadioButton jRadioButton354;
+    private javax.swing.JRadioButton jRadioButton355;
+    private javax.swing.JRadioButton jRadioButton356;
+    private javax.swing.JRadioButton jRadioButton357;
+    private javax.swing.JRadioButton jRadioButton358;
+    private javax.swing.JRadioButton jRadioButton359;
     private javax.swing.JRadioButton jRadioButton36;
+    private javax.swing.JRadioButton jRadioButton360;
+    private javax.swing.JRadioButton jRadioButton361;
+    private javax.swing.JRadioButton jRadioButton362;
+    private javax.swing.JRadioButton jRadioButton363;
+    private javax.swing.JRadioButton jRadioButton364;
+    private javax.swing.JRadioButton jRadioButton365;
+    private javax.swing.JRadioButton jRadioButton366;
+    private javax.swing.JRadioButton jRadioButton367;
+    private javax.swing.JRadioButton jRadioButton368;
+    private javax.swing.JRadioButton jRadioButton369;
     private javax.swing.JRadioButton jRadioButton37;
+    private javax.swing.JRadioButton jRadioButton370;
+    private javax.swing.JRadioButton jRadioButton371;
+    private javax.swing.JRadioButton jRadioButton372;
+    private javax.swing.JRadioButton jRadioButton373;
+    private javax.swing.JRadioButton jRadioButton374;
+    private javax.swing.JRadioButton jRadioButton375;
+    private javax.swing.JRadioButton jRadioButton376;
+    private javax.swing.JRadioButton jRadioButton377;
+    private javax.swing.JRadioButton jRadioButton378;
+    private javax.swing.JRadioButton jRadioButton379;
     private javax.swing.JRadioButton jRadioButton38;
+    private javax.swing.JRadioButton jRadioButton380;
+    private javax.swing.JRadioButton jRadioButton381;
+    private javax.swing.JRadioButton jRadioButton382;
+    private javax.swing.JRadioButton jRadioButton383;
+    private javax.swing.JRadioButton jRadioButton384;
+    private javax.swing.JRadioButton jRadioButton385;
+    private javax.swing.JRadioButton jRadioButton386;
+    private javax.swing.JRadioButton jRadioButton387;
+    private javax.swing.JRadioButton jRadioButton388;
+    private javax.swing.JRadioButton jRadioButton389;
     private javax.swing.JRadioButton jRadioButton39;
+    private javax.swing.JRadioButton jRadioButton390;
+    private javax.swing.JRadioButton jRadioButton391;
+    private javax.swing.JRadioButton jRadioButton392;
+    private javax.swing.JRadioButton jRadioButton393;
+    private javax.swing.JRadioButton jRadioButton394;
+    private javax.swing.JRadioButton jRadioButton395;
+    private javax.swing.JRadioButton jRadioButton396;
+    private javax.swing.JRadioButton jRadioButton397;
+    private javax.swing.JRadioButton jRadioButton398;
+    private javax.swing.JRadioButton jRadioButton399;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton40;
+    private javax.swing.JRadioButton jRadioButton400;
+    private javax.swing.JRadioButton jRadioButton401;
+    private javax.swing.JRadioButton jRadioButton402;
+    private javax.swing.JRadioButton jRadioButton403;
+    private javax.swing.JRadioButton jRadioButton404;
+    private javax.swing.JRadioButton jRadioButton405;
+    private javax.swing.JRadioButton jRadioButton406;
+    private javax.swing.JRadioButton jRadioButton407;
+    private javax.swing.JRadioButton jRadioButton408;
     private javax.swing.JRadioButton jRadioButton41;
     private javax.swing.JRadioButton jRadioButton42;
     private javax.swing.JRadioButton jRadioButton43;
@@ -4824,8 +6042,24 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
+    private javax.swing.JTextField jTextField28;
+    private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField30;
+    private javax.swing.JTextField jTextField31;
+    private javax.swing.JTextField jTextField32;
+    private javax.swing.JTextField jTextField33;
+    private javax.swing.JTextField jTextField34;
+    private javax.swing.JTextField jTextField35;
+    private javax.swing.JTextField jTextField36;
+    private javax.swing.JTextField jTextField37;
+    private javax.swing.JTextField jTextField38;
+    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField40;
+    private javax.swing.JTextField jTextField41;
+    private javax.swing.JTextField jTextField42;
+    private javax.swing.JTextField jTextField43;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
@@ -4833,7 +6067,7 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-    void save(String path) {
+    public void save(String path) {
         PrintWriter frequentWriter;
         PrintWriter rareWriter;
         try {
@@ -4847,11 +6081,20 @@ public class Questions extends javax.swing.JFrame {
             File file2 = new File(path+File.separatorChar+dir+File.separatorChar+"rare.txt");
             rareWriter = new PrintWriter(file2);
             
+            
             //Head
             
-            frequentWriter.println(jTextField1.getText());
+            String text="";
             
-            frequentWriter.println(jTextField2.getText() + " " + jTextField3.getText() + " " + jTextField4.getText());
+            text=jTextField1.getText();
+            if(!text.equals("")){
+                rareWriter.println("arc színe: " + jTextField1.getText());
+            }
+            
+            text=jTextField2.getText();
+            if(!text.equals("")){
+                rareWriter.println("fejfájás helye:" + jTextField2.getText() + " jellege: " + jTextField3.getText() + " gyakorisága: " + jTextField4.getText());
+            }
             
             String action=buttonGroup1.getSelection().getActionCommand();
             String content="fej fázékony";
@@ -4859,7 +6102,7 @@ public class Questions extends javax.swing.JFrame {
                 frequentWriter.println(content);
             }else if(action=="2"){
                 rareWriter.println(content);
-            }
+            }    
             
             action=buttonGroup2.getSelection().getActionCommand();
             content="szédülés";
@@ -5029,10 +6272,20 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
-            //Chest
+            text=jTextField28.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
+            
+            text=jTextField29.getText();
+            if(!text.equals("")){
+                rareWriter.println(text);
+            }
             
             frequentWriter.println("*****");
             rareWriter.println("*****");
+            
+            //Chest 
             
             action=buttonGroup23.getSelection().getActionCommand();
             content="szívdobogás nyugalomban";
@@ -5146,6 +6399,16 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
+            text=jTextField30.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
+            
+            text=jTextField31.getText();
+            if(!text.equals("")){
+                rareWriter.println(text);
+            }
+            
             frequentWriter.println("*****");
             rareWriter.println("*****");
             
@@ -5255,7 +6518,11 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
-            rareWriter.println("széklet gyakoriság: " + jTextField8.getText()+ " állag: "  + jTextField9.getText() + " szín: " + jTextField10.getText());
+            text=jTextField8.getText();
+            if(!text.equals("")){
+                rareWriter.println("széklet gyakoriság: " + jTextField8.getText()+ " állag: "  + jTextField9.getText() + " szín: " + jTextField10.getText());
+            }
+            
             
             action=buttonGroup50.getSelection().getActionCommand();
             content="égő végbélnyílás";
@@ -5311,6 +6578,16 @@ public class Questions extends javax.swing.JFrame {
                 frequentWriter.println(content);
             }else if(action=="2"){
                 rareWriter.println(content);
+            }
+            
+            text=jTextField32.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
+            
+            text=jTextField33.getText();
+            if(!text.equals("")){
+                rareWriter.println(text);
             }
             
             frequentWriter.println("*****");
@@ -5446,9 +6723,18 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
-            frequentWriter.println("*****");
-            rareWriter.println("*****");
+             text=jTextField34.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
             
+            text=jTextField35.getText();
+            if(!text.equals("")){
+                rareWriter.println(text);
+            }
+            
+            frequentWriter.println("*****");
+            rareWriter.println("*****"); 
             
             //Lower abdomen
              
@@ -5468,9 +6754,16 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
-            rareWriter.println("napi folyadékbevitel " + jTextField7.getText() + " l " + jComboBox1.getSelectedItem().toString());
+            text=jTextField7.getText();
+            if(!text.equals("")){
+                rareWriter.println("napi folyadékbevitel " + jTextField7.getText() + " l " + jComboBox1.getSelectedItem().toString());
+            }
             
-            rareWriter.println("napközbeni vizeletürítések száma: " + jSpinner1.getValue().toString());
+            text=jSpinner1.getValue().toString();
+            if(!text.equals("0")){
+                rareWriter.println("napközbeni vizeletürítések száma: " + jSpinner1.getValue().toString());
+            }
+            
              
             action=buttonGroup74.getSelection().getActionCommand();
             content="éjszakai vizelés száma: " + jSpinner2.getValue().toString();
@@ -5664,6 +6957,16 @@ public class Questions extends javax.swing.JFrame {
                 rareWriter.println(content);
             }
             
+            text=jTextField36.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
+            
+            text=jTextField37.getText();
+            if(!text.equals("")){
+                rareWriter.println(text);
+            }
+            
             
             frequentWriter.println("*****");
             rareWriter.println("*****");
@@ -5671,11 +6974,22 @@ public class Questions extends javax.swing.JFrame {
             //Menses
             
             if(Controller.controller.sex.equals("nő")){
-                rareWriter.println(jSpinner3.getValue().toString()+".-"+jSpinner4.getValue().toString()+". életévig");
-
-                rareWriter.println("szín: " + jComboBox2.getSelectedItem().toString() + " mennyiség: "+jComboBox3.getSelectedItem().toString());
-
-                rareWriter.println("hossz: "+ jComboBox4.getSelectedItem().toString()+" nap: "+jSpinner5.getValue().toString()+" ciklus nap: "+jSpinner6.getValue().toString());
+                
+                text=jSpinner3.getValue().toString();
+                if(!text.equals("0")){
+                    rareWriter.println(jSpinner3.getValue().toString()+".-"+jSpinner4.getValue().toString()+". életévig");
+                }
+                
+                text=jComboBox2.getSelectedItem().toString();
+                if(!text.equals("────────")){
+                    rareWriter.println("szín: " + jComboBox2.getSelectedItem().toString() + " mennyiség: "+jComboBox3.getSelectedItem().toString());
+                }
+                
+                text=jComboBox4.getSelectedItem().toString();
+                if(!text.equals("────────")){
+                    rareWriter.println("hossz: "+ jComboBox4.getSelectedItem().toString()+" nap: "+jSpinner5.getValue().toString()+" ciklus nap: "+jSpinner6.getValue().toString());
+                }
+                
 
                 action=buttonGroup98.getSelection().getActionCommand();
                 content="szabálytalan menstruáció";
@@ -5714,19 +7028,35 @@ public class Questions extends javax.swing.JFrame {
             
             //Spine
             
-            String text=jTextField21.getText();
+            text=jTextField21.getText();
             if(!text.equals("")){
-                frequentWriter.println("ideje: "+ text);
+                frequentWriter.println("fennállás ideje: "+ text);
             }
             
             text=jTextField11.getText();
             if(!text.equals("")){
-                frequentWriter.println("érintett: "+text);
+                frequentWriter.println("érintett csigolya: "+text);
             }
             
             text=jTextField12.getText();
             if(!text.equals("")){
               frequentWriter.println("kisugrzás: " + text);
+            }
+            
+            text=jTextField38.getText();
+            if(!text.equals("")){
+              frequentWriter.println("érintett meridián(ok): " + text);
+            }
+            
+            text=jTextField39.getText();
+            if(!text.equals("")){
+              frequentWriter.println("trigger/ahshi pont: " + text);
+            }
+            
+            action=jComboBox9.getSelectedItem().toString();
+            content="éjszaka fennáll a fájdalom";
+            if(action=="igen"){
+                frequentWriter.println(content);
             }
             
             text=jTextField13.getText();
@@ -5766,6 +7096,11 @@ public class Questions extends javax.swing.JFrame {
                 frequentWriter.println(content);
             }
             
+            text=jTextField42.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
+            
             frequentWriter.println("*****");
             rareWriter.println("*****");
             
@@ -5785,6 +7120,16 @@ public class Questions extends javax.swing.JFrame {
             text=jTextField19.getText();
             if(!text.equals("")){
                 frequentWriter.println("kisugárzás: "+ text);
+            }
+            
+            text=jTextField40.getText();
+            if(!text.equals("")){
+              frequentWriter.println("érintett meridián(ok): " + text);
+            }
+            
+            text=jTextField41.getText();
+            if(!text.equals("")){
+              frequentWriter.println("trigger/ahshi pont: " + text);
             }
             
             text=jTextField20.getText();
@@ -5829,6 +7174,11 @@ public class Questions extends javax.swing.JFrame {
                 frequentWriter.println(content);
             }
             
+            text=jTextField43.getText();
+            if(!text.equals("")){
+                frequentWriter.println(text);
+            }
+            
             frequentWriter.println("*****");
             rareWriter.println("*****");
                         
@@ -5837,5 +7187,274 @@ public class Questions extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        makeGrouplist();
+        saveAll();
     }
+    
+    public void load(int idNumber){
+        try {
+            Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"questions.txt"));
+            String line="";
+           
+            //Convert Enumeration to a List
+            
+            makeGrouplist();
+            for(ButtonGroup b: buttonGroups){
+                line=input.nextLine();
+                List<AbstractButton> listRadioButton = Collections.list(b.getElements());
+                listRadioButton.get(Integer.parseInt(line)).setSelected(true);
+            }
+            
+            jTextField1.setText(input.nextLine());
+            jTextField2.setText(input.nextLine());
+            jTextField3.setText(input.nextLine());
+            jTextField4.setText(input.nextLine());
+            jTextField5.setText(input.nextLine());
+            jTextField6.setText(input.nextLine());
+            jTextField7.setText(input.nextLine());
+            jTextField8.setText(input.nextLine());
+            jTextField9.setText(input.nextLine());
+            jTextField10.setText(input.nextLine());
+            jTextField11.setText(input.nextLine());
+            jTextField12.setText(input.nextLine());
+            jTextField13.setText(input.nextLine());
+            jTextField14.setText(input.nextLine());
+            jTextField15.setText(input.nextLine());
+            jTextField16.setText(input.nextLine());
+            jTextField17.setText(input.nextLine());
+            jTextField18.setText(input.nextLine());
+            jTextField19.setText(input.nextLine());
+            jTextField20.setText(input.nextLine());
+            jTextField21.setText(input.nextLine());
+            jTextField22.setText(input.nextLine());
+            jTextField23.setText(input.nextLine());
+            jTextField24.setText(input.nextLine());
+            jTextField25.setText(input.nextLine());
+            jTextField26.setText(input.nextLine());
+            jTextField27.setText(input.nextLine());
+            jTextField28.setText(input.nextLine());
+            jTextField29.setText(input.nextLine());
+            jTextField30.setText(input.nextLine());
+            jTextField31.setText(input.nextLine());
+            jTextField32.setText(input.nextLine());
+            jTextField33.setText(input.nextLine());
+            jTextField34.setText(input.nextLine());
+            jTextField35.setText(input.nextLine());
+            jTextField36.setText(input.nextLine());
+            jTextField37.setText(input.nextLine());
+            jTextField38.setText(input.nextLine());
+            jTextField39.setText(input.nextLine());
+            jTextField40.setText(input.nextLine());
+            jTextField41.setText(input.nextLine());
+            jTextField42.setText(input.nextLine());
+            jTextField43.setText(input.nextLine());
+            jSpinner1.setValue(Integer.parseInt(input.nextLine()));
+            jSpinner2.setValue(Integer.parseInt(input.nextLine()));
+            jSpinner3.setValue(Integer.parseInt(input.nextLine()));
+            jSpinner4.setValue(Integer.parseInt(input.nextLine()));
+            jSpinner5.setValue(Integer.parseInt(input.nextLine()));
+            jSpinner6.setValue(Integer.parseInt(input.nextLine()));
+            jComboBox1.setSelectedItem(input.nextLine());
+            jComboBox2.setSelectedItem(input.nextLine());
+            jComboBox3.setSelectedItem(input.nextLine());
+            jComboBox4.setSelectedItem(input.nextLine());
+            jComboBox5.setSelectedItem(input.nextLine());
+            jComboBox6.setSelectedItem(input.nextLine());
+            jComboBox7.setSelectedItem(input.nextLine());
+            jComboBox8.setSelectedItem(input.nextLine());
+            jComboBox9.setSelectedItem(input.nextLine());
+            
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Questions.class.getName()).log(Level.SEVERE, null, ex);
+        }  
+    }
+    
+    List<ButtonGroup> buttonGroups=new ArrayList<ButtonGroup>();
+            
+            public void makeGrouplist(){
+                buttonGroups.add(buttonGroup1);
+                buttonGroups.add(buttonGroup2);
+                buttonGroups.add(buttonGroup3);
+                buttonGroups.add(buttonGroup4);
+                buttonGroups.add(buttonGroup5);
+                buttonGroups.add(buttonGroup6);
+                buttonGroups.add(buttonGroup7);
+                buttonGroups.add(buttonGroup8);
+                buttonGroups.add(buttonGroup9);
+                buttonGroups.add(buttonGroup10);
+                buttonGroups.add(buttonGroup11);
+                buttonGroups.add(buttonGroup12);
+                buttonGroups.add(buttonGroup13);
+                buttonGroups.add(buttonGroup14);
+                buttonGroups.add(buttonGroup15);
+                buttonGroups.add(buttonGroup16);
+                buttonGroups.add(buttonGroup17);
+                buttonGroups.add(buttonGroup18);
+                buttonGroups.add(buttonGroup19);
+                buttonGroups.add(buttonGroup20);
+                buttonGroups.add(buttonGroup21);
+                buttonGroups.add(buttonGroup22);
+                buttonGroups.add(buttonGroup23);
+                buttonGroups.add(buttonGroup24);
+                buttonGroups.add(buttonGroup25);
+                buttonGroups.add(buttonGroup26);
+                buttonGroups.add(buttonGroup27);
+                buttonGroups.add(buttonGroup28);
+                buttonGroups.add(buttonGroup29);
+                buttonGroups.add(buttonGroup30);
+                buttonGroups.add(buttonGroup31);
+                buttonGroups.add(buttonGroup32);
+                buttonGroups.add(buttonGroup33);
+                buttonGroups.add(buttonGroup34);
+                buttonGroups.add(buttonGroup35);
+                buttonGroups.add(buttonGroup36);
+                buttonGroups.add(buttonGroup37);
+                buttonGroups.add(buttonGroup38);
+                buttonGroups.add(buttonGroup39);
+                buttonGroups.add(buttonGroup40);
+                buttonGroups.add(buttonGroup41);
+                buttonGroups.add(buttonGroup42);
+                buttonGroups.add(buttonGroup43);
+                buttonGroups.add(buttonGroup44);
+                buttonGroups.add(buttonGroup45);
+                buttonGroups.add(buttonGroup46);
+                buttonGroups.add(buttonGroup47);
+                buttonGroups.add(buttonGroup48);
+                buttonGroups.add(buttonGroup49);
+                buttonGroups.add(buttonGroup50);
+                buttonGroups.add(buttonGroup51);
+                buttonGroups.add(buttonGroup52);
+                buttonGroups.add(buttonGroup53);
+                buttonGroups.add(buttonGroup54);
+                buttonGroups.add(buttonGroup55);
+                buttonGroups.add(buttonGroup56);
+                buttonGroups.add(buttonGroup57);
+                buttonGroups.add(buttonGroup58);
+                buttonGroups.add(buttonGroup59);
+                buttonGroups.add(buttonGroup60);
+                buttonGroups.add(buttonGroup61);
+                buttonGroups.add(buttonGroup62);
+                buttonGroups.add(buttonGroup63);
+                buttonGroups.add(buttonGroup64);
+                buttonGroups.add(buttonGroup65);
+                buttonGroups.add(buttonGroup66);
+                buttonGroups.add(buttonGroup67);
+                buttonGroups.add(buttonGroup68);
+                buttonGroups.add(buttonGroup69);
+                buttonGroups.add(buttonGroup70);
+                buttonGroups.add(buttonGroup71);
+                buttonGroups.add(buttonGroup72);
+                buttonGroups.add(buttonGroup73);
+                buttonGroups.add(buttonGroup74);
+                buttonGroups.add(buttonGroup75);
+                buttonGroups.add(buttonGroup76);
+                buttonGroups.add(buttonGroup77);
+                buttonGroups.add(buttonGroup78);
+                buttonGroups.add(buttonGroup79);
+                buttonGroups.add(buttonGroup80);
+                buttonGroups.add(buttonGroup81);
+                buttonGroups.add(buttonGroup82);
+                buttonGroups.add(buttonGroup83);
+                buttonGroups.add(buttonGroup84);
+                buttonGroups.add(buttonGroup85);
+                buttonGroups.add(buttonGroup86);
+                buttonGroups.add(buttonGroup87);
+                buttonGroups.add(buttonGroup88);
+                buttonGroups.add(buttonGroup89);
+                buttonGroups.add(buttonGroup90);
+                buttonGroups.add(buttonGroup91);
+                buttonGroups.add(buttonGroup92);
+                buttonGroups.add(buttonGroup93);
+                buttonGroups.add(buttonGroup94);
+                buttonGroups.add(buttonGroup95);
+                buttonGroups.add(buttonGroup96);
+                buttonGroups.add(buttonGroup97);
+                buttonGroups.add(buttonGroup98);
+                buttonGroups.add(buttonGroup99);
+                buttonGroups.add(buttonGroup100);
+                buttonGroups.add(buttonGroup101);
+                buttonGroups.add(buttonGroup102);
+            }
+            public void saveAll(){
+            PrintWriter questionWriter = null;
+            try {
+                File file3 = new File(Controller.controller.path+Integer.toString(Controller.controller.idNumber)+File.separatorChar+"questions.txt");
+                questionWriter = new PrintWriter(file3);
+                for(ButtonGroup b: buttonGroups){
+                    questionWriter.println(b.getSelection().getActionCommand());
+                }
+            }catch (FileNotFoundException ex) {
+                Logger.getLogger(Questions.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            questionWriter.println(jTextField1.getText());
+            questionWriter.println(jTextField2.getText());
+            questionWriter.println(jTextField3.getText());
+            questionWriter.println(jTextField4.getText());
+            questionWriter.println(jTextField5.getText());
+            questionWriter.println(jTextField6.getText());
+            questionWriter.println(jTextField7.getText());
+            questionWriter.println(jTextField8.getText());
+            questionWriter.println(jTextField9.getText());
+            questionWriter.println(jTextField10.getText());
+            questionWriter.println(jTextField11.getText());
+            questionWriter.println(jTextField12.getText());
+            questionWriter.println(jTextField13.getText());
+            questionWriter.println(jTextField14.getText());
+            questionWriter.println(jTextField15.getText());
+            questionWriter.println(jTextField16.getText());
+            questionWriter.println(jTextField17.getText());
+            questionWriter.println(jTextField18.getText());
+            questionWriter.println(jTextField19.getText());
+            questionWriter.println(jTextField20.getText());
+            questionWriter.println(jTextField21.getText());
+            questionWriter.println(jTextField22.getText());
+            questionWriter.println(jTextField23.getText());
+            questionWriter.println(jTextField24.getText());
+            questionWriter.println(jTextField25.getText());
+            questionWriter.println(jTextField26.getText());
+            questionWriter.println(jTextField27.getText());
+            questionWriter.println(jTextField28.getText());
+            questionWriter.println(jTextField29.getText());
+            questionWriter.println(jTextField30.getText());
+            questionWriter.println(jTextField31.getText());
+            questionWriter.println(jTextField32.getText());
+            questionWriter.println(jTextField33.getText());
+            questionWriter.println(jTextField34.getText());
+            questionWriter.println(jTextField35.getText());
+            questionWriter.println(jTextField36.getText());
+            questionWriter.println(jTextField37.getText());
+            questionWriter.println(jTextField38.getText());
+            questionWriter.println(jTextField39.getText());
+            questionWriter.println(jTextField40.getText());
+            questionWriter.println(jTextField41.getText());
+            questionWriter.println(jTextField42.getText());
+            questionWriter.println(jTextField43.getText());
+            questionWriter.println(jSpinner1.getValue().toString());
+            questionWriter.println(jSpinner2.getValue().toString());
+            questionWriter.println(jSpinner3.getValue().toString());
+            questionWriter.println(jSpinner4.getValue().toString());
+            questionWriter.println(jSpinner5.getValue().toString());
+            questionWriter.println(jSpinner6.getValue().toString());
+            questionWriter.println(jComboBox1.getSelectedItem().toString());
+            questionWriter.println(jComboBox2.getSelectedItem().toString());
+            questionWriter.println(jComboBox3.getSelectedItem().toString());
+            questionWriter.println(jComboBox4.getSelectedItem().toString());
+            questionWriter.println(jComboBox5.getSelectedItem().toString());
+            questionWriter.println(jComboBox6.getSelectedItem().toString());
+            questionWriter.println(jComboBox7.getSelectedItem().toString());
+            questionWriter.println(jComboBox8.getSelectedItem().toString());
+            questionWriter.println(jComboBox9.getSelectedItem().toString());
+         
+            
+            
+            questionWriter.close();
+            }
+
+    public void hideComponents() {
+        jButton2.setVisible(false);
+    }
+            
 }
