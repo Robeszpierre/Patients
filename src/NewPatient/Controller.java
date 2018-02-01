@@ -202,7 +202,7 @@ public class Controller {
             System.out.println("Can't make final report txt");
         }
         writer2.println("***");
-        writer2.println("gyógyult");
+        writer2.println("────────");
         writer2.println("***");
         
         writer2.close();
