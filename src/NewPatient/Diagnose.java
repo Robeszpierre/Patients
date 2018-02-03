@@ -69,8 +69,14 @@ public class Diagnose extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Diagnózis/Javaslatok");
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jScrollPane1.setHorizontalScrollBar(null);
 
@@ -259,13 +265,18 @@ public class Diagnose extends javax.swing.JFrame {
             Controller.controller.save();
         } catch (IOException ex) {
             Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
-        }   
+        }
+        Controller.controller.mainFrame.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         this.setVisible(false);
         Controller.controller.previous7();
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        Controller.controller.mainFrame.setVisible(true);
+    }//GEN-LAST:event_formWindowClosed
 
     /**
      * @param args the command line arguments
@@ -338,32 +349,24 @@ public class Diagnose extends javax.swing.JFrame {
             String dir=Integer.toString(Controller.controller.idNumber);
             File directory = new File(path+dir);
             directory.mkdir();
-            
-            String diagnose=jTextPane1.getText();
-            String therapy=jTextPane2.getText();
-            String diet=jTextPane3.getText();
-            String herbs=jTextPane4.getText();
-            String chiniseMedicine=jTextPane5.getText();
-            String physiotherapy=jTextPane6.getText();
-            String other=jTextPane7.getText();
 
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"diagnose.txt");
             writer = new PrintWriter(file);
             
-            writer.println(diagnose);
+            writer.println(jTextPane1.getText());
             writer.println("***");
-            writer.println(therapy);
+            writer.println(jTextPane2.getText());
             writer.println("***");
-            writer.println(diet);
+            writer.println(jTextPane3.getText());
             writer.println("***");
-            writer.println(herbs);
+            writer.println(jTextPane4.getText());
             writer.println("***");
-            writer.println(chiniseMedicine);
+            writer.println(jTextPane5.getText());
             writer.println("***");
-            writer.println(physiotherapy);
+            writer.println(jTextPane6.getText());
             writer.println("***");
-            writer.println(other);
+            writer.println(jTextPane7.getText());
             writer.println("***");
             writer.close();
         } catch (FileNotFoundException ex) {

@@ -56,8 +56,14 @@ public class Complaints extends javax.swing.JFrame {
         jTextPane4 = new javax.swing.JTextPane();
         jLabel4 = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Jelen Panaszok");
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -169,14 +175,18 @@ public class Complaints extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        Controller.controller.newAnamnesis();
+        Controller.controller.newQuestions();
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         this.setVisible(false);
-        Controller.controller.previous1();
+        Controller.controller.previous3();
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        Controller.controller.mainFrame.setVisible(true);
+    }//GEN-LAST:event_formWindowClosed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -203,7 +213,6 @@ public class Complaints extends javax.swing.JFrame {
             String dir=Integer.toString(Controller.controller.idNumber);
             File directory = new File(path+dir);
             directory.mkdir();
-            
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"complaints.txt");
             writer = new PrintWriter(file);

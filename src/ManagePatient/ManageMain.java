@@ -19,6 +19,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -102,6 +104,8 @@ public class ManageMain extends javax.swing.JFrame {
         jList18 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -236,12 +240,18 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane8 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel64 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Betegek kezelése");
-        setPreferredSize(new java.awt.Dimension(1366, 768));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 740));
@@ -350,7 +360,17 @@ public class ManageMain extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(210, 680, 200, 30);
+        jButton3.setBounds(210, 710, 200, 30);
+
+        jLabel62.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel62.setText("Gerinc");
+        jPanel2.add(jLabel62);
+        jLabel62.setBounds(250, 680, 43, 15);
+
+        jLabel63.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel63.setText("Végtagok");
+        jPanel2.add(jLabel63);
+        jLabel63.setBounds(330, 680, 70, 15);
 
         jTabbedPane1.addTab("Tünetek", jPanel2);
 
@@ -376,7 +396,7 @@ public class ManageMain extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -640,7 +660,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel60)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Aktuális", jPanel6);
@@ -704,10 +724,10 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Anamnézis", jPanel8);
+        jTabbedPane1.addTab("Pszichikum", jPanel8);
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -990,7 +1010,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel61)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane30, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Pulzus", jPanel9);
@@ -1156,17 +1176,17 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE))
-            .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane5))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1181,15 +1201,18 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
+            .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane6))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Fül", jPanel11);
@@ -1198,6 +1221,7 @@ public class ManageMain extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel57.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel57.setText("Értékelés");
 
         jTextArea1.setColumns(20);
@@ -1205,6 +1229,22 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane8.setViewportView(jTextArea1);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyógyult", "részben gyógyult", "nem gyógyult", "egyéb" }));
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
+            }
+        });
+
+        jLabel64.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+
+        jButton5.setBackground(new java.awt.Color(0, 0, 0));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Dátum hozzáadása");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1221,14 +1261,24 @@ public class ManageMain extends javax.swing.JFrame {
                             .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 641, Short.MAX_VALUE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                    .addComponent(jLabel64, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel57)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
@@ -1246,14 +1296,13 @@ public class ManageMain extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Mentés");
-        jButton2.setPreferredSize(new java.awt.Dimension(111, 33));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton4.setBackground(new java.awt.Color(0, 0, 0));
+        jButton4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Kezelés törlése");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                jButton4MouseClicked(evt);
             }
         });
 
@@ -1268,20 +1317,22 @@ public class ManageMain extends javax.swing.JFrame {
                     .addComponent(jTabbedPane3)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 637, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(jButton4)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleDescription("tab1");
@@ -1294,7 +1345,7 @@ public class ManageMain extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
         );
 
         pack();
@@ -1304,16 +1355,6 @@ public class ManageMain extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         addTreatment();
     }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-         saveFinalReport();
-        
-        for(int i=0; i<treatments.size(); i++){
-            treatments.get(i).save(i, idNumber);
-        }
-        
-        JOptionPane.showMessageDialog(null, "Adatok elmentve!");
-    }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         Scanner input=null;
@@ -1335,13 +1376,78 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3MouseClicked
 
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        File folder = new File(Controller.controller.path+idNumber+File.separatorChar+"Treatments");
+	File[] listOfFiles = folder.listFiles();
+        if(idx>listOfFiles.length){
+            treatments.remove(idx-1);
+            jTabbedPane3.remove(idx);
+            idx--;
+        }
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime dateTime = LocalDateTime.now();
+        String time = dateTime.format(formatter); 
+        jLabel64.setText(time);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    
+    //make statistic about the efficiency
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+        if (evt.getStateChange() == 2) {
+           String base=(String) evt.getItem();
+           
+           if(base.equals("────────")){
+               Controller.controller.treatmentInProgress--;
+           }else if(base.equals("gyógyult")){
+               Controller.controller.healed--;
+           }else if(base.equals("részben gyógyult")){
+               Controller.controller.partiallyHealed--;
+           }else if(base.equals("nem gyógyult")){
+               Controller.controller.notHealed--;
+           }else if(base.equals("egyéb")){
+               Controller.controller.other--;
+           }
+        }
+        
+        if (evt.getStateChange() == 1) {
+           String base=(String) evt.getItem();
+           
+           if(base.equals("────────")){
+               Controller.controller.treatmentInProgress++;
+           }else if(base.equals("gyógyult")){
+               Controller.controller.healed++;
+           }else if(base.equals("részben gyógyult")){
+               Controller.controller.partiallyHealed++;
+           }else if(base.equals("nem gyógyult")){
+               Controller.controller.notHealed++;
+           }else if(base.equals("egyéb")){
+               Controller.controller.other++;
+           }
+        }
+    }//GEN-LAST:event_jComboBox1ItemStateChanged
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        saveFinalReport();
+        Controller.controller.saveStatistic();
+        
+        for(int i=0; i<treatments.size(); i++){
+            treatments.get(i).save(i, idNumber);
+        }
+        
+        Controller.controller.mainFrame.setVisible(true);
+    }//GEN-LAST:event_formWindowClosed
+
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1401,6 +1507,9 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel87;
@@ -1973,7 +2082,6 @@ public class ManageMain extends javax.swing.JFrame {
                 line=input.nextLine();
             }
             jTextPane41.setText(text);
-            line=input.nextLine();
             
             text="";
             line=input.nextLine();
@@ -1982,7 +2090,6 @@ public class ManageMain extends javax.swing.JFrame {
                 line=input.nextLine();
             }
             jTextPane42.setText(text);
-            line=input.nextLine();
             
             text="";
             line=input.nextLine();
@@ -1991,7 +2098,6 @@ public class ManageMain extends javax.swing.JFrame {
                 line=input.nextLine();
             }
             jTextPane43.setText(text);
-            line=input.nextLine();
             
             text="";
             line=input.nextLine();
@@ -2000,7 +2106,6 @@ public class ManageMain extends javax.swing.JFrame {
                 line=input.nextLine();
             }
             jTextPane44.setText(text);
-            line=input.nextLine();
             
             text="";
             line=input.nextLine();
@@ -2009,7 +2114,6 @@ public class ManageMain extends javax.swing.JFrame {
                 line=input.nextLine();
             }
             jTextPane45.setText(text);
-            line=input.nextLine();
             
             text="";
             line=input.nextLine();
@@ -2091,6 +2195,7 @@ public class ManageMain extends javax.swing.JFrame {
                         idx++;
                     }
                 }
+        jTabbedPane3.setSelectedIndex(idx);
     }
 
     private void loadFinalReport(String path) {
@@ -2101,12 +2206,23 @@ public class ManageMain extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             System.out.println("There is no final report.");
         }
+        
         String line=input.nextLine();
+        while(!line.equals("***")){
+            text+=line;
+            line=input.nextLine();
+        }
+        jLabel64.setText(text);
+        
+        text="";
+        line=input.nextLine();
         while(!line.equals("***")){
             text+=line+"\n";
             line=input.nextLine();
         }
-        jTextArea1.setText(text);
+        if(!text.equals("\n")){
+            jTextArea1.setText(text);
+        }
         
         line=input.nextLine();
         jComboBox1.setSelectedItem(line);
@@ -2118,6 +2234,7 @@ public class ManageMain extends javax.swing.JFrame {
         
         jTabbedPane3.addTab(Integer.toString(idx+1), currentTreatment);
         idx++;
+        jTabbedPane3.setSelectedIndex(idx);
     }
 
     private void saveFinalReport() {
@@ -2130,6 +2247,8 @@ public class ManageMain extends javax.swing.JFrame {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        writer.println(jLabel64.getText());
+        writer.println("***");
         writer.println(jTextArea1.getText());
         writer.println("***");
         writer.println(jComboBox1.getSelectedItem().toString());

@@ -28,7 +28,7 @@ public class Controller {
     public int idNumber; 
     public String path="/home/robeszpierre/Desktop/Patients/";
     public String sex;
-    private MainFrame mainFrame;
+    public MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;
     private Questions newPatientQuestions;
     private MedicalHistory newPatientMedicalHistory;
@@ -49,6 +49,12 @@ public class Controller {
     public int avgManAge;
     public int sumOfWomanAge;
     public int avgWomanAge;
+    
+    public int treatmentInProgress;
+    public int healed;
+    public int partiallyHealed;
+    public int notHealed;
+    public int other;
     
     public void start(){
         mainFrame=new MainFrame();
@@ -183,6 +189,8 @@ public class Controller {
         newPatientPsychologicalAnamnesis.save(path);
         newPatientDiagnose.save(path);
         newPatientPulse.save(path);
+        
+        treatmentInProgress++;
               
         PrintWriter writer;
         try {
@@ -202,28 +210,13 @@ public class Controller {
             System.out.println("Can't make final report txt");
         }
         writer2.println("***");
+        writer2.println("***");
         writer2.println("────────");
         writer2.println("***");
         
         writer2.close();
         
-        PrintWriter writer3=null;
-        try {
-            writer3 = new PrintWriter(path+"statistic.txt");
-            writer3.println(numOfPatients);
-            writer3.println(numOfMan);
-            writer3.println(numOfWoman);
-            writer3.println(sumOfAge);
-            writer3.println(avgAge);
-            writer3.println(sumOfManAge);
-            writer3.println(avgManAge);
-            writer3.println(sumOfWomanAge);
-            writer3.println(avgWomanAge);
-        } catch (FileNotFoundException ex) {
-            System.out.println("Can't make final report txt");
-        }
-
-        writer3.close();
+        saveStatistic();
         
         File directory = new File(path+idNumber+File.separatorChar+"Treatments");
         directory.mkdir();
@@ -243,11 +236,13 @@ public class Controller {
             numOfMan=Integer.parseInt(input.nextLine());
             numOfWoman=Integer.parseInt(input.nextLine());
             sumOfAge=Integer.parseInt(input.nextLine());
-            avgAge=Integer.parseInt(input.nextLine());
             sumOfManAge=Integer.parseInt(input.nextLine());
-            avgManAge=Integer.parseInt(input.nextLine());
             sumOfWomanAge=Integer.parseInt(input.nextLine());
-            avgWomanAge=Integer.parseInt(input.nextLine());
+            treatmentInProgress=Integer.parseInt(input.nextLine());
+            healed=Integer.parseInt(input.nextLine());
+            partiallyHealed=Integer.parseInt(input.nextLine());
+            notHealed=Integer.parseInt(input.nextLine());
+            other=Integer.parseInt(input.nextLine());
             
             input.close();
         } catch (FileNotFoundException ex) {
@@ -255,15 +250,37 @@ public class Controller {
         }
     }
 
-    void countAvg() {
+    public void countAvg() {
         avgAge=sumOfAge/numOfPatients;
         try{
             avgManAge=sumOfManAge/numOfMan;
         }catch(Exception e){
         }
         try{
-            avgWomanAge=numOfWoman;
+            avgWomanAge=sumOfWomanAge/numOfWoman;
         }catch(Exception e){
         }
+    }
+
+    public void saveStatistic() {
+        PrintWriter writer3=null;
+        try {
+            writer3 = new PrintWriter(path+"statistic.txt");
+            writer3.println(numOfPatients);
+            writer3.println(numOfMan);
+            writer3.println(numOfWoman);
+            writer3.println(sumOfAge);
+            writer3.println(sumOfManAge);
+            writer3.println(sumOfWomanAge);
+            writer3.println(treatmentInProgress);
+            writer3.println(healed);
+            writer3.println(partiallyHealed);
+            writer3.println(notHealed);
+            writer3.println(other);
+        } catch (FileNotFoundException ex) {
+            System.out.println("Can't make statistic.txt");
+        }
+
+        writer3.close();
     }
 }

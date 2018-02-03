@@ -3,12 +3,19 @@ package Main;
 import ManagePatient.ManageMain;
 import ManagePatient.SelectPatient;
 import NewPatient.Controller;
+import Statistic.Statistic;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /*
@@ -46,6 +53,22 @@ public class MainFrame extends javax.swing.JFrame {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        
+        
+        BufferedImage img=null;   
+        Image dimg=null;
+        try{
+            img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"main.jpg"));
+            dimg = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),
+            Image.SCALE_SMOOTH);
+        }catch(Exception e){
+                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+        }
+        
+        ImageIcon icon=new ImageIcon(dimg);
+        jLabel1.setIcon(icon);
+
+        
           
     }
 
@@ -61,6 +84,8 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel = new javax.swing.JPanel();
         newPatientButton = new javax.swing.JButton();
         existingPatientButton = new javax.swing.JButton();
+        statisticButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Beteg nyílvántartó");
@@ -68,9 +93,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         mainPanel.setBackground(new java.awt.Color(146, 146, 146));
         mainPanel.setPreferredSize(new java.awt.Dimension(800, 400));
+        mainPanel.setLayout(null);
 
         newPatientButton.setBackground(new java.awt.Color(0, 0, 0));
-        newPatientButton.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        newPatientButton.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         newPatientButton.setForeground(new java.awt.Color(255, 255, 255));
         newPatientButton.setText("Új beteg felvétele");
         newPatientButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -78,9 +104,11 @@ public class MainFrame extends javax.swing.JFrame {
                 newPatientButtonMouseClicked(evt);
             }
         });
+        mainPanel.add(newPatientButton);
+        newPatientButton.setBounds(120, 100, 240, 100);
 
         existingPatientButton.setBackground(new java.awt.Color(0, 0, 0));
-        existingPatientButton.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        existingPatientButton.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         existingPatientButton.setForeground(new java.awt.Color(255, 255, 255));
         existingPatientButton.setText("Betegek kezelése");
         existingPatientButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,37 +116,32 @@ public class MainFrame extends javax.swing.JFrame {
                 existingPatientButtonMouseClicked(evt);
             }
         });
+        mainPanel.add(existingPatientButton);
+        existingPatientButton.setBounds(120, 260, 240, 100);
 
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(newPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
-                .addComponent(existingPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(126, 126, 126))
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap(90, Short.MAX_VALUE)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(newPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(existingPatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(110, 110, 110))
-        );
+        statisticButton.setBackground(new java.awt.Color(0, 0, 0));
+        statisticButton.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        statisticButton.setForeground(new java.awt.Color(255, 255, 255));
+        statisticButton.setText("Statisztika");
+        statisticButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                statisticButtonMouseClicked(evt);
+            }
+        });
+        mainPanel.add(statisticButton);
+        statisticButton.setBounds(1020, 580, 240, 100);
+        mainPanel.add(jLabel1);
+        jLabel1.setBounds(0, 0, 1370, 770);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1366, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
         );
 
         pack();
@@ -133,14 +156,25 @@ public class MainFrame extends javax.swing.JFrame {
         selectPatient.setVisible(true);
     }//GEN-LAST:event_existingPatientButtonMouseClicked
 
+    private void statisticButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_statisticButtonMouseClicked
+        Statistic statistic = new Statistic();
+        statistic.setVisible(true);
+    }//GEN-LAST:event_statisticButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
+    
+    
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton existingPatientButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton newPatientButton;
+    private javax.swing.JButton statisticButton;
     // End of variables declaration//GEN-END:variables
+
+    
 }
