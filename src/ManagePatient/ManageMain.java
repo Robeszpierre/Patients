@@ -67,7 +67,19 @@ public class ManageMain extends javax.swing.JFrame {
         loadTongue(path);
         loadEar(path);
 
-        
+        Controller.controller.treatmentInProgress++;
+        String debugStat=jComboBox1.getSelectedItem().toString();
+        if(debugStat.equals("────────")){
+             Controller.controller.treatmentInProgress--;
+        }else if(debugStat.equals("gyógyult")){
+             Controller.controller.healed--;
+        }else if(debugStat.equals("részben gyógyult")){
+             Controller.controller.partiallyHealed--;
+        }else if(debugStat.equals("nem gyógyult")){
+             Controller.controller.notHealed--;
+        }else if(debugStat.equals("egyéb")){
+             Controller.controller.other--;
+        }
     }
 
     /**
@@ -1427,6 +1439,12 @@ public class ManageMain extends javax.swing.JFrame {
                Controller.controller.other++;
            }
         }
+        
+        System.out.println("folyamatban "+Controller.controller.treatmentInProgress);
+        System.out.println("gyógyult "+Controller.controller.healed);
+        System.out.println("részben gyógyult "+Controller.controller.partiallyHealed);
+        System.out.println("nem gyógyult "+Controller.controller.notHealed);
+        System.out.println("egyéb "+Controller.controller.other);
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
