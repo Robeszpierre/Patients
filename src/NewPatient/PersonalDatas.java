@@ -220,10 +220,8 @@ public class PersonalDatas extends javax.swing.JFrame {
         try{
             patientBirthAge=Integer.parseInt(jTextField2.getText());
         }catch(Exception e){
-            patientBirthAge=0;
+            patientBirthAge=1960;
         }
-        
-        System.out.println(patientBirthAge);
         
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy");
         LocalDateTime dateTime = LocalDateTime.now();

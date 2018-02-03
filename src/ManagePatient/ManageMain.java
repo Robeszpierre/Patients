@@ -1439,12 +1439,6 @@ public class ManageMain extends javax.swing.JFrame {
                Controller.controller.other++;
            }
         }
-        
-        System.out.println("folyamatban "+Controller.controller.treatmentInProgress);
-        System.out.println("gyógyult "+Controller.controller.healed);
-        System.out.println("részben gyógyult "+Controller.controller.partiallyHealed);
-        System.out.println("nem gyógyult "+Controller.controller.notHealed);
-        System.out.println("egyéb "+Controller.controller.other);
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
