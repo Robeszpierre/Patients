@@ -109,13 +109,13 @@ public class Pulse extends javax.swing.JFrame {
 
         jLabel6.setText("JOBB");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "felületes", "közép", "mély" }));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "gyors", "normális", "lassú" }));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
+        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "szabályos", "kihagyó" }));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -127,29 +127,29 @@ public class Pulse extends javax.swing.JFrame {
             }
         });
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
+        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "felületes", "közép", "mély" }));
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
+        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "gyors", "normális", "lassú" }));
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
+        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
+        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "szabályos", "kihagyó" }));
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "felületes", "közép", "mély" }));
 
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "gyors", "normális", "lassú" }));
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
+        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
+        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "szabályos", "kihagyó" }));
 
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
+        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "felületes", "közép", "mély" }));
 
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
+        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "gyors", "normális", "lassú" }));
 
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
+        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
+        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "szabályos", "kihagyó" }));
 
         jLabel7.setText("Mélység");
 
@@ -159,21 +159,21 @@ public class Pulse extends javax.swing.JFrame {
 
         jLabel10.setText("Ritmus");
 
-        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
+        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "felületes", "közép", "mély" }));
 
-        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
+        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "gyors", "normális", "lassú" }));
 
-        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
+        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
+        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "szabályos", "kihagyó" }));
 
-        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "felületes", "közép", "mély" }));
+        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "felületes", "közép", "mély" }));
 
-        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "gyors", "normális", "lassú" }));
+        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "gyors", "normális", "lassú" }));
 
-        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "erőteljes", "normális", "gyenge" }));
+        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "erőteljes", "normális", "gyenge" }));
 
-        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szabályos", "kihagyó" }));
+        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────", "szabályos", "kihagyó" }));
 
         jLabel11.setText("1 (T):");
 
