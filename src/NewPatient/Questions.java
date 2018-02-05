@@ -882,6 +882,7 @@ public class Questions extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Kikérdező lap");
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
@@ -3355,13 +3356,13 @@ public class Questions extends javax.swing.JFrame {
                                                 .addComponent(jRadioButton315))
                                             .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(95, 95, 95))
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addGap(79, 79, 79)
-                                                        .addComponent(jLabel78)))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                            .addGap(79, 79, 79)
+                                                            .addComponent(jLabel78)))
+                                                    .addGap(16, 16, 16))
                                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                                     .addGap(79, 79, 79)
                                                     .addComponent(jLabel123)))))
