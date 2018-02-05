@@ -26,7 +26,7 @@ public class Controller {
     
     static public Controller controller=new Controller();
     public int idNumber; 
-    public String path="C:\\Users\\Robeszpierre\\Desktop\\";
+    public String path="/home/robeszpierre/Desktop/Patients/";
     public String sex;
     public MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;

@@ -5581,7 +5581,7 @@ public class Questions extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         save(Controller.controller.path);
-        this.dispose();
+        this.setVisible(false);
         new ManageMain(Controller.controller.idNumber);
     }//GEN-LAST:event_jButton1MouseClicked
 

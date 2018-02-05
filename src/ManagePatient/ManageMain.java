@@ -1378,11 +1378,11 @@ public class ManageMain extends javax.swing.JFrame {
             }
             Controller.controller.setSex(line);
             Controller.controller.idNumber=idNumber;
+            this.setVisible(false);
             Questions q=new Questions();
             q.load(idNumber);
             q.setVisible(true);
             q.hideComponents();
-            this.dispose();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }
