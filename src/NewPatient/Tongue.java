@@ -1,8 +1,10 @@
 package NewPatient;
 
 
+import ManagePatient.ManageMain;
 import com.sun.org.apache.bcel.internal.generic.DDIV;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.dnd.DropTarget;
 import java.awt.image.BufferedImage;
@@ -11,9 +13,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -32,6 +36,7 @@ public class Tongue extends javax.swing.JFrame {
      */
     public Tongue() {
         initComponents();
+        jButton3.setVisible(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2); 
         
@@ -59,6 +64,7 @@ public class Tongue extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Nyelv");
@@ -101,6 +107,7 @@ public class Tongue extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel2.setText("Jellemzés");
 
         jScrollPane1.setViewportView(jTextPane1);
@@ -112,6 +119,16 @@ public class Tongue extends javax.swing.JFrame {
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
+            }
+        });
+
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Módosítások mentése");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
             }
         });
 
@@ -133,7 +150,9 @@ public class Tongue extends javax.swing.JFrame {
                                 .addComponent(pathLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 370, Short.MAX_VALUE)
+                        .addGap(84, 84, 84)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8)))
                 .addContainerGap(18, Short.MAX_VALUE))
@@ -150,11 +169,12 @@ public class Tongue extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -186,11 +206,22 @@ public class Tongue extends javax.swing.JFrame {
         Controller.controller.mainFrame.setVisible(true);
     }//GEN-LAST:event_formWindowClosed
 
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        try {
+            save(Controller.controller.path);
+        } catch (IOException ex) {
+            Logger.getLogger(Tongue.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.setVisible(false);
+        new ManageMain(Controller.controller.idNumber);
+    }//GEN-LAST:event_jButton3MouseClicked
+
     private DragListener drag;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imageLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -218,5 +249,36 @@ public class Tongue extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    public void changeButtons() {
+        jButton1.setVisible(false);
+        jButton2.setVisible(false);
+        jButton3.setVisible(true);
+    }
+
+    public void load(int idNumber) {
+        try {
+            Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"tongue.txt"));
+            String text="";
+            while(input.hasNext()){
+                text+=input.nextLine()+"\n";
+            }
+            jTextPane1.setText(text);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        BufferedImage img=null;   
+        Image dimg=null;
+        try{
+            img=ImageIO.read(new File(Controller.controller.path+idNumber+File.separatorChar+"tongue.jpg"));
+            dimg = img.getScaledInstance(imageLabel.getWidth(), imageLabel.getHeight(),
+            Image.SCALE_SMOOTH);
+        }catch(Exception e){
+                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+        }
+        
+        ImageIcon icon=new ImageIcon(dimg);
+        imageLabel.setIcon(icon);
     }
 }

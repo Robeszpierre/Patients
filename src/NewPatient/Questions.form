@@ -290,15 +290,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel129" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel153" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jSpinner5" min="-2" pref="64" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel129" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
@@ -310,37 +302,44 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jRadioButton318" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel124" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton313" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton314" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton315" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel121" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="jSpinner3" min="-2" pref="70" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel124" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Component id="jLabel121" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="jLabel122" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                                                      </Group>
                                                   </Group>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Component id="jLabel122" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                                      <Component id="jSpinner4" min="-2" pref="70" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton313" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton314" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton315" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jSpinner4" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="jSpinner3" min="-2" pref="70" max="-2" attributes="0"/>
+                                                              <EmptySpace min="95" pref="95" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                                                              <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                                                          <Component id="jLabel123" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
                                                   </Group>
                                               </Group>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabel126" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jRadioButton319" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton320" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton321" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel130" min="-2" max="-2" attributes="0"/>
@@ -350,6 +349,33 @@
                                               <Component id="jRadioButton323" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jRadioButton324" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLabel126" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jLabel128" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="jRadioButton319" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton320" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton321" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="jLabel153" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="jSpinner5" min="-2" pref="64" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -362,24 +388,10 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel154" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jSpinner6" min="-2" pref="60" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel127" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel123" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jLabel128" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabel78" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="jLabel127" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -1163,7 +1175,7 @@
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jTextField45" pref="152" max="32767" attributes="0"/>
+                                                  <Component id="jTextField45" pref="177" max="32767" attributes="0"/>
                                                   <Component id="jTextField46" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -1404,7 +1416,6 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="jLabel52" min="-2" pref="188" max="-2" attributes="0"/>
                                                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -1659,7 +1670,7 @@
                                                       <Component id="jTextField44" min="-2" pref="149" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -1695,8 +1706,9 @@
                                               <Component id="jLabel157" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel169" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel46" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="972" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -3136,13 +3148,16 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Fej"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Arc sz&#xed;ne:"/>
               </Properties>
             </Component>
@@ -3158,6 +3173,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fejf&#xe1;j&#xe1;s:"/>
               </Properties>
             </Component>
@@ -3184,16 +3202,25 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Helye/&#xe9;rintett meridi&#xe1;nok:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Jellege:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyakoris&#xe1;ga:"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[100, 15]"/>
@@ -3202,6 +3229,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fej f&#xe1;z&#xe9;konys&#xe1;ga"/>
               </Properties>
             </Component>
@@ -3234,7 +3264,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Sz&#xe9;d&#xfc;l&#xe9;s:"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sz&#xe9;d&#xfc;l&#xe9;s"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton4">
@@ -3266,6 +3299,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Elalv&#xe1;s zavara"/>
               </Properties>
             </Component>
@@ -3298,6 +3334,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc1;talv&#xe1;s zavara"/>
               </Properties>
             </Component>
@@ -3342,6 +3381,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mem&#xf3;ria roml&#xe1;sa"/>
               </Properties>
             </Component>
@@ -3374,6 +3416,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hajhull&#xe1;s"/>
               </Properties>
             </Component>
@@ -3406,6 +3451,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Korai &#x151;sz&#xfc;l&#xe9;s"/>
               </Properties>
             </Component>
@@ -3438,6 +3486,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel16">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe1;raz haj"/>
               </Properties>
             </Component>
@@ -3470,6 +3521,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel17">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hom&#xe1;lyos l&#xe1;t&#xe1;s"/>
               </Properties>
             </Component>
@@ -3502,6 +3556,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe1;raz szem"/>
               </Properties>
             </Component>
@@ -3534,6 +3591,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel19">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="V&#xf6;r&#xf6;s szem"/>
               </Properties>
             </Component>
@@ -3566,6 +3626,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Karik&#xe1;s, m&#xe9;lyen &#xfc;l&#x151; szem"/>
               </Properties>
             </Component>
@@ -3598,6 +3661,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel21">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="S&#xf6;t&#xe9;tben rosszabbul l&#xe1;t&#xe1;s"/>
               </Properties>
             </Component>
@@ -3630,6 +3696,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel22">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xfc;lz&#xfa;g&#xe1;s"/>
               </Properties>
             </Component>
@@ -3662,6 +3731,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel23">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nagyothall&#xe1;s"/>
               </Properties>
             </Component>
@@ -3694,6 +3766,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel24">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Laza fogak"/>
               </Properties>
             </Component>
@@ -3726,7 +3801,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
               <Properties>
-                <Property name="text" type="java.lang.String" value="&#xcd;gygyullad&#xe1;s, afta, herpesz"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#xcd;nygyullad&#xe1;s, afta, herpesz"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JRadioButton" name="jRadioButton49">
@@ -3758,6 +3836,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kellemetlen sz&#xe1;jszag"/>
               </Properties>
             </Component>
@@ -3790,6 +3871,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel27">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Savas b&#xf6;f&#xf6;g&#xe9;s"/>
               </Properties>
             </Component>
@@ -3822,6 +3906,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel28">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Orcap&#xed;r"/>
               </Properties>
             </Component>
@@ -3854,6 +3941,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel29">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="V&#xf6;r&#xf6;s arc"/>
               </Properties>
             </Component>
@@ -3886,6 +3976,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel30">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe1;raz sz&#xe1;j-torok"/>
               </Properties>
             </Component>
@@ -3919,13 +4012,16 @@
             <Component class="javax.swing.JLabel" name="jLabel31">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Mellkas"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel32">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xed;vdobog&#xe1;s nyugalomban"/>
               </Properties>
             </Component>
@@ -3958,6 +4054,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel33">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Terhel&#xe9;sre roml&#xf3; l&#xe9;gszomj"/>
               </Properties>
             </Component>
@@ -3990,6 +4089,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel34">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Er&#x151;tlen hang"/>
               </Properties>
             </Component>
@@ -4022,6 +4124,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel35">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Rekedt hang"/>
               </Properties>
             </Component>
@@ -4054,6 +4159,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel36">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Besz&#xe9;d ker&#xfc;l&#xe9;se"/>
               </Properties>
             </Component>
@@ -4086,6 +4194,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel37">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hajlam megf&#xe1;z&#xe1;sra"/>
               </Properties>
             </Component>
@@ -4118,6 +4229,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel38">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe9;l-ker&#xfc;l&#xe9;s"/>
               </Properties>
             </Component>
@@ -4150,6 +4264,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel39">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe1;raz k&#xf6;h&#xf6;g&#xe9;s"/>
               </Properties>
             </Component>
@@ -4182,6 +4299,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel40">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Asztm&#xe1;s k&#xf6;h&#xf6;g&#xe9;s"/>
               </Properties>
             </Component>
@@ -4214,6 +4334,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel41">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="K&#xf6;pet"/>
               </Properties>
             </Component>
@@ -4246,6 +4369,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel42">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mellkasi telts&#xe9;g&#xe9;rzet"/>
               </Properties>
             </Component>
@@ -4278,6 +4404,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel43">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mellkasi f&#xe1;jdalom"/>
               </Properties>
             </Component>
@@ -4310,6 +4439,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel44">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mellfesz&#xfc;l&#xe9;s"/>
               </Properties>
             </Component>
@@ -4342,6 +4474,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel45">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hideg kezek"/>
               </Properties>
             </Component>
@@ -4382,13 +4517,16 @@
             <Component class="javax.swing.JLabel" name="jLabel46">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Has"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel47">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Rossz &#xe9;tv&#xe1;gy"/>
               </Properties>
             </Component>
@@ -4421,6 +4559,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel48">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xcd;z&#xe9;rz&#xe9;s zavara"/>
               </Properties>
             </Component>
@@ -4453,6 +4594,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel49">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hasi fesz&#xfc;l&#xe9;s &#xe9;tkez&#xe9;s ut&#xe1;n"/>
               </Properties>
             </Component>
@@ -4485,6 +4629,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel50">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Puffad&#xe1;s"/>
               </Properties>
             </Component>
@@ -4517,6 +4664,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel51">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xe1;rad&#xe9;konys&#xe1;g"/>
               </Properties>
             </Component>
@@ -4549,6 +4699,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel52">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hajlam fogy&#xe1;sra/h&#xed;z&#xe1;sra"/>
               </Properties>
             </Component>
@@ -4581,6 +4734,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel53">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyomort&#xe1;ji &#xe9;g&#x151; &#xe9;rz&#xe9;s + nem k&#xed;v&#xe1;n enni"/>
                 <Property name="toolTipText" type="java.lang.String" value="Gyomort&#xe1;ji &#xe9;g&#x151; &#xe9;rz&#xe9;s + nem k&#xed;v&#xe1;n enni"/>
               </Properties>
@@ -4614,6 +4770,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel54">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyomort&#xe1;ji &#xe9;g&#x151; &#xe9;rz&#xe9;s + szomj&#xfa;s&#xe1;g hideg italra"/>
                 <Property name="toolTipText" type="java.lang.String" value="Gyomort&#xe1;ji &#xe9;g&#x151; &#xe9;rz&#xe9;s + szomj&#xfa;s&#xe1;g hideg italra"/>
               </Properties>
@@ -4647,6 +4806,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel55">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc1;lland&#xf3; &#xe9;hs&#xe9;g"/>
               </Properties>
             </Component>
@@ -4679,6 +4841,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel56">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="H&#xe1;nyinger, h&#xe1;ny&#xe1;s"/>
               </Properties>
             </Component>
@@ -4711,6 +4876,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel57">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="B&#xf6;f&#xf6;g&#xe9;s, csuk&#xe1;s"/>
               </Properties>
             </Component>
@@ -4743,6 +4911,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel58">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe9;kreked&#xe9;s"/>
               </Properties>
             </Component>
@@ -4775,6 +4946,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel59">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hasmen&#xe9;s"/>
               </Properties>
             </Component>
@@ -4807,11 +4981,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel60">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sz&#xe9;klet"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel61">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;g&#x151; v&#xe9;gb&#xe9;lny&#xed;l&#xe1;s"/>
               </Properties>
             </Component>
@@ -4844,6 +5024,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel62">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="G&#xf6;rcs&#xf6;g hasi f&#xe1;jdalom"/>
               </Properties>
             </Component>
@@ -4876,6 +5059,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel63">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hidegre roml&#xf3; gyomort&#xe1;ji telts&#xe9;g/f&#xe1;jdalom"/>
                 <Property name="toolTipText" type="java.lang.String" value="Hidegre roml&#xf3; gyomort&#xe1;ji telts&#xe9;g/f&#xe1;jdalom"/>
               </Properties>
@@ -4908,6 +5094,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel64">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Aranyeress&#xe9;g"/>
               </Properties>
             </Component>
@@ -4940,6 +5129,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel65">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hideg hasalj"/>
               </Properties>
             </Component>
@@ -4972,6 +5164,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel66">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hideg orrcs&#xfa;cs"/>
               </Properties>
             </Component>
@@ -5004,6 +5199,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel67">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Aggodalmaskod&#xe1;s"/>
               </Properties>
             </Component>
@@ -5058,13 +5256,16 @@
             <Component class="javax.swing.JLabel" name="jLabel68">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="M&#xe1;j"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel69">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Izomg&#xf6;rcs&#xf6;k"/>
               </Properties>
             </Component>
@@ -5097,6 +5298,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel79">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Izomr&#xe1;ng&#xe1;s"/>
               </Properties>
             </Component>
@@ -5129,6 +5333,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel80">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ingerl&#xe9;kenys&#xe9;g"/>
               </Properties>
             </Component>
@@ -5161,6 +5368,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel81">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Lehangolt&#xe1;g"/>
               </Properties>
             </Component>
@@ -5193,6 +5403,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel82">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hull&#xe1;mz&#xf3; hangulat"/>
               </Properties>
             </Component>
@@ -5225,6 +5438,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel83">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="C&#xe9;ltalans&#xe1;g &#xe9;rzete"/>
               </Properties>
             </Component>
@@ -5257,6 +5473,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel84">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="D&#xfc;hkit&#xf6;r&#xe9;sek"/>
               </Properties>
             </Component>
@@ -5289,6 +5508,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel85">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fogcsikorgat&#xe1;s"/>
               </Properties>
             </Component>
@@ -5321,6 +5543,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel86">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="S&#xed;rva &#xe9;bred&#xe9;s"/>
               </Properties>
             </Component>
@@ -5344,6 +5569,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel87">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Borda&#xed;v alatt/mellkasi fesz&#xfc;l&#xe9;s"/>
                 <Property name="toolTipText" type="java.lang.String" value="Borda&#xed;v alatt/mellkasi fesz&#xfc;l&#xe9;s"/>
               </Properties>
@@ -5404,6 +5632,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel88">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Bordat&#xe1;ji &#xe9;g&#x151; &#xe9;rz&#xe9;s"/>
               </Properties>
             </Component>
@@ -5418,6 +5649,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel89">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Keser&#x171; sz&#xe1;j&#xed;z"/>
               </Properties>
             </Component>
@@ -5450,6 +5684,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel90">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="S&#xf3;hajtoz&#xe1;s"/>
               </Properties>
             </Component>
@@ -5491,6 +5728,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel91">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Duzzadt, &#xe9;g&#x151;, viszket&#x151; her&#xe9;k/nagyajkak"/>
                 <Property name="toolTipText" type="java.lang.String" value="Duzzadt, &#xe9;g&#x151;, viszket&#x151; her&#xe9;k/nagyajkak"/>
               </Properties>
@@ -5524,6 +5764,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel92">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gomb&#xf3;c&#xe9;rz&#xe9;s a torokban"/>
                 <Property name="toolTipText" type="java.lang.String" value="Gomb&#xf3;c&#xe9;rz&#xe9;s a torokban"/>
               </Properties>
@@ -5549,13 +5792,16 @@
             <Component class="javax.swing.JLabel" name="jLabel73">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Alhas"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel93">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyenge-&#xe9;rz&#xe9;keny der&#xe9;k"/>
               </Properties>
             </Component>
@@ -5588,6 +5834,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel94">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyenge-&#xe9;rz&#xe9;keny t&#xe9;rd"/>
               </Properties>
             </Component>
@@ -5620,11 +5869,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel95">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Napi folyad&#xe9;kbevitel"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel96">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Napk&#xf6;zbeni vizelet&#xfc;r&#xed;t&#xe9;sek sz&#xe1;ma"/>
               </Properties>
             </Component>
@@ -5659,6 +5914,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel97">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;jszakai vizel&#xe9;s"/>
               </Properties>
             </Component>
@@ -5725,6 +5983,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel98">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyenge vizeletsug&#xe1;r"/>
               </Properties>
             </Component>
@@ -5757,6 +6018,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel99">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Vizeletcsepeg&#xe9;s"/>
               </Properties>
             </Component>
@@ -5789,11 +6053,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel100">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;jszakai &#xe1;gybavizel&#xe9;s"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel101">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Megtorpan&#xf3; vizel&#xe9;s"/>
               </Properties>
             </Component>
@@ -5826,6 +6096,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel102">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Vizel&#xe9;s ut&#xe1;n nincs teljes ki&#xfc;r&#xfc;lts&#xe9;g-&#xe9;rzet"/>
               </Properties>
             </Component>
@@ -5858,6 +6131,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel103">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gyakori, s&#xfc;rget&#x151; vizel&#xe9;s"/>
               </Properties>
             </Component>
@@ -5890,6 +6166,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel104">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xe1;jdalmas vizel&#xe9;s"/>
               </Properties>
             </Component>
@@ -5922,6 +6201,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel105">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Zavaros vizelet"/>
               </Properties>
             </Component>
@@ -5954,6 +6236,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel106">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="V&#xe9;res vizelet"/>
               </Properties>
             </Component>
@@ -5986,6 +6271,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel107">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Alhasi telts&#xe9;g, f&#xe1;jdalom"/>
               </Properties>
             </Component>
@@ -6018,6 +6306,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel108">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Prosztata-gondok"/>
               </Properties>
             </Component>
@@ -6050,6 +6341,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel109">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;jszakai mag&#xf6;ml&#xe9;s"/>
               </Properties>
             </Component>
@@ -6082,6 +6376,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel110">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Korai mag&#xf6;ml&#xe9;s"/>
               </Properties>
             </Component>
@@ -6114,6 +6411,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel111">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Bokat&#xe1;ji vizeny&#x151;"/>
               </Properties>
             </Component>
@@ -6146,6 +6446,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel112">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Impotencia"/>
               </Properties>
             </Component>
@@ -6178,6 +6481,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel113">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Frigidit&#xe1;s"/>
               </Properties>
             </Component>
@@ -6210,6 +6516,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel114">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Medd&#x151;s&#xe9;g"/>
               </Properties>
             </Component>
@@ -6242,6 +6551,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel115">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Csontritkul&#xe1;s"/>
               </Properties>
             </Component>
@@ -6274,6 +6586,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel116">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hideg-f&#xe1;z&#xf3;s der&#xe9;k"/>
               </Properties>
             </Component>
@@ -6306,6 +6621,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel117">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hideg-f&#xe1;z&#xf3;s t&#xe9;rdek"/>
               </Properties>
             </Component>
@@ -6338,6 +6656,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel118">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hideg-f&#xe1;z&#xf3;s l&#xe1;bak"/>
               </Properties>
             </Component>
@@ -6370,6 +6691,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel119">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;jszakai izzad&#xe1;s"/>
               </Properties>
             </Component>
@@ -6429,19 +6753,25 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel120">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nappali h&#x151;hull&#xe1;mok"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel77">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Menses"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel121">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Els&#x151; menses"/>
               </Properties>
             </Component>
@@ -6454,6 +6784,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel122">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Utols&#xf3; menses"/>
               </Properties>
             </Component>
@@ -6466,6 +6799,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel124">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Szab&#xe1;lytalan menstru&#xe1;ci&#xf3;"/>
               </Properties>
             </Component>
@@ -6525,11 +6861,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel125">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xe1;jdalmas menstru&#xe1;ci&#xf3;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel126">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Csom&#xf3;s menstru&#xe1;ci&#xf3;s v&#xe9;r"/>
               </Properties>
             </Component>
@@ -6562,6 +6904,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel127">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="V&#xe9;rz&#xe9;s sz&#xed;ne"/>
               </Properties>
             </Component>
@@ -6601,6 +6946,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel129">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ciklus hossza"/>
               </Properties>
             </Component>
@@ -6621,6 +6969,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel130">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Premenstru&#xe1;ci&#xf3;s t&#xfc;netek"/>
               </Properties>
             </Component>
@@ -6654,13 +7005,16 @@
             <Component class="javax.swing.JLabel" name="jLabel131">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gerinc"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel132">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Melyik gerincszakaz/csigolya &#xe9;rintett"/>
               </Properties>
             </Component>
@@ -6668,6 +7022,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel133">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kisug&#xe1;rz&#xe1;s"/>
               </Properties>
             </Component>
@@ -6675,6 +7032,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel134">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xe1;jdalom jellege"/>
               </Properties>
             </Component>
@@ -6682,6 +7042,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel135">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mi rontja"/>
               </Properties>
             </Component>
@@ -6691,11 +7054,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel136">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mi jav&#xed;tja"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel137">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mozg&#xe1;skorl&#xe1;tozotts&#xe1;g"/>
               </Properties>
             </Component>
@@ -6714,6 +7083,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel138">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Der&#xe9;k f&#xe1;z&#xe9;kony-e"/>
               </Properties>
             </Component>
@@ -6732,6 +7104,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel139">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kor&#xe1;bbi s&#xe9;r&#xfc;l&#xe9;s"/>
               </Properties>
             </Component>
@@ -6739,6 +7114,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel140">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kor&#xe1;bbi m&#x171;t&#xe9;t"/>
               </Properties>
             </Component>
@@ -6747,13 +7125,16 @@
             <Component class="javax.swing.JLabel" name="jLabel141">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="V&#xe9;gtagok, iz&#xfc;letek"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel142">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Panasz helye"/>
               </Properties>
             </Component>
@@ -6761,6 +7142,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel143">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kisug&#xe1;rz&#xe1;s"/>
               </Properties>
             </Component>
@@ -6768,6 +7152,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel144">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xe1;jdalom jellege"/>
               </Properties>
             </Component>
@@ -6775,6 +7162,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel145">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;jszaka fenn&#xe1;ll-e a f&#xe1;jdalom"/>
               </Properties>
             </Component>
@@ -6793,6 +7183,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel147">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mi rontja?"/>
               </Properties>
             </Component>
@@ -6800,6 +7193,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel148">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mi jav&#xed;tja?"/>
               </Properties>
             </Component>
@@ -6807,6 +7203,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel146">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Mozg&#xe1;skorl&#xe1;tozotts&#xe1;g"/>
               </Properties>
             </Component>
@@ -6825,11 +7224,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel149">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b k&#xed;s&#xe9;r&#x151; t&#xfc;netek (pl. b&#x151;rp&#xed;r)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel150">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kor&#xe1;bbi s&#xe9;r&#xfc;l&#xe9;s"/>
               </Properties>
             </Component>
@@ -6839,6 +7244,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel151">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Kor&#xe1;bbi m&#x171;t&#xe9;t"/>
               </Properties>
             </Component>
@@ -6863,6 +7271,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel152">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="T&#xf6;r&#xe9;keny, puha k&#xf6;rm&#xf6;k"/>
               </Properties>
             </Component>
@@ -6902,6 +7313,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel154">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cikluson bel&#xfc;l h&#xe1;ny napos a v&#xe9;rz&#xe9;s"/>
               </Properties>
             </Component>
@@ -6909,6 +7323,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel155">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Panasz fenn&#xe1;ll&#xe1;s&#xe1;nak ideje"/>
               </Properties>
             </Component>
@@ -6916,6 +7333,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel156">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Panasz fenn&#xe1;ll&#xe1;s&#xe1;nak ideje"/>
               </Properties>
             </Component>
@@ -7950,7 +8370,7 @@
             <Component class="javax.swing.JLabel" name="jLabel158">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="3"/>
+                  <Font name="FreeSans" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
@@ -7962,7 +8382,7 @@
             <Component class="javax.swing.JLabel" name="jLabel160">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="3"/>
+                  <Font name="FreeSans" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
@@ -7970,7 +8390,7 @@
             <Component class="javax.swing.JLabel" name="jLabel161">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="3"/>
+                  <Font name="FreeSans" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
@@ -7982,7 +8402,7 @@
             <Component class="javax.swing.JLabel" name="jLabel159">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="3"/>
+                  <Font name="FreeSans" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
@@ -7994,7 +8414,7 @@
             <Component class="javax.swing.JLabel" name="jLabel162">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="12" style="3"/>
+                  <Font name="FreeSans" size="12" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
@@ -8005,6 +8425,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel163">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;rintett meridi&#xe1;n(ok)"/>
               </Properties>
             </Component>
@@ -8012,6 +8435,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel164">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;jszaka fenn&#xe1;ll-e a f&#xe1;jdalom"/>
               </Properties>
             </Component>
@@ -8030,6 +8456,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel165">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;rz&#xe9;keny (trigger, Ah Shi) pontok"/>
               </Properties>
             </Component>
@@ -8037,6 +8466,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel166">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;rintett meridi&#xe1;n(ok)"/>
               </Properties>
             </Component>
@@ -8046,11 +8478,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel167">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="&#xc9;rz&#xe9;keny (trigger, Ah Shi) pontok"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel168">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
             </Component>
@@ -8058,6 +8496,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel169">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
             </Component>
@@ -8149,6 +8590,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel180">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b:"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[100, 15]"/>
@@ -8164,11 +8608,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel181">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fejf&#xe1;j&#xe1;st rontja:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel182">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fejf&#xe1;j&#xe1;st jav&#xed;tja:"/>
               </Properties>
             </Component>
@@ -8188,6 +8638,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel183">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Korai r&#xe1;ncosod&#xe1;s"/>
               </Properties>
             </Component>
@@ -8230,7 +8683,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel184">
               <Properties>
-                <Property name="text" type="java.lang.String" value="gyakori mell&#xe9;k&#xfc;reg-gyullad&#xe1;s illetve gyakori f&#xfc;lgyullad&#xe1;s"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Gyakori mell&#xe9;k&#xfc;reg-gyullad&#xe1;s illetve gyakori f&#xfc;lgyullad&#xe1;s"/>
                 <Property name="toolTipText" type="java.lang.String" value="gyakori mell&#xe9;k&#xfc;reg-gyullad&#xe1;s illetve gyakori f&#xfc;lgyullad&#xe1;s"/>
               </Properties>
             </Component>
@@ -8310,12 +8766,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel185">
               <Properties>
-                <Property name="text" type="java.lang.String" value="k&#xf6;d&#xf6;ss&#xe9;g &#xe9;rz&#xe9;se illetve &#xfc;ress&#xe9;g&#xe9;rzet a fejben"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="K&#xf6;d&#xf6;ss&#xe9;g &#xe9;rz&#xe9;se illetve &#xfc;ress&#xe9;g&#xe9;rzet a fejben"/>
                 <Property name="toolTipText" type="java.lang.String" value="k&#xf6;d&#xf6;ss&#xe9;g &#xe9;rz&#xe9;se illetve &#xfc;ress&#xe9;g&#xe9;rzet a fejben"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel186">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="F&#xfc;lz&#xfa;g&#xe1;s"/>
               </Properties>
             </Component>
@@ -8352,7 +8814,7 @@
             <Component class="javax.swing.JLabel" name="jLabel187">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Medence"/>
               </Properties>
@@ -8374,6 +8836,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel188">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
             </Component>
@@ -8383,6 +8848,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel189">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Egy&#xe9;b"/>
               </Properties>
             </Component>
@@ -8406,13 +8874,16 @@
             <Component class="javax.swing.JLabel" name="jLabel190">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="14" style="1"/>
+                  <Font name="Dialog" size="14" style="3"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Farokcsont"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel191">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="FreeSans" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Panaszok szimmetrikusak-e?"/>
               </Properties>
             </Component>

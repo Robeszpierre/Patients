@@ -897,14 +897,16 @@ public class Questions extends javax.swing.JFrame {
         jPanel2.setMinimumSize(new java.awt.Dimension(500, 1500));
         jPanel2.setPreferredSize(new java.awt.Dimension(1366, 6800));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel2.setText("Fej");
 
+        jLabel3.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel3.setText("Arc színe:");
 
         jTextField1.setMinimumSize(new java.awt.Dimension(100, 23));
         jTextField1.setPreferredSize(new java.awt.Dimension(50, 28));
 
+        jLabel4.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel4.setText("Fejfájás:");
 
         jTextField2.setPreferredSize(new java.awt.Dimension(100, 26));
@@ -913,13 +915,17 @@ public class Questions extends javax.swing.JFrame {
 
         jTextField4.setPreferredSize(new java.awt.Dimension(100, 23));
 
+        jLabel5.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel5.setText("Helye/érintett meridiánok:");
 
+        jLabel6.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel6.setText("Jellege:");
 
+        jLabel7.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel7.setText("Gyakorisága:");
         jLabel7.setPreferredSize(new java.awt.Dimension(100, 15));
 
+        jLabel8.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel8.setText("Fej fázékonysága");
 
         buttonGroup1.add(jRadioButton1);
@@ -934,7 +940,8 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton3.setText("Gyakori");
         jRadioButton3.setActionCommand("2");
 
-        jLabel9.setText("Szédülés:");
+        jLabel9.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
+        jLabel9.setText("Szédülés");
 
         buttonGroup2.add(jRadioButton4);
         jRadioButton4.setText("Nem jellemző");
@@ -948,6 +955,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton6.setText("Gyakori");
         jRadioButton6.setActionCommand("2");
 
+        jLabel10.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel10.setText("Elalvás zavara");
 
         buttonGroup3.add(jRadioButton7);
@@ -962,6 +970,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton9.setText("Gyakori");
         jRadioButton9.setActionCommand("2");
 
+        jLabel11.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel11.setText("Átalvás zavara");
 
         buttonGroup4.add(jRadioButton10);
@@ -980,6 +989,7 @@ public class Questions extends javax.swing.JFrame {
 
         jTextField5.setPreferredSize(new java.awt.Dimension(100, 23));
 
+        jLabel13.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel13.setText("Memória romlása");
 
         buttonGroup5.add(jRadioButton13);
@@ -994,6 +1004,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton15.setText("Gyakori");
         jRadioButton15.setActionCommand("2");
 
+        jLabel14.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel14.setText("Hajhullás");
 
         buttonGroup6.add(jRadioButton16);
@@ -1008,6 +1019,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton18.setText("Gyakori");
         jRadioButton18.setActionCommand("2");
 
+        jLabel15.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel15.setText("Korai őszülés");
 
         buttonGroup7.add(jRadioButton19);
@@ -1022,6 +1034,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton21.setText("Gyakori");
         jRadioButton21.setActionCommand("2");
 
+        jLabel16.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel16.setText("Száraz haj");
 
         buttonGroup8.add(jRadioButton22);
@@ -1036,6 +1049,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton24.setText("Gyakori");
         jRadioButton24.setActionCommand("2");
 
+        jLabel17.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel17.setText("Homályos látás");
 
         buttonGroup9.add(jRadioButton25);
@@ -1050,6 +1064,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton27.setText("Gyakori");
         jRadioButton27.setActionCommand("2");
 
+        jLabel18.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel18.setText("Száraz szem");
 
         buttonGroup10.add(jRadioButton28);
@@ -1064,6 +1079,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton30.setText("Gyakori");
         jRadioButton30.setActionCommand("2");
 
+        jLabel19.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel19.setText("Vörös szem");
 
         buttonGroup11.add(jRadioButton31);
@@ -1078,6 +1094,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton33.setText("Gyakori");
         jRadioButton33.setActionCommand("2");
 
+        jLabel20.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel20.setText("Karikás, mélyen ülő szem");
 
         buttonGroup12.add(jRadioButton34);
@@ -1092,6 +1109,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton36.setText("Gyakori");
         jRadioButton36.setActionCommand("2");
 
+        jLabel21.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel21.setText("Sötétben rosszabbul látás");
 
         buttonGroup13.add(jRadioButton37);
@@ -1106,6 +1124,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton39.setText("Gyakori");
         jRadioButton39.setActionCommand("2");
 
+        jLabel22.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel22.setText("Fülzúgás");
 
         buttonGroup14.add(jRadioButton40);
@@ -1120,6 +1139,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton42.setText("Gyakori");
         jRadioButton42.setActionCommand("2");
 
+        jLabel23.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel23.setText("Nagyothallás");
 
         buttonGroup15.add(jRadioButton43);
@@ -1134,6 +1154,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton45.setText("Gyakori");
         jRadioButton45.setActionCommand("2");
 
+        jLabel24.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel24.setText("Laza fogak");
 
         buttonGroup16.add(jRadioButton46);
@@ -1148,7 +1169,8 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton48.setText("Gyakori");
         jRadioButton48.setActionCommand("2");
 
-        jLabel25.setText("Ígygyulladás, afta, herpesz");
+        jLabel25.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
+        jLabel25.setText("Ínygyulladás, afta, herpesz");
 
         buttonGroup17.add(jRadioButton49);
         jRadioButton49.setText("Nem jellemző");
@@ -1162,6 +1184,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton51.setText("Gyakori");
         jRadioButton51.setActionCommand("2");
 
+        jLabel26.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel26.setText("Kellemetlen szájszag");
 
         buttonGroup18.add(jRadioButton52);
@@ -1176,6 +1199,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton54.setText("Gyakori");
         jRadioButton54.setActionCommand("2");
 
+        jLabel27.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel27.setText("Savas böfögés");
 
         buttonGroup19.add(jRadioButton55);
@@ -1190,6 +1214,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton57.setText("Gyakori");
         jRadioButton57.setActionCommand("2");
 
+        jLabel28.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel28.setText("Orcapír");
 
         buttonGroup20.add(jRadioButton58);
@@ -1204,6 +1229,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton60.setText("Gyakori");
         jRadioButton60.setActionCommand("2");
 
+        jLabel29.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel29.setText("Vörös arc");
 
         buttonGroup21.add(jRadioButton61);
@@ -1218,6 +1244,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton63.setText("Gyakori");
         jRadioButton63.setActionCommand("2");
 
+        jLabel30.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel30.setText("Száraz száj-torok");
 
         buttonGroup22.add(jRadioButton64);
@@ -1232,9 +1259,10 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton66.setText("Gyakori");
         jRadioButton66.setActionCommand("2");
 
-        jLabel31.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel31.setText("Mellkas");
 
+        jLabel32.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel32.setText("Szívdobogás nyugalomban");
 
         buttonGroup23.add(jRadioButton67);
@@ -1249,6 +1277,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton69.setText("Gyakori");
         jRadioButton69.setActionCommand("2");
 
+        jLabel33.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel33.setText("Terhelésre romló légszomj");
 
         buttonGroup24.add(jRadioButton70);
@@ -1263,6 +1292,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton72.setText("Gyakori");
         jRadioButton72.setActionCommand("2");
 
+        jLabel34.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel34.setText("Erőtlen hang");
 
         buttonGroup25.add(jRadioButton73);
@@ -1277,6 +1307,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton75.setText("Gyakori");
         jRadioButton75.setActionCommand("2");
 
+        jLabel35.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel35.setText("Rekedt hang");
 
         buttonGroup26.add(jRadioButton76);
@@ -1291,6 +1322,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton78.setText("Gyakori");
         jRadioButton78.setActionCommand("2");
 
+        jLabel36.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel36.setText("Beszéd kerülése");
 
         buttonGroup27.add(jRadioButton79);
@@ -1305,6 +1337,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton81.setText("Gyakori");
         jRadioButton81.setActionCommand("2");
 
+        jLabel37.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel37.setText("Hajlam megfázásra");
 
         buttonGroup28.add(jRadioButton82);
@@ -1319,6 +1352,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton84.setText("Gyakori");
         jRadioButton84.setActionCommand("2");
 
+        jLabel38.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel38.setText("Szél-kerülés");
 
         buttonGroup29.add(jRadioButton85);
@@ -1333,6 +1367,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton87.setText("Gyakori");
         jRadioButton87.setActionCommand("2");
 
+        jLabel39.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel39.setText("Száraz köhögés");
 
         buttonGroup30.add(jRadioButton88);
@@ -1347,6 +1382,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton90.setText("Gyakori");
         jRadioButton90.setActionCommand("2");
 
+        jLabel40.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel40.setText("Asztmás köhögés");
 
         buttonGroup31.add(jRadioButton91);
@@ -1361,6 +1397,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton93.setText("Gyakori");
         jRadioButton93.setActionCommand("2");
 
+        jLabel41.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel41.setText("Köpet");
 
         buttonGroup32.add(jRadioButton94);
@@ -1375,6 +1412,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton96.setText("Gyakori");
         jRadioButton96.setActionCommand("2");
 
+        jLabel42.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel42.setText("Mellkasi teltségérzet");
 
         buttonGroup33.add(jRadioButton97);
@@ -1389,6 +1427,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton99.setText("Gyakori");
         jRadioButton99.setActionCommand("2");
 
+        jLabel43.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel43.setText("Mellkasi fájdalom");
 
         buttonGroup34.add(jRadioButton100);
@@ -1403,6 +1442,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton102.setText("Gyakori");
         jRadioButton102.setActionCommand("2");
 
+        jLabel44.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel44.setText("Mellfeszülés");
 
         buttonGroup35.add(jRadioButton103);
@@ -1417,6 +1457,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton105.setText("Gyakori");
         jRadioButton105.setActionCommand("2");
 
+        jLabel45.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel45.setText("Hideg kezek");
 
         buttonGroup36.add(jRadioButton106);
@@ -1433,9 +1474,10 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel1.setText("Színe");
 
-        jLabel46.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel46.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel46.setText("Has");
 
+        jLabel47.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel47.setText("Rossz étvágy");
 
         buttonGroup37.add(jRadioButton109);
@@ -1450,6 +1492,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton111.setText("Gyakori");
         jRadioButton111.setActionCommand("2");
 
+        jLabel48.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel48.setText("Ízérzés zavara");
 
         buttonGroup38.add(jRadioButton112);
@@ -1464,6 +1507,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton114.setText("Gyakori");
         jRadioButton114.setActionCommand("2");
 
+        jLabel49.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel49.setText("Hasi feszülés étkezés után");
 
         buttonGroup39.add(jRadioButton115);
@@ -1478,6 +1522,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton117.setText("Gyakori");
         jRadioButton117.setActionCommand("2");
 
+        jLabel50.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel50.setText("Puffadás");
 
         buttonGroup40.add(jRadioButton118);
@@ -1492,6 +1537,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton120.setText("Gyakori");
         jRadioButton120.setActionCommand("2");
 
+        jLabel51.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel51.setText("Fáradékonyság");
 
         buttonGroup41.add(jRadioButton121);
@@ -1506,6 +1552,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton123.setText("Gyakori");
         jRadioButton123.setActionCommand("2");
 
+        jLabel52.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel52.setText("Hajlam fogyásra/hízásra");
 
         buttonGroup42.add(jRadioButton124);
@@ -1520,6 +1567,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton126.setText("Gyakori");
         jRadioButton126.setActionCommand("2");
 
+        jLabel53.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel53.setText("Gyomortáji égő érzés + nem kíván enni");
         jLabel53.setToolTipText("Gyomortáji égő érzés + nem kíván enni");
 
@@ -1535,6 +1583,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton129.setText("Gyakori");
         jRadioButton129.setActionCommand("2");
 
+        jLabel54.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel54.setText("Gyomortáji égő érzés + szomjúság hideg italra");
         jLabel54.setToolTipText("Gyomortáji égő érzés + szomjúság hideg italra");
 
@@ -1550,6 +1599,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton132.setText("Gyakori");
         jRadioButton132.setActionCommand("2");
 
+        jLabel55.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel55.setText("Állandó éhség");
 
         buttonGroup45.add(jRadioButton133);
@@ -1564,6 +1614,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton135.setText("Gyakori");
         jRadioButton135.setActionCommand("2");
 
+        jLabel56.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel56.setText("Hányinger, hányás");
 
         buttonGroup46.add(jRadioButton136);
@@ -1578,6 +1629,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton138.setText("Gyakori");
         jRadioButton138.setActionCommand("2");
 
+        jLabel57.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel57.setText("Böfögés, csukás");
 
         buttonGroup47.add(jRadioButton139);
@@ -1592,6 +1644,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton141.setText("Gyakori");
         jRadioButton141.setActionCommand("2");
 
+        jLabel58.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel58.setText("Székrekedés");
 
         buttonGroup48.add(jRadioButton142);
@@ -1606,6 +1659,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton144.setText("Gyakori");
         jRadioButton144.setActionCommand("2");
 
+        jLabel59.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel59.setText("Hasmenés");
 
         buttonGroup49.add(jRadioButton145);
@@ -1620,8 +1674,10 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton147.setText("Gyakori");
         jRadioButton147.setActionCommand("2");
 
+        jLabel60.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel60.setText("Széklet");
 
+        jLabel61.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel61.setText("Égő végbélnyílás");
 
         buttonGroup50.add(jRadioButton151);
@@ -1636,6 +1692,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton153.setText("Gyakori");
         jRadioButton153.setActionCommand("2");
 
+        jLabel62.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel62.setText("Görcsög hasi fájdalom");
 
         buttonGroup51.add(jRadioButton154);
@@ -1650,6 +1707,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton156.setText("Gyakori");
         jRadioButton156.setActionCommand("2");
 
+        jLabel63.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel63.setText("Hidegre romló gyomortáji teltség/fájdalom");
         jLabel63.setToolTipText("Hidegre romló gyomortáji teltség/fájdalom");
 
@@ -1664,6 +1722,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton159.setText("Gyakori");
         jRadioButton159.setActionCommand("2");
 
+        jLabel64.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel64.setText("Aranyeresség");
 
         buttonGroup53.add(jRadioButton160);
@@ -1678,6 +1737,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton162.setText("Gyakori");
         jRadioButton162.setActionCommand("2");
 
+        jLabel65.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel65.setText("Hideg hasalj");
 
         buttonGroup54.add(jRadioButton163);
@@ -1692,6 +1752,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton165.setText("Gyakori");
         jRadioButton165.setActionCommand("2");
 
+        jLabel66.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel66.setText("Hideg orrcsúcs");
 
         buttonGroup55.add(jRadioButton166);
@@ -1706,6 +1767,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton168.setText("Gyakori");
         jRadioButton168.setActionCommand("2");
 
+        jLabel67.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel67.setText("Aggodalmaskodás");
 
         buttonGroup56.add(jRadioButton169);
@@ -1726,9 +1788,10 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel72.setText("Szín");
 
-        jLabel68.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel68.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel68.setText("Máj");
 
+        jLabel69.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel69.setText("Izomgörcsök");
 
         buttonGroup57.add(jRadioButton172);
@@ -1743,6 +1806,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton174.setText("Gyakori");
         jRadioButton174.setActionCommand("2");
 
+        jLabel79.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel79.setText("Izomrángás");
 
         buttonGroup58.add(jRadioButton193);
@@ -1757,6 +1821,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton195.setText("Gyakori");
         jRadioButton195.setActionCommand("2");
 
+        jLabel80.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel80.setText("Ingerlékenység");
 
         buttonGroup59.add(jRadioButton196);
@@ -1771,6 +1836,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton198.setText("Gyakori");
         jRadioButton198.setActionCommand("2");
 
+        jLabel81.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel81.setText("Lehangoltág");
 
         buttonGroup60.add(jRadioButton199);
@@ -1785,6 +1851,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton201.setText("Gyakori");
         jRadioButton201.setActionCommand("2");
 
+        jLabel82.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel82.setText("Hullámzó hangulat");
 
         buttonGroup61.add(jRadioButton202);
@@ -1799,6 +1866,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton204.setText("Gyakori");
         jRadioButton204.setActionCommand("2");
 
+        jLabel83.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel83.setText("Céltalanság érzete");
 
         buttonGroup62.add(jRadioButton205);
@@ -1813,6 +1881,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton207.setText("Gyakori");
         jRadioButton207.setActionCommand("2");
 
+        jLabel84.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel84.setText("Dühkitörések");
 
         buttonGroup63.add(jRadioButton208);
@@ -1827,6 +1896,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton210.setText("Gyakori");
         jRadioButton210.setActionCommand("2");
 
+        jLabel85.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel85.setText("Fogcsikorgatás");
 
         buttonGroup64.add(jRadioButton211);
@@ -1841,6 +1911,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton213.setText("Gyakori");
         jRadioButton213.setActionCommand("2");
 
+        jLabel86.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel86.setText("Sírva ébredés");
 
         buttonGroup66.add(jRadioButton214);
@@ -1851,6 +1922,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton215.setText("Nem jellemző");
         jRadioButton215.setActionCommand("0");
 
+        jLabel87.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel87.setText("Bordaív alatt/mellkasi feszülés");
         jLabel87.setToolTipText("Bordaív alatt/mellkasi feszülés");
 
@@ -1878,12 +1950,14 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton221.setText("Nem jellemző");
         jRadioButton221.setActionCommand("0");
 
+        jLabel88.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel88.setText("Bordatáji égő érzés");
 
         buttonGroup66.add(jRadioButton222);
         jRadioButton222.setText("Gyakori");
         jRadioButton222.setActionCommand("2");
 
+        jLabel89.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel89.setText("Keserű szájíz");
 
         buttonGroup68.add(jRadioButton223);
@@ -1898,6 +1972,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton225.setText("Nem jellemző");
         jRadioButton225.setActionCommand("0");
 
+        jLabel90.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel90.setText("Sóhajtozás");
 
         buttonGroup69.add(jRadioButton226);
@@ -1916,6 +1991,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton229.setText("Nem jellemző");
         jRadioButton229.setActionCommand("0");
 
+        jLabel91.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel91.setText("Duzzadt, égő, viszkető herék/nagyajkak");
         jLabel91.setToolTipText("Duzzadt, égő, viszkető herék/nagyajkak");
 
@@ -1931,6 +2007,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton232.setText("Nem jellemző");
         jRadioButton232.setActionCommand("0");
 
+        jLabel92.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel92.setText("Gombócérzés a torokban");
         jLabel92.setToolTipText("Gombócérzés a torokban");
 
@@ -1942,9 +2019,10 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton234.setText("Ritka");
         jRadioButton234.setActionCommand("1");
 
-        jLabel73.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel73.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel73.setText("Alhas");
 
+        jLabel93.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel93.setText("Gyenge-érzékeny derék");
 
         buttonGroup72.add(jRadioButton235);
@@ -1959,6 +2037,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton237.setText("Gyakori");
         jRadioButton237.setActionCommand("2");
 
+        jLabel94.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel94.setText("Gyenge-érzékeny térd");
 
         buttonGroup73.add(jRadioButton238);
@@ -1973,8 +2052,10 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton240.setText("Gyakori");
         jRadioButton240.setActionCommand("2");
 
+        jLabel95.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel95.setText("Napi folyadékbevitel");
 
+        jLabel96.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel96.setText("Napközbeni vizeletürítések száma");
 
         jLabel74.setText("Mennyiség:");
@@ -1983,6 +2064,7 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel75.setText("liter");
 
+        jLabel97.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel97.setText("Éjszakai vizelés");
 
         buttonGroup74.add(jRadioButton241);
@@ -2011,6 +2093,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton246.setText("Gyakori");
         jRadioButton246.setActionCommand("2");
 
+        jLabel98.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel98.setText("Gyenge vizeletsugár");
 
         buttonGroup76.add(jRadioButton247);
@@ -2025,6 +2108,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton249.setText("Gyakori");
         jRadioButton249.setActionCommand("2");
 
+        jLabel99.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel99.setText("Vizeletcsepegés");
 
         buttonGroup77.add(jRadioButton250);
@@ -2039,8 +2123,10 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton252.setText("Gyakori");
         jRadioButton252.setActionCommand("2");
 
+        jLabel100.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel100.setText("Éjszakai ágybavizelés");
 
+        jLabel101.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel101.setText("Megtorpanó vizelés");
 
         buttonGroup78.add(jRadioButton253);
@@ -2055,6 +2141,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton255.setText("Gyakori");
         jRadioButton255.setActionCommand("2");
 
+        jLabel102.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel102.setText("Vizelés után nincs teljes kiürültség-érzet");
 
         buttonGroup79.add(jRadioButton256);
@@ -2069,6 +2156,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton258.setText("Gyakori");
         jRadioButton258.setActionCommand("2");
 
+        jLabel103.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel103.setText("Gyakori, sürgető vizelés");
 
         buttonGroup80.add(jRadioButton259);
@@ -2083,6 +2171,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton261.setText("Gyakori");
         jRadioButton261.setActionCommand("2");
 
+        jLabel104.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel104.setText("Fájdalmas vizelés");
 
         buttonGroup81.add(jRadioButton262);
@@ -2097,6 +2186,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton264.setText("Gyakori");
         jRadioButton264.setActionCommand("2");
 
+        jLabel105.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel105.setText("Zavaros vizelet");
 
         buttonGroup82.add(jRadioButton265);
@@ -2111,6 +2201,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton267.setText("Gyakori");
         jRadioButton267.setActionCommand("2");
 
+        jLabel106.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel106.setText("Véres vizelet");
 
         buttonGroup83.add(jRadioButton268);
@@ -2125,6 +2216,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton270.setText("Gyakori");
         jRadioButton270.setActionCommand("2");
 
+        jLabel107.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel107.setText("Alhasi teltség, fájdalom");
 
         buttonGroup84.add(jRadioButton271);
@@ -2139,6 +2231,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton273.setText("Gyakori");
         jRadioButton273.setActionCommand("2");
 
+        jLabel108.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel108.setText("Prosztata-gondok");
 
         buttonGroup85.add(jRadioButton274);
@@ -2153,6 +2246,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton276.setText("Gyakori");
         jRadioButton276.setActionCommand("2");
 
+        jLabel109.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel109.setText("Éjszakai magömlés");
 
         buttonGroup86.add(jRadioButton277);
@@ -2167,6 +2261,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton279.setText("Gyakori");
         jRadioButton279.setActionCommand("2");
 
+        jLabel110.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel110.setText("Korai magömlés");
 
         buttonGroup87.add(jRadioButton280);
@@ -2181,6 +2276,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton282.setText("Gyakori");
         jRadioButton282.setActionCommand("2");
 
+        jLabel111.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel111.setText("Bokatáji vizenyő");
 
         buttonGroup88.add(jRadioButton283);
@@ -2195,6 +2291,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton285.setText("Gyakori");
         jRadioButton285.setActionCommand("2");
 
+        jLabel112.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel112.setText("Impotencia");
 
         buttonGroup89.add(jRadioButton286);
@@ -2209,6 +2306,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton288.setText("Gyakori");
         jRadioButton288.setActionCommand("2");
 
+        jLabel113.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel113.setText("Frigiditás");
 
         buttonGroup90.add(jRadioButton289);
@@ -2223,6 +2321,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton291.setText("Gyakori");
         jRadioButton291.setActionCommand("2");
 
+        jLabel114.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel114.setText("Meddőség");
 
         buttonGroup91.add(jRadioButton292);
@@ -2237,6 +2336,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton294.setText("Gyakori");
         jRadioButton294.setActionCommand("2");
 
+        jLabel115.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel115.setText("Csontritkulás");
 
         buttonGroup92.add(jRadioButton295);
@@ -2251,6 +2351,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton297.setText("Gyakori");
         jRadioButton297.setActionCommand("2");
 
+        jLabel116.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel116.setText("Hideg-fázós derék");
 
         buttonGroup93.add(jRadioButton298);
@@ -2265,6 +2366,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton300.setText("Gyakori");
         jRadioButton300.setActionCommand("2");
 
+        jLabel117.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel117.setText("Hideg-fázós térdek");
 
         buttonGroup94.add(jRadioButton301);
@@ -2279,6 +2381,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton303.setText("Gyakori");
         jRadioButton303.setActionCommand("2");
 
+        jLabel118.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel118.setText("Hideg-fázós lábak");
 
         buttonGroup95.add(jRadioButton304);
@@ -2293,6 +2396,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton306.setText("Gyakori");
         jRadioButton306.setActionCommand("2");
 
+        jLabel119.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel119.setText("Éjszakai izzadás");
 
         buttonGroup96.add(jRadioButton307);
@@ -2319,19 +2423,23 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton312.setText("Nem jellemző");
         jRadioButton312.setActionCommand("0");
 
+        jLabel120.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel120.setText("Nappali hőhullámok");
 
-        jLabel77.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel77.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel77.setText("Menses");
 
+        jLabel121.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel121.setText("Első menses");
 
         jLabel78.setText("Éves korban");
 
+        jLabel122.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel122.setText("Utolsó menses");
 
         jLabel123.setText("Éves korban");
 
+        jLabel124.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel124.setText("Szabálytalan menstruáció");
 
         buttonGroup98.add(jRadioButton313);
@@ -2358,8 +2466,10 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton318.setText("Gyakori");
         jRadioButton318.setActionCommand("2");
 
+        jLabel125.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel125.setText("Fájdalmas menstruáció");
 
+        jLabel126.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel126.setText("Csomós menstruációs vér");
 
         buttonGroup100.add(jRadioButton319);
@@ -2374,6 +2484,7 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton321.setText("Gyakori");
         jRadioButton321.setActionCommand("2");
 
+        jLabel127.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel127.setText("Vérzés színe");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "sötét", "halvány" }));
@@ -2382,10 +2493,12 @@ public class Questions extends javax.swing.JFrame {
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "bőséges", "kevés", "normális" }));
 
+        jLabel129.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel129.setText("Ciklus hossza");
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "rövidebb", "hosszabb", "rendszertelen" }));
 
+        jLabel130.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel130.setText("Premenstruációs tünetek");
 
         buttonGroup101.add(jRadioButton322);
@@ -2400,56 +2513,75 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton324.setText("Gyakori");
         jRadioButton324.setActionCommand("2");
 
-        jLabel131.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel131.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel131.setText("Gerinc");
 
+        jLabel132.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel132.setText("Melyik gerincszakaz/csigolya érintett");
 
+        jLabel133.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel133.setText("Kisugárzás");
 
+        jLabel134.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel134.setText("Fájdalom jellege");
 
+        jLabel135.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel135.setText("Mi rontja");
 
+        jLabel136.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel136.setText("Mi javítja");
 
+        jLabel137.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel137.setText("Mozgáskorlátozottság");
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
+        jLabel138.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel138.setText("Derék fázékony-e");
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
+        jLabel139.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel139.setText("Korábbi sérülés");
 
+        jLabel140.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel140.setText("Korábbi műtét");
 
-        jLabel141.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel141.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel141.setText("Végtagok, izületek");
 
+        jLabel142.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel142.setText("Panasz helye");
 
+        jLabel143.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel143.setText("Kisugárzás");
 
+        jLabel144.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel144.setText("Fájdalom jellege");
 
+        jLabel145.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel145.setText("Éjszaka fennáll-e a fájdalom");
 
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
+        jLabel147.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel147.setText("Mi rontja?");
 
+        jLabel148.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel148.setText("Mi javítja?");
 
+        jLabel146.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel146.setText("Mozgáskorlátozottság");
 
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
+        jLabel149.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel149.setText("Egyéb kísérő tünetek (pl. bőrpír)");
 
+        jLabel150.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel150.setText("Korábbi sérülés");
 
+        jLabel151.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel151.setText("Korábbi műtét");
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
@@ -2462,6 +2594,7 @@ public class Questions extends javax.swing.JFrame {
             }
         });
 
+        jLabel152.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel152.setText("Törékeny, puha körmök");
 
         buttonGroup102.add(jRadioButton325);
@@ -2478,10 +2611,13 @@ public class Questions extends javax.swing.JFrame {
 
         jLabel153.setText("Napok száma");
 
+        jLabel154.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel154.setText("Cikluson belül hány napos a vérzés");
 
+        jLabel155.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel155.setText("Panasz fennállásának ideje");
 
+        jLabel156.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel156.setText("Panasz fennállásának ideje");
 
         buttonGroup1.add(jRadioButton148);
@@ -2994,35 +3130,42 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton378.setText("Nem megkérdezett");
         jRadioButton378.setActionCommand("3");
 
-        jLabel158.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel158.setFont(new java.awt.Font("FreeSans", 3, 12)); // NOI18N
         jLabel158.setText("Egyéb");
 
-        jLabel160.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel160.setFont(new java.awt.Font("FreeSans", 3, 12)); // NOI18N
         jLabel160.setText("Egyéb");
 
-        jLabel161.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel161.setFont(new java.awt.Font("FreeSans", 3, 12)); // NOI18N
         jLabel161.setText("Egyéb");
 
-        jLabel159.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel159.setFont(new java.awt.Font("FreeSans", 3, 12)); // NOI18N
         jLabel159.setText("Egyéb");
 
-        jLabel162.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel162.setFont(new java.awt.Font("FreeSans", 3, 12)); // NOI18N
         jLabel162.setText("Egyéb");
 
+        jLabel163.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel163.setText("Érintett meridián(ok)");
 
+        jLabel164.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel164.setText("Éjszaka fennáll-e a fájdalom");
 
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
+        jLabel165.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel165.setText("Érzékeny (trigger, Ah Shi) pontok");
 
+        jLabel166.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel166.setText("Érintett meridián(ok)");
 
+        jLabel167.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel167.setText("Érzékeny (trigger, Ah Shi) pontok");
 
+        jLabel168.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel168.setText("Egyéb");
 
+        jLabel169.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel169.setText("Egyéb");
 
         jLabel170.setText("gyakori");
@@ -3065,19 +3208,23 @@ public class Questions extends javax.swing.JFrame {
             }
         });
 
+        jLabel180.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel180.setText("Egyéb:");
         jLabel180.setPreferredSize(new java.awt.Dimension(100, 15));
 
         jTextField44.setPreferredSize(new java.awt.Dimension(100, 23));
 
+        jLabel181.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel181.setText("Fejfájást rontja:");
 
+        jLabel182.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel182.setText("Fejfájást javítja:");
 
         jTextField45.setPreferredSize(new java.awt.Dimension(100, 23));
 
         jTextField46.setPreferredSize(new java.awt.Dimension(100, 23));
 
+        jLabel183.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel183.setText("Korai ráncosodás");
 
         buttonGroup103.add(jRadioButton409);
@@ -3097,7 +3244,8 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton412.setText("Nem megkérdezett");
         jRadioButton412.setActionCommand("3");
 
-        jLabel184.setText("gyakori melléküreg-gyulladás illetve gyakori fülgyulladás");
+        jLabel184.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
+        jLabel184.setText("Gyakori melléküreg-gyulladás illetve gyakori fülgyulladás");
         jLabel184.setToolTipText("gyakori melléküreg-gyulladás illetve gyakori fülgyulladás");
 
         buttonGroup104.add(jRadioButton413);
@@ -3134,29 +3282,34 @@ public class Questions extends javax.swing.JFrame {
         jRadioButton420.setText("Nem megkérdezett");
         jRadioButton420.setActionCommand("3");
 
-        jLabel185.setText("ködösség érzése illetve ürességérzet a fejben");
+        jLabel185.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
+        jLabel185.setText("Ködösség érzése illetve ürességérzet a fejben");
         jLabel185.setToolTipText("ködösség érzése illetve ürességérzet a fejben");
 
+        jLabel186.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel186.setText("Fülzúgás");
 
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "bal oldal", "jobb oldal", "mindkét oldal" }));
 
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "magas", "mély", "egyéb" }));
 
-        jLabel187.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel187.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel187.setText("Medence");
 
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "szemből: balra le", "szemből: jobbra le", "nem lett vizsgálva" }));
 
+        jLabel188.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel188.setText("Egyéb");
 
+        jLabel189.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel189.setText("Egyéb");
 
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "hátulról: balra hajlik", "hátulról: jobbra hajlik", "korábbi sérülés", "jelenlegi sérülés", "nem lett vizsgálva" }));
 
-        jLabel190.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel190.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel190.setText("Farokcsont");
 
+        jLabel191.setFont(new java.awt.Font("FreeSans", 1, 12)); // NOI18N
         jLabel191.setText("Panaszok szimmetrikusak-e?");
 
         jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "igen", "nem" }));
@@ -3173,14 +3326,7 @@ public class Questions extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(169, 169, 169)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel129)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel153)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel129)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -3191,32 +3337,34 @@ public class Questions extends javax.swing.JFrame {
                                         .addComponent(jRadioButton317)
                                         .addGap(18, 18, 18)
                                         .addComponent(jRadioButton318))
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel124)
-                                            .addGap(64, 64, 64)
-                                            .addComponent(jRadioButton313)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jRadioButton314)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jRadioButton315))
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel121)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel122)
-                                                .addGap(30, 30, 30)
-                                                .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel126)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton319)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton320)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton321))
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel124)
+                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel121, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                    .addComponent(jLabel122)
+                                                    .addGap(100, 100, 100))))
+                                        .addGap(26, 26, 26)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jRadioButton313)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton314)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton315))
+                                            .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(95, 95, 95))
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addGap(79, 79, 79)
+                                                        .addComponent(jLabel78)))
+                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                    .addGap(79, 79, 79)
+                                                    .addComponent(jLabel123)))))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                         .addComponent(jLabel130)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3224,7 +3372,29 @@ public class Questions extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jRadioButton323)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton324)))
+                                        .addComponent(jRadioButton324))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel126)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel128)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jRadioButton319)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton320)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton321))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel153)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jRadioButton405)
@@ -3233,20 +3403,9 @@ public class Questions extends javax.swing.JFrame {
                                     .addComponent(jRadioButton408)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel154)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel127)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel123)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel128)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel78)))))
+                            .addComponent(jLabel127)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3924,7 +4083,7 @@ public class Questions extends javax.swing.JFrame {
                                             .addComponent(jLabel181))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField45, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                                            .addComponent(jTextField45, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                                             .addComponent(jTextField46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                 .addGap(98, 98, 98))
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -4119,7 +4278,6 @@ public class Questions extends javax.swing.JFrame {
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
                                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jLabel46)
                                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                                         .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addGap(30, 30, 30)
@@ -4333,7 +4491,7 @@ public class Questions extends javax.swing.JFrame {
                                                 .addComponent(jLabel180, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(0, 17, Short.MAX_VALUE))))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(283, 283, 283)
@@ -4363,8 +4521,9 @@ public class Questions extends javax.swing.JFrame {
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(167, 167, 167)
                                         .addComponent(jLabel157))
-                                    .addComponent(jLabel169))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                    .addComponent(jLabel169)
+                                    .addComponent(jLabel46))
+                                .addGap(0, 972, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
