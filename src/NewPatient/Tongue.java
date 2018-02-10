@@ -237,13 +237,11 @@ public class Tongue extends javax.swing.JFrame {
             String dir=Integer.toString(Controller.controller.idNumber);
             File directory = new File(path+dir);
             directory.mkdir();
-            
-            String tongue=jTextPane1.getText();
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"tongue.txt");
             writer = new PrintWriter(file);
             
-            writer.println(tongue);
+            writer.println(jTextPane1.getText().trim());
             writer.close();
             drag.save();
         } catch (FileNotFoundException ex) {

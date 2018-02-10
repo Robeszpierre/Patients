@@ -63,6 +63,7 @@ public class Treatment extends javax.swing.JPanel {
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextPane5 = new javax.swing.JTextPane();
         jLabel7 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
 
         jScrollPane2.setHorizontalScrollBar(null);
 
@@ -70,7 +71,6 @@ public class Treatment extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(627, 1240));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setText("jLabel1");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel2.setText("Változások");
@@ -100,18 +100,21 @@ public class Treatment extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel7.setText("Terápia (pontok, masszázs, moxa, köpöly stb.)");
 
+        jButton11.setBackground(new java.awt.Color(0, 0, 0));
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
+        jButton11.setText("Dátum módosítása");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(265, 265, 265)
-                        .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,14 +144,24 @@ public class Treatment extends javax.swing.JPanel {
                         .addComponent(jLabel6))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(146, 146, 146)
-                        .addComponent(jLabel7)))
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton11))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(265, 265, 265)
+                        .addComponent(jLabel2)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -171,7 +184,7 @@ public class Treatment extends javax.swing.JPanel {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel1);
@@ -184,12 +197,18 @@ public class Treatment extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        DateModify d=new DateModify(this);
+        d.setVisible(true);
+    }//GEN-LAST:event_jButton11MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton11;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -221,26 +240,26 @@ public class Treatment extends javax.swing.JPanel {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
             
-            writer.println(jLabel1.getText());
+            writer.println(jLabel1.getText().trim());
             writer.println("***");
         
-            writer.println(jTextPane1.getText());
+            writer.println(jTextPane1.getText().trim());
             writer.println("***");
             
             
-            writer.println(jTextPane2.getText());
+            writer.println(jTextPane2.getText().trim());
             writer.println("***");
             
             
-            writer.println(jTextPane3.getText());
+            writer.println(jTextPane3.getText().trim());
             writer.println("***");
             
             
-            writer.println(jTextPane4.getText());
+            writer.println(jTextPane4.getText().trim());
             writer.println("***");
             
             
-            writer.println(jTextPane5.getText());
+            writer.println(jTextPane5.getText().trim());
             writer.println("***");
             
             writer.close();
@@ -259,13 +278,6 @@ public class Treatment extends javax.swing.JPanel {
             }
             jLabel1.setText(text);
             
-            text = "";
-            line=input.nextLine();
-            while(!line.equals("***")){
-                text+=line+"\n";
-                line=input.nextLine();
-            }
-            jTextPane1.setText(text);
             
             text = "";
             line=input.nextLine();
@@ -273,7 +285,9 @@ public class Treatment extends javax.swing.JPanel {
                 text+=line+"\n";
                 line=input.nextLine();
             }
-            jTextPane2.setText(text);
+            if(!text.equals("\n")){
+                jTextPane1.setText(text);
+            }
             
             text = "";
             line=input.nextLine();
@@ -281,7 +295,9 @@ public class Treatment extends javax.swing.JPanel {
                 text+=line+"\n";
                 line=input.nextLine();
             }
-            jTextPane3.setText(text);
+            if(!text.equals("\n")){
+                jTextPane2.setText(text);
+            }
             
             text = "";
             line=input.nextLine();
@@ -289,7 +305,9 @@ public class Treatment extends javax.swing.JPanel {
                 text+=line+"\n";
                 line=input.nextLine();
             }
-            jTextPane4.setText(text);
+            if(!text.equals("\n")){
+                jTextPane3.setText(text);
+            }
             
             text = "";
             line=input.nextLine();
@@ -297,11 +315,27 @@ public class Treatment extends javax.swing.JPanel {
                 text+=line+"\n";
                 line=input.nextLine();
             }
-            jTextPane5.setText(text);
+            if(!text.equals("\n")){
+                jTextPane4.setText(text);
+            }
+            
+            text = "";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=line+"\n";
+                line=input.nextLine();
+            }
+            if(!text.equals("\n")){
+                jTextPane5.setText(text);
+            }
             
             input.close();
         }catch(Exception e){
             System.out.println("FILE NOT FOUND");
     }
+    }
+
+    void setdate(String date) {
+        jLabel1.setText(date);
     }
 }

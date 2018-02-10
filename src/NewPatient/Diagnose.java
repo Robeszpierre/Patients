@@ -364,19 +364,19 @@ public class Diagnose extends javax.swing.JFrame {
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"diagnose.txt");
             writer = new PrintWriter(file);
             
-            writer.println(jTextPane1.getText());
+            writer.println(jTextPane1.getText().trim());
             writer.println("***");
-            writer.println(jTextPane2.getText());
+            writer.println(jTextPane2.getText().trim());
             writer.println("***");
-            writer.println(jTextPane3.getText());
+            writer.println(jTextPane3.getText().trim());
             writer.println("***");
-            writer.println(jTextPane4.getText());
+            writer.println(jTextPane4.getText().trim());
             writer.println("***");
-            writer.println(jTextPane5.getText());
+            writer.println(jTextPane5.getText().trim());
             writer.println("***");
-            writer.println(jTextPane6.getText());
+            writer.println(jTextPane6.getText().trim());
             writer.println("***");
-            writer.println(jTextPane7.getText());
+            writer.println(jTextPane7.getText().trim());
             writer.println("***");
             writer.close();
         } catch (FileNotFoundException ex) {

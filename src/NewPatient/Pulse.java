@@ -501,7 +501,7 @@ public class Pulse extends javax.swing.JFrame {
             writer.println(jComboBox27.getSelectedItem().toString());
             writer.println(jComboBox28.getSelectedItem().toString());
             
-            writer.println(jTextArea1.getText());
+            writer.println(jTextArea1.getText().trim());
             writer.println("***");
     
             writer.close();

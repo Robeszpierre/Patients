@@ -42,34 +42,27 @@ public class MedicalHistory extends javax.swing.JFrame {
             File directory = new File(path+dir);
             directory.mkdir();
             
-            String childHood=jTextPane9.getText();
-            String previousIllnesses=jTextPane10.getText();
-            String actualIllnesses=jTextPane11.getText();
-            String surgeries=jTextPane12.getText();
-            String dentistry=jTextPane13.getText();
-            String medicines=jTextPane14.getText();
-            String pregnencies=jTextPane15.getText();
-            String pregnant=jComboBox2.getSelectedItem().toString();
+            
 
          
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"medicalhistory.txt");
             writer = new PrintWriter(file);
             
-            writer.println(childHood);
+            writer.println(jTextPane9.getText().trim());
             writer.println("***");
-            writer.println(previousIllnesses);
+            writer.println(jTextPane10.getText().trim());
             writer.println("***");
-            writer.println(actualIllnesses);
+            writer.println(jTextPane11.getText().trim());
             writer.println("***");
-            writer.println(surgeries);
+            writer.println(jTextPane12.getText().trim());
             writer.println("***");
-            writer.println(dentistry);
+            writer.println(jTextPane13.getText().trim());
             writer.println("***");
-            writer.println(medicines);
+            writer.println(jTextPane14.getText().trim());
             writer.println("***");
-            writer.println(pregnencies);
+            writer.println(jTextPane15.getText().trim());
             writer.println("***");
-            writer.println(pregnant);
+            writer.println(jComboBox2.getSelectedItem().toString().trim());
             writer.println("***");
             writer.close();
         } catch (FileNotFoundException ex) {

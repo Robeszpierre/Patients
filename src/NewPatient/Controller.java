@@ -26,7 +26,7 @@ public class Controller {
     
     static public Controller controller=new Controller();
     public int idNumber; 
-    public String path="C:\\Users\\Robeszpierre\\Desktop\\Patients\\";
+    public String path="C:\\Users\\azido_000\\Desktop\\Patients\\";
     public String sex;
     public MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;
@@ -55,6 +55,8 @@ public class Controller {
     public int partiallyHealed;
     public int notHealed;
     public int other;
+    
+    public int sumOfTreatments;
     
     public void start(){
         mainFrame=new MainFrame();
@@ -243,6 +245,7 @@ public class Controller {
             partiallyHealed=Integer.parseInt(input.nextLine());
             notHealed=Integer.parseInt(input.nextLine());
             other=Integer.parseInt(input.nextLine());
+            sumOfTreatments=Integer.parseInt(input.nextLine());
             
             input.close();
         } catch (FileNotFoundException ex) {
@@ -277,6 +280,7 @@ public class Controller {
             writer3.println(partiallyHealed);
             writer3.println(notHealed);
             writer3.println(other);
+            writer3.println(sumOfTreatments);
         } catch (FileNotFoundException ex) {
             System.out.println("Can't make statistic.txt");
         }

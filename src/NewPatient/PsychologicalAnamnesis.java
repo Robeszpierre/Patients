@@ -221,19 +221,15 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
             String dir=Integer.toString(Controller.controller.idNumber);
             File directory = new File(path+dir);
             directory.mkdir();
-            
-            String fetalAge=jTextPane1.getText();
-            String childHood=jTextPane2.getText();
-            String adultHood=jTextPane3.getText();
         
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"anamnesis.txt");
             writer = new PrintWriter(file);
             
-            writer.println(fetalAge);
+            writer.println(jTextPane1.getText().trim());
             writer.println("***");
-            writer.println(childHood);
+            writer.println(jTextPane2.getText().trim());
             writer.println("***");
-            writer.println(adultHood);
+            writer.println(jTextPane3.getText().trim());
             writer.println("***");
             writer.close();
         } catch (FileNotFoundException ex) {
