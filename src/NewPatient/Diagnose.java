@@ -87,42 +87,49 @@ public class Diagnose extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel2.setText("Diagnózis(ok)");
 
+        jTextPane1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane2.setViewportView(jTextPane1);
 
+        jTextPane2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane3.setViewportView(jTextPane2);
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel3.setText("Terápiás koncepció");
 
+        jTextPane3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane4.setViewportView(jTextPane3);
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
         jLabel4.setText("JAVASLAT(OK)");
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel5.setText("1. Étrend");
 
+        jTextPane4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane5.setViewportView(jTextPane4);
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel6.setText("2. Gyógynövény");
 
+        jTextPane5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane6.setViewportView(jTextPane5);
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel7.setText("3. Kínai orvosság");
 
+        jTextPane6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane7.setViewportView(jTextPane6);
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel8.setText("4. Mozgás/gyógytorna");
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel9.setText("5. Életmód, egyéb javaslat");
 
+        jTextPane7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane8.setViewportView(jTextPane7);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -233,7 +240,7 @@ public class Diagnose extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel2);

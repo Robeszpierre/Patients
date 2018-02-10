@@ -70,19 +70,22 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel1.setText("Magzati kor, születés körüli időszak");
 
+        jTextPane1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(jTextPane1);
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel2.setText("Gyermekkor");
 
+        jTextPane2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane2.setViewportView(jTextPane2);
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel3.setText("Felnőtt kor ill. a jelenleg fennálló helyzet");
 
+        jTextPane3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane3.setViewportView(jTextPane3);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -135,8 +138,8 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(296, 296, 296)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(309, 309, 309)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))

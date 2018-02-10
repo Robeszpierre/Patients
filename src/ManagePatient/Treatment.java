@@ -75,29 +75,34 @@ public class Treatment extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         jLabel2.setText("Változások");
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel3.setText("Romlás");
 
+        jTextPane1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(jTextPane1);
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel4.setText("Javulás");
 
+        jTextPane2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane3.setViewportView(jTextPane2);
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel5.setText("Egyéb");
 
+        jTextPane3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane4.setViewportView(jTextPane3);
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel6.setText("Újabb javaslatok");
 
+        jTextPane4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane5.setViewportView(jTextPane4);
 
+        jTextPane5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane6.setViewportView(jTextPane5);
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel7.setText("Terápia (pontok, masszázs, moxa, köpöly stb.)");
 
         jButton11.setBackground(new java.awt.Color(0, 0, 0));

@@ -71,9 +71,10 @@ public class Complaints extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel1.setText("Jelen panaszok");
 
+        jTextPane1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(jTextPane1);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -96,19 +97,22 @@ public class Complaints extends javax.swing.JFrame {
             }
         });
 
+        jTextPane2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane2.setViewportView(jTextPane2);
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel2.setText("Nyugati orvosi diagnózis(ok)");
 
+        jTextPane3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane3.setViewportView(jTextPane3);
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel3.setText("Képalkotó vizsgálat(ok)");
 
+        jTextPane4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane4.setViewportView(jTextPane4);
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel4.setText("Laborvizsgálat(ok) eredményei");
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));

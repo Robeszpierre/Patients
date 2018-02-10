@@ -121,44 +121,52 @@ public class MedicalHistory extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel10.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel10.setText("Gyermekkori nagyobb betegség(ek)");
 
+        jTextPane9.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane10.setViewportView(jTextPane9);
 
+        jTextPane10.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane11.setViewportView(jTextPane10);
 
-        jLabel11.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel11.setText("Előző betegség(ek)");
 
+        jTextPane11.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane12.setViewportView(jTextPane11);
 
-        jLabel12.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel12.setText("Ismert, jelenleg is fennálló betegség(ek)");
 
-        jLabel13.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel13.setText("Műtét(ek)");
 
+        jTextPane12.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane13.setViewportView(jTextPane12);
 
+        jTextPane13.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane14.setViewportView(jTextPane13);
 
-        jLabel14.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel14.setText("Nagyobb fogászati beavatkozás(ok)");
 
+        jTextPane14.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane15.setViewportView(jTextPane14);
 
-        jLabel15.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel15.setText("Jelenleg szedett gyógyszer(ek), gyógynövény(ek)");
 
+        jTextPane15.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane16.setViewportView(jTextPane15);
 
-        jLabel16.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel16.setText("Korábbi terhesség(ek)");
 
-        jLabel17.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
         jLabel17.setText("Jelenleg állapotos-e");
 
+        jComboBox2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "nem", "igen" }));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -192,31 +200,32 @@ public class MedicalHistory extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(144, 144, 144))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
-                    .addComponent(jScrollPane11)
-                    .addComponent(jScrollPane12)
-                    .addComponent(jScrollPane13)
-                    .addComponent(jScrollPane14)
-                    .addComponent(jScrollPane15)
-                    .addComponent(jScrollPane16))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(357, 357, 357)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16))
-                .addContainerGap(608, Short.MAX_VALUE))
+                        .addGap(387, 387, 387)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(357, 357, 357)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,11 +233,11 @@ public class MedicalHistory extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel11)
                 .addGap(4, 4, 4)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                 .addGap(20, 20, 20)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -257,7 +266,7 @@ public class MedicalHistory extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
         );
 
         jScrollPane9.setViewportView(jPanel2);

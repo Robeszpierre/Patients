@@ -110,6 +110,7 @@ public class Ear extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jLabel2.setText("Jellemzés");
 
+        jTextPane1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(jTextPane1);
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
