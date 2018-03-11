@@ -297,6 +297,12 @@ public class PersonalDatas extends javax.swing.JFrame {
             writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
             writer2.append(" ");
             writer2.append(jTextField1.getText());
+            writer2.append(" ");
+            writer2.append(jTextField2.getText());
+            writer2.append("-");
+            writer2.append(jTextField3.getText());
+            writer2.append("-");
+            writer2.append(jTextField4.getText());
             writer2.append(System.getProperty("line.separator"));
             
             

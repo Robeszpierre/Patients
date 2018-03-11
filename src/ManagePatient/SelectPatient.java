@@ -67,6 +67,7 @@ public class SelectPatient extends javax.swing.JFrame {
         setTitle("Beteg kiválasztása");
         setResizable(false);
 
+        jList1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jScrollPane1.setViewportView(jList1);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));

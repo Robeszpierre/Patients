@@ -158,7 +158,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void statisticButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_statisticButtonMouseClicked
         this.setVisible(false);
+        
         Statistic statistic = new Statistic();
+        statistic.setExtendedState(JFrame.MAXIMIZED_BOTH);
         statistic.setVisible(true);
     }//GEN-LAST:event_statisticButtonMouseClicked
 
