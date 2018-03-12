@@ -41,9 +41,13 @@ public class DragListener implements  DropTargetListener{
             imageLabel=image;
             pathlabel=path;
             imgName=name;
-            img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"noimage.jpg"));
+            img=ImageIO.read(new File(Controller.controller.path+Controller.controller.idNumber +File.separatorChar+ imgName +".jpg"));       
         } catch (IOException ex) {
-            Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex);
+            try {
+                img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"noimage.jpg"));
+            } catch (IOException ex1) {
+                Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex1);
+            }
         }
     }
     

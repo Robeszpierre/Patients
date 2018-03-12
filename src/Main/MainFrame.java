@@ -12,11 +12,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -57,12 +59,16 @@ public class MainFrame extends javax.swing.JFrame {
         
         BufferedImage img=null;   
         Image dimg=null;
+        int numOfFiles=new File(Controller.controller.path+"img"+File.separatorChar+"main").listFiles().length;
+        System.out.println(numOfFiles);
+        Random rand = new Random();
+        int randomPicture = rand.nextInt(numOfFiles) + 1;
         try{
-            img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"main.jpg"));
+            img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"main"+File.separatorChar+randomPicture+".jpg"));
             dimg = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
-                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+                JOptionPane.showMessageDialog(null, "Nincs a Patients mappa a megfelelő helyen. Ha nem tudja megoldani a problémát, akkor kérem lépjen kapcsolatba a fejlesztővel a robeszpierre@gmail.com e-mail címen.");
         }
         
         ImageIcon icon=new ImageIcon(dimg);

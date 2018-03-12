@@ -8,8 +8,11 @@ package ManagePatient;
 import NewPatient.Controller;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,6 +26,8 @@ import javax.swing.DefaultListModel;
  */
 public class SelectPatient extends javax.swing.JFrame {
 
+    DefaultListModel listModel;
+    ArrayList<String> elements;
     /**
      * Creates new form SelectPatient
      */
@@ -30,6 +35,7 @@ public class SelectPatient extends javax.swing.JFrame {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        searchBox.requestFocusInWindow();
         
         Scanner inputPatients=null;
         
@@ -39,15 +45,14 @@ public class SelectPatient extends javax.swing.JFrame {
             Logger.getLogger(SelectPatient.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        DefaultListModel listModel = new DefaultListModel();
+        elements= new ArrayList<String>();
+        listModel = new DefaultListModel();
         
         while(inputPatients.hasNext()){
-            listModel.addElement(inputPatients.nextLine());
+            elements.add(inputPatients.nextLine());
         }
         
-        jList1.setModel(listModel);
-        
-        
+        updateListContent(elements);      
     }
 
     /**
@@ -63,11 +68,17 @@ public class SelectPatient extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
+        searchBox = new javax.swing.JTextField();
 
         setTitle("Beteg kiválasztása");
         setResizable(false);
 
         jList1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jList1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jList1KeyPressed(evt);
+            }
+        });
         jScrollPane1.setViewportView(jList1);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
@@ -80,19 +91,33 @@ public class SelectPatient extends javax.swing.JFrame {
             }
         });
 
+        searchBox.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        searchBox.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                searchBoxKeyTyped(evt);
+            }
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchBoxKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
-                .addContainerGap())
             .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(searchBox)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchBox, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -112,6 +137,10 @@ public class SelectPatient extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        selectPatient();
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void selectPatient(){
         Matcher matcher = Pattern.compile("\\d+").matcher(jList1.getSelectedValue());
         matcher.find();
         int patientId = Integer.valueOf(matcher.group());      
@@ -119,7 +148,47 @@ public class SelectPatient extends javax.swing.JFrame {
         new ManageMain(patientId);
         this.setVisible(false);
         Controller.controller.mainFrame.setVisible(false);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }
+    
+    private void updateListContent(ArrayList<String> elements){
+        for(String val : elements){
+            listModel.addElement(val);
+        }
+        jList1.setModel(listModel);
+        jList1.setSelectedIndex(0);
+    }
+    
+    private void searchBoxKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchBoxKeyTyped
+            ArrayList<String> result=new ArrayList<>();
+            for(String val: elements){
+                if(val.toLowerCase().contains(searchBox.getText().toLowerCase())){
+                    result.add(val);
+                }
+            }
+            listModel.removeAllElements();
+            updateListContent(result);
+    }//GEN-LAST:event_searchBoxKeyTyped
+
+    private void searchBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchBoxKeyPressed
+        int keyCode = evt.getKeyCode();
+        switch( keyCode ) { 
+            case KeyEvent.VK_UP:
+                jList1.setSelectedIndex(jList1.getSelectedIndex()-1);
+                break;
+            case KeyEvent.VK_DOWN:
+                jList1.setSelectedIndex(jList1.getSelectedIndex()+1);
+                break;
+            case KeyEvent.VK_ENTER:
+                selectPatient();
+                break;
+        }
+    }//GEN-LAST:event_searchBoxKeyPressed
+
+    private void jList1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jList1KeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            selectPatient();
+        }
+    }//GEN-LAST:event_jList1KeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -127,5 +196,6 @@ public class SelectPatient extends javax.swing.JFrame {
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField searchBox;
     // End of variables declaration//GEN-END:variables
 }
