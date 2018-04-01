@@ -19,6 +19,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -59,8 +60,12 @@ public class MainFrame extends javax.swing.JFrame {
         
         BufferedImage img=null;   
         Image dimg=null;
-        int numOfFiles=new File(Controller.controller.path+"img"+File.separatorChar+"main").listFiles().length;
-        System.out.println(numOfFiles);
+        int numOfFiles=0;
+        try{
+        numOfFiles=new File(Controller.controller.path+"img"+File.separatorChar+"main").listFiles().length;
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, Controller.controller.path + "Nincsenek a program mappái a megfelelő helyen. Ha nem tudja megoldani a problémát, akkor kérem lépjen kapcsolatba a fejlesztővel a robeszpierre@gmail.com e-mail címen.");
+        }
         Random rand = new Random();
         int randomPicture = rand.nextInt(numOfFiles) + 1;
         try{
@@ -68,7 +73,7 @@ public class MainFrame extends javax.swing.JFrame {
             dimg = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
-                JOptionPane.showMessageDialog(null, "Nincs a Patients mappa a megfelelő helyen. Ha nem tudja megoldani a problémát, akkor kérem lépjen kapcsolatba a fejlesztővel a robeszpierre@gmail.com e-mail címen.");
+                JOptionPane.showMessageDialog(null, "Nincs kép a fő program menüjéhez");
         }
         
         ImageIcon icon=new ImageIcon(dimg);
@@ -163,11 +168,15 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_existingPatientButtonMouseClicked
 
     private void statisticButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_statisticButtonMouseClicked
-        this.setVisible(false);
-        
+        try{
         Statistic statistic = new Statistic();
         statistic.setExtendedState(JFrame.MAXIMIZED_BOTH);
         statistic.setVisible(true);
+        this.setVisible(false);
+        }catch(Exception e){
+            showMessageDialog(null, "Még nincs beteg a rendszerben, akiről statisztikát készíthetnék!");
+        }
+        
     }//GEN-LAST:event_statisticButtonMouseClicked
 
     /**

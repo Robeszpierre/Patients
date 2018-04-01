@@ -6,9 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
+import java.security.CodeSource;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.stage.FileChooser;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import sun.security.krb5.Checksum;
 
@@ -26,7 +30,7 @@ public class Controller {
     
     static public Controller controller=new Controller();
     public int idNumber; 
-    public String path="/home/robeszpierre/Desktop/Patients/";
+    public String path=null; 
     public String sex;
     public MainFrame mainFrame;
     private PersonalDatas newPatientPersonalDatas;
@@ -59,6 +63,7 @@ public class Controller {
     public int sumOfTreatments;
     
     public void start(){
+        setPath();
         mainFrame=new MainFrame();
         mainFrame.setVisible(true);
         initStat();
@@ -286,5 +291,18 @@ public class Controller {
         }
 
         writer3.close();
+    }  
+
+    private void setPath() {
+        CodeSource codeSource = Controller.class.getProtectionDomain().getCodeSource();
+        File jarFile = null;
+        try {
+            jarFile = new File(codeSource.getLocation().toURI().getPath());
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String jarDir = jarFile.getParentFile().getPath();    
+        jarDir+="/Betegek/";
+        path=jarDir;
     }
 }

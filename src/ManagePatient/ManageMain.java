@@ -11,6 +11,7 @@ import NewPatient.Diagnose;
 import NewPatient.Ear;
 import NewPatient.Joint;
 import NewPatient.MedicalHistory;
+import NewPatient.PersonalDatas;
 import NewPatient.PsychologicalAnamnesis;
 import NewPatient.Questions;
 import NewPatient.Tongue;
@@ -129,6 +130,7 @@ public class ManageMain extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
+        jButton13 = new javax.swing.JButton();
         jScrollPane32 = new javax.swing.JScrollPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel58 = new javax.swing.JLabel();
@@ -422,21 +424,38 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea7.setRows(5);
         jScrollPane7.setViewportView(jTextArea7);
 
+        jButton13.setBackground(new java.awt.Color(0, 0, 0));
+        jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setText("Adatok módosítása");
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(39, Short.MAX_VALUE)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 603, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(222, 222, 222))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                .addGap(205, 205, 205))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -468,7 +487,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Szerkesztés");
+        jButton2.setText("Adatok módosítása");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -627,7 +646,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton9.setBackground(new java.awt.Color(0, 0, 0));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Szerkesztés");
+        jButton9.setText("Adatok módosítása");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
@@ -787,7 +806,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(0, 0, 0));
         jButton8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Szerkesztés");
+        jButton8.setText("Adatok módosítása");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton8MouseClicked(evt);
@@ -928,7 +947,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(0, 0, 0));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("Szerkesztés");
+        jButton10.setText("Adatok módosítása");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton10MouseClicked(evt);
@@ -1034,7 +1053,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(0, 0, 0));
         jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Szerkesztés");
+        jButton6.setText("Adatok módosítása");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton6MouseClicked(evt);
@@ -1078,7 +1097,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(0, 0, 0));
         jButton7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Szerkesztés");
+        jButton7.setText("Adatok módosítása");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
@@ -1728,6 +1747,15 @@ public class ManageMain extends javax.swing.JFrame {
         p.changeButtons();
     }//GEN-LAST:event_jButton2MouseClicked
 
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+        this.setVisible(false);
+        Controller.controller.idNumber=idNumber;
+        PersonalDatas p=new PersonalDatas();
+        p.load(idNumber);
+        p.setVisible(true);
+        p.changeButtons();
+    }//GEN-LAST:event_jButton13MouseClicked
+
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1735,6 +1763,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

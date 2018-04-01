@@ -1,5 +1,6 @@
 package NewPatient;
 
+import ManagePatient.ManageMain;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
@@ -9,6 +10,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,7 +32,8 @@ public class PersonalDatas extends javax.swing.JFrame {
     public PersonalDatas() {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);      
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        jButton2.setVisible(false);
     }
 
     /**
@@ -64,9 +67,16 @@ public class PersonalDatas extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Személyes adatok");
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -129,6 +139,16 @@ public class PersonalDatas extends javax.swing.JFrame {
 
         jTextField6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Módosítások mentése");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -137,7 +157,9 @@ public class PersonalDatas extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(340, 340, 340)
+                        .addGap(119, 119, 119)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -220,7 +242,9 @@ public class PersonalDatas extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
 
@@ -267,6 +291,16 @@ public class PersonalDatas extends javax.swing.JFrame {
         Controller.controller.setSex(jComboBox1.getSelectedItem().toString());
         Controller.controller.newMedicalHistory();
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        save(Controller.controller.path);
+        this.setVisible(false);
+        new ManageMain(Controller.controller.idNumber);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        Controller.controller.mainFrame.setVisible(true);
+    }//GEN-LAST:event_formWindowClosed
 
     public void save(String path){
         PrintWriter writer;
@@ -318,6 +352,7 @@ public class PersonalDatas extends javax.swing.JFrame {
      */
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -340,6 +375,35 @@ public class PersonalDatas extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    public void load(int idNumber) {
+        try {
+            Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"personaldata.txt"));
+            input.nextLine();
+            jTextField1.setText(input.nextLine());
+            jTextField9.setText(input.nextLine());
+            jTextField10.setText(input.nextLine());
+            String birthdate=input.nextLine();
+            String[] parts = birthdate.split("-");
+            jTextField2.setText(parts[0]);
+            jTextField3.setText(parts[1]);
+            jTextField4.setText(parts[2]);
+            jTextField5.setText(input.nextLine());
+            jTextField6.setText(input.nextLine());
+            jTextField7.setText(input.nextLine());
+            jTextField8.setText(input.nextLine());
+            jComboBox1.setSelectedItem(input.nextLine());      
+            
+            input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(PsychologicalAnamnesis.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void changeButtons() {
+        jButton1.setVisible(false);
+        jButton2.setVisible(true);
+    }
 
     
 

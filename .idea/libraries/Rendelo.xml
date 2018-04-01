@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Rendelo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Rendelo.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
