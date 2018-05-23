@@ -8,12 +8,19 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 import java.security.CodeSource;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.stage.FileChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import sun.security.krb5.Checksum;
 
 /*
@@ -63,10 +70,14 @@ public class Controller {
     public int sumOfTreatments;
     
     public void start(){
+        if(checkLicence()){
         setPath();
         mainFrame=new MainFrame();
         mainFrame.setVisible(true);
         initStat();
+        }else{
+            JOptionPane.showMessageDialog(null, "Lejárt az előfizetése! Ha meg szeretné hosszabítani, akkor lépjen kapcsolatba a fejlesztővel az alábbi e-mail címen: robeszpierre@gmail.com");
+        }
     }
     
     
@@ -304,5 +315,15 @@ public class Controller {
         String jarDir = jarFile.getParentFile().getPath();    
         jarDir+="/Betegek/";
         path=jarDir;
+    }
+
+    private Boolean checkLicence() {
+	Calendar today = Calendar.getInstance();
+	Calendar outdate = new GregorianCalendar(2118, 9, 4);
+        if(today.before(outdate)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

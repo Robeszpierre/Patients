@@ -1,5 +1,6 @@
 package NewPatient;
 
+import Main.MainFrame;
 import ManagePatient.ManageMain;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -10,9 +11,12 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -117,7 +121,7 @@ public class PersonalDatas extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel7.setText("Nem");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "férfi", "nő" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "────────", "férfi", "nő" }));
 
         jLabel8.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
         jLabel8.setText("Anyja neve");
@@ -263,39 +267,47 @@ public class PersonalDatas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        this.setVisible(false);
-        Controller.controller.mainFrame.setVisible(false);
-        
-        int patientBirthAge;
-        try{
-            patientBirthAge=Integer.parseInt(jTextField2.getText());
-        }catch(Exception e){
-            patientBirthAge=1960;
-        }
-        
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy");
-        LocalDateTime dateTime = LocalDateTime.now();
-        String time = dateTime.format(formatter); 
-        
-        int currentAge=Integer.parseInt(time);
-        
-        int patientAge=currentAge-patientBirthAge;
-        Controller.controller.sumOfAge+=patientAge;
-        
-        if(jComboBox1.getSelectedItem().toString().equals("férfi")){
-            Controller.controller.sumOfManAge+=patientAge;
+        if(validation()){
+            this.setVisible(false);
+            Controller.controller.mainFrame.setVisible(false);
+
+            int patientBirthAge;
+            try{
+                patientBirthAge=Integer.parseInt(jTextField2.getText());
+            }catch(Exception e){
+                patientBirthAge=1960;
+            }
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy");
+            LocalDateTime dateTime = LocalDateTime.now();
+            String time = dateTime.format(formatter); 
+
+            int currentAge=Integer.parseInt(time);
+
+            int patientAge=currentAge-patientBirthAge;
+            Controller.controller.sumOfAge+=patientAge;
+
+            if(jComboBox1.getSelectedItem().toString().equals("férfi")){
+                Controller.controller.sumOfManAge+=patientAge;
+            }else{
+                Controller.controller.sumOfWomanAge+=patientAge;
+            } 
+
+            Controller.controller.setSex(jComboBox1.getSelectedItem().toString());
+            Controller.controller.newMedicalHistory();
         }else{
-            Controller.controller.sumOfWomanAge+=patientAge;
-        } 
-        
-        Controller.controller.setSex(jComboBox1.getSelectedItem().toString());
-        Controller.controller.newMedicalHistory();
+            JOptionPane.showMessageDialog(null, "A Név, a Születési Időpont és a Nem kitöltése kötelező!");
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        save(Controller.controller.path);
-        this.setVisible(false);
-        new ManageMain(Controller.controller.idNumber);
+        if(validation()){
+            saveModifications(Controller.controller.path);
+            this.setVisible(false);
+            new ManageMain(Controller.controller.idNumber);
+        }else{
+            JOptionPane.showMessageDialog(null, "A Név, a Születési Időpont és a Nem kitöltése kötelező!");
+        }
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
@@ -339,6 +351,57 @@ public class PersonalDatas extends javax.swing.JFrame {
             writer2.append(jTextField4.getText());
             writer2.append(System.getProperty("line.separator"));
             
+            
+            writer.close();
+            writer2.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void saveModifications(String path){
+        PrintWriter writer;
+        PrintWriter writer2;
+        try {
+            String dir=Integer.toString(Controller.controller.idNumber);
+            File directory = new File(path+dir);
+            directory.mkdir();
+            
+         
+            File file = new File(path+File.separatorChar+dir+File.separatorChar+"personaldata.txt");
+            writer = new PrintWriter(file);
+            
+            
+            
+            writer.println(Controller.controller.idNumber);
+            writer.println(jTextField1.getText());
+            writer.println(jTextField9.getText());
+            writer.println(jTextField10.getText());
+            writer.println(jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText());
+            writer.println(jTextField5.getText());
+            writer.println(jTextField6.getText());
+            writer.println(jTextField7.getText());
+            writer.println(jTextField8.getText());
+            writer.println(jComboBox1.getSelectedItem().toString());
+            
+            Scanner sc=new Scanner(new File(path+File.separatorChar+"patients.txt"));
+            String line;
+            List<String> patients=new ArrayList<String>();
+            while(sc.hasNext()){
+                line=sc.nextLine();
+                patients.add(line);
+            }
+            
+            String patientsData=Integer.toString(Controller.controller.idNumber)+" "+jTextField1.getText()+" "+jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText();
+            patients.set(Controller.controller.idNumber-1, patientsData);
+            
+            sc.close();
+
+            File file2 = new File(path+File.separatorChar+"patients.txt");
+            writer2 = new PrintWriter(file2); 
+            for(String p: patients){
+                writer2.println(p);
+            }         
             
             writer.close();
             writer2.close();
@@ -397,6 +460,14 @@ public class PersonalDatas extends javax.swing.JFrame {
             input.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(PsychologicalAnamnesis.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private Boolean validation(){
+        if(jTextField1.getText().equals("") || jTextField2.getText().equals("") || jTextField3.getText().equals("") || jTextField4.getText().equals("") || jComboBox1.getSelectedItem().toString().equals("────────")){
+            return false;
+        }else{
+            return true;
         }
     }
 

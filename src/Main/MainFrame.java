@@ -6,8 +6,11 @@ import NewPatient.Controller;
 import Statistic.Statistic;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.lang.reflect.Field;
@@ -20,6 +23,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.JPanel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,12 +31,18 @@ import static javax.swing.JOptionPane.showMessageDialog;
  * and open the template in the editor.
  */
 
+
+
 /**
  *
  * @author robeszpierre
  */
 public class MainFrame extends javax.swing.JFrame {
 
+        BufferedImage img=null;   
+        Image dimg=null;
+        int numOfFiles=0;
+        int randomPicture;
     /**
      * Creates new form MainFrame
      */
@@ -57,29 +67,21 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
         
-        
-        BufferedImage img=null;   
-        Image dimg=null;
-        int numOfFiles=0;
         try{
         numOfFiles=new File(Controller.controller.path+"img"+File.separatorChar+"main").listFiles().length;
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, Controller.controller.path + "Nincsenek a program mappái a megfelelő helyen. Ha nem tudja megoldani a problémát, akkor kérem lépjen kapcsolatba a fejlesztővel a robeszpierre@gmail.com e-mail címen.");
+            JOptionPane.showMessageDialog(null, " Nincs a Betegek mappa a megfelelő helyen, tegye elérhetővé ezen a helyen: " + Controller.controller.path +  " Ha nem tudja megoldani a problémát, akkor kérem lépjen kapcsolatba a fejlesztővel a robeszpierre@gmail.com e-mail címen.");
+            System.exit(0);
         }
         Random rand = new Random();
-        int randomPicture = rand.nextInt(numOfFiles) + 1;
+        randomPicture = rand.nextInt(numOfFiles) + 1;
         try{
             img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"main"+File.separatorChar+randomPicture+".jpg"));
-            dimg = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),
-            Image.SCALE_SMOOTH);
         }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Nincs kép a fő program menüjéhez");
-        }
-        
-        ImageIcon icon=new ImageIcon(dimg);
-        jLabel1.setIcon(icon);
+        } 
 
-        
+        resizeImage();
           
     }
 
@@ -101,9 +103,19 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Beteg nyílvántartó");
         setResizable(false);
+        addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                formMouseDragged(evt);
+            }
+        });
 
         mainPanel.setBackground(new java.awt.Color(146, 146, 146));
         mainPanel.setPreferredSize(new java.awt.Dimension(800, 400));
+        mainPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                mainPanelMouseReleased(evt);
+            }
+        });
         mainPanel.setLayout(null);
 
         newPatientButton.setBackground(new java.awt.Color(0, 0, 0));
@@ -140,7 +152,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         mainPanel.add(statisticButton);
-        statisticButton.setBounds(1020, 580, 240, 100);
+        statisticButton.setBounds(1070, 600, 240, 100);
         mainPanel.add(jLabel1);
         jLabel1.setBounds(0, 0, 1370, 770);
 
@@ -152,37 +164,56 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
         );
+
+        getAccessibleContext().setAccessibleName("Betegnyílvántartó");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void newPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newPatientButtonMouseClicked
-         Controller.controller.newPatient();
-    }//GEN-LAST:event_newPatientButtonMouseClicked
+    private void statisticButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_statisticButtonMouseClicked
+        try{
+            Statistic statistic = new Statistic();
+            statistic.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            statistic.setVisible(true);
+            this.setVisible(false);
+        }catch(Exception e){
+            showMessageDialog(null, "Még nincs beteg a rendszerben, akiről statisztikát készíthetnék!");
+        }
+    }//GEN-LAST:event_statisticButtonMouseClicked
 
     private void existingPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_existingPatientButtonMouseClicked
         SelectPatient selectPatient = new SelectPatient();
         selectPatient.setVisible(true);
     }//GEN-LAST:event_existingPatientButtonMouseClicked
 
-    private void statisticButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_statisticButtonMouseClicked
-        try{
-        Statistic statistic = new Statistic();
-        statistic.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        statistic.setVisible(true);
-        this.setVisible(false);
-        }catch(Exception e){
-            showMessageDialog(null, "Még nincs beteg a rendszerben, akiről statisztikát készíthetnék!");
-        }
-        
-    }//GEN-LAST:event_statisticButtonMouseClicked
+    private void newPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newPatientButtonMouseClicked
+        Controller.controller.newPatient();
+    }//GEN-LAST:event_newPatientButtonMouseClicked
 
+    private void mainPanelMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainPanelMouseReleased
+        System.out.println("aaa");
+        jLabel1.setSize(mainPanel.getWidth(), mainPanel.getHeight());
+        resizeImage();
+    }//GEN-LAST:event_mainPanelMouseReleased
+
+    private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
+        System.out.println("mouse");
+    }//GEN-LAST:event_formMouseDragged
+
+    private void resizeImage(){
+        dimg = img.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon icon=new ImageIcon(dimg);
+        jLabel1.setIcon(icon);
+    }
+    
+
+    
+    
     /**
      * @param args the command line arguments
      */
-    
     
    
 

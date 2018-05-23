@@ -126,6 +126,7 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane18 = new javax.swing.JScrollPane();
         jList18 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -394,9 +395,9 @@ public class ManageMain extends javax.swing.JFrame {
         jButton3.setBounds(40, 700, 200, 30);
 
         jLabel63.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
-        jLabel63.setText("Végtagok");
+        jLabel63.setText("Gerinc");
         jPanel2.add(jLabel63);
-        jLabel63.setBounds(430, 710, 70, 20);
+        jLabel63.setBounds(120, 680, 70, 20);
 
         jTabbedPane2.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
 
@@ -413,6 +414,11 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ManagePatient/body3.jpg"))); // NOI18N
         jPanel2.add(jLabel1);
         jLabel1.setBounds(0, 0, 650, 680);
+
+        jLabel70.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
+        jLabel70.setText("Végtagok");
+        jPanel2.add(jLabel70);
+        jLabel70.setBounds(430, 710, 70, 20);
 
         jTabbedPane1.addTab("Tünetek", jPanel2);
 
@@ -1835,6 +1841,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
