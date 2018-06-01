@@ -15,6 +15,11 @@ import NewPatient.PersonalDatas;
 import NewPatient.PsychologicalAnamnesis;
 import NewPatient.Questions;
 import NewPatient.Tongue;
+import com.itextpdf.io.font.TrueTypeFont;
+import com.itextpdf.kernel.pdf.PdfName;
+//import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.styledxmlparser.jsoup.Jsoup;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.Dimension;
@@ -39,6 +44,47 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.font.PDFont;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+
+//pdfbox
+//import java.io.IOException;
+//import org.apache.fontbox.encoding.Encoding;
+//import org.apache.pdfbox.pdmodel.PDDocument;
+//import org.apache.pdfbox.pdmodel.PDPage;
+//import org.apache.pdfbox.pdmodel.PDPageContentStream;
+//import org.apache.pdfbox.pdmodel.font.PDType1Font;
+//import org.apache.pdfbox.pdmodel.font.PDTrueTypeFont;
+//import org.apache.pdfbox.util.Charsets;
+
+////////////
+
+//iText
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.BaseFont;
+import static com.itextpdf.text.pdf.PdfDictionary.FONT;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfWriter;
+//import com.itextpdf.text.Image;
+import com.itextpdf.text.html.HtmlEncoder;
+
+import java.io.FileOutputStream;
+import static java.nio.file.Files.lines;
+import com.itextpdf.text.pdf.PdfPTable;
+
+
+
+
+
+
+
 
 /**
  *
@@ -47,6 +93,7 @@ import javax.swing.JPanel;
 public class ManageMain extends javax.swing.JFrame {
     
     ArrayList<Treatment> treatments=new ArrayList<Treatment>();
+    ArrayList<Treatment> treatments2=new ArrayList<Treatment>();
     int idx=0;
     
     int idNumber;
@@ -279,6 +326,7 @@ public class ManageMain extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Betegek kezelése");
@@ -740,7 +788,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -760,7 +808,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(jLabel2))
-                .addGap(70, 70, 70)
+                .addGap(67, 67, 67)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(118, Short.MAX_VALUE))
         );
@@ -1549,20 +1597,34 @@ public class ManageMain extends javax.swing.JFrame {
             }
         });
 
+        jButton14.setBackground(new java.awt.Color(0, 0, 0));
+        jButton14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(255, 255, 255));
+        jButton14.setText("PDF");
+        jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton14MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane3)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(12, 12, 12)
+                        .addComponent(jTabbedPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -1572,9 +1634,10 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                     .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
@@ -1595,11 +1658,6 @@ public class ManageMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        addTreatment();
-        Controller.controller.sumOfTreatments++;
-    }//GEN-LAST:event_jButton1MouseClicked
-
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         File folder = new File(Controller.controller.path+idNumber+File.separatorChar+"Treatments");
 	File[] listOfFiles = folder.listFiles();
@@ -1762,6 +1820,701 @@ public class ManageMain extends javax.swing.JFrame {
         p.changeButtons();
     }//GEN-LAST:event_jButton13MouseClicked
 
+    private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
+        // TODO add your handling code here:
+        
+        
+              //pdf
+//       try{
+//           PDDocument doc = new PDDocument();
+//           PDPage myPage = new PDPage();
+//           doc.addPage(myPage);
+//           PDPageContentStream cont = new PDPageContentStream(doc, myPage);
+//           cont.beginText();
+//
+//                cont.setFont(PDType1Font.TIMES_ROMAN, 12);
+//                cont.setLeading(14.5f);
+//
+//                cont.newLineAtOffset(25, 700);
+//                String line1 = "World War II (often abbreviated to WWII or WW2)";
+//                cont.showText(line1);
+//
+//                cont.newLine();
+//
+//                
+//
+//                cont.endText();
+//                doc.save("C://ez//va.pdf");
+//
+//
+//
+//       }catch(Exception e){}
+//try{
+        
+        
+//        String fileName = "PdfWithtext.pdf"; // name of our file
+//        
+//        PDDocument doc = new PDDocument();
+//        PDPage page = new PDPage();
+//
+//        doc.addPage(page);
+//
+//        PDPageContentStream content = new PDPageContentStream(doc, page);
+//        
+//        content.beginText();
+//        content.setFont(PDType1Font.COURIER, 12);
+//        content.setLeading(14.5f);
+//        content.newLineAtOffset(25, 700);
+//        content.showText("Beteg Urlap");
+//        content.endText();
+//        
+//        content.beginText();
+//        content.newLine();
+//        
+//        
+//        content.setLeading(14.5f);
+//        content.newLineAtOffset(25, 700);
+//        String lines[] = jTextArea7.getText().split("\\r?\\n");
+//        for (String line : lines) {
+//            if(!"".equals(line))
+//            {
+//                content.showText(line);
+//                content.newLine();
+//                
+//            }
+//            
+//        }
+//   
+//        content.endText();
+//        content.close();
+//        doc.save(fileName);
+//        doc.close();
+// 
+//        JOptionPane.showMessageDialog(null,"your file created in : "+ System.getProperty("user.dir"));
+//        }
+//        catch(IOException e){   
+//        System.out.println(e.getMessage());
+//        }
+
+
+//itextpdf
+
+         Document document = new Document();
+
+        try {
+            PdfWriter.getInstance(document,new FileOutputStream("Urlap"+idNumber+".pdf"));
+
+            document.open();
+            
+            //String lines[] = jTextArea7.getText().split("\\r?\\n");
+             
+             try {
+                 BaseFont baseFont = BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+                 Font cellFont20 = new Font(baseFont, 20);
+                 Font cellFont12italic = new Font(baseFont, 12,Font.ITALIC);
+                 Font cellFont12 = new Font(baseFont, 12);
+                 Font boldFont22 = new Font(baseFont, 22, Font.BOLD);
+                 Font boldFont12 = new Font(baseFont, 12, Font.BOLD);
+                 com.itextpdf.text.Paragraph p=new com.itextpdf.text.Paragraph("Beteg Űrlap \n",boldFont22);
+                 document.add(p);
+                 
+                //adatok
+//                for (String line : lines)
+//                {
+//                    if(!"".equals(line))
+//                    {
+//                        document.add(new com.itextpdf.text.Paragraph(line,cellFont12));
+//                    }
+//                }
+
+            try {
+            String path=Controller.controller.path + idNumber + File.separatorChar;
+            Scanner personalDataInput=new Scanner(new File(path+"personaldata.txt"));
+            personalDataInput.nextLine();
+            com.itextpdf.text.Paragraph name=new com.itextpdf.text.Paragraph("Név: ",cellFont12);
+            name.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(name);
+            com.itextpdf.text.Paragraph mothername=new com.itextpdf.text.Paragraph("Anyja neve: ",cellFont12);
+            mothername.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(mothername);
+            com.itextpdf.text.Paragraph birthP=new com.itextpdf.text.Paragraph("Születési hely: ",cellFont12);
+            birthP.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(birthP);
+
+            com.itextpdf.text.Paragraph birthT=new com.itextpdf.text.Paragraph("Születési időpont: ",cellFont12);
+            birthT.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(birthT);
+
+            com.itextpdf.text.Paragraph status=new com.itextpdf.text.Paragraph("Családi állapot: ",cellFont12);
+            status.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(status);
+
+            com.itextpdf.text.Paragraph work=new com.itextpdf.text.Paragraph("Foglalkozás: ",cellFont12);
+            work.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(work);
+
+            com.itextpdf.text.Paragraph email=new com.itextpdf.text.Paragraph("E-mail cím: ",cellFont12);
+            email.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(email);
+
+            com.itextpdf.text.Paragraph tel=new com.itextpdf.text.Paragraph("Telefonszám: ",cellFont12);
+            tel.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(tel);
+
+            com.itextpdf.text.Paragraph sex=new com.itextpdf.text.Paragraph("Neme: ",cellFont12);
+            sex.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            document.add(sex);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                //tunetek
+                document.add(new com.itextpdf.text.Paragraph("Tünetek",boldFont22));
+                
+                String symp="";
+                for(int i=0;i<jList11.getModel().getSize();i++)
+                {
+                    symp+=jList11.getModel().getElementAt(i)+", ";
+                }
+                //symp+="\n";
+                for(int i=0;i<jList10.getModel().getSize();i++)
+                {
+                    if(i==(jList10.getModel().getSize()-1))
+                        symp+=jList10.getModel().getElementAt(i);
+                    else
+                        symp+=jList10.getModel().getElementAt(i)+", ";                        
+                }
+                if(!(symp.equals("")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Fej:",boldFont12));
+                    String htmlfreesymp= Jsoup.parse(symp).text();
+                    document.add(new com.itextpdf.text.Paragraph(htmlfreesymp,cellFont12italic));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                
+                symp="";
+                for(int i=0;i<jList12.getModel().getSize();i++)
+                {
+                    symp+=jList12.getModel().getElementAt(i)+", ";
+                }
+               
+                for(int i=0;i<jList14.getModel().getSize();i++)
+                {
+                    if(i==(jList14.getModel().getSize()-1))
+                        symp+=jList14.getModel().getElementAt(i);
+                    else
+                        symp+=jList14.getModel().getElementAt(i)+", ";                        
+                }
+                if(!(symp.equals("")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Mellkas:",boldFont12));
+                    String htmlfreesymp= Jsoup.parse(symp).text();
+                    document.add(new com.itextpdf.text.Paragraph(htmlfreesymp,cellFont12italic));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                
+                symp="";
+                for(int i=0;i<jList13.getModel().getSize();i++)
+                {
+                    symp+=jList13.getModel().getElementAt(i)+", ";
+                }
+                
+                for(int i=0;i<jList15.getModel().getSize();i++)
+                {
+                    if(i==(jList15.getModel().getSize()-1))
+                        symp+=jList15.getModel().getElementAt(i);
+                    else
+                        symp+=jList15.getModel().getElementAt(i)+", ";                        
+                }
+                if(!(symp.equals("")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Has:",boldFont12));
+                    String htmlfreesymp= Jsoup.parse(symp).text();
+                    document.add(new com.itextpdf.text.Paragraph(htmlfreesymp,cellFont12italic));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                
+                symp="";
+                for(int i=0;i<jList16.getModel().getSize();i++)
+                {
+                    symp+=jList16.getModel().getElementAt(i)+", ";
+                }
+                
+                for(int i=0;i<jList9.getModel().getSize();i++)
+                {
+                    if(i==(jList9.getModel().getSize()-1))
+                        symp+=jList9.getModel().getElementAt(i);
+                    else
+                        symp+=jList9.getModel().getElementAt(i)+", ";                        
+                }
+                if(!(symp.equals("")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Alhas:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(symp,cellFont12italic));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                symp="";
+                for(int i=0;i<jList17.getModel().getSize();i++)
+                {
+                    if(i==(jList17.getModel().getSize()-1))
+                        symp+=jList17.getModel().getElementAt(i);
+                    else
+                        symp+=jList17.getModel().getElementAt(i)+", ";
+                }
+                if(!(symp.equals("")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Gerinc:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(symp,cellFont12italic));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                
+                
+                
+                symp="";
+                for(int i=0;i<jList18.getModel().getSize();i++)
+                {                   
+                        symp+=jList18.getModel().getElementAt(i)+", ";
+                }
+                if(!(symp.equals("")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Végtagok:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(symp,cellFont12italic));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                String medicalHistory="";
+                boolean kelle=true;               
+                medicalHistory = jTextPane9.getText();
+                if(medicalHistory.length()>1)
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22)); kelle=false;
+                    document.add(new com.itextpdf.text.Paragraph("Gyermekkori nagyobb betegségek:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+               
+                medicalHistory= jTextPane10.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                     document.add(new com.itextpdf.text.Paragraph("Elöző betegség(ek):",boldFont12));
+                     document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                     document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+
+                medicalHistory="";
+                
+                medicalHistory= jTextPane11.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Ismert, jelenleg is fennálló betegségek(ek):",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+                
+                medicalHistory= jTextPane12.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Műtétek:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+                
+                medicalHistory= jTextPane13.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Nagyobb fogászati beavatkozás(ok):",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+                
+                medicalHistory= jTextPane14.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Jelenleg szedett gyógyszer(ek), gyógynövény(ek):",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+                
+                medicalHistory= jTextPane17.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Gyógyszerérzékenység:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+                
+                medicalHistory= jTextPane15.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Korábbi terhesség(ek):",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+               
+                medicalHistory= jLabel2.getText();
+                if(medicalHistory.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Kórtörténet",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Jelenleg állapotos-e:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(medicalHistory,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                medicalHistory="";
+                //pszichikum
+                kelle=true;
+                String psich;
+                //document.add(new com.itextpdf.text.Paragraph("Pszichikum",boldFont22));
+                psich = jTextPane2.getText();
+                if(psich.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Pszichikum",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Magzati kor, születés körüli időszak:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(psich,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+               
+                psich="";
+                
+                psich = jTextPane3.getText();
+                if(psich.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Pszichikum",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Gyermekkor:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(psich,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                psich="";
+                
+                psich = jTextPane4.getText();
+                if(psich.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Pszichikum",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Felnőttkor, ill a jelenleg fenálló helyzet:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(psich,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                psich="";
+                
+                //Actual
+                kelle=true;
+                String actual;
+                
+                actual = jTextPane1.getText();
+                if(actual.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Nyugati orvosi diagnózis(ok):",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                actual="";
+                
+                actual = jTextPane7.getText();
+                if(actual.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Jelen panaszok:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                actual="";
+                
+                actual = jTextPane8.getText();
+                if(actual.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Laborvizsgálatok eredményei:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                actual="";
+                
+                actual = jTextPane16.getText();
+                if(actual.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Képalkotó vizsgálatok:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                actual="";
+                
+                
+                //Diagnose
+                kelle=true;
+                String diagnose;
+                
+                diagnose = jTextPane40.getText();
+                if(diagnose.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("HKO diagnózis",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("diagnózis(ok):",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                diagnose = jTextPane41.getText();
+                if(diagnose.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("HKO diagnózis",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Terápiás koncepció:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                kelle=true;
+                diagnose = jTextPane42.getText();
+                if(diagnose.length()>1)
+                {
+                    if(kelle){
+                        com.itextpdf.text.Paragraph javaslatok=new com.itextpdf.text.Paragraph("JAVASLAT(OK)",boldFont22);
+                        javaslatok.setAlignment(Element.ALIGN_CENTER);
+                        document.add(javaslatok);
+                        kelle=false;
+                    }
+                    document.add(new com.itextpdf.text.Paragraph("1. Étrend:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                diagnose = jTextPane43.getText();
+                if(diagnose.length()>1)
+                {
+                     if(kelle){
+                        com.itextpdf.text.Paragraph javaslatok=new com.itextpdf.text.Paragraph("JAVASLAT(OK)",boldFont22);
+                        javaslatok.setAlignment(Element.ALIGN_CENTER);
+                        document.add(javaslatok);
+                        kelle=false;
+                    }
+                    document.add(new com.itextpdf.text.Paragraph("2. Gyógynövény:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                diagnose = jTextPane44.getText();
+                if(diagnose.length()>1)
+                {
+                     if(kelle){
+                        com.itextpdf.text.Paragraph javaslatok=new com.itextpdf.text.Paragraph("JAVASLAT(OK)",boldFont22);
+                        javaslatok.setAlignment(Element.ALIGN_CENTER);
+                        document.add(javaslatok);
+                        kelle=false;
+                    }
+                    document.add(new com.itextpdf.text.Paragraph("3. Kínai orvosság:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                diagnose = jTextPane45.getText();
+                if(diagnose.length()>1)
+                {
+                     if(kelle){
+                        com.itextpdf.text.Paragraph javaslatok=new com.itextpdf.text.Paragraph("JAVASLAT(OK)",boldFont22);
+                        javaslatok.setAlignment(Element.ALIGN_CENTER);
+                        document.add(javaslatok);
+                        kelle=false;
+                    }
+                    document.add(new com.itextpdf.text.Paragraph("4. Mozgás/gyógytorna:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                diagnose = jTextPane46.getText();
+                if(diagnose.length()>1)
+                {
+                     if(kelle){
+                        com.itextpdf.text.Paragraph javaslatok=new com.itextpdf.text.Paragraph("JAVASLAT(OK)",boldFont22);
+                        javaslatok.setAlignment(Element.ALIGN_CENTER);
+                        document.add(javaslatok);
+                        kelle=false;
+                    }
+                    document.add(new com.itextpdf.text.Paragraph("5. Életmód, egyéb javaslat:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(diagnose,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                diagnose="";
+                
+                //Pulse
+                if((jLabel31.getText().equals("felületes")||jLabel31.getText().equals("közép")||jLabel31.getText().equals("mély")))
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Pulzus",boldFont22));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                    PdfPTable table = new PdfPTable(5);
+
+                    table.addCell(new com.itextpdf.text.Paragraph("Jobb:",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("Mélység:",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("Sebesség:",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("Erő:",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("Ritmus:",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("1(T)",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel31.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel32.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel33.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel34.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("2(L)",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel35.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel36.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel37.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel38.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph("3(V)",boldFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel39.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel40.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel41.getText(),cellFont12));
+                    table.addCell(new com.itextpdf.text.Paragraph(jLabel42.getText(),cellFont12));
+                    document.add(table);
+                
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                    
+                    PdfPTable table2 = new PdfPTable(5);
+                    
+                    table2.addCell(new com.itextpdf.text.Paragraph("Bal:",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("Mélység:",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("Sebesség:",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("Erő:",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("Ritmus:",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("1(Sz)",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel43.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel44.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel45.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel46.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("2(M)",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel47.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel48.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel49.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel50.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph("3(V)",boldFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel51.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel52.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel53.getText(),cellFont12));
+                    table2.addCell(new com.itextpdf.text.Paragraph(jLabel54.getText(),cellFont12));
+                    document.add(table2);
+                    document.add(new com.itextpdf.text.Paragraph("Egyéb:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(jTextArea2.getText(),cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                
+                
+                
+                
+                String tongue = jTextPane5.getText();
+                if(tongue.length()>1)
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Nyelv:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(tongue,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                String ear = jTextPane6.getText();
+                if(ear.length()>1)
+                {
+                    document.add(new com.itextpdf.text.Paragraph("Fül:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(ear,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                
+                document.add(new com.itextpdf.text.Paragraph("Értékelés:",boldFont22));
+                document.add(new com.itextpdf.text.Paragraph("Értékelés dátuma: "+jLabel64.getText(),cellFont12));
+                document.add(new com.itextpdf.text.Paragraph(jTextArea1.getText(),cellFont12));
+                document.add(new com.itextpdf.text.Paragraph("A beteg állapota: "+jComboBox1.getSelectedItem().toString(),boldFont12));
+                
+//                File folder = new File(Controller.controller.path + idNumber + File.separatorChar+"Treatments");
+//		File[] listOfFiles = folder.listFiles();
+//                    if(listOfFiles.length>0){
+//                    for(int i = 1; i < listOfFiles.length+1; i++){
+//                        document.add(new com.itextpdf.text.Paragraph(i+". kezelés:",boldFont12));
+//                        treatments.add(new Treatment());
+//                        Treatment currentTreatment=treatments.get(idx);
+//                        currentTreatment.load(i,Controller.controller.path + idNumber + File.separatorChar );
+//                        currentTreatment.pdf(document);
+//                        idx++;
+//                    }
+//                    
+//                }
+                int i=0;
+                for (Treatment element : treatments)
+                {
+                    i++;
+                }
+                if(i>0)document.add(new com.itextpdf.text.Paragraph("Kezelés:",boldFont22));
+                for (Treatment element : treatments) {
+                     element.setIsFilled();
+                     if(element.getIsFilled())
+                        element.pdf(document);
+                 }
+                
+                
+                
+                
+
+
+
+                
+                document.add(new com.itextpdf.text.Paragraph("Dokumentum vége"));
+                document.close(); 
+                JOptionPane.showMessageDialog(null,"A pdf fájl sikeresen elkészült, megtalálható az alábbi helyen:\n "+ System.getProperty("user.dir"));
+       } catch (IOException ex) {
+                 Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+             }
+
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        
+        
+    }//GEN-LAST:event_jButton14MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        addTreatment();
+        Controller.controller.sumOfTreatments++;
+    }//GEN-LAST:event_jButton1MouseClicked
+
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1770,6 +2523,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2581,6 +3335,7 @@ public class ManageMain extends javax.swing.JFrame {
                     }
                 }
         jTabbedPane3.setSelectedIndex(idx);
+       
     }
 
     private void loadFinalReport(String path) {
