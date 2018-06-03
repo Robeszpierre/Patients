@@ -6,9 +6,14 @@
 package ManagePatient;
 
 import NewPatient.Controller;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.pdf.BaseFont;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
@@ -34,6 +39,21 @@ public class Treatment extends javax.swing.JPanel {
         LocalDateTime dateTime = LocalDateTime.now();
         String time = dateTime.format(formatter); 
         jLabel1.setText(time);
+    }
+    private boolean isFilled;
+    public void setIsFilled()
+    {
+        if(jTextPane1.getText().length()>1||jTextPane2.getText().length()>1||jTextPane3.getText().length()>1
+           ||jTextPane4.getText().length()>1||jTextPane5.getText().length()>1)
+        {
+            isFilled=true;
+        }
+        else
+            isFilled=false;
+    }
+    public boolean getIsFilled()
+    {
+        return isFilled;
     }
 
     /**
@@ -331,6 +351,58 @@ public class Treatment extends javax.swing.JPanel {
         }catch(Exception e){
             System.out.println("FILE NOT FOUND");
     }
+    }
+    
+    void pdf(Document d ) throws DocumentException, IOException
+    {
+        BaseFont baseFont = BaseFont.createFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+                 Font cellFont20 = new Font(baseFont, 20);
+                 Font cellFont12italic = new Font(baseFont, 12,Font.ITALIC);
+                 Font cellFont12 = new Font(baseFont, 12);
+                 Font boldFont22 = new Font(baseFont, 22, Font.BOLD);
+                 Font boldFont12 = new Font(baseFont, 12, Font.BOLD);
+        d.add(new com.itextpdf.text.Paragraph("Dátum:"+jLabel1.getText(),boldFont12));
+        String treat="";
+        treat=jTextPane1.getText();
+        if(treat.length()>1)
+        {
+            d.add(new com.itextpdf.text.Paragraph("Romlás:",boldFont12));
+            d.add(new com.itextpdf.text.Paragraph(treat,cellFont12));
+            d.add(new com.itextpdf.text.Paragraph(""));
+        }
+        treat="";
+        treat=jTextPane2.getText();
+        if(treat.length()>1)
+        {
+            d.add(new com.itextpdf.text.Paragraph("Javulás:",boldFont12));
+            d.add(new com.itextpdf.text.Paragraph(treat,cellFont12));
+            d.add(new com.itextpdf.text.Paragraph(""));
+        }
+        treat="";
+        treat=jTextPane3.getText();
+        if(treat.length()>1)
+        {
+            d.add(new com.itextpdf.text.Paragraph("Egyéb:",boldFont12));
+            d.add(new com.itextpdf.text.Paragraph(treat,cellFont12));
+            d.add(new com.itextpdf.text.Paragraph(""));
+        }
+        treat="";
+        treat=jTextPane4.getText();
+        if(treat.length()>1)
+        {
+            d.add(new com.itextpdf.text.Paragraph("Újabb javaslatok:",boldFont12));
+            d.add(new com.itextpdf.text.Paragraph(treat,cellFont12));
+            d.add(new com.itextpdf.text.Paragraph(""));
+        }
+        treat="";
+        treat=jTextPane5.getText();
+        if(treat.length()>1)
+        {
+            d.add(new com.itextpdf.text.Paragraph("Terápia (pontok, masszázs, moxa, köpöly stb.)",boldFont12));
+            d.add(new com.itextpdf.text.Paragraph(treat,cellFont12));
+            d.add(new com.itextpdf.text.Paragraph(""));
+        }
+        
     }
 
     void setdate(String date) {
