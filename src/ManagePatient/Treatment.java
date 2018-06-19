@@ -6,6 +6,7 @@
 package ManagePatient;
 
 import NewPatient.Controller;
+import Main.EncryptDecrypt;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Font;
@@ -248,7 +249,7 @@ public class Treatment extends javax.swing.JPanel {
     private javax.swing.JTextPane jTextPane5;
     // End of variables declaration//GEN-END:variables
 
-    void save(int treatmentNumber, int idNumber) {
+    void save(int treatmentNumber, int idNumber)throws Exception {
           PrintWriter writer = null;
         
             File file = new File(Controller.controller.path+idNumber+File.separatorChar+"Treatments"+File.separatorChar+Integer.toString(treatmentNumber+1)+".txt");
@@ -258,32 +259,32 @@ public class Treatment extends javax.swing.JPanel {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
             
-            writer.println(jLabel1.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jLabel1.getText().trim()));
             writer.println("***");
         
-            writer.println(jTextPane1.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(  jTextPane1.getText().trim()));
             writer.println("***");
             
             
-            writer.println(jTextPane2.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextPane2.getText().trim()));
             writer.println("***");
             
             
-            writer.println(jTextPane3.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextPane3.getText().trim()));
             writer.println("***");
             
             
-            writer.println(jTextPane4.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextPane4.getText().trim()));
             writer.println("***");
             
             
-            writer.println(jTextPane5.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextPane5.getText().trim()));
             writer.println("***");
             
             writer.close();
     }
 
-    void load(int i, String path) {
+    void load(int i, String path)throws Exception {
         Scanner input;
         String line, text = "";
         try{
@@ -291,7 +292,7 @@ public class Treatment extends javax.swing.JPanel {
             
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             jLabel1.setText(text);
@@ -300,7 +301,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             if(!text.equals("\n")){
@@ -310,7 +311,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             if(!text.equals("\n")){
@@ -320,7 +321,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             if(!text.equals("\n")){
@@ -330,7 +331,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             if(!text.equals("\n")){
@@ -340,7 +341,7 @@ public class Treatment extends javax.swing.JPanel {
             text = "";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             if(!text.equals("\n")){

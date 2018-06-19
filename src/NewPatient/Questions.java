@@ -1,6 +1,7 @@
 package NewPatient;
 
 import ManagePatient.ManageMain;
+import Main.EncryptDecrypt;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -6626,9 +6627,17 @@ public class Questions extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        save(Controller.controller.path);
+        try {
+            save(Controller.controller.path);
+        } catch (Exception ex) {
+            Logger.getLogger(Questions.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
-        new ManageMain(Controller.controller.idNumber);
+        try {
+            new ManageMain(Controller.controller.idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(Questions.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -7588,7 +7597,7 @@ public class Questions extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-    public void save(String path) {
+    public void save(String path)throws Exception {
         PrintWriter frequentWriter;
         PrintWriter rareWriter;
         try {
@@ -7609,7 +7618,7 @@ public class Questions extends javax.swing.JFrame {
             
             text=jTextField1.getText();
             if(!text.equals("")){
-                rareWriter.println("arc színe: " + jTextField1.getText());
+                rareWriter.println(EncryptDecrypt.encrypt( "arc színe: " + jTextField1.getText()));
             }
             
             String action=buttonGroup106.getSelection().getActionCommand();
@@ -7618,48 +7627,48 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
                 
                     text=jTextField2.getText();
                 if(!text.equals("")){
-                    frequentWriter.println("fejfájás helye/érintett meridiánok:" + jTextField2.getText() + " jellege: " + jTextField3.getText() + " gyakorisága: " + jTextField4.getText() + " egyéb: " + jTextField44.getText());
+                    frequentWriter.println(EncryptDecrypt.encrypt("fejfájás helye/érintett meridiánok:" + jTextField2.getText() + " jellege: " + jTextField3.getText() + " gyakorisága: " + jTextField4.getText() + " egyéb: " + jTextField44.getText()));
                 }
 
                 text=jTextField44.getText();
                 if(!text.equals("")){
-                    frequentWriter.println("fejfájás egyéb: " + jTextField44.getText());
+                    frequentWriter.println(EncryptDecrypt.encrypt("fejfájás egyéb: " + jTextField44.getText()));
                 }
 
                 text=jTextField45.getText();
                 if(!text.equals("")){
-                    frequentWriter.println("fejfájást rontja: " + jTextField45.getText());
+                    frequentWriter.println(EncryptDecrypt.encrypt("fejfájást rontja: " + jTextField45.getText()));
                 }
 
                 text=jTextField46.getText();
                 if(!text.equals("")){
-                     frequentWriter.println("fejfájást javítja: " + jTextField46.getText());
+                     frequentWriter.println(EncryptDecrypt.encrypt("fejfájást javítja: " + jTextField46.getText()));
                 }
             }else if(action=="2"){
-                    rareWriter.println(content);
+                    rareWriter.println(EncryptDecrypt.encrypt(content));
 
                     text=jTextField2.getText();
                 if(!text.equals("")){
-                    rareWriter.println("fejfájás helye/érintett meridiánok:" + jTextField2.getText() + " jellege: " + jTextField3.getText() + " gyakorisága: " + jTextField4.getText() + " egyéb: " + jTextField44.getText());
+                    rareWriter.println(EncryptDecrypt.encrypt("fejfájás helye/érintett meridiánok:" + jTextField2.getText() + " jellege: " + jTextField3.getText() + " gyakorisága: " + jTextField4.getText() + " egyéb: " + jTextField44.getText()));
                 }
 
                 text=jTextField44.getText();
                 if(!text.equals("")){
-                    rareWriter.println("fejfájás egyéb: " + jTextField44.getText());
+                    rareWriter.println(EncryptDecrypt.encrypt("fejfájás egyéb: " + jTextField44.getText()));
                 }
 
                 text=jTextField45.getText();
                 if(!text.equals("")){
-                    rareWriter.println("fejfájást rontja: " + jTextField45.getText());
+                    rareWriter.println(EncryptDecrypt.encrypt("fejfájást rontja: " + jTextField45.getText()));
                 }
 
                 text=jTextField46.getText();
                 if(!text.equals("")){
-                     rareWriter.println("fejfájást javítja: " + jTextField46.getText());
+                     rareWriter.println(EncryptDecrypt.encrypt("fejfájást javítja: " + jTextField46.getText()));
                 }
             }    
             
@@ -7671,9 +7680,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }    
             
             action=buttonGroup2.getSelection().getActionCommand();
@@ -7682,9 +7691,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup3.getSelection().getActionCommand();
@@ -7693,9 +7702,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup4.getSelection().getActionCommand();
@@ -7704,9 +7713,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup5.getSelection().getActionCommand();
@@ -7715,9 +7724,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup6.getSelection().getActionCommand();
@@ -7726,9 +7735,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup7.getSelection().getActionCommand();
@@ -7737,9 +7746,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup9.getSelection().getActionCommand();
@@ -7748,9 +7757,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup9.getSelection().getActionCommand();
@@ -7759,9 +7768,9 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action=="2"){
-                rareWriter.println(content);
+                rareWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=buttonGroup10.getSelection().getActionCommand();
@@ -7769,6 +7778,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox11.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7780,6 +7790,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox12.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7791,6 +7802,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox13.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7802,6 +7814,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox14.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7819,7 +7832,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox15.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
-            
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7831,6 +7844,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox16.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7842,6 +7856,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox17.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7853,6 +7868,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox18.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7864,6 +7880,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox19.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7875,6 +7892,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox20.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7886,6 +7904,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox21.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7897,6 +7916,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox22.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7908,6 +7928,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox23.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7919,6 +7940,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox24.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7930,6 +7952,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox25.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7941,6 +7964,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox26.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7952,7 +7976,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox111.isSelected()){
                 text="<html><font color=red>"+text+"</html>";
                 }
-                frequentWriter.println(text);
+                frequentWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=jTextField29.getText();
@@ -7960,7 +7984,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox112.isSelected()){
                 text="<html><font color=red>"+text+"</html>";
                 }
-                rareWriter.println(text);
+                rareWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             
@@ -7975,6 +7999,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox27.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7986,6 +8011,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox28.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -7997,6 +8023,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox29.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8008,6 +8035,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox30.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8019,6 +8047,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox31.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8030,6 +8059,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox32.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8041,6 +8071,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox33.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8052,6 +8083,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox34.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8063,6 +8095,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox35.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8074,6 +8107,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox36.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8085,6 +8119,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox37.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8096,6 +8131,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox38.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8107,6 +8143,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox39.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8118,6 +8155,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox40.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8129,7 +8167,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox113.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                frequentWriter.println(text);
+                frequentWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=jTextField31.getText();
@@ -8137,7 +8175,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox114.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                rareWriter.println(text);
+                rareWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             frequentWriter.println("*****");
@@ -8150,6 +8188,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox41.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8161,6 +8200,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox42.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8172,6 +8212,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox43.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8183,6 +8224,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox44.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8194,6 +8236,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox45.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8205,6 +8248,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox46.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8216,6 +8260,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox47.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8227,6 +8272,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox48.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8238,6 +8284,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox49.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8249,6 +8296,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox50.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8260,6 +8308,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox51.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8271,6 +8320,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox52.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8282,6 +8332,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox53.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8290,7 +8341,7 @@ public class Questions extends javax.swing.JFrame {
             
             text=jTextField8.getText();
             if(!text.equals("")){
-                rareWriter.println("<html><b>széklet</b> <u>gyakoriság</u>: " + jTextField8.getText()+ " <u>állag</u>: "  + jTextField9.getText() + " <u>szín</u>: " + jTextField10.getText()+"</html>");
+                rareWriter.println(EncryptDecrypt.encrypt("<html><b>széklet</b> <u>gyakoriság</u>: " + jTextField8.getText()+ " <u>állag</u>: "  + jTextField9.getText() + " <u>szín</u>: " + jTextField10.getText()+"</html>"));
             }
             
             
@@ -8299,6 +8350,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox54.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8310,6 +8362,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox55.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8321,6 +8374,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox56.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8332,6 +8386,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox57.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8343,6 +8398,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox58.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8354,6 +8410,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox59.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8365,6 +8422,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox60.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8376,7 +8434,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox115.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                frequentWriter.println(text);
+                frequentWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=jTextField33.getText();
@@ -8384,7 +8442,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox116.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                rareWriter.println(text);
+                rareWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             frequentWriter.println("*****");
@@ -8397,6 +8455,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox61.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8408,6 +8467,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox62.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8419,6 +8479,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox63.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8430,6 +8491,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox64.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8441,6 +8503,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox65.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8452,6 +8515,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox66.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8463,6 +8527,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox67.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8474,6 +8539,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox68.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8485,6 +8551,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox69.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8496,6 +8563,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox70.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8507,6 +8575,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox71.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8518,6 +8587,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox72.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8529,6 +8599,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox73.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8540,6 +8611,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox74.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8551,6 +8623,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox75.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8562,6 +8635,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox76.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8573,7 +8647,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox117.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                frequentWriter.println(text);
+                frequentWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=jTextField35.getText();
@@ -8581,7 +8655,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox118.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                rareWriter.println(text);
+                rareWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             frequentWriter.println("*****");
@@ -8594,6 +8668,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox77.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8609,6 +8684,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox78.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8624,6 +8700,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox79.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 rareWriter.println(content);
             }
             
@@ -8633,6 +8710,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox80.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 rareWriter.println(content);
             }
             
@@ -8642,6 +8720,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox81.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8653,6 +8732,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox82.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8664,6 +8744,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox83.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8675,6 +8756,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox84.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8686,6 +8768,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox85.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8697,6 +8780,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox86.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8709,17 +8793,21 @@ public class Questions extends javax.swing.JFrame {
                 content="<html><font color=red>"+content+"</html>";
             }
             if(action=="1"){
+                content=EncryptDecrypt.encrypt(content);
                 frequentWriter.println(content);
                 action=jComboBox15.getSelectedItem().toString();
                 content="Hajlam hólyaghurutra";
                 if(action.equals("igen")){
+                content=EncryptDecrypt.encrypt(content);
                 frequentWriter.println(content);
                 }
             }else if(action=="2"){
+                content=EncryptDecrypt.encrypt(content);
                 rareWriter.println(content);
                 action=jComboBox15.getSelectedItem().toString();
                 content="Hajlam hólyaghurutra";
                 if(action.equals("igen")){
+                    content=EncryptDecrypt.encrypt(content);
                     rareWriter.println(content);
                 }
             }
@@ -8731,6 +8819,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox88.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8742,6 +8831,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox89.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8753,6 +8843,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox90.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8764,6 +8855,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox91.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8775,6 +8867,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox92.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8786,6 +8879,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox93.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8797,6 +8891,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox94.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8808,6 +8903,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox95.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8819,6 +8915,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox96.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8830,6 +8927,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox97.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8841,6 +8939,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox99.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8852,6 +8951,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox100.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8863,6 +8963,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox101.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8874,6 +8975,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox102.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8885,6 +8987,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox103.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8896,6 +8999,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox104.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8907,6 +9011,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox105.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8918,6 +9023,7 @@ public class Questions extends javax.swing.JFrame {
             if(jCheckBox106.isSelected()){
                 content="<html><font color=red>"+content+"</html>";
             }
+            content=EncryptDecrypt.encrypt(content);
             if(action=="1"){
                 frequentWriter.println(content);
             }else if(action=="2"){
@@ -8929,7 +9035,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox119.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                frequentWriter.println(text);
+                frequentWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=jTextField37.getText();
@@ -8937,7 +9043,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox120.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                rareWriter.println(text);
+                rareWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             
@@ -8956,17 +9062,17 @@ public class Questions extends javax.swing.JFrame {
                         text+=jSpinner4.getValue().toString();
                     }
                     text+=" életévig";
-                    rareWriter.println(text);
+                    rareWriter.println(EncryptDecrypt.encrypt(text));
                 }
                 
                 text=jComboBox2.getSelectedItem().toString();
                 if(!text.equals("────────")){
-                    rareWriter.println("szín: " + jComboBox2.getSelectedItem().toString() + " mennyiség: "+jComboBox3.getSelectedItem().toString());
+                    rareWriter.println(EncryptDecrypt.encrypt("szín: " + jComboBox2.getSelectedItem().toString() + " mennyiség: "+jComboBox3.getSelectedItem().toString()));
                 }
                 
                 text=jComboBox4.getSelectedItem().toString();
                 if(!text.equals("────────")){
-                    rareWriter.println("hossz: "+ jComboBox4.getSelectedItem().toString()+" napok: " +jSpinner5.getValue().toString()+ "-" + jSpinner7.getValue().toString() + " ciklus napok: " +jSpinner6.getValue().toString());
+                    rareWriter.println(EncryptDecrypt.encrypt("hossz: "+ jComboBox4.getSelectedItem().toString()+" napok: " +jSpinner5.getValue().toString()+ "-" + jSpinner7.getValue().toString() + " ciklus napok: " +jSpinner6.getValue().toString()));
                 }
                 
 
@@ -8975,6 +9081,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox107.isSelected()){
                     content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 if(action=="1"){
                     frequentWriter.println(content);
                 }else if(action=="2"){
@@ -8986,6 +9093,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox108.isSelected()){
                     content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 if(action=="1"){
                     frequentWriter.println(content);
                 }else if(action=="2"){
@@ -8997,6 +9105,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox109.isSelected()){
                     content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 if(action=="1"){
                     frequentWriter.println(content);
                 }else if(action=="2"){
@@ -9008,6 +9117,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox110.isSelected()){
                     content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 if(action=="1"){
                     frequentWriter.println(content);
                 }else if(action=="2"){
@@ -9023,6 +9133,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox122.isSelected()){
                     content="<html><font color=red>"+content+"</html>";
                 }
+                content=EncryptDecrypt.encrypt(content);
                 if(action=="1"){
                     frequentWriter.println(content);
                 }else if(action=="2"){
@@ -9034,7 +9145,7 @@ public class Questions extends javax.swing.JFrame {
                 if(jCheckBox121.isSelected()){
                     text="<html><font color=red>"+text+"</html>";
                 }
-                rareWriter.println(text);
+                rareWriter.println(EncryptDecrypt.encrypt(text));
             }
                 
                
@@ -9046,97 +9157,97 @@ public class Questions extends javax.swing.JFrame {
             
             text=jTextField11.getText();
             if(!text.equals("")){
-                frequentWriter.println("érintett csigolya: "+text);
+                frequentWriter.println(EncryptDecrypt.encrypt("érintett csigolya: "+text));
             }
             
             text=jTextField21.getText();
             if(!text.equals("")){
-                frequentWriter.println("fennállás ideje: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("fennállás ideje: "+ text));
             }
             
             text=jTextField12.getText();
             if(!text.equals("")){
-              frequentWriter.println("kisugrzás: " + text);
+              frequentWriter.println(EncryptDecrypt.encrypt("kisugrzás: " + text));
             }
             
             text=jTextField38.getText();
             if(!text.equals("")){
-              frequentWriter.println("érintett meridián(ok): " + text);
+              frequentWriter.println(EncryptDecrypt.encrypt("érintett meridián(ok): " + text));
             }
             
             text=jTextField39.getText();
             if(!text.equals("")){
-              frequentWriter.println("trigger/Ah Shi pont(ok): " + text);
+              frequentWriter.println(EncryptDecrypt.encrypt("trigger/Ah Shi pont(ok): " + text));
             }
             
             action=jComboBox9.getSelectedItem().toString();
             content="éjszaka fennáll a fájdalom";
             if(action=="igen"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             text=jTextField13.getText();
             if(!text.equals("")){
-              frequentWriter.println("jelleg: "+text);
+              frequentWriter.println(EncryptDecrypt.encrypt("jelleg: "+text));
             }
             
             text=jTextField14.getText();
             if(!text.equals("")){
-               frequentWriter.println("rontja: "+text);
+               frequentWriter.println(EncryptDecrypt.encrypt("rontja: "+text));
             }
             
             text=jTextField16.getText();
             if(!text.equals("")){
-             frequentWriter.println("javítja: "+text);
+             frequentWriter.println(EncryptDecrypt.encrypt("javítja: "+text));
             }
             
             text=jTextField15.getText();
             if(!text.equals("")){
-                frequentWriter.println("korábbi sérülés: "+text);
+                frequentWriter.println(EncryptDecrypt.encrypt("korábbi sérülés: "+text));
             }
             
             text=jTextField17.getText();
             if(!text.equals("")){
-              frequentWriter.println("korábbi műtét: "+text);
+              frequentWriter.println(EncryptDecrypt.encrypt("korábbi műtét: "+text));
             }
             
             action=jComboBox5.getSelectedItem().toString();
             content="mozgáskorlátozott";
             if(action=="igen"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             action=jComboBox6.getSelectedItem().toString();
             content="derék fázékony";
             if(action=="igen"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             text=jTextField42.getText();
             if(!text.equals("")){
-                frequentWriter.println(text);
+                frequentWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             action=jComboBox12.getSelectedItem().toString();
             content="medence: " + jComboBox12.getSelectedItem().toString();
             if(!action.equals("────────")){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             text=jTextField47.getText();
             if(!text.equals("")){
-                frequentWriter.println("medence: " + text);
+                frequentWriter.println(EncryptDecrypt.encrypt("medence: " + text));
             }
             
             action=jComboBox13.getSelectedItem().toString();
             content="farokcsont: " + jComboBox13.getSelectedItem().toString();
             if(!action.equals("────────")){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             text=jTextField48.getText();
             if(!text.equals("")){
-                frequentWriter.println("farokcsont: " + text);
+                frequentWriter.println(EncryptDecrypt.encrypt("farokcsont: " + text));
             }
             
             
@@ -9148,78 +9259,78 @@ public class Questions extends javax.swing.JFrame {
             
             text=jTextField18.getText();
             if(!text.equals("")){
-                frequentWriter.println("helye: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("helye: "+ text));
             }
             
             text=jTextField27.getText();
             if(!text.equals("")){
-                frequentWriter.println("ideje: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("ideje: "+ text));
             }
             
             text=jTextField19.getText();
             if(!text.equals("")){
-                frequentWriter.println("kisugárzás: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("kisugárzás: "+ text));
             }
             
             text=jTextField40.getText();
             if(!text.equals("")){
-              frequentWriter.println("érintett meridián(ok): " + text);
+              frequentWriter.println(EncryptDecrypt.encrypt("érintett meridián(ok): " + text));
             }
             
             text=jTextField41.getText();
             if(!text.equals("")){
-              frequentWriter.println("trigger/Ah Shi pont(ok): " + text);
+              frequentWriter.println(EncryptDecrypt.encrypt("trigger/Ah Shi pont(ok): " + text));
             }
             
             text=jTextField20.getText();
             if(!text.equals("")){
-                frequentWriter.println("jelleg: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("jelleg: "+ text));
             }
             
             action=jComboBox8.getSelectedItem().toString();
             content="éjszaka fennáll a fájdalom";
             if(action=="igen"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             text=jTextField22.getText();
             if(!text.equals("")){
-                frequentWriter.println("rontja: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("rontja: "+ text));
             }
             
             text=jTextField24.getText();
             if(!text.equals("")){
-                frequentWriter.println("javítja: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("javítja: "+ text));
             }
             
              action=jComboBox7.getSelectedItem().toString();
             content="mozgáskorlátozottság";
             if(action=="igen"){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }
             
             text=jTextField25.getText();
             if(!text.equals("")){
-                frequentWriter.println("kisérő tünet: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("kisérő tünet: "+ text));
             }
             
             text=jTextField23.getText();
             if(!text.equals("")){
-                frequentWriter.println("korábbi sérülés: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("korábbi sérülés: "+ text));
             }
             
             text=jTextField26.getText();
             if(!text.equals("")){
-                frequentWriter.println("korábbi műtét: "+ text);
+                frequentWriter.println(EncryptDecrypt.encrypt("korábbi műtét: "+ text));
             }
             
             
             action=jComboBox14.getSelectedItem().toString();
             content="panaszok szimmetrikusak";
             if(action.equals("igen")){
-                frequentWriter.println(content);
+                frequentWriter.println(EncryptDecrypt.encrypt(content));
             }else if(action.equals("nem")){
-                frequentWriter.println("panaszok nem szimmetrikusak");
+                frequentWriter.println(EncryptDecrypt.encrypt("panaszok nem szimmetrikusak"));
             }
             
             text=jTextField43.getText();
@@ -9648,7 +9759,7 @@ public class Questions extends javax.swing.JFrame {
         checkBoxList.add(jCheckBox120);
     }
     
-    public void saveAll(){
+    public void saveAll() throws Exception{
         PrintWriter questionWriter = null;
         try {
             File file3 = new File(Controller.controller.path+Integer.toString(Controller.controller.idNumber)+File.separatorChar+"questions.txt");

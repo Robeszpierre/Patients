@@ -137,10 +137,14 @@ public class SelectPatient extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        selectPatient();
+        try {
+            selectPatient();
+        } catch (Exception ex) {
+            Logger.getLogger(SelectPatient.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void selectPatient(){
+    private void selectPatient() throws Exception{
         Matcher matcher = Pattern.compile("\\d+").matcher(jList1.getSelectedValue());
         matcher.find();
         int patientId = Integer.valueOf(matcher.group());      
@@ -179,14 +183,24 @@ public class SelectPatient extends javax.swing.JFrame {
                 jList1.setSelectedIndex(jList1.getSelectedIndex()+1);
                 break;
             case KeyEvent.VK_ENTER:
+        {
+            try {
                 selectPatient();
+            } catch (Exception ex) {
+                Logger.getLogger(SelectPatient.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
         }
     }//GEN-LAST:event_searchBoxKeyPressed
 
     private void jList1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jList1KeyPressed
         if(evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            selectPatient();
+            try {
+                selectPatient();
+            } catch (Exception ex) {
+                Logger.getLogger(SelectPatient.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_jList1KeyPressed
 

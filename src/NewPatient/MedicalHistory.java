@@ -2,6 +2,7 @@ package NewPatient;
 
 
 import ManagePatient.ManageMain;
+import Main.EncryptDecrypt;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
@@ -35,7 +36,7 @@ public class MedicalHistory extends javax.swing.JFrame {
         jScrollPane9.getVerticalScrollBar().setUnitIncrement(30);
     }
     
-    public void save(String path){
+    public void save(String path)throws Exception{
         PrintWriter writer;
         try {
             String dir=Integer.toString(Controller.controller.idNumber);
@@ -48,23 +49,23 @@ public class MedicalHistory extends javax.swing.JFrame {
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"medicalhistory.txt");
             writer = new PrintWriter(file);
             
-            writer.println(jTextPane9.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane9.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane10.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane10.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane11.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane11.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane12.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane12.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane13.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane13.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane14.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane14.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane15.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane15.getText().trim()));
             writer.println("***");
-            writer.println(jComboBox2.getSelectedItem().toString().trim());
+            writer.println(EncryptDecrypt.encrypt(jComboBox2.getSelectedItem().toString().trim()));
             writer.println("***");
-            writer.println(jTextPane16.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane16.getText().trim()));
             writer.println("***");
             writer.close();
         } catch (FileNotFoundException ex) {
@@ -313,9 +314,17 @@ public class MedicalHistory extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        save(Controller.controller.path);
+        try {
+            save(Controller.controller.path);
+        } catch (Exception ex) {
+            Logger.getLogger(MedicalHistory.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
-        new ManageMain(Controller.controller.idNumber);
+        try {
+            new ManageMain(Controller.controller.idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(MedicalHistory.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**

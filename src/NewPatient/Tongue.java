@@ -2,6 +2,7 @@ package NewPatient;
 
 
 import ManagePatient.ManageMain;
+import Main.EncryptDecrypt;
 import com.sun.org.apache.bcel.internal.generic.DDIV;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -212,9 +213,15 @@ public class Tongue extends javax.swing.JFrame {
             save(Controller.controller.path);
         } catch (IOException ex) {
             Logger.getLogger(Tongue.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Tongue.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.setVisible(false);
-        new ManageMain(Controller.controller.idNumber);
+        try {
+            new ManageMain(Controller.controller.idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(Tongue.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton3MouseClicked
 
     private DragListener drag;
@@ -232,7 +239,7 @@ public class Tongue extends javax.swing.JFrame {
     private javax.swing.JLabel pathLabel;
     // End of variables declaration//GEN-END:variables
     
-    public void save(String path) throws IOException {
+    public void save(String path) throws IOException,Exception{
         PrintWriter writer;
         try {
             String dir=Integer.toString(Controller.controller.idNumber);
@@ -242,7 +249,7 @@ public class Tongue extends javax.swing.JFrame {
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"tongue.txt");
             writer = new PrintWriter(file);
             
-            writer.println(jTextPane1.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextPane1.getText().trim()));
             writer.close();
             drag.save();
         } catch (FileNotFoundException ex) {
@@ -255,14 +262,14 @@ public class Tongue extends javax.swing.JFrame {
         jButton3.setVisible(true);
     }
 
-    public void load(int idNumber) {
+    public void load(int idNumber)throws Exception {
         try {
             Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"tongue.txt"));
             String text="";
             while(input.hasNext()){
                 text+=input.nextLine()+"\n";
             }
-            jTextPane1.setText(text);
+            jTextPane1.setText(EncryptDecrypt.decrypt( text));
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }

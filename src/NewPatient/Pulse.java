@@ -1,6 +1,6 @@
 package NewPatient;
 
-
+import Main.EncryptDecrypt;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
@@ -516,7 +516,7 @@ public class Pulse extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 
-    void save(String path) {
+    void save(String path)throws Exception {
         PrintWriter writer;
         try {
             String dir=Integer.toString(Controller.controller.idNumber);
@@ -526,37 +526,37 @@ public class Pulse extends javax.swing.JFrame {
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"pulse.txt");
             writer = new PrintWriter(file);
             
-            writer.println(jComboBox5.getSelectedItem().toString());
-            writer.println(jComboBox6.getSelectedItem().toString());
-            writer.println(jComboBox7.getSelectedItem().toString());
-            writer.println(jComboBox8.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt( jComboBox5.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox6.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox7.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox8.getSelectedItem().toString()));
             
-            writer.println(jComboBox9.getSelectedItem().toString());
-            writer.println(jComboBox10.getSelectedItem().toString());
-            writer.println(jComboBox11.getSelectedItem().toString());
-            writer.println(jComboBox12.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt( jComboBox9.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox10.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox11.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox12.getSelectedItem().toString()));
             
-            writer.println(jComboBox13.getSelectedItem().toString());
-            writer.println(jComboBox14.getSelectedItem().toString());
-            writer.println(jComboBox15.getSelectedItem().toString());
-            writer.println(jComboBox16.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt( jComboBox13.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox14.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox15.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox16.getSelectedItem().toString()));
             
-            writer.println(jComboBox17.getSelectedItem().toString());
-            writer.println(jComboBox18.getSelectedItem().toString());
-            writer.println(jComboBox19.getSelectedItem().toString());
-            writer.println(jComboBox20.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt( jComboBox17.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox18.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox19.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox20.getSelectedItem().toString()));
             
-            writer.println(jComboBox21.getSelectedItem().toString());
-            writer.println(jComboBox22.getSelectedItem().toString());
-            writer.println(jComboBox23.getSelectedItem().toString());
-            writer.println(jComboBox24.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt( jComboBox21.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox22.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox23.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox24.getSelectedItem().toString()));
             
-            writer.println(jComboBox25.getSelectedItem().toString());
-            writer.println(jComboBox26.getSelectedItem().toString());
-            writer.println(jComboBox27.getSelectedItem().toString());
-            writer.println(jComboBox28.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt( jComboBox25.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox26.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox27.getSelectedItem().toString()));
+            writer.println(EncryptDecrypt.encrypt( jComboBox28.getSelectedItem().toString()));
             
-            writer.println(jTextArea1.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextArea1.getText().trim()));
             writer.println("***");
     
             writer.close();

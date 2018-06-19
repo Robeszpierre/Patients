@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package ManagePatient;
-
+import Main.EncryptDecrypt;
 import NewPatient.Complaints;
 import NewPatient.Controller;
 import NewPatient.Diagnose;
@@ -78,6 +78,13 @@ import com.itextpdf.text.html.HtmlEncoder;
 import java.io.FileOutputStream;
 import static java.nio.file.Files.lines;
 import com.itextpdf.text.pdf.PdfPTable;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 
 
@@ -102,7 +109,7 @@ public class ManageMain extends javax.swing.JFrame {
     /**
      * Creates new form ManageMain
      */
-    public ManageMain(int id) {
+    public ManageMain(int id) throws Exception {
         this.setVisible(true);
         this.idNumber = id;
         String path=Controller.controller.path + idNumber + File.separatorChar;
@@ -1713,11 +1720,19 @@ public class ManageMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-        saveFinalReport();
+        try {
+            saveFinalReport();
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         Controller.controller.saveStatistic();
         
         for(int i=0; i<treatments.size(); i++){
-            treatments.get(i).save(i, idNumber);
+            try {
+                treatments.get(i).save(i, idNumber);
+            } catch (Exception ex) {
+                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         
         Controller.controller.mainFrame.setVisible(true);
@@ -1759,7 +1774,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         Tongue t=new Tongue();
-        t.load(idNumber);
+        try {
+            t.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         t.changeButtons();
         t.setVisible(true);
     }//GEN-LAST:event_jButton6MouseClicked
@@ -1821,7 +1840,8 @@ public class ManageMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13MouseClicked
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
-        // TODO add your handling code here:
+    
+// TODO add your handling code here:
         
         
               //pdf
@@ -1932,41 +1952,57 @@ public class ManageMain extends javax.swing.JFrame {
             Scanner personalDataInput=new Scanner(new File(path+"personaldata.txt"));
             personalDataInput.nextLine();
             com.itextpdf.text.Paragraph name=new com.itextpdf.text.Paragraph("Név: ",cellFont12);
-            name.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            name.add(new Chunk(EncryptDecrypt.decrypt( personalDataInput.nextLine()),boldFont12));
             document.add(name);
             com.itextpdf.text.Paragraph mothername=new com.itextpdf.text.Paragraph("Anyja neve: ",cellFont12);
-            mothername.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            mothername.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(mothername);
             com.itextpdf.text.Paragraph birthP=new com.itextpdf.text.Paragraph("Születési hely: ",cellFont12);
-            birthP.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            birthP.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(birthP);
 
             com.itextpdf.text.Paragraph birthT=new com.itextpdf.text.Paragraph("Születési időpont: ",cellFont12);
-            birthT.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            birthT.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(birthT);
 
             com.itextpdf.text.Paragraph status=new com.itextpdf.text.Paragraph("Családi állapot: ",cellFont12);
-            status.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            status.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(status);
 
             com.itextpdf.text.Paragraph work=new com.itextpdf.text.Paragraph("Foglalkozás: ",cellFont12);
-            work.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            work.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(work);
 
             com.itextpdf.text.Paragraph email=new com.itextpdf.text.Paragraph("E-mail cím: ",cellFont12);
-            email.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            email.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(email);
 
             com.itextpdf.text.Paragraph tel=new com.itextpdf.text.Paragraph("Telefonszám: ",cellFont12);
-            tel.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            tel.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(tel);
 
             com.itextpdf.text.Paragraph sex=new com.itextpdf.text.Paragraph("Neme: ",cellFont12);
-            sex.add(new Chunk(personalDataInput.nextLine(),boldFont12));
+            sex.add(new Chunk(EncryptDecrypt.decrypt(personalDataInput.nextLine()),boldFont12));
             document.add(sex);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }       catch (NoSuchAlgorithmException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InvalidKeySpecException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (NoSuchPaddingException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InvalidKeyException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InvalidAlgorithmParameterException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (UnsupportedEncodingException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IllegalBlockSizeException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (BadPaddingException ex) {
+                    Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 //tunetek
                 document.add(new com.itextpdf.text.Paragraph("Tünetek",boldFont22));
                 
@@ -2052,7 +2088,8 @@ public class ManageMain extends javax.swing.JFrame {
                 if(!(symp.equals("")))
                 {
                     document.add(new com.itextpdf.text.Paragraph("Alhas:",boldFont12));
-                    document.add(new com.itextpdf.text.Paragraph(symp,cellFont12italic));
+                    String htmlfreesymp= Jsoup.parse(symp).text();
+                    document.add(new com.itextpdf.text.Paragraph(htmlfreesymp,cellFont12italic));
                     document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
                 }
                 symp="";
@@ -2701,7 +2738,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane9;
     // End of variables declaration//GEN-END:variables
 
-    private void loadSymptoms(String path) {
+    private void loadSymptoms(String path)throws Exception {
         Scanner frequentInput=null;
         Scanner rareInput=null;
         String path1=path+"frequent.txt";
@@ -2714,8 +2751,8 @@ public class ManageMain extends javax.swing.JFrame {
         }
         
         
-        String line = frequentInput.nextLine();
-        String line2 = rareInput.nextLine();
+        String line =frequentInput.nextLine();
+        String line2 =rareInput.nextLine();
         
         //HEAD
        
@@ -2723,7 +2760,7 @@ public class ManageMain extends javax.swing.JFrame {
         DefaultListModel listModel1 = new DefaultListModel();
         
         while(!line.equals("*****")){
-            listModel1.addElement(line);
+            listModel1.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         jList11.setModel(listModel1);
@@ -2732,26 +2769,27 @@ public class ManageMain extends javax.swing.JFrame {
         DefaultListModel listModel2 = new DefaultListModel();
         
         while(!line2.equals("*****")){
-            listModel2.addElement(line2);
-            line2 = rareInput.nextLine();
+            if(line2!=null){
+            listModel2.addElement(EncryptDecrypt.decrypt(line2));
+            line2 =rareInput.nextLine();}
         }
         jList10.setModel(listModel2);
         
         line = frequentInput.nextLine();
-        line2 = rareInput.nextLine();
+        line2 =rareInput.nextLine();
         
         //CHEST
         
         DefaultListModel listModel3 = new DefaultListModel();
         while(!line.equals("*****")){
-            listModel3.addElement(line);
+            listModel3.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         jList12.setModel(listModel3);
         
         DefaultListModel listModel4 = new DefaultListModel();
         while(!line2.equals("*****")){
-            listModel4.addElement(line2);
+            listModel4.addElement(EncryptDecrypt.decrypt(line2));
             line2 = rareInput.nextLine();
         }
         jList14.setModel(listModel4);
@@ -2763,14 +2801,14 @@ public class ManageMain extends javax.swing.JFrame {
         
         DefaultListModel listModel5 = new DefaultListModel();
         while(!line.equals("*****")){
-            listModel5.addElement(line);
+            listModel5.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         
         line = frequentInput.nextLine();
         
         while(!line.equals("*****")){
-            listModel5.addElement(line);
+            listModel5.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         
@@ -2778,14 +2816,14 @@ public class ManageMain extends javax.swing.JFrame {
         
         DefaultListModel listModel6 = new DefaultListModel();
         while(!line2.equals("*****")){
-            listModel6.addElement(line2);
+            listModel6.addElement(EncryptDecrypt.decrypt(line2));
             line2 = rareInput.nextLine();
         }
         
         line2 = rareInput.nextLine();
         
         while(!line2.equals("*****")){
-            listModel6.addElement(line2);
+            listModel6.addElement(EncryptDecrypt.decrypt(line2));
             line2 = rareInput.nextLine();
         }
         
@@ -2802,14 +2840,14 @@ public class ManageMain extends javax.swing.JFrame {
         
         DefaultListModel listModel7 = new DefaultListModel();
         while(!line.equals("*****")){
-            listModel7.addElement(line);
+            listModel7.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         
         line = frequentInput.nextLine();
         
         while(!line.equals("*****")){
-            listModel7.addElement(line);
+            listModel7.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         
@@ -2817,14 +2855,14 @@ public class ManageMain extends javax.swing.JFrame {
         
         DefaultListModel listModel8 = new DefaultListModel();
         while(!line2.equals("*****")){
-            listModel8.addElement(line2);
+            listModel8.addElement(EncryptDecrypt.decrypt(line2));
             line2 = rareInput.nextLine();
         }
         
         line2 = rareInput.nextLine();
         
         while(!line2.equals("*****")){
-            listModel8.addElement(line2);
+            listModel8.addElement(EncryptDecrypt.decrypt(line2));
             line2 = rareInput.nextLine();
         }
         
@@ -2838,7 +2876,7 @@ public class ManageMain extends javax.swing.JFrame {
         
         DefaultListModel listModel9 = new DefaultListModel();
         while(!line.equals("*****")){
-            listModel9.addElement(line);
+            listModel9.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         jList17.setModel(listModel9);
@@ -2849,7 +2887,7 @@ public class ManageMain extends javax.swing.JFrame {
         
         DefaultListModel listModel10 = new DefaultListModel();
         while(!line.equals("*****")){
-            listModel10.addElement(line);
+            listModel10.addElement(EncryptDecrypt.decrypt(line));
             line = frequentInput.nextLine();
         }
         jList18.setModel(listModel10);
@@ -2883,7 +2921,7 @@ public class ManageMain extends javax.swing.JFrame {
                 DefaultListModel listModel = new DefaultListModel();
                 line=input.nextLine();
                 while(!line.equals("*****")){
-                    listModel.addElement(line);
+                    listModel.addElement(EncryptDecrypt.decrypt(line));
                     line = input.nextLine();
                 }
                 j.setModel(listModel);
@@ -2986,13 +3024,13 @@ public class ManageMain extends javax.swing.JFrame {
         jList18.setBackground(new Color(0,0,0,0));
     }
 
-    private void loadMedicalHistory(String path) {
+    private void loadMedicalHistory(String path)throws Exception {
         try {
             Scanner medicalHistory=new Scanner(new File(path+"medicalhistory.txt"));
             String line=medicalHistory.nextLine();
             String text="";
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane9.setText(text);
             }
@@ -3000,7 +3038,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane10.setText(text);
             }
@@ -3008,7 +3046,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane11.setText(text);
             }
@@ -3016,7 +3054,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane12.setText(text);
             }
@@ -3024,7 +3062,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane13.setText(text);
             }
@@ -3032,7 +3070,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane14.setText(text);
             }
@@ -3040,21 +3078,21 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane15.setText(text);
             }
             
             
             line=medicalHistory.nextLine();
-            jLabel2.setText(line);
+            jLabel2.setText(EncryptDecrypt.decrypt( line));
             line=medicalHistory.nextLine();
             
             if(medicalHistory.hasNext()){
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt( line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane17.setText(text);
                 }
@@ -3065,31 +3103,31 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }
 
-    private void loadPersonalData(String path) {
+    private void loadPersonalData(String path)throws Exception {
         try {
             Scanner personalDataInput=new Scanner(new File(path+"personaldata.txt"));
             personalDataInput.nextLine();
-            jTextArea7.append("Név: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Anyja neve: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Születési hely: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Születési időpont: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Családi állapot: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Foglalkozás: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("E-mail cím: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Telefonszám: " + personalDataInput.nextLine() + "\n\n");
-            jTextArea7.append("Neme: " + personalDataInput.nextLine() + "\n\n");
+            jTextArea7.append("Név: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Anyja neve: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Születési hely: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Születési időpont: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Családi állapot: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Foglalkozás: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("E-mail cím: " +EncryptDecrypt.decrypt( personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Telefonszám: " + EncryptDecrypt.decrypt(personalDataInput.nextLine()) + "\n\n");
+            jTextArea7.append("Neme: " + EncryptDecrypt.decrypt(personalDataInput.nextLine()) + "\n\n");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    private void loadComplaints(String path) {
+    private void loadComplaints(String path)throws Exception {
          try {
             Scanner input=new Scanner(new File(path+"complaints.txt"));
             String text="";
             String line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane1.setText(text);
@@ -3097,7 +3135,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane7.setText(text);
@@ -3105,7 +3143,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane8.setText(text);
@@ -3113,7 +3151,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane16.setText(text);
@@ -3124,14 +3162,14 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }
 
-    private void loadAnamnezis(String path) {
+    private void loadAnamnezis(String path)throws Exception {
         try {
             Scanner input=new Scanner(new File(path+"anamnesis.txt"));
             
             String text="";
             String line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane2.setText(text);
@@ -3139,7 +3177,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane3.setText(text);
@@ -3147,7 +3185,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane4.setText(text);
@@ -3159,39 +3197,39 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }
 
-    private void loadPulse(String path) {
+    private void loadPulse(String path)throws Exception {
         try {
             Scanner input=new Scanner(new File(path+"pulse.txt"));
             
-            jLabel31.setText(input.nextLine());
-            jLabel32.setText(input.nextLine());
-            jLabel33.setText(input.nextLine());
-            jLabel34.setText(input.nextLine());
-            jLabel35.setText(input.nextLine());
-            jLabel36.setText(input.nextLine());
-            jLabel37.setText(input.nextLine());
-            jLabel38.setText(input.nextLine());
-            jLabel39.setText(input.nextLine());
-            jLabel40.setText(input.nextLine());
-            jLabel41.setText(input.nextLine());
-            jLabel42.setText(input.nextLine());
-            jLabel43.setText(input.nextLine());
-            jLabel44.setText(input.nextLine());
-            jLabel45.setText(input.nextLine());
-            jLabel46.setText(input.nextLine());
-            jLabel47.setText(input.nextLine());
-            jLabel48.setText(input.nextLine());
-            jLabel49.setText(input.nextLine());
-            jLabel50.setText(input.nextLine());
-            jLabel51.setText(input.nextLine());
-            jLabel52.setText(input.nextLine());
-            jLabel53.setText(input.nextLine());
-            jLabel54.setText(input.nextLine());
+            jLabel31.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel32.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel33.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel34.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel35.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel36.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel37.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel38.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel39.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel40.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel41.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel42.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel43.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel44.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel45.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel46.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel47.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel48.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel49.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel50.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel51.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel52.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel53.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jLabel54.setText(EncryptDecrypt.decrypt(input.nextLine()));
             
             String text="";
             String line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt( line)+"\n";
                 line=input.nextLine();
             }
             jTextArea2.setText(text);
@@ -3203,13 +3241,13 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }
 
-    private void loadDiagnose(String path) {
+    private void loadDiagnose(String path)throws Exception {
         try {
             Scanner input=new Scanner(new File(path+"diagnose.txt"));
             String text="";
             String line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane40.setText(text);
@@ -3217,7 +3255,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane41.setText(text);
@@ -3225,7 +3263,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane42.setText(text);
@@ -3233,7 +3271,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane43.setText(text);
@@ -3241,7 +3279,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane44.setText(text);
@@ -3249,7 +3287,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane45.setText(text);
@@ -3257,7 +3295,7 @@ public class ManageMain extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane46.setText(text);
@@ -3270,12 +3308,12 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }
 
-    private void loadTongue(String path) {
+    private void loadTongue(String path)throws Exception {
         try {
             Scanner input=new Scanner(new File(path+"tongue.txt"));
             String text="";
             while(input.hasNext()){
-                text+=input.nextLine()+"\n";
+                text+=EncryptDecrypt.decrypt(input.nextLine())+"\n";
             }
             jTextPane5.setText(text);
         } catch (FileNotFoundException ex) {
@@ -3296,12 +3334,12 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel55.setIcon(icon);
     }
 
-    private void loadEar(String path) {
+    private void loadEar(String path) throws Exception{
         try {
             Scanner input=new Scanner(new File(path+"ear.txt"));
             String text="";
             while(input.hasNext()){
-                text+=input.nextLine()+"\n";
+                text+=EncryptDecrypt.decrypt(input.nextLine())+"\n";
             }
             jTextPane6.setText(text);
         } catch (FileNotFoundException ex) {
@@ -3322,7 +3360,7 @@ public class ManageMain extends javax.swing.JFrame {
         jLabel56.setIcon(icon);
     }
 
-    private void loadTreatments(String path) {
+    private void loadTreatments(String path) throws Exception {
         File folder = new File(path+"Treatments");
 		File[] listOfFiles = folder.listFiles();
                     if(listOfFiles.length>0){
@@ -3338,7 +3376,7 @@ public class ManageMain extends javax.swing.JFrame {
        
     }
 
-    private void loadFinalReport(String path) {
+    private void loadFinalReport(String path)throws Exception {
         Scanner input=null;
         String text="";
         try {
@@ -3349,7 +3387,7 @@ public class ManageMain extends javax.swing.JFrame {
         
         String line=input.nextLine();
         while(!line.equals("***")){
-            text+=line;
+            text+=EncryptDecrypt.decrypt(line);
             line=input.nextLine();
         }
         jLabel64.setText(text);
@@ -3357,7 +3395,7 @@ public class ManageMain extends javax.swing.JFrame {
         text="";
         line=input.nextLine();
         while(!line.equals("***")){
-            text+=line+"\n";
+            text+=EncryptDecrypt.decrypt(line)+"\n";
             line=input.nextLine();
         }
         if(!text.equals("\n")){
@@ -3378,7 +3416,7 @@ public class ManageMain extends javax.swing.JFrame {
         currentTreatment.setFocus();
     }
 
-    private void saveFinalReport() {
+    private void saveFinalReport() throws Exception{
         PrintWriter writer = null;
         
             File file = new File(Controller.controller.path+idNumber+File.separatorChar+"finalreport.txt");
@@ -3388,9 +3426,9 @@ public class ManageMain extends javax.swing.JFrame {
             Logger.getLogger(Treatment.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        writer.println(jLabel64.getText().trim());
+        writer.println(EncryptDecrypt.encrypt(jLabel64.getText().trim()));
         writer.println("***");
-        writer.println(jTextArea1.getText().trim());
+        writer.println(EncryptDecrypt.encrypt(jTextArea1.getText().trim()));
         writer.println("***");
         writer.println(jComboBox1.getSelectedItem().toString().trim());
         writer.println("***");

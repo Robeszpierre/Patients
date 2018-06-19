@@ -199,7 +199,7 @@ public class Controller {
         newPatientPulse.setVisible(true);
     }
     
-    public void save() throws IOException{
+    public void save() throws IOException, Exception{
         newPatientPersonalDatas.save(path);
         newPatientMedicalHistory.save(path);
         newPatientPresentComplaints.save(path);

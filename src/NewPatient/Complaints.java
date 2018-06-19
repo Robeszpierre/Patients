@@ -2,6 +2,7 @@ package NewPatient;
 
 
 import ManagePatient.ManageMain;
+import Main.EncryptDecrypt;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
@@ -213,9 +214,17 @@ public class Complaints extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        save(Controller.controller.path);
+        try {
+            save(Controller.controller.path);
+        } catch (Exception ex) {
+            Logger.getLogger(Complaints.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
-        new ManageMain(Controller.controller.idNumber);
+        try {
+            new ManageMain(Controller.controller.idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(Complaints.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton3MouseClicked
 
 
@@ -238,7 +247,7 @@ public class Complaints extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane4;
     // End of variables declaration//GEN-END:variables
 
-    void save(String path) {
+    void save(String path)throws Exception {
         PrintWriter writer;
         try {
             String dir=Integer.toString(Controller.controller.idNumber);
@@ -249,16 +258,16 @@ public class Complaints extends javax.swing.JFrame {
             writer = new PrintWriter(file);
             
             String complaints=jTextPane2.getText().trim();
-            writer.println(complaints);
+            writer.println(EncryptDecrypt.encrypt(complaints));
             writer.println("***");
             complaints=jTextPane4.getText().trim();
-            writer.println(complaints);
+            writer.println(EncryptDecrypt.encrypt(complaints));
             writer.println("***");
             complaints=jTextPane3.getText().trim();
-            writer.println(complaints);
+            writer.println(EncryptDecrypt.encrypt(complaints));
             writer.println("***");
             complaints=jTextPane1.getText().trim();
-            writer.println(complaints);
+            writer.println(EncryptDecrypt.encrypt(complaints));
             writer.println("***");
             
             

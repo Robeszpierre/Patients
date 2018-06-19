@@ -1,6 +1,7 @@
 package NewPatient;
 
 import Main.MainFrame;
+import Main.EncryptDecrypt;
 import ManagePatient.ManageMain;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -304,7 +305,11 @@ public class PersonalDatas extends javax.swing.JFrame {
         if(validation()){
             saveModifications(Controller.controller.path);
             this.setVisible(false);
-            new ManageMain(Controller.controller.idNumber);
+            try {
+                new ManageMain(Controller.controller.idNumber);
+            } catch (Exception ex) {
+                Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }else{
             JOptionPane.showMessageDialog(null, "A Név, a Születési Időpont és a Nem kitöltése kötelező!");
         }
@@ -314,7 +319,7 @@ public class PersonalDatas extends javax.swing.JFrame {
         Controller.controller.mainFrame.setVisible(true);
     }//GEN-LAST:event_formWindowClosed
 
-    public void save(String path){
+    public void save(String path)throws Exception {
         PrintWriter writer;
         PrintWriter writer2;
         try {
@@ -330,15 +335,15 @@ public class PersonalDatas extends javax.swing.JFrame {
             
             
             writer.println(Controller.controller.idNumber);
-            writer.println(jTextField1.getText());
-            writer.println(jTextField9.getText());
-            writer.println(jTextField10.getText());
-            writer.println(jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText());
-            writer.println(jTextField5.getText());
-            writer.println(jTextField6.getText());
-            writer.println(jTextField7.getText());
-            writer.println(jTextField8.getText());
-            writer.println(jComboBox1.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt(jTextField1.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField9.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField10.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField5.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField6.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField7.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField8.getText()));
+            writer.println(EncryptDecrypt.encrypt(jComboBox1.getSelectedItem().toString()));
             
             writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
             writer2.append(" ");
@@ -439,11 +444,13 @@ public class PersonalDatas extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-    public void load(int idNumber) {
+    public void load(int idNumber){
         try {
             Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"personaldata.txt"));
             input.nextLine();
-            jTextField1.setText(input.nextLine());
+            String sor=input.nextLine();
+            jTextField1.setText(sor);
+            //System.out.println(EncryptDecrypt.decrypt(sor));
             jTextField9.setText(input.nextLine());
             jTextField10.setText(input.nextLine());
             String birthdate=input.nextLine();

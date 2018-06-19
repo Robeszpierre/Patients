@@ -2,6 +2,7 @@ package NewPatient;
 
 
 import ManagePatient.ManageMain;
+import Main.EncryptDecrypt;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
@@ -275,6 +276,8 @@ public class Diagnose extends javax.swing.JFrame {
             Controller.controller.save();
         } catch (IOException ex) {
             Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
         }
         Controller.controller.mainFrame.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
@@ -289,9 +292,17 @@ public class Diagnose extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        save(Controller.controller.path);
+        try {
+            save(Controller.controller.path);
+        } catch (Exception ex) {
+            Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
-        new ManageMain(Controller.controller.idNumber);
+        try {
+            new ManageMain(Controller.controller.idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(Diagnose.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton3MouseClicked
 
     /**
@@ -360,7 +371,7 @@ public class Diagnose extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane7;
     // End of variables declaration//GEN-END:variables
 
-    void save(String path) {
+    void save(String path)throws Exception {
          PrintWriter writer;
         try {
             String dir=Integer.toString(Controller.controller.idNumber);
@@ -371,19 +382,19 @@ public class Diagnose extends javax.swing.JFrame {
             File file = new File(path+File.separatorChar+dir+File.separatorChar+"diagnose.txt");
             writer = new PrintWriter(file);
             
-            writer.println(jTextPane1.getText().trim());
+            writer.println(EncryptDecrypt.encrypt( jTextPane1.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane2.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane2.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane3.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane3.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane4.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane4.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane5.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane5.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane6.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane6.getText().trim()));
             writer.println("***");
-            writer.println(jTextPane7.getText().trim());
+            writer.println(EncryptDecrypt.encrypt(jTextPane7.getText().trim()));
             writer.println("***");
             writer.close();
         } catch (FileNotFoundException ex) {

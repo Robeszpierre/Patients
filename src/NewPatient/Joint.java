@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package NewPatient;
-
+import Main.EncryptDecrypt;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -301,7 +301,7 @@ public class Joint extends javax.swing.JPanel {
     public javax.swing.JTextField text9;
     // End of variables declaration//GEN-END:variables
 
-    public void save() {
+    public void save() throws Exception{
         PrintWriter jointWriter = null;
         try {
             File file = new File(Controller.controller.path+Integer.toString(Controller.controller.idNumber)+File.separatorChar+"joints.txt");
@@ -310,21 +310,21 @@ public class Joint extends javax.swing.JPanel {
             Logger.getLogger(Questions.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        jointWriter.println(text1.getText());
-        jointWriter.println(text2.getText());
-        jointWriter.println(text3.getText());
-        jointWriter.println(text4.getText());
-        jointWriter.println(text5.getText());
-        jointWriter.println(text6.getText());
-        jointWriter.println(text7.getText());
-        jointWriter.println(text8.getText());
-        jointWriter.println(text9.getText());
-        jointWriter.println(text10.getText());
-        jointWriter.println(text11.getText());
-        jointWriter.println(text12.getText());
-        jointWriter.println(combooo1.getSelectedItem().toString());
-        jointWriter.println(combooo2.getSelectedItem().toString());
-        jointWriter.println(combooo3.getSelectedItem().toString());
+        jointWriter.println(EncryptDecrypt.encrypt( text1.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt( text2.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text3.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text4.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text5.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text6.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text7.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text8.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text9.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text10.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text11.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(text12.getText()));
+        jointWriter.println(EncryptDecrypt.encrypt(combooo1.getSelectedItem().toString()));
+        jointWriter.println(EncryptDecrypt.encrypt(combooo2.getSelectedItem().toString()));
+        jointWriter.println(EncryptDecrypt.encrypt(combooo3.getSelectedItem().toString()));
         
         
         save2();
@@ -332,7 +332,7 @@ public class Joint extends javax.swing.JPanel {
         jointWriter.close();
     }
     
-    public void save2(){
+    public void save2()throws Exception{
         PrintWriter jointWriter = null;
         try {
             File file = new File(Controller.controller.path+Integer.toString(Controller.controller.idNumber)+File.separatorChar+"joints2.txt");
@@ -345,83 +345,83 @@ public class Joint extends javax.swing.JPanel {
         
         text=text1.getText();
             if(!text.equals("")){
-                jointWriter.println("helye: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt( "helye: "+ text));
             }
             
             text=text2.getText();
             if(!text.equals("")){
-                jointWriter.println("ideje: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("ideje: "+ text));
             }
             
             text=text3.getText();
             if(!text.equals("")){
-                jointWriter.println("kisugárzás: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("kisugárzás: "+ text));
             }
             
             text=text4.getText();
             if(!text.equals("")){
-              jointWriter.println("érintett meridián(ok): " + text);
+              jointWriter.println(EncryptDecrypt.encrypt("érintett meridián(ok): " + text));
             }
             
             text=text5.getText();
             if(!text.equals("")){
-              jointWriter.println("trigger/Ah Shi pont(ok): " + text);
+              jointWriter.println(EncryptDecrypt.encrypt("trigger/Ah Shi pont(ok): " + text));
             }
             
             text=text6.getText();
             if(!text.equals("")){
-                jointWriter.println("jelleg: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("jelleg: "+ text));
             }
             
             text=combooo1.getSelectedItem().toString();
             text="éjszaka fennáll a fájdalom";
             if(text=="igen"){
-                jointWriter.println(text);
+                jointWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=text7.getText();
             if(!text.equals("")){
-                jointWriter.println("rontja: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("rontja: "+ text));
             }
             
             text=text8.getText();
             if(!text.equals("")){
-                jointWriter.println("javítja: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("javítja: "+ text));
             }
             
             text=combooo2.getSelectedItem().toString();
             text="mozgáskorlátozott";
             if(text=="igen"){
-                jointWriter.println(text);
+                jointWriter.println(EncryptDecrypt.encrypt(text));
             }
             
             text=text9.getText();
             if(!text.equals("")){
-                jointWriter.println("kisérő tünet: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("kisérő tünet: "+ text));
             }
             
             text=text10.getText();
             if(!text.equals("")){
-                jointWriter.println("korábbi sérülés: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("korábbi sérülés: "+ text));
             }
             
             text=text11.getText();
             if(!text.equals("")){
-                jointWriter.println("korábbi műtét: "+ text);
+                jointWriter.println(EncryptDecrypt.encrypt("korábbi műtét: "+ text));
             }
             
             String content;
             text=combooo3.getSelectedItem().toString();
             content="panaszok szimmetrikusak";
             if(text.equals("igen")){
-                jointWriter.println(content);
+                jointWriter.println(EncryptDecrypt.encrypt(content));
             }else if(text.equals("nem")){
-                jointWriter.println("panaszok nem szimmetrikusak");
+                jointWriter.println(EncryptDecrypt.encrypt("panaszok nem szimmetrikusak"));
             }  
             
             text=text12.getText();
             if(!text.equals("")){
-                jointWriter.println(text);
+                jointWriter.println(EncryptDecrypt.encrypt(text));
             }
         
         jointWriter.println("*****");
