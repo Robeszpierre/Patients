@@ -1752,7 +1752,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         Complaints c=new Complaints();
-        c.load(idNumber);
+        try {
+            c.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         c.changeButtons();
         c.setVisible(true);
     }//GEN-LAST:event_jButton8MouseClicked
@@ -1765,7 +1769,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         Ear e=new Ear();
-        e.load(idNumber);
+        try {
+            e.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         e.changeButtons();
         e.setVisible(true);
     }//GEN-LAST:event_jButton7MouseClicked
@@ -1787,7 +1795,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         Diagnose d=new Diagnose();
-        d.load(idNumber);
+        try {
+            d.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         d.changeButtons();
         d.setVisible(true);
     }//GEN-LAST:event_jButton10MouseClicked
@@ -1796,7 +1808,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         MedicalHistory m=new MedicalHistory();
-        m.load(idNumber);
+        try {
+            m.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         m.changeButtons();
         m.setVisible(true);
     }//GEN-LAST:event_jButton9MouseClicked
@@ -1825,7 +1841,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         PsychologicalAnamnesis p=new PsychologicalAnamnesis();
-        p.load(idNumber);
+        try {
+            p.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         p.setVisible(true);
         p.changeButtons();
     }//GEN-LAST:event_jButton2MouseClicked
@@ -1834,7 +1854,11 @@ public class ManageMain extends javax.swing.JFrame {
         this.setVisible(false);
         Controller.controller.idNumber=idNumber;
         PersonalDatas p=new PersonalDatas();
-        p.load(idNumber);
+        try {
+            p.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
         p.setVisible(true);
         p.changeButtons();
     }//GEN-LAST:event_jButton13MouseClicked

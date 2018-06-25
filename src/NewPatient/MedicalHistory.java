@@ -366,13 +366,13 @@ public class MedicalHistory extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane9;
     // End of variables declaration//GEN-END:variables
 
-    public void load(int idNumber) {
+    public void load(int idNumber)throws Exception {
        try {
             Scanner medicalHistory=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"medicalhistory.txt"));
             String line=medicalHistory.nextLine();
             String text="";
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane9.setText(text);
             }
@@ -380,7 +380,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane10.setText(text);
             }
@@ -388,7 +388,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane11.setText(text);
             }
@@ -396,7 +396,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane12.setText(text);
             }
@@ -404,7 +404,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane13.setText(text);
             }
@@ -412,7 +412,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane14.setText(text);
             }
@@ -420,7 +420,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                 jTextPane15.setText(text);
             }
@@ -432,7 +432,7 @@ public class MedicalHistory extends javax.swing.JFrame {
             text="";
             line=medicalHistory.nextLine();
             while(!line.equals("***")){
-                    text+=line+"\n";
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
                     line=medicalHistory.nextLine();
                     jTextPane16.setText(text);
                 }

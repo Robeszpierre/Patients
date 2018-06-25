@@ -267,7 +267,7 @@ public class Tongue extends javax.swing.JFrame {
             Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"tongue.txt"));
             String text="";
             while(input.hasNext()){
-                text+=input.nextLine()+"\n";
+                text+=EncryptDecrypt.decrypt(input.nextLine())+"\n";
             }
             jTextPane1.setText(EncryptDecrypt.decrypt( text));
         } catch (FileNotFoundException ex) {

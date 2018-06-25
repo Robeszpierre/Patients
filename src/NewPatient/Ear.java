@@ -259,12 +259,12 @@ public class Ear extends javax.swing.JFrame {
         }
     }
 
-    public void load(int idNumber) {
+    public void load(int idNumber)throws Exception{
         try {
             Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"ear.txt"));
             String text="";
             while(input.hasNext()){
-                text+=input.nextLine()+"\n";
+                text+=EncryptDecrypt.decrypt(input.nextLine())+"\n";
             }
             jTextPane1.setText(text);
         } catch (FileNotFoundException ex) {

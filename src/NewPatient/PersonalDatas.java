@@ -303,7 +303,11 @@ public class PersonalDatas extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         if(validation()){
-            saveModifications(Controller.controller.path);
+            try {
+                saveModifications(Controller.controller.path);
+            } catch (Exception ex) {
+                Logger.getLogger(PersonalDatas.class.getName()).log(Level.SEVERE, null, ex);
+            }
             this.setVisible(false);
             try {
                 new ManageMain(Controller.controller.idNumber);
@@ -364,7 +368,7 @@ public class PersonalDatas extends javax.swing.JFrame {
         }
     }
     
-    public void saveModifications(String path){
+    public void saveModifications(String path)throws Exception{
         PrintWriter writer;
         PrintWriter writer2;
         try {
@@ -379,15 +383,15 @@ public class PersonalDatas extends javax.swing.JFrame {
             
             
             writer.println(Controller.controller.idNumber);
-            writer.println(jTextField1.getText());
-            writer.println(jTextField9.getText());
-            writer.println(jTextField10.getText());
-            writer.println(jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText());
-            writer.println(jTextField5.getText());
-            writer.println(jTextField6.getText());
-            writer.println(jTextField7.getText());
-            writer.println(jTextField8.getText());
-            writer.println(jComboBox1.getSelectedItem().toString());
+            writer.println(EncryptDecrypt.encrypt(jTextField1.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField9.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField10.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField2.getText()+"-"+jTextField3.getText()+"-"+jTextField4.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField5.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField6.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField7.getText()));
+            writer.println(EncryptDecrypt.encrypt(jTextField8.getText()));
+            writer.println(EncryptDecrypt.encrypt(jComboBox1.getSelectedItem().toString()));
             
             Scanner sc=new Scanner(new File(path+File.separatorChar+"patients.txt"));
             String line;
@@ -444,25 +448,25 @@ public class PersonalDatas extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-    public void load(int idNumber){
+    public void load(int idNumber)throws Exception{
         try {
             Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"personaldata.txt"));
             input.nextLine();
             String sor=input.nextLine();
-            jTextField1.setText(sor);
+            jTextField1.setText(EncryptDecrypt.decrypt(sor));
             //System.out.println(EncryptDecrypt.decrypt(sor));
-            jTextField9.setText(input.nextLine());
-            jTextField10.setText(input.nextLine());
-            String birthdate=input.nextLine();
+            jTextField9.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jTextField10.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            String birthdate=EncryptDecrypt.decrypt(input.nextLine());
             String[] parts = birthdate.split("-");
             jTextField2.setText(parts[0]);
             jTextField3.setText(parts[1]);
             jTextField4.setText(parts[2]);
-            jTextField5.setText(input.nextLine());
-            jTextField6.setText(input.nextLine());
-            jTextField7.setText(input.nextLine());
-            jTextField8.setText(input.nextLine());
-            jComboBox1.setSelectedItem(input.nextLine());      
+            jTextField5.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jTextField6.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jTextField7.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jTextField8.setText(EncryptDecrypt.decrypt(input.nextLine()));
+            jComboBox1.setSelectedItem(EncryptDecrypt.decrypt(input.nextLine()));      
             
             input.close();
         } catch (FileNotFoundException ex) {

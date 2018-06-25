@@ -249,14 +249,14 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
         }
     }
 
-    public void load(int idNumber) {
+    public void load(int idNumber)throws Exception {
         try {
             Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"anamnesis.txt"));
             
             String text="";
             String line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane1.setText(text);
@@ -264,7 +264,7 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane2.setText(text);
@@ -272,7 +272,7 @@ public class PsychologicalAnamnesis extends javax.swing.JFrame {
             text="";
             line=input.nextLine();
             while(!line.equals("***")){
-                text+=line+"\n";
+                text+=EncryptDecrypt.decrypt(line)+"\n";
                 line=input.nextLine();
             }
             jTextPane3.setText(text);

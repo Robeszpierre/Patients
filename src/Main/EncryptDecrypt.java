@@ -23,6 +23,7 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 
+
 /**
  *
  * @author Szarvas
@@ -87,19 +88,26 @@ public class EncryptDecrypt {
             BadPaddingException,
             IOException {
         //Key generation for enc and desc
-        KeySpec keySpec = new PBEKeySpec(secretKey.toCharArray(), salt, iterationCount);
-        SecretKey key = SecretKeyFactory.getInstance("PBEWithMD5AndDES").generateSecret(keySpec);
-        // Prepare the parameter to the ciphers
-        AlgorithmParameterSpec paramSpec = new PBEParameterSpec(salt, iterationCount);
-        //Decryption process; same key will be used for decr
-        dcipher = Cipher.getInstance(key.getAlgorithm());
-        dcipher.init(Cipher.DECRYPT_MODE, key, paramSpec);
-        byte[] enc = Base64.getDecoder().decode(encryptedText);
-        byte[] utf8 = dcipher.doFinal(enc);
-        String charSet = "UTF-8";
-        String plainStr = new String(utf8, charSet);
-        return plainStr;
-    }
+        String pattern="^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$";
+        if(encryptedText.matches(pattern))
+        {
+            KeySpec keySpec = new PBEKeySpec(secretKey.toCharArray(), salt, iterationCount);
+            SecretKey key = SecretKeyFactory.getInstance("PBEWithMD5AndDES").generateSecret(keySpec);
+            // Prepare the parameter to the ciphers
+            AlgorithmParameterSpec paramSpec = new PBEParameterSpec(salt, iterationCount);
+            //Decryption process; same key will be used for decr
+            dcipher = Cipher.getInstance(key.getAlgorithm());
+            dcipher.init(Cipher.DECRYPT_MODE, key, paramSpec);
+            byte[] enc = Base64.getDecoder().decode(encryptedText);
+            byte[] utf8 = dcipher.doFinal(enc);
+            String charSet = "UTF-8";
+            String plainStr = new String(utf8, charSet);
+            return plainStr;
+        }
+        return encryptedText;
+        }
+        
+    
 
  public static String decrypt(String encryptedText)
             throws NoSuchAlgorithmException,
