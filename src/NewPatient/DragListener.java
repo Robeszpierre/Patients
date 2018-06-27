@@ -5,7 +5,7 @@ package NewPatient;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import Main.EncryptDecrypt;
 import java.awt.Image;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
@@ -16,8 +16,12 @@ import java.awt.dnd.DropTargetEvent;
 import java.awt.dnd.DropTargetListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -41,7 +45,13 @@ public class DragListener implements  DropTargetListener{
             imageLabel=image;
             pathlabel=path;
             imgName=name;
-            img=ImageIO.read(new File(Controller.controller.path+Controller.controller.idNumber +File.separatorChar+ imgName +".jpg"));       
+            String imageString="";
+            Scanner input=new Scanner(new File(Controller.controller.path+Controller.controller.idNumber +File.separatorChar+ imgName+"encodedImage.txt"));      
+            while(input.hasNext()){
+                imageString+=input.nextLine();
+            }
+            img=EncryptDecrypt.decodeToImage(imageString);
+            //img=ImageIO.read(new File(Controller.controller.path+Controller.controller.idNumber +File.separatorChar+ imgName +".jpg"));       
         } catch (IOException ex) {
             try {
                 img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"noimage.jpg"));
@@ -112,11 +122,24 @@ public class DragListener implements  DropTargetListener{
     }
     
     public void save(){
+//        try {
+//            File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ imgName +".jpg");
+//            ImageIO.write(img, "jpg",outputfile);
+//        } catch (IOException ex) {
+//            Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        String EncodedIMG= EncryptDecrypt.encodeToString(img, "jpg");
+        PrintWriter writer;
         try {
-            File outputfile = new File(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ imgName +".jpg");
-            ImageIO.write(img, "jpg", outputfile);
-        } catch (IOException ex) {
+            writer = new PrintWriter(Controller.controller.path + Controller.controller.idNumber +File.separatorChar+ imgName +"encodedImage.txt", "UTF-8");
+            writer.println(EncodedIMG);
+            writer.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
     }
 }

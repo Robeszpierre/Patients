@@ -274,11 +274,25 @@ public class Ear extends javax.swing.JFrame {
         BufferedImage img=null;   
         Image dimg=null;
         try{
-            img=ImageIO.read(new File(Controller.controller.path+idNumber+File.separatorChar+"ear.jpg"));
+            String imageString="";
+            Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"earencodedImage.txt"));
+            
+            while(input.hasNext()){
+                imageString+=input.nextLine();
+            }
+            img=EncryptDecrypt.decodeToImage(imageString);
+            //img=ImageIO.read(new File(Controller.controller.path+idNumber+File.separatorChar+"ear.jpg"));
             dimg = img.getScaledInstance(imageLabel.getWidth(), imageLabel.getHeight(),
             Image.SCALE_SMOOTH);
         }catch(Exception e){
-                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+                //Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+                try {
+                img=ImageIO.read(new File(Controller.controller.path+"img"+File.separatorChar+"noimage.jpg"));
+                dimg = img.getScaledInstance(imageLabel.getWidth(), imageLabel.getHeight(),
+                Image.SCALE_SMOOTH);
+            } catch (IOException ex1) {
+                Logger.getLogger(DragListener.class.getName()).log(Level.SEVERE, null, ex1);
+            }
         }
         
         ImageIcon icon=new ImageIcon(dimg);

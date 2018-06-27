@@ -3347,11 +3347,25 @@ public class ManageMain extends javax.swing.JFrame {
         BufferedImage img=null;   
         Image dimg=null;
         try{
+            String imageString="";
+            Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"tongueencodedImage.txt"));
+            
+            while(input.hasNext()){
+                imageString+=input.nextLine();
+            }
+            img=EncryptDecrypt.decodeToImage(imageString);
+            //img=ImageIO.read(new File(path+"tongue.jpg"));
+            dimg = img.getScaledInstance(jLabel55.getWidth(), jLabel55.getHeight(),
+            Image.SCALE_SMOOTH);
+            ImageIcon icon=new ImageIcon(dimg);
+            jLabel55.setIcon(icon);
+        }catch(Exception e){
+                //Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
             img=ImageIO.read(new File(path+"tongue.jpg"));
             dimg = img.getScaledInstance(jLabel55.getWidth(), jLabel55.getHeight(),
             Image.SCALE_SMOOTH);
-        }catch(Exception e){
-                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+            ImageIcon icon=new ImageIcon(dimg);
+            jLabel55.setIcon(icon);
         }
         
         ImageIcon icon=new ImageIcon(dimg);
@@ -3373,11 +3387,25 @@ public class ManageMain extends javax.swing.JFrame {
         BufferedImage img=null;   
         Image dimg=null;
         try{
+            String imageString="";
+            Scanner input=new Scanner(new File(Controller.controller.path+idNumber+File.separatorChar+"earencodedImage.txt"));
+            
+            while(input.hasNext()){
+                imageString+=input.nextLine();
+            }
+            img=EncryptDecrypt.decodeToImage(imageString);
+            //img=ImageIO.read(new File(path+"ear.jpg"));
+            dimg = img.getScaledInstance(jLabel56.getWidth(), jLabel56.getHeight(),
+            Image.SCALE_SMOOTH);
+            ImageIcon icon=new ImageIcon(dimg);
+            jLabel56.setIcon(icon);
+        }catch(Exception e){
+                //Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
             img=ImageIO.read(new File(path+"ear.jpg"));
             dimg = img.getScaledInstance(jLabel56.getWidth(), jLabel56.getHeight(),
             Image.SCALE_SMOOTH);
-        }catch(Exception e){
-                Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, e);
+            ImageIcon icon=new ImageIcon(dimg);
+            jLabel56.setIcon(icon);
         }
         
         ImageIcon icon=new ImageIcon(dimg);
