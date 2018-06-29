@@ -197,7 +197,7 @@ public class Ear extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        Controller.controller.newPulse();
+        Controller.controller.newManualTherapy();
         this.setVisible(false);
     }//GEN-LAST:event_jButton1MouseClicked
 

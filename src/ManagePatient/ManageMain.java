@@ -15,6 +15,7 @@ import NewPatient.PersonalDatas;
 import NewPatient.PsychologicalAnamnesis;
 import NewPatient.Questions;
 import NewPatient.Tongue;
+import NewPatient.ManualTherapy;
 import com.itextpdf.io.font.TrueTypeFont;
 import com.itextpdf.kernel.pdf.PdfName;
 //import com.itextpdf.kernel.pdf.PdfWriter;
@@ -125,6 +126,7 @@ public class ManageMain extends javax.swing.JFrame {
         loadFinalReport(path);
         loadTongue(path);
         loadEar(path);
+        loadManualTherapy(path);
 
         Controller.controller.treatmentInProgress++;
         String debugStat=jComboBox1.getSelectedItem().toString();
@@ -318,6 +320,11 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane30 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jLabel61 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane35 = new javax.swing.JScrollPane();
+        jTextPane18 = new javax.swing.JTextPane();
+        jButton15 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
@@ -512,7 +519,7 @@ public class ManageMain extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(205, 205, 205))
         );
 
@@ -1482,10 +1489,54 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel61)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane30, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Pulzus", jPanel9);
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabel3.setText("Manuálterápia");
+
+        jScrollPane35.setViewportView(jTextPane18);
+
+        jButton15.setBackground(new java.awt.Color(0, 0, 0));
+        jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(255, 255, 255));
+        jButton15.setText("Módosítás");
+        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton15MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 16, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(474, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Manuálterápia", jPanel8);
 
         jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -2124,7 +2175,8 @@ public class ManageMain extends javax.swing.JFrame {
                 if(!(symp.equals("")))
                 {
                     document.add(new com.itextpdf.text.Paragraph("Gerinc:",boldFont12));
-                    document.add(new com.itextpdf.text.Paragraph(symp,cellFont12italic));
+                    String htmlfreesymp= Jsoup.parse(symp).text();
+                    document.add(new com.itextpdf.text.Paragraph(htmlfreesymp,cellFont12italic));
                     document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
                 }
                 
@@ -2139,7 +2191,8 @@ public class ManageMain extends javax.swing.JFrame {
                 if(!(symp.equals("")))
                 {
                     document.add(new com.itextpdf.text.Paragraph("Végtagok:",boldFont12));
-                    document.add(new com.itextpdf.text.Paragraph(symp,cellFont12italic));
+                    String htmlfreesymp= Jsoup.parse(symp).text();
+                    document.add(new com.itextpdf.text.Paragraph(htmlfreesymp,cellFont12italic));
                     document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
                 }
                 
@@ -2322,6 +2375,14 @@ public class ManageMain extends javax.swing.JFrame {
                 {
                     if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
                     document.add(new com.itextpdf.text.Paragraph("Képalkotó vizsgálatok:",boldFont12));
+                    document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
+                    document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
+                }
+                actual = jTextPane18.getText();
+                if(actual.length()>1)
+                {
+                    if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
+                    document.add(new com.itextpdf.text.Paragraph("Manuálterápia:",boldFont12));
                     document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
                     document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
                 }
@@ -2573,6 +2634,19 @@ public class ManageMain extends javax.swing.JFrame {
         Controller.controller.sumOfTreatments++;
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
+        this.setVisible(false);
+        Controller.controller.idNumber=idNumber;
+        ManualTherapy m=new ManualTherapy();
+        try {
+            m.load(idNumber);
+        } catch (Exception ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        m.changeButtons();
+        m.setVisible(true);
+    }//GEN-LAST:event_jButton15MouseClicked
+
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -2582,6 +2656,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2613,6 +2688,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2685,6 +2761,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
@@ -2713,6 +2790,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane31;
     private javax.swing.JScrollPane jScrollPane32;
     private javax.swing.JScrollPane jScrollPane33;
+    private javax.swing.JScrollPane jScrollPane35;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane56;
@@ -2742,6 +2820,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane15;
     private javax.swing.JTextPane jTextPane16;
     private javax.swing.JTextPane jTextPane17;
+    private javax.swing.JTextPane jTextPane18;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
@@ -3213,6 +3292,19 @@ public class ManageMain extends javax.swing.JFrame {
             
             
             input.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private void loadManualTherapy(String path)throws Exception{
+        try {
+            Scanner input=new Scanner(new File(path+"manualtherapy.txt"));
+            String text="";
+            while(input.hasNext()){
+                text+=EncryptDecrypt.decrypt(input.nextLine())+"\n";
+            }
+            jTextPane18.setText(text);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
         }

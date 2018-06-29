@@ -49,6 +49,7 @@ public class Controller {
     private Pulse newPatientPulse;
     private Diagnose newPatientDiagnose;
     private Ear newPatientEar;
+    public ManualTherapy newPatientManualTherapy;
     
     //statistic
     public int numOfPatients;
@@ -143,7 +144,7 @@ public class Controller {
         newPatientEar=new Ear();
         newPatientPulse=new Pulse();
         newPatientDiagnose=new Diagnose();
-        
+        newPatientManualTherapy=new ManualTherapy();
         newPatientMedicalHistory.setVisible(true);
     }
     
@@ -161,6 +162,10 @@ public class Controller {
     
     public void newEar(){
         newPatientEar.setVisible(true);
+    }
+    
+    public void newManualTherapy(){
+        newPatientManualTherapy.setVisible(true);
     }
     
     public void newPulse(){  
@@ -207,6 +212,7 @@ public class Controller {
         newPatientPsychologicalAnamnesis.save(path);
         newPatientDiagnose.save(path);
         newPatientPulse.save(path);
+        newPatientManualTherapy.save(path);
         
         treatmentInProgress++;
               
