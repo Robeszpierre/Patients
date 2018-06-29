@@ -48,7 +48,7 @@ public class SelectPatient extends javax.swing.JFrame {
     /**
      * Creates new form SelectPatient
      */
-    public SelectPatient() {
+    public SelectPatient() throws Exception{
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -68,7 +68,7 @@ public class SelectPatient extends javax.swing.JFrame {
         Calendar today = Calendar.getInstance();
         
         while(inputPatients.hasNext()){
-            String nextPatient=inputPatients.nextLine();
+            String nextPatient=EncryptDecrypt.decrypt(inputPatients.nextLine());
             if(nextPatient.equals("")){
                 continue;
             }
@@ -312,7 +312,11 @@ public class SelectPatient extends javax.swing.JFrame {
                     File dir=new File(Controller.controller.path+patientId);
                     System.out.println(dir);
                     deleteDirectory(dir);
-                    deletePatient(selecteditem);
+                    try {
+                        deletePatient(selecteditem);
+                    } catch (Exception ex) {
+                        Logger.getLogger(SelectPatient.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                     break;
                 }
                 counter++;
@@ -347,7 +351,7 @@ public class SelectPatient extends javax.swing.JFrame {
     return(directory.delete());
 }
 
-    private void deletePatient(String selecteditem) {
+    private void deletePatient(String selecteditem)throws Exception {
         Scanner inputPatients=null;
         
         try {
@@ -359,7 +363,7 @@ public class SelectPatient extends javax.swing.JFrame {
         String tmp="";
         
         while(inputPatients.hasNext()){
-            String input=inputPatients.nextLine();
+            String input=EncryptDecrypt.decrypt( inputPatients.nextLine());
             if(input.equals(selecteditem)){
                 
             }else if(("<html><font color=red>"+input+"</html>").equals(selecteditem)){

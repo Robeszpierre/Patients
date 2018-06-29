@@ -184,8 +184,14 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_statisticButtonMouseClicked
 
     private void existingPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_existingPatientButtonMouseClicked
-        SelectPatient selectPatient = new SelectPatient();
-        selectPatient.setVisible(true);
+        SelectPatient selectPatient;
+            try {
+                selectPatient = new SelectPatient();
+                selectPatient.setVisible(true);
+            } catch (Exception ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
     }//GEN-LAST:event_existingPatientButtonMouseClicked
 
     private void newPatientButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newPatientButtonMouseClicked

@@ -349,17 +349,18 @@ public class PersonalDatas extends javax.swing.JFrame {
             writer.println(EncryptDecrypt.encrypt(jTextField8.getText()));
             writer.println(EncryptDecrypt.encrypt(jComboBox1.getSelectedItem().toString()));
             
-            writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
-            writer2.append(" ");
-            writer2.append(jTextField1.getText());
-            writer2.append(" ");
-            writer2.append(jTextField2.getText());
-            writer2.append("-");
-            writer2.append(jTextField3.getText());
-            writer2.append("-");
-            writer2.append(jTextField4.getText());
-            writer2.append(System.getProperty("line.separator"));
-            
+//            writer2.append(Integer.toString(Controller.controller.idNumber));   //Writes the patients id into a file
+//            writer2.append(" ");
+//            writer2.append(jTextField1.getText());
+//            writer2.append(" ");
+//            writer2.append(jTextField2.getText());
+//            writer2.append("-");
+//            writer2.append(jTextField3.getText());
+//            writer2.append("-");
+//            writer2.append(jTextField4.getText());
+//            writer2.append(System.getProperty("line.separator"));
+            String line=Integer.toString(Controller.controller.idNumber)+" "+jTextField1.getText()+" "+jTextField2.getText()+" "+jTextField3.getText()+" "+jTextField4.getText();
+            writer2.println(EncryptDecrypt.encrypt(line));
             
             writer.close();
             writer2.close();
