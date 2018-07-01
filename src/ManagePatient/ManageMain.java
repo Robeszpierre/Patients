@@ -15,7 +15,6 @@ import NewPatient.PersonalDatas;
 import NewPatient.PsychologicalAnamnesis;
 import NewPatient.Questions;
 import NewPatient.Tongue;
-import NewPatient.ManualTherapy;
 import com.itextpdf.io.font.TrueTypeFont;
 import com.itextpdf.kernel.pdf.PdfName;
 //import com.itextpdf.kernel.pdf.PdfWriter;
@@ -126,7 +125,7 @@ public class ManageMain extends javax.swing.JFrame {
         loadFinalReport(path);
         loadTongue(path);
         loadEar(path);
-        loadManualTherapy(path);
+        
 
         Controller.controller.treatmentInProgress++;
         String debugStat=jComboBox1.getSelectedItem().toString();
@@ -241,6 +240,9 @@ public class ManageMain extends javax.swing.JFrame {
         jScrollPane29 = new javax.swing.JScrollPane();
         jTextPane16 = new javax.swing.JTextPane();
         jButton8 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane35 = new javax.swing.JScrollPane();
+        jTextPane19 = new javax.swing.JTextPane();
         jScrollPane56 = new javax.swing.JScrollPane();
         jPanel14 = new javax.swing.JPanel();
         jLabel87 = new javax.swing.JLabel();
@@ -321,10 +323,6 @@ public class ManageMain extends javax.swing.JFrame {
         jTextArea2 = new javax.swing.JTextArea();
         jLabel61 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane35 = new javax.swing.JScrollPane();
-        jTextPane18 = new javax.swing.JTextPane();
-        jButton15 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
@@ -878,6 +876,15 @@ public class ManageMain extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Dialog", 3, 16)); // NOI18N
+        jLabel3.setText("Manuálterápia");
+
+        jScrollPane35.setBorder(null);
+
+        jTextPane19.setEditable(false);
+        jTextPane19.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jScrollPane35.setViewportView(jTextPane19);
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -891,24 +898,31 @@ public class ManageMain extends javax.swing.JFrame {
                             .addComponent(jLabel68)
                             .addGroup(jPanel12Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel66)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(jLabel66))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel67))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(567, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -917,20 +931,24 @@ public class ManageMain extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel65)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel66)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane27)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel67)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane28)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel68)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane29)
                 .addGap(18, 18, 18)
+                .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1489,54 +1507,23 @@ public class ManageMain extends javax.swing.JFrame {
                 .addComponent(jLabel61)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane30, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Pulzus", jPanel9);
-
-        jLabel3.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
-        jLabel3.setText("Manuálterápia");
-
-        jScrollPane35.setViewportView(jTextPane18);
-
-        jButton15.setBackground(new java.awt.Color(0, 0, 0));
-        jButton15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(255, 255, 255));
-        jButton15.setText("Módosítás");
-        jButton15.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton15MouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 16, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addGap(0, 645, Short.MAX_VALUE)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane35, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(474, Short.MAX_VALUE))
+            .addGap(0, 740, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Manuálterápia", jPanel8);
+        jTabbedPane1.addTab("", jPanel8);
 
         jTabbedPane3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -2378,7 +2365,7 @@ public class ManageMain extends javax.swing.JFrame {
                     document.add(new com.itextpdf.text.Paragraph(actual,cellFont12));
                     document.add(new com.itextpdf.text.Paragraph(" "));//terkoz
                 }
-                actual = jTextPane18.getText();
+                actual = jTextPane19.getText();
                 if(actual.length()>1)
                 {
                     if(kelle){document.add(new com.itextpdf.text.Paragraph("Aktuális",boldFont22));kelle=false;}
@@ -2634,19 +2621,6 @@ public class ManageMain extends javax.swing.JFrame {
         Controller.controller.sumOfTreatments++;
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
-        this.setVisible(false);
-        Controller.controller.idNumber=idNumber;
-        ManualTherapy m=new ManualTherapy();
-        try {
-            m.load(idNumber);
-        } catch (Exception ex) {
-            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        m.changeButtons();
-        m.setVisible(true);
-    }//GEN-LAST:event_jButton15MouseClicked
-
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -2656,7 +2630,6 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2820,7 +2793,7 @@ public class ManageMain extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane15;
     private javax.swing.JTextPane jTextPane16;
     private javax.swing.JTextPane jTextPane17;
-    private javax.swing.JTextPane jTextPane18;
+    private javax.swing.JTextPane jTextPane19;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
@@ -3256,6 +3229,14 @@ public class ManageMain extends javax.swing.JFrame {
             }
             jTextPane16.setText(text);
             
+            text="";
+            line=input.nextLine();
+            while(!line.equals("***")){
+                text+=EncryptDecrypt.decrypt(line)+"\n";
+                line=input.nextLine();
+            }
+            jTextPane19.setText(text);
+            
             input.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
@@ -3297,18 +3278,7 @@ public class ManageMain extends javax.swing.JFrame {
         }
     }
     
-    private void loadManualTherapy(String path)throws Exception{
-        try {
-            Scanner input=new Scanner(new File(path+"manualtherapy.txt"));
-            String text="";
-            while(input.hasNext()){
-                text+=EncryptDecrypt.decrypt(input.nextLine())+"\n";
-            }
-            jTextPane18.setText(text);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+    
 
     private void loadPulse(String path)throws Exception {
         try {

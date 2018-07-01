@@ -5,7 +5,7 @@
             <url>src/NewPatient/Controller.java</url>
             <bookmark id="1">
                 <name/>
-                <line>162</line>
+                <line>163</line>
                 <key/>
             </bookmark>
         </file>
@@ -15,19 +15,14 @@
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/PsychologicalAnamnesis.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Diagnose.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Controller.java</file>
-            <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Questions.java</file>
-            <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/ManagePatient/DateModify.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Pulse.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Complaints.java</file>
-            <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/DragListener.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Tongue.java</file>
-            <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/Main/MainFrame.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/Main/EncryptDecrypt.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/ManagePatient/ManageMain.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Joint.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/Ear.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/PersonalDatas.java</file>
-            <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/ManagePatient/SelectPatient.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/ManagePatient/Treatment.java</file>
             <file>file:/C:/Users/Szarvas/Documents/Munka/Patients/src/NewPatient/MedicalHistory.java</file>
         </group>
