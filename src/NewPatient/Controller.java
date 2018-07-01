@@ -72,6 +72,7 @@ public class Controller {
     
     public void start(){
         if(checkLicence()){
+        new Login();
         setPath();
         mainFrame=new MainFrame();
         mainFrame.setVisible(true);

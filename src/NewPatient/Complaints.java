@@ -336,13 +336,15 @@ public class Complaints extends javax.swing.JFrame {
             }
             jTextPane1.setText(text);
             
-            text="";
-            line=input.nextLine();
-            while(!line.equals("***")){
-                text+=EncryptDecrypt.decrypt(line)+"\n";
+            if(input.hasNext()){
+                text="";
                 line=input.nextLine();
+                while(!line.equals("***")){
+                    text+=EncryptDecrypt.decrypt(line)+"\n";
+                    line=input.nextLine();
+                }
+                jTextPane5.setText(text);
             }
-            jTextPane5.setText(text);
             
             input.close();
         } catch (FileNotFoundException ex) {
