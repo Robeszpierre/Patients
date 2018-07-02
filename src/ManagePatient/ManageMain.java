@@ -1965,9 +1965,45 @@ public class ManageMain extends javax.swing.JFrame {
 //itextpdf
 
          Document document = new Document();
-
+         String path2=Controller.controller.path + idNumber + File.separatorChar;
+         Scanner personalDataInputforpdf;
+         String nameOfPdf="";
         try {
-            PdfWriter.getInstance(document,new FileOutputStream("Urlap"+idNumber+".pdf"));
+            personalDataInputforpdf = new Scanner(new File(path2+"personaldata.txt"));
+            personalDataInputforpdf.nextLine();
+            nameOfPdf=EncryptDecrypt.decrypt( personalDataInputforpdf.nextLine());
+            personalDataInputforpdf.close();
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidKeySpecException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (NoSuchPaddingException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidKeyException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidAlgorithmParameterException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalBlockSizeException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (BadPaddingException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ManageMain.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+        String namepdf[]=nameOfPdf.split(" ");
+        String nameofpdf2="";
+        try {
+            for(int i=0;i<namepdf.length;i++)
+            {
+                nameofpdf2+=namepdf[i]+"_";
+            }
+            String finalName=nameofpdf2.substring(0, nameofpdf2.length() - 1);
+
+            PdfWriter.getInstance(document,new FileOutputStream(finalName+".pdf"));
 
             document.open();
             
@@ -1980,7 +2016,7 @@ public class ManageMain extends javax.swing.JFrame {
                  Font cellFont12 = new Font(baseFont, 12);
                  Font boldFont22 = new Font(baseFont, 22, Font.BOLD);
                  Font boldFont12 = new Font(baseFont, 12, Font.BOLD);
-                 com.itextpdf.text.Paragraph p=new com.itextpdf.text.Paragraph("Beteg Űrlap \n",boldFont22);
+                 com.itextpdf.text.Paragraph p=new com.itextpdf.text.Paragraph("Páciens Űrlap \n",boldFont22);
                  document.add(p);
                  
                 //adatok
