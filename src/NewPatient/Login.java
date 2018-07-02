@@ -97,8 +97,8 @@ class PassWordDialog extends JDialog {
         jbtOk.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if ("a".equals(String.valueOf(jpfPassword.getPassword()))
-                        && "a".equals(jtfUsername.getText())) {
+                if ("zsuzsa".equals(String.valueOf(jpfPassword.getPassword()))
+                        && "sagodi".equals(jtfUsername.getText())) {
                     setVisible(false);
                 } else {
                     jlblStatus.setText("Hibás felhasználónév vagy jelszó");

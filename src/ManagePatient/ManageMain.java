@@ -2577,15 +2577,9 @@ public class ManageMain extends javax.swing.JFrame {
                      if(element.getIsFilled())
                         element.pdf(document);
                  }
-                
-                
-                
-                
-
-
 
                 
-                document.add(new com.itextpdf.text.Paragraph("Dokumentum vége"));
+                //document.add(new com.itextpdf.text.Paragraph("Dokumentum vége"));
                 document.close(); 
                 JOptionPane.showMessageDialog(null,"A pdf fájl sikeresen elkészült, megtalálható az alábbi helyen:\n "+ System.getProperty("user.dir"));
        } catch (IOException ex) {
